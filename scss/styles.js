@@ -4,18 +4,13 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  welcome: {
-    fontSize: 20
-  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
   engine: {
     position: 'absolute',
     right: 0,
+    top: 0
   },
   body: {
     backgroundColor: Colors.white,
