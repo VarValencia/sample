@@ -22,7 +22,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import styles from './scss/styles'
+import styles from '@styles/styles'
 
 const App: () => React$Node = () => {
   return (
