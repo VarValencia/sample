@@ -40,7 +40,7 @@ const LandingPage: () => React$Node = () => {
               </View>
             </View>
             <View style={styles.sectionContainerButton}>
-              <View style={styles.ButtonContainer}>
+              <View style={styles.gudSuccess}>
                 <Button
                   onPress={() => {
                     console.log('you tapped the button Iniciar');
@@ -48,10 +48,7 @@ const LandingPage: () => React$Node = () => {
                   title="INICIAR SESIÓN"
                 />
               </View>
-            </View>
-
-            <View style={styles.sectionContainerButton1}>
-              <View style={styles.ButtonContainer}>
+              <View style={styles.gudSuccess}>
                 <Button
                   onPress={() => {
                     console.log('you tapped the button regist');
