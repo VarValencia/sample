@@ -9,7 +9,8 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from "react-native";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
 // Importación de las vistas
 import LandingPage from '@screens/LandingPage';
@@ -20,12 +21,14 @@ const RootStack = createStackNavigator();
 const App: () => React$Node = () => {
   return (
     <>
-     <NavigationContainer>
-      <RootStack.Navigator>
-        <RootStack.Screen name="BienvenidaScreen" component={LandingPage} />
-        <RootStack.Screen name="LoginScreen" component={LoginScreen} />
-      </RootStack.Navigator>
-    </NavigationContainer>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <RootStack.Navigator headerMode="none">
+            <RootStack.Screen name="BienvenidaScreen" component={LandingPage} />
+            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
+          </RootStack.Navigator>
+        </NavigationContainer>
+      </SafeAreaProvider>
       {/* <NavigationContainer>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
