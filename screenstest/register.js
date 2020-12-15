@@ -16,7 +16,7 @@ import {
   StatusBar,
   Button,
   TouchableHighlight,
-  TextInput
+  TextInput,
 } from 'react-native';
 
 import {
@@ -25,67 +25,51 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from  'react-native/Libraries/NewAppScreen';
+} from 'react-native/Libraries/NewAppScreen';
 
-const App:   () => React$Node = () => {
+const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
-         contentInsetAdjustmentBehavior="automatic"
+          contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
             <View style={styles.sectionContainer1}>
               <View style={styles.ButtonContainer}>
                 <Text></Text>
-                <TextInput 
-                    style = {styles.textInput1}
-                    editable
-                    maxLength={40}
-                />
-              </View>            
-            </View> 
+                <TextInput style={styles.textInput1} editable maxLength={40} />
+              </View>
+            </View>
             <View style={styles.sectionContainer2}>
               <View style={styles.ButtonContainer}>
                 <Text></Text>
-                <TextInput 
-                    style = {styles.textInput1}
-                    editable
-                    maxLength={40}
-                />
-              </View>            
-            </View> 
+                <TextInput style={styles.textInput1} editable maxLength={40} />
+              </View>
+            </View>
             <View style={styles.sectionContainer2}>
               <View style={styles.ButtonContainer}>
                 <Text></Text>
-                <TextInput 
-                    style = {styles.textInput1}
-                    editable
-                    maxLength={40}
-                />
-              </View>            
-            </View> 
+                <TextInput style={styles.textInput1} editable maxLength={40} />
+              </View>
+            </View>
             <View style={styles.sectionContainer2}>
               <View style={styles.ButtonContainer}>
                 <Text></Text>
-                <TextInput 
-                    style = {styles.textInput1}
-                    editable
-                    maxLength={40}
+                <TextInput style={styles.textInput1} editable maxLength={40} />
+              </View>
+            </View>
+            <View style={styles.sectionContainer}>
+              <View style={styles.ButtonContainer}>
+                <Button
+                  onPress={() => {
+                    console.log('you tapped the button 2');
+                  }}
+                  title="Mas GUD?"
                 />
-              </View>            
-            </View> 
-              <View style={styles.sectionContainer}>
-                <View style={styles.ButtonContainer}>
-                  <Button 
-                    onPress ={()=> {
-                    console.log("you tapped the button 2");
-                    }}
-                    title= "Mas GUD?"
-                  />
-                </View>                
-              </View> 
+              </View>
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -106,32 +90,22 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems:'center',
-    flexWrap: "nowrap",
+    alignItems: 'center',
+    flexWrap: 'nowrap',
   },
   sectionContainer: {
-    marginTop: "70%", 
-    marginHorizontal: "10%",
+    marginTop: '70%',
+    marginHorizontal: '10%',
     backgroundColor: Colors.black,
   },
   sectionContainer1: {
-    marginTop: "2%", 
-    marginHorizontal: "10%",
+    marginTop: '2%',
+    marginHorizontal: '10%',
     backgroundColor: Colors.black,
   },
   sectionContainer2: {
-    marginTop: "2%", 
-    marginHorizontal: "10%",
-    backgroundColor: Colors.black,
-  },
-  sectionContainer3: {
-    marginTop: "2%", 
-    marginHorizontal: "10%",
-    backgroundColor: Colors.black,
-  },
-  sectionContainer4: {
-    marginTop: "2%", 
-    marginHorizontal: "10%",
+    marginTop: '2%',
+    marginHorizontal: '10%',
     backgroundColor: Colors.black,
   },
   sectionTitle: {
@@ -156,11 +130,11 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-  ButtonContainer:{
-    margin:"0%",
+  ButtonContainer: {
+    margin: '0%',
   },
   textInput1: {
-    height:40 ,
+    height: 40,
     borderColor: 'gray',
     borderWidth: 1,
   },

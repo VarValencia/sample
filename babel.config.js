@@ -4,13 +4,12 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: [
-          '.'
-        ],
+        root: ['.'],
         alias: {
-          '@styles': './scss'
-        }
-      }
-    ]
-  ]
+          '@styles': './scss',
+          '@assets': './icons_app',
+        },
+      },
+    ],
+  ],
 };

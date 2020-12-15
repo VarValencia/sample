@@ -64,16 +64,41 @@ export default StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+
+  // Valencia styles
   ButtonContainer: {
-    margin: '0%',
+    margin: '7%',
   },
+
   Container: {
     marginTop: 20,
   },
-  form: {
+  picture: {
     position: 'relative',
     textAlign: 'center',
     width: 50,
     height: 50,
+  },
+  logo: {
+    position: 'relative',
+    textAlign: 'center',
+    width: 15,
+    height: 15,
+  },
+  textInput1: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+  },
+  //LogIn container botones especificos
+  sectionContainerU: {
+    marginTop: '40%',
+    marginHorizontal: '10%',
+    backgroundColor: Colors.lighter,
+  },
+  sectionContainerR: {
+    marginTop: '0%',
+    marginHorizontal: '0%',
+    backgroundColor: Colors.lighter,
   },
 });
