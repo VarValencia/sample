@@ -11,7 +11,7 @@ export default StyleSheet.create({
     top: 0,
   },
   body: {
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.white,
     textAlign: 'center',
   },
   sectionContainer: {
@@ -21,12 +21,12 @@ export default StyleSheet.create({
   sectionContainerButton: {
     marginTop: '63%',
     marginHorizontal: '10%',
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.white,
   },
   sectionContainerButton1: {
     marginTop: '5%',
     marginHorizontal: '10%',
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.white,
   },
   sectionImageContainer: {
     marginTop: '25%',
