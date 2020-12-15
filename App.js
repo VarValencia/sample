@@ -23,7 +23,7 @@ const App: () => React$Node = () => {
     <>
       <SafeAreaProvider>
         <NavigationContainer>
-          <RootStack.Navigator headerMode="none">
+          <RootStack.Navigator initialRouteName="BienvenidaScreen" headerMode="none">
             <RootStack.Screen name="BienvenidaScreen" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
           </RootStack.Navigator>
