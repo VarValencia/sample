@@ -8,7 +8,6 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   View,
   Text,
@@ -16,8 +15,10 @@ import {
   Button,
   Image,
 } from 'react-native';
-
 import styles from '@styles/styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
 
 const LandingPage: () => React$Node = () => {
   return (
