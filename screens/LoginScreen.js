@@ -19,29 +19,22 @@ import {
   Image,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import styles from '@styles/styles';
 
-const App: () => React$Node = () => {
+const LoginScreen: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar hidden = {true} />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
             <View styles={styles.container}>
-              <Image
+              {/* <Image
                 styles={styles.picture}
                 source={require('./screenstest/descarga.png')}
-              />
+              /> */}
             </View>
             <Text style={styles.sectionTitle}>Bienvenidos</Text>
 
@@ -74,4 +67,4 @@ const App: () => React$Node = () => {
   );
 };
 
-export default App;
+export default LoginScreen;

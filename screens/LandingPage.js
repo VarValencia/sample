@@ -19,10 +19,10 @@ import {
 
 import styles from '@styles/styles';
 
-const App: () => React$Node = () => {
+const LandingPage: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar hidden={true} />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
@@ -32,10 +32,6 @@ const App: () => React$Node = () => {
               <View style={styles.imageContainer}>
                 <Text style={styles.sectionTitle}>Bienvenidos</Text>
                 <View style={styles.ButtonContainer}>
-                  <Image
-                    styles={styles.form}
-                    source={require('./screenstest/descarga.png')}
-                  />
                 </View>
                 <Text tyle={styles.sectionMessage}>
                   Entra a un espacio donde puedes ser
@@ -70,4 +66,4 @@ const App: () => React$Node = () => {
   );
 };
 
-export default App;
+export default LandingPage;
