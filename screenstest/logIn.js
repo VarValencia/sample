@@ -16,6 +16,7 @@ import {
   StatusBar,
   Button,
   TouchableHighlight,
+  TextInput,
   Image,
 } from 'react-native';
 
@@ -35,43 +36,46 @@ const App:  () => React$Node = () => {
         <ScrollView
          contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          
+         
           <View style={styles.body}>
-            <View style={styles.sectionImageContainer}>
-              <View style={styles.imageContainer}>
-                <Text style= {styles.sectionTitle}>Bienvenidos</Text>
-                <View style= {styles.ButtonContainer}>
-                  <Image styles = {styles.form}
-                    source = {require('./screenstest/descarga.png')}
+            <View styles= {styles.container}>
+              <Image 
+              styles= {styles.form}
+              source = {require('./screenstest/descarga.png')}/>
+            </View>
+            <Text style = {styles.sectionTitle}>Bienvenidos</Text>
+            
+            <View style={styles.sectionContainerU}>
+              <View style={styles.ButtonContainer}>
+                <Text style={styles.sectionTitle}>Email</Text>
+                  <TextInput 
+                    style={styles.textInput1}
+                    editable
+                    maxLength={40}
+                  />
+              </View>       
+            </View>
+            <View style={styles.sectionContainerR}>
+              <View style={styles.ButtonContainer}>
+                <Text style={styles.sectionTitle}>Contraseña</Text>
+                  <TextInput 
+                    style = {styles.textInput1}
+                    editable
+                    maxLength={40}
                   />
                 </View>
-                <Text tyle = {styles.sectionMessage}>Entra a Un lugar donde puedes ser</Text>
-              </View>
-
-            </View>
-            <View style={styles.sectionContainerButton}>
-              <View style={styles.ButtonContainer}>
-                 <Button 
-                  onPress ={()=> {
-                  console.log("you tapped the button Iniciar");
-                  }}
-                  title= "INICIAR SESIÓN"
-                  /> 
-              </View>            
-            </View> 
-            
-              <View style={styles.sectionContainerButton1}>
-                <View style={styles.ButtonContainer}>
+              <View styles={styles.sectionContainerR}>
+                <View styles={styles.sectionContainerR}>
                   <Button 
                     onPress ={()=> {
-                    console.log("you tapped the button regist");
+                    console.log("you tapped the button acceder");
                     }}
-                    title= "REGISTRARSE "
-                  />
-                </View>                
-              
-               </View> 
-            </View>
+                    title= "ACCEDER"
+                    /> 
+                </View>
+              </View>       
+            </View> 
+          </View>
         </ScrollView>
       </SafeAreaView>
     </>
@@ -87,26 +91,21 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.lighter,
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems:'center',
     flexWrap: "nowrap",
   },
-  sectionContainerButton: {
-    marginTop: "63%", 
+  sectionContainerU: {
+    marginTop: "40%", 
     marginHorizontal: "10%",
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.lighter,
   },
-  sectionContainerButton1: {
-    marginTop: "5%", 
-    marginHorizontal: "10%",
-    backgroundColor: Colors.black,
-  },
-  sectionImageContainer:{
-    marginTop: "25%",
-    marginHorizontal:"1%",
+  sectionContainerR: {
+    marginTop: "0%", 
+    marginHorizontal: "0%",
     backgroundColor: Colors.lighter,
   },
   sectionTitle: {
@@ -114,11 +113,23 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: Colors.black,
   },
-  sectionMessage: {
+  sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
     color: Colors.dark,
+  },
+  Container: {
+    marginTop: 20,
+  },
+  form:{
+    width:50,
+    height:50,
+  },
+  textInput1: {
+    height:40 ,
+    borderColor: 'gray',
+    borderWidth: 1,
   },
   highlight: {
     fontWeight: '700',
@@ -132,14 +143,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   ButtonContainer:{
-    margin:"0%",
-  },
-  Container:{
-    marginTop:20,
-  },
-  form:{
-    width:50,
-    height: 50,
+    margin:"7%",
   },
 });
 

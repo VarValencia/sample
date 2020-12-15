@@ -15,8 +15,7 @@ import {
   Text,
   StatusBar,
   Button,
-  TouchableHighlight,
-  Image,
+  TouchableHighlight
 } from 'react-native';
 
 import {
@@ -27,7 +26,7 @@ import {
   ReloadInstructions,
 } from  'react-native/Libraries/NewAppScreen';
 
-const App:  () => React$Node = () => {
+const App:   () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -35,43 +34,60 @@ const App:  () => React$Node = () => {
         <ScrollView
          contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          
-          <View style={styles.body}>
-            <View style={styles.sectionImageContainer}>
-              <View style={styles.imageContainer}>
-                <Text style= {styles.sectionTitle}>Bienvenidos</Text>
-                <View style= {styles.ButtonContainer}>
-                  <Image styles = {styles.form}
-                    source = {require('./screenstest/descarga.png')}
-                  />
-                </View>
-                <Text tyle = {styles.sectionMessage}>Entra a Un lugar donde puedes ser</Text>
-              </View>
-
+          {/* <Header />
+          {global.HermesInternal == null ? null : (
+            <View style={styles.engine}>
+              <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
-            <View style={styles.sectionContainerButton}>
+          )} */}
+          <View style={styles.body}>
+            <View style={styles.sectionContainer}>
               <View style={styles.ButtonContainer}>
                  <Button 
                   onPress ={()=> {
-                  console.log("you tapped the button Iniciar");
+                  console.log("you tapped the button 1");
                   }}
-                  title= "INICIAR SESIÓN"
+                  title= "GUD?"
                   /> 
               </View>            
             </View> 
             
-              <View style={styles.sectionContainerButton1}>
+              <View style={styles.sectionContainer1}>
                 <View style={styles.ButtonContainer}>
                   <Button 
                     onPress ={()=> {
-                    console.log("you tapped the button regist");
+                    console.log("you tapped the button 2");
                     }}
-                    title= "REGISTRARSE "
+                    title= "Mas GUD?"
                   />
                 </View>                
               
-               </View> 
-            </View>
+               {/* <Text style={styles.sectionTitle}>Paso uno</Text>  */}
+               {/* <Text style={styles.sectionDescription}>
+                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                screen and then come back to see your edits. 
+                  </Text>  */}
+              </View> 
+            {/* <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionDescription}>
+                <ReloadInstructions />
+              </Text>
+            </View> */}
+            {/* <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionDescription}>
+                <DebugInstructions />
+              </Text>
+            </View> */}
+            {/* <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionDescription}>
+                Read the docs to discover what to do next:
+              </Text>
+            </View> */}
+            {/* <LearnMoreLinks /> */}
+          </View>
         </ScrollView>
       </SafeAreaView>
     </>
@@ -94,27 +110,22 @@ const styles = StyleSheet.create({
     alignItems:'center',
     flexWrap: "nowrap",
   },
-  sectionContainerButton: {
-    marginTop: "63%", 
+  sectionContainer: {
+    marginTop: "70%", 
     marginHorizontal: "10%",
     backgroundColor: Colors.black,
   },
-  sectionContainerButton1: {
-    marginTop: "5%", 
+  sectionContainer1: {
+    marginTop: "2%", 
     marginHorizontal: "10%",
     backgroundColor: Colors.black,
-  },
-  sectionImageContainer:{
-    marginTop: "25%",
-    marginHorizontal:"1%",
-    backgroundColor: Colors.lighter,
   },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
   },
-  sectionMessage: {
+  sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
@@ -133,13 +144,6 @@ const styles = StyleSheet.create({
   },
   ButtonContainer:{
     margin:"0%",
-  },
-  Container:{
-    marginTop:20,
-  },
-  form:{
-    width:50,
-    height: 50,
   },
 });
 
