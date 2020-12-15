@@ -3,7 +3,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export default StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.white,
   },
   engine: {
     position: 'absolute',
@@ -33,7 +33,7 @@ export default StyleSheet.create({
     marginLeft: 50,
     marginRight: 50,
     textAlign: 'center',
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.white,
   },
   sectionTitle: {
     textAlign: 'center',
@@ -45,19 +45,19 @@ export default StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.dark,
+    color: Colors.white,
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.dark,
+    color: Colors.white,
   },
   highlight: {
     fontWeight: '700',
   },
   footer: {
-    color: Colors.dark,
+    color: Colors.white,
     fontSize: 12,
     fontWeight: '600',
     padding: 4,
@@ -94,11 +94,11 @@ export default StyleSheet.create({
   sectionContainerU: {
     marginTop: '40%',
     marginHorizontal: '10%',
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.white,
   },
   sectionContainerR: {
     marginTop: '0%',
     marginHorizontal: '0%',
-    backgroundColor: Colors.lighter,
+    backgroundColor: Colors.white,
   },
 });
