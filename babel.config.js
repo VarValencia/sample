@@ -8,7 +8,7 @@ module.exports = {
         alias: {
           '@styles': './scss',
           '@assets': './icons_app',
-          '@screens': './screens'
+          '@screens': './screens',
         },
       },
     ],

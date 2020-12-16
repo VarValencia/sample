@@ -1,8 +1,19 @@
 import {StyleSheet} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+
+// App Color Theme
+const Colors = {
+  black: '#000',
+  gudBlack: '#505050',
+  gudWhite: '#FFF',
+  gudGreenLight: '#E0F0F0',
+  gudGreenMedium: '#C1E3E2',
+  gudGreenRegular: '#A2D6D6',
+  gudGreenDark: '#62BDBA',
+};
 
 export default StyleSheet.create({
-  scrollView: {
+  gudButton: {
+    backgroundColor: Colors.gudGreenLight,
   },
   engine: {
     position: 'absolute',
@@ -13,37 +24,41 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    position: 'relative',
+    marginVertical: '5%',
+    textAlign: 'center',
+    marginHorizontal: '20%',
   },
   sectionContainerButton: {
     position: 'relative',
     textAlign: 'center',
+    marginTop: '40%',
     marginHorizontal: '20%',
-    marginVertical: "120%",
+    marginVertical: '10%',
   },
   sectionImageContainer: {
-    marginTop: '25%',
-    marginLeft: 50,
-    marginRight: 50,
-    textAlign: 'center',
+    marginTop: '10%',
+    position: 'relative',
+    marginHorizontal: '50%',
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: '600',
     color: Colors.black,
   },
   sectionMessage: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
   },
+  //prefabricado por el engine
   highlight: {
     fontWeight: '700',
   },
@@ -57,23 +72,24 @@ export default StyleSheet.create({
 
   // Valencia styles
   gudSuccess: {
-    margin: '7%',
+    margin: '10%',
   },
 
   Container: {
     marginTop: 20,
   },
   picture: {
+    //importante el position
     position: 'relative',
-    textAlign: 'center',
     width: 50,
     height: 50,
   },
   logo: {
     position: 'relative',
-    textAlign: 'center',
-    width: 15,
-    height: 15,
+    width: 50,
+    height: 50,
+    marginVertical: '5%',
+    marginHorizontal: '50%',
   },
   textInput1: {
     height: 40,
@@ -81,11 +97,24 @@ export default StyleSheet.create({
     borderWidth: 1,
   },
   //LogIn container botones especificos
-  sectionContainerU: {
+  sectionContainerU: {},
 
+  //estilo que debería funcionar para el botón
+  ButtonLandingSc: {
+    backgroundColor: '#85e085',
+    opacity: 0.6,
   },
+  sectionTitle1: {
+    textAlign: 'center',
+    fontSize: 22,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  //BORRAR
   sectionContainerR: {
     marginTop: '0%',
+    //me da problemas marginLeft marginRight
+    //sin embargo, el horizontal funciona
     marginHorizontal: '0%',
   },
 });

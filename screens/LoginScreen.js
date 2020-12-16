@@ -24,27 +24,26 @@ import styles from '@styles/styles';
 const LoginScreen: () => React$Node = () => {
   return (
     <>
-      <StatusBar hidden = {true} />
+      <StatusBar hidden={true} />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <View styles={styles.container}>
-              {/* <Image
-                styles={styles.picture}
-                source={require('./screenstest/descarga.png')}
-              /> */}
+            <View style={styles.ImageContainer}>
+              <Image
+                style={styles.logo}
+                source={require('../iconos_app/1x/GUDLogo.png')}
+              />
             </View>
-            <Text style={styles.sectionTitle}>Bienvenidos</Text>
-
-            <View style={styles.sectionContainerU}>
-              <View style={styles.ButtonContainer}>
+            <Text style={styles.sectionTitle}>¡BIENVENIDO!</Text>
+            <View style={styles.Container}>
+              <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Email</Text>
                 <TextInput style={styles.textInput1} editable maxLength={40} />
               </View>
             </View>
-            <View style={styles.sectionContainerR}>
+            <View style={styles.sectionContainer}>
               <View style={styles.ButtonContainer}>
                 <Text style={styles.sectionTitle}>Contraseña</Text>
                 <TextInput style={styles.textInput1} editable maxLength={40} />
