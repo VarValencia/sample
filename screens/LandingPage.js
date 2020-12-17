@@ -10,6 +10,8 @@ import React from 'react';
 import {ScrollView, View, Text, StatusBar, Button, Image} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const LandingPage: () => React$Node = () => {
   return (
@@ -40,19 +42,18 @@ const LandingPage: () => React$Node = () => {
                 </Text>
               </View>
             </View>
-            <View style={styles.sectionContainerButton}>
-              <View style={styles.gudSuccess}>
-                <Button
-                  style={styles.ButtonLandingSc}
-                  color={styles.gudButton}
+            <View style={styles.sectionContainer}>
+              <View style={styles.ButtonLandingSc}>
+                <TouchableHighlight
                   onPress={() => {
                     console.log('you tapped the button Iniciar');
-                  }}
-                  title="INICIAR SESIÓN"
-                />
+                  }}>
+                  <Text style={styles.ButtonTextLSc}>INICIAR SESION</Text>
+                </TouchableHighlight>
               </View>
               <View style={styles.gudSuccess}>
                 <Button
+                  color="black"
                   onPress={() => {
                     console.log('you tapped the button regist');
                   }}

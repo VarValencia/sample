@@ -30,32 +30,37 @@ const LoginScreen: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <View style={styles.ImageContainer}>
-              <Image
-                style={styles.logo}
-                source={require('../iconos_app/1x/GUDLogo.png')}
-              />
-            </View>
-            <Text style={styles.sectionTitle}>¡BIENVENIDO!</Text>
-            <View style={styles.Container}>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Email</Text>
-                <TextInput style={styles.textInput1} editable maxLength={40} />
+            <View style={styles.sectionContainer}>
+              <View style={styles.ImageContainer}>
+                <Image
+                  style={styles.logo}
+                  source={require('../iconos_app/1x/GUDLogo.png')}
+                />
               </View>
+              <Text style={styles.sectionTitle}>¡BIENVENIDO!</Text>
+              <Text style={styles.sectionDescription}>
+                Introduce Email y contraseña para acceder a tu cuenta
+              </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <View style={styles.ButtonContainer}>
-                <Text style={styles.sectionTitle}>Contraseña</Text>
+              <View style={styles.Container}>
+                <Text style={styles.TextLogSc}>Email</Text>
+              </View>
+              <TextInput style={styles.textInput1} editable maxLength={40} />
+            </View>
+            <View style={styles.sectionContainer}>
+              <View style={styles.Container}>
+                <Text style={styles.TextLogSc}>Contraseña</Text>
                 <TextInput style={styles.textInput1} editable maxLength={40} />
               </View>
               <View styles={styles.sectionContainerR}>
-                <View styles={styles.sectionContainerR}>
-                  <Button
+                <View style={styles.ButtonLoginSc}>
+                  <TouchableHighlight
                     onPress={() => {
-                      console.log('you tapped the button acceder');
-                    }}
-                    title="ACCEDER"
-                  />
+                      console.log('you tapped the button ACCEDER');
+                    }}>
+                    <Text style={styles.ButtonTextLSc}>ACCEDER</Text>
+                  </TouchableHighlight>
                 </View>
               </View>
             </View>
