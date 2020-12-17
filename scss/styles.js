@@ -14,6 +14,7 @@ const Colors = {
 export default StyleSheet.create({
   gudButton: {
     backgroundColor: Colors.gudGreenLight,
+    color: Colors.black,
   },
   engine: {
     position: 'absolute',
@@ -32,7 +33,7 @@ export default StyleSheet.create({
   sectionContainerButton: {
     position: 'relative',
     textAlign: 'center',
-    marginTop: '40%',
+    marginTop: '20%',
     marginHorizontal: '20%',
     marginVertical: '10%',
   },
@@ -43,7 +44,7 @@ export default StyleSheet.create({
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: 36,
+    fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
   },
@@ -92,6 +93,7 @@ export default StyleSheet.create({
     marginHorizontal: '50%',
   },
   textInput1: {
+    width: 240,
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
@@ -101,8 +103,16 @@ export default StyleSheet.create({
 
   //estilo que debería funcionar para el botón
   ButtonLandingSc: {
-    backgroundColor: '#85e085',
-    opacity: 0.6,
+    margin: '10%',
+    position: 'relative',
+    width: 200,
+    height: 40,
+    backgroundColor: '#C1E3E2',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    opacity: 0.4,
   },
   sectionTitle1: {
     textAlign: 'center',
@@ -110,11 +120,52 @@ export default StyleSheet.create({
     fontWeight: '600',
     color: Colors.black,
   },
-  //BORRAR
+  //landing screen
+  ButtonTextLSc: {
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.black,
+    marginHorizontal: '10%',
+    marginVertical: '4%',
+  },
   sectionContainerR: {
-    marginTop: '0%',
-    //me da problemas marginLeft marginRight
-    //sin embargo, el horizontal funciona
-    marginHorizontal: '0%',
+    margin: '20%',
+    position: 'relative',
+    width: 200,
+    height: 40,
+    backgroundColor: '#62BDBA',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    opacity: 0.4,
+  },
+  ButtonContainer: {
+    position: 'relative',
+    textAlign: 'center',
+    marginTop: '20%',
+    marginHorizontal: '20%',
+    marginVertical: '10%',
+  },
+  TextLogSc: {
+    textAlign: 'left',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.black,
+    marginHorizontal: '10%',
+    marginVertical: '4%',
+  },
+  ButtonLoginSc: {
+    margin: '10%',
+    position: 'relative',
+    width: 200,
+    height: 40,
+    backgroundColor: '#62BDBA',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    opacity: 0.4,
   },
 });
