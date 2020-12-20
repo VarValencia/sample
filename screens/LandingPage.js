@@ -7,11 +7,10 @@
  */
 
 import React from 'react';
-import {ScrollView, View, Text, StatusBar, Button, Image} from 'react-native';
+import { ScrollView, View, Text, StatusBar, Button, Image } from 'react-native';
 import styles from '@styles/styles';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableHighlight} from 'react-native-gesture-handler';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
 const LandingPage: () => React$Node = () => {
   return (
