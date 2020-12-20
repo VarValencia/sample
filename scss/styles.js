@@ -1,7 +1,8 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-// App Color Theme
+// App Theme
 EStyleSheet.build({
+  // COLORS
   $black: '#000',
   $gudBlack: '#505050',
   $gudWhite: '#FFF',
@@ -9,9 +10,31 @@ EStyleSheet.build({
   $gudGreenMedium: '#C1E3E2',
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
+
+  // PADDINGS & MARGINS
+  $gudBodyMarginH: "20%",
+  $gudBodyMarginV: "20%",
 })
 
 export default EStyleSheet.create({
+  // Sorted styles
+  scrollView: {
+    position: "relative"
+  },
+  body: {
+    textAlign: 'center',
+    marginHorizontal: '$gudBodyMarginH',
+    marginVertical: '$gudBodyMarginV'
+  },
+  cardContainer: {
+    position: 'relative',
+    marginVertical: '5%',
+    textAlign: 'center'
+  },
+
+
+
+  // Old styles
   gudButton: {
     backgroundColor: '$gudGreenLight',
     color: '$gudBlack',
@@ -20,15 +43,6 @@ export default EStyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 0,
-  },
-  body: {
-    textAlign: 'center',
-  },
-  sectionContainer: {
-    position: 'relative',
-    marginVertical: '5%',
-    textAlign: 'center',
-    marginHorizontal: '20%',
   },
   sectionContainerButton: {
     position: 'relative',
@@ -60,7 +74,6 @@ export default EStyleSheet.create({
     fontWeight: '400',
     textAlign: 'center',
   },
-  //prefabricado por el engine
   highlight: {
     fontWeight: '700',
   },
