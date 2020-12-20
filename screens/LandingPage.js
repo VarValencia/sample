@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { ScrollView, View, Text, StatusBar, Button, Image } from 'react-native';
+import { ScrollView, View, Text, StatusBar, Image } from 'react-native';
 import styles from '@styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableHighlight } from 'react-native-gesture-handler';
@@ -21,7 +21,7 @@ const LandingPage: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
+            <View style={styles.cardContainer}>
               <View style={styles.ImageContainer}>
                 <Image
                   style={styles.logo}
@@ -41,7 +41,7 @@ const LandingPage: () => React$Node = () => {
                 </Text>
               </View>
             </View>
-            <View style={styles.sectionContainer}>
+            <View style={styles.cardContainer}>
               <View style={styles.ButtonLandingSc}>
                 <TouchableHighlight
                   onPress={() => {
