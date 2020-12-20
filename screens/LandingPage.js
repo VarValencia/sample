@@ -48,17 +48,16 @@ const LandingPage: () => React$Node = () => {
                   onPress={() => {
                     console.log('you tapped the button Iniciar');
                   }}>
-                  <Text style={styles.ButtonTextLSc}>INICIAR SESION</Text>
+                  <Text style={styles.ButtonTextLandingSc}>INICIAR SESION</Text>
                 </TouchableHighlight>
               </View>
-              <View style={styles.gudSuccess}>
-                <Button
-                  color="black"
+              <View style={styles.ButtonLandingSc2}>
+                <TouchableHighlight
                   onPress={() => {
-                    console.log('you tapped the button regist');
-                  }}
-                  title="REGISTRARSE "
-                />
+                    console.log('you tapped the button Iniciar');
+                  }}>
+                  <Text style={styles.ButtonTextLandingSc}>REGISTRARSE</Text>
+                </TouchableHighlight>
               </View>
             </View>
           </View>
