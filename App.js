@@ -23,7 +23,10 @@ const App: () => React$Node = () => {
     <>
       <SafeAreaProvider>
         <NavigationContainer>
-          <RootStack.Navigator initialRouteName="LandingPage" headerMode="none">
+          <RootStack.Navigator screenOptions={{
+            headerStyle: { elevation: 0 },
+            cardStyle: { backgroundColor: '#fff' }
+          }} initialRouteName="LandingPage" headerMode="none">
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
             <RootStack.Screen
