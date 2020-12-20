@@ -30,8 +30,8 @@ const LoginScreen: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <View style={styles.ImageContainer}>
+            <View style={styles.sectionContainerMarginTop}>
+              <View>
                 <Image
                   style={styles.logo}
                   source={require('../iconos_app/1x/GUDLogo.png')}
@@ -42,26 +42,22 @@ const LoginScreen: () => React$Node = () => {
                 Introduce Email y contraseña para acceder a tu cuenta
               </Text>
             </View>
-            <View style={styles.sectionContainer}>
-              <View style={styles.Container}>
+            <View style={styles.Container}>
+              <View style={styles.sectionContainerLogSc}>
                 <Text style={styles.TextLogSc}>Email</Text>
+                <TextInput style={styles.textInput1} editable maxLength={40} />
               </View>
-              <TextInput style={styles.textInput1} editable maxLength={40} />
-            </View>
-            <View style={styles.sectionContainer}>
-              <View style={styles.Container}>
+              <View style={styles.sectionContainerLogSc}>
                 <Text style={styles.TextLogSc}>Contraseña</Text>
                 <TextInput style={styles.textInput1} editable maxLength={40} />
               </View>
-              <View styles={styles.sectionContainerR}>
-                <View style={styles.ButtonLoginSc}>
-                  <TouchableHighlight
-                    onPress={() => {
-                      console.log('you tapped the button ACCEDER');
-                    }}>
-                    <Text style={styles.ButtonTextLSc}>ACCEDER</Text>
-                  </TouchableHighlight>
-                </View>
+              <View style={styles.ButtonLogSc}>
+                <TouchableHighlight
+                  onPress={() => {
+                    console.log('you tapped the button ACCEDER');
+                  }}>
+                  <Text style={styles.ButtonTextLogSc}>Acceder</Text>
+                </TouchableHighlight>
               </View>
             </View>
           </View>
