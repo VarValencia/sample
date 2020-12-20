@@ -56,8 +56,9 @@ export default StyleSheet.create({
   },
   sectionDescription: {
     marginTop: 8,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '400',
+    textAlign: 'center',
   },
   //prefabricado por el engine
   highlight: {
@@ -77,7 +78,7 @@ export default StyleSheet.create({
   },
 
   Container: {
-    marginTop: 20,
+    marginTop: 15,
   },
   picture: {
     //importante el position
@@ -90,13 +91,15 @@ export default StyleSheet.create({
     width: 50,
     height: 50,
     marginVertical: '5%',
-    marginHorizontal: '50%',
+    marginHorizontal: '40%',
   },
   textInput1: {
-    width: 240,
-    height: 40,
+    width: 300,
+    height: 30,
     borderColor: 'gray',
     borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#00000030',
   },
   //LogIn container botones especificos
   sectionContainerU: {},
@@ -113,33 +116,28 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: '#fff',
     opacity: 0.4,
+    marginHorizontal: '10%',
+    marginTop: '15%',
   },
   sectionTitle1: {
     textAlign: 'center',
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: '600',
     color: Colors.black,
   },
   //landing screen
-  ButtonTextLSc: {
+  ButtonTextLandingSc: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
     color: Colors.black,
-    marginHorizontal: '10%',
-    marginVertical: '4%',
   },
-  sectionContainerR: {
-    margin: '20%',
+  //parte de abajo de loginSc
+  sectionContainerLogSc: {
     position: 'relative',
-    width: 200,
-    height: 40,
-    backgroundColor: '#62BDBA',
+    marginVertical: '5%',
     textAlign: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-    opacity: 0.4,
+    marginHorizontal: '10%',
   },
   ButtonContainer: {
     position: 'relative',
@@ -150,22 +148,67 @@ export default StyleSheet.create({
   },
   TextLogSc: {
     textAlign: 'left',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '600',
     color: Colors.black,
-    marginHorizontal: '10%',
-    marginVertical: '4%',
+    marginHorizontal: '0%',
+    marginVertical: '2%',
   },
-  ButtonLoginSc: {
+  ButtonLogSc: {
     margin: '10%',
     position: 'relative',
-    width: 200,
-    height: 40,
+    width: 300,
+    height: 30,
     backgroundColor: '#62BDBA',
     textAlign: 'center',
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#fff',
     opacity: 0.4,
+    marginHorizontal: '10%',
+    marginVertical: '15%',
+  },
+  sectionContainerMarginTop: {
+    position: 'relative',
+    marginVertical: '25%',
+    textAlign: 'center',
+    marginHorizontal: '20%',
+  },
+  ButtonTextLogSc: {
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  ButtonRegisterSc: {
+    margin: '10%',
+    position: 'relative',
+    width: 200,
+    height: 40,
+    backgroundColor: '#C1E3E2',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+  },
+  ButtonTextRegisterSc: {
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  ButtonLandingSc2: {
+    margin: '10%',
+    position: 'relative',
+    width: 200,
+    height: 40,
+    backgroundColor: '#C1E3E2',
+    textAlign: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    opacity: 0.4,
+    marginHorizontal: '10%',
+    marginVertical: '0%',
   },
 });
