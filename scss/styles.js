@@ -15,10 +15,14 @@ EStyleSheet.build({
   $gudGreenDark: '#62BDBA',
 
   // PADDINGS & MARGINS
+  // Body
   $gudBodyMarginH: "20%",
   $gudBodyMarginV: "20%",
+  // Titles
   $gudTitlePaddingTop: "5%",
   $gudTitlePaddingBottom: "20%",
+  // Buttons
+  $gudButtonMarginH: "40%",
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
@@ -27,7 +31,14 @@ EStyleSheet.build({
 
   $gudSM: 10,
   $gudMD: 15,
-  $gudLG: 20
+  $gudLG: 20,
+
+  // Screen Dimensions
+  $scrWidth: Dimensions.get('window').width,
+  $scrheight: Dimensions.get('window').height,
+
+  // General styling
+  $gudBorderRadius: 15,
 })
 
 export default EStyleSheet.create({
@@ -36,9 +47,13 @@ export default EStyleSheet.create({
     position: "relative"
   },
   body: {
+    position: 'relative',
+    top: 0,
+    left: 0,
     textAlign: 'center',
     marginHorizontal: '$gudBodyMarginH',
     marginVertical: '$gudBodyMarginV',
+    backgroundColor: "$gudWhite",
   },
 
   // Containers
@@ -63,7 +78,11 @@ export default EStyleSheet.create({
     paddingTop: '$gudTitlePaddingTop',
     paddingBottom: '$gudTitlePaddingBottom'
   },
-
+  gudButtonText: {
+    fontFamily: '$sb',
+    marginVertical: "3%",
+    color: '$gudGreenDark'
+  },
 
   // Text sizes and weight
   textLG: {
@@ -87,6 +106,32 @@ export default EStyleSheet.create({
     width: Dimensions.get('window').width * 80 / 100,
     height: Dimensions.get('window').height * 30 / 100,
     margin: 10
+  },
+
+  // Button styling
+  credentialButtonsContainer: {
+    position: 'relative',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: Dimensions.get("window").height * 10/100,
+  },
+  credentialButton: {
+    width: Dimensions.get("window").width * 60 / 100,
+    height: Dimensions.get("window").height * 5 / 100,
+    position: 'relative',
+    marginHorizontal: '$gudButtonMarginH',
+    backgroundColor: '$gudWhite',
+    borderRadius: '$gudBorderRadius',
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    margin: '2%',
+
+  },
+  active: {
+    backgroundColor: '$gudGreenLight',
+    borderColor: '$gudGreenLight',
   },
 
 
@@ -159,22 +204,6 @@ export default EStyleSheet.create({
   },
   //LogIn container botones especificos
   sectionContainerU: {},
-
-  //estilo que debería funcionar para el botón
-  ButtonLandingSc: {
-    margin: '10%',
-    position: 'relative',
-    width: 200,
-    height: 40,
-    backgroundColor: '#C1E3E2',
-    textAlign: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-    opacity: 0.4,
-    marginHorizontal: '10%',
-    marginTop: '15%',
-  },
   sectionTitle1: {
     textAlign: 'center',
     fontSize: 20,

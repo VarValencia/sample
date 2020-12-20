@@ -38,21 +38,21 @@ const LandingPage: () => React$Node = () => {
               <GudText style={[styles.textLG]} text='Entra al espacio donde puedes SER' />
               {/* <GudText style={[styles.textFocus, styles.textLG]} text='SER' /> */}
             </View>
-            <View style={styles.cardContainer}>
-              <View style={styles.ButtonLandingSc}>
+            <View style={styles.credentialButtonsContainer}>
+              <View style={[styles.credentialButton, styles.active]}>
                 <TouchableHighlight
                   onPress={() => {
                     console.log('you tapped the button Iniciar');
                   }}>
-                  <Text style={styles.ButtonTextLandingSc}>INICIAR SESION</Text>
+                  <GudText style={[styles.gudButtonText, styles.textMD]} text='Iniciar sesión'/>
                 </TouchableHighlight>
               </View>
-              <View style={styles.ButtonLandingSc2}>
+              <View style={styles.credentialButton}>
                 <TouchableHighlight
                   onPress={() => {
                     console.log('you tapped the button Iniciar');
                   }}>
-                  <Text style={styles.ButtonTextLandingSc}>REGISTRARSE</Text>
+                  <GudText style={[styles.gudButtonText, styles.textMD]} text='Regístrate'/>
                 </TouchableHighlight>
               </View>
             </View>
