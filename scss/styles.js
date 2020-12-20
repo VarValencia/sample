@@ -17,7 +17,7 @@ EStyleSheet.build({
 })
 
 export default EStyleSheet.create({
-  // Sorted styles
+  // New styles
   scrollView: {
     position: "relative"
   },
@@ -30,6 +30,11 @@ export default EStyleSheet.create({
     position: 'relative',
     marginVertical: '5%',
     textAlign: 'center'
+  },
+  appLogoContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
 
@@ -98,13 +103,6 @@ export default EStyleSheet.create({
     position: 'relative',
     width: 50,
     height: 50,
-  },
-  logo: {
-    position: 'relative',
-    width: 50,
-    height: 50,
-    marginVertical: '5%',
-    marginHorizontal: '40%',
   },
   textInput1: {
     width: 300,

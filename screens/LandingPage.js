@@ -22,19 +22,16 @@ const LandingPage: () => React$Node = () => {
           style={styles.scrollView}>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.ImageContainer}>
+              <View style={styles.appLogoContainer}>
                 <Image
-                  style={styles.logo}
                   source={require('../iconos_app/1x/GUDLogo.png')}
                 />
               </View>
               <Text style={styles.sectionTitle}>Bienvenidos</Text>
-              <View styles={styles.imageContainer}>
-                <Image
-                  styles={styles.picture}
-                  source={require('../android/app/src/main/assets/images/LoginScreen.png')}
-                />
-              </View>
+              <Image
+                styles={styles.picture}
+                source={require('../android/app/src/main/assets/images/LoginScreen.png')}
+              />
               <View style={styles.Container}>
                 <Text style={styles.sectionMessage}>
                   Entra al espacio donde puedes SER
