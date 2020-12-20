@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "macdroid": "npx react-native run-android",
     "ios": "react-native run-ios",
+    "macios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
