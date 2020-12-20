@@ -80,7 +80,7 @@ export default EStyleSheet.create({
   },
   gudButtonText: {
     fontFamily: '$sb',
-    marginVertical: "3%",
+    marginVertical: "4%",
     color: '$gudGreenDark'
   },
 
@@ -115,25 +115,27 @@ export default EStyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Dimensions.get("window").height * 10/100,
+    marginTop: Dimensions.get("window").height * 10 / 100,
   },
   credentialButton: {
     width: Dimensions.get("window").width * 60 / 100,
     height: Dimensions.get("window").height * 5 / 100,
-    position: 'relative',
     marginHorizontal: '$gudButtonMarginH',
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
     margin: '2%',
-
   },
   active: {
     backgroundColor: '$gudGreenLight',
     borderColor: '$gudGreenLight',
   },
-
+  touchableActive: {
+    width: Dimensions.get("window").width * 60 / 100,
+    height: Dimensions.get("window").height * 5 / 100,
+    borderRadius: '$gudBorderRadius',
+  },
 
 
 
