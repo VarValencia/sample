@@ -1,5 +1,8 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
+// Import Dimensions for screen measurement
+import { Dimensions } from 'react-native';
+
 // App Theme
 EStyleSheet.build({
   // COLORS
@@ -14,6 +17,17 @@ EStyleSheet.build({
   // PADDINGS & MARGINS
   $gudBodyMarginH: "20%",
   $gudBodyMarginV: "20%",
+  $gudTitlePaddingTop: "5%",
+  $gudTitlePaddingBottom: "20%",
+
+  // FONTS & SIZES
+  $b: 'Poppins-Bold',
+  $sb: 'Poppins-SemiBold',
+  $rg: 'Poppins-Regular',
+
+  $gudSM: 10,
+  $gudMD: 15,
+  $gudLG: 20
 })
 
 export default EStyleSheet.create({
@@ -24,18 +38,57 @@ export default EStyleSheet.create({
   body: {
     textAlign: 'center',
     marginHorizontal: '$gudBodyMarginH',
-    marginVertical: '$gudBodyMarginV'
+    marginVertical: '$gudBodyMarginV',
   },
+
+  // Containers
   cardContainer: {
     position: 'relative',
-    marginVertical: '5%',
     textAlign: 'center'
   },
-  appLogoContainer: {
+  appImageContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
   },
+
+  // Text styles
+  gudText: {
+    fontFamily: '$sb',
+    color: '$gudBlack',
+    textAlign: 'center'
+  },
+  title: {
+    fontFamily: '$b',
+    paddingTop: '$gudTitlePaddingTop',
+    paddingBottom: '$gudTitlePaddingBottom'
+  },
+
+
+  // Text sizes and weight
+  textLG: {
+    fontSize: '$gudLG',
+  },
+  textMD: {
+    fontSize: '$gudMD',
+  },
+  textSM: {
+    fontSize: '$gudSM',
+  },
+
+  // Text decorations
+  textFocus: {
+    color: '$gudGreenDark'
+  },
+
+  // Image styling
+  gudCardImage: {
+    resizeMode: 'contain',
+    width: Dimensions.get('window').width * 80 / 100,
+    height: Dimensions.get('window').height * 30 / 100,
+    margin: 10
+  },
+
 
 
 
@@ -95,15 +148,7 @@ export default EStyleSheet.create({
     margin: '10%',
   },
 
-  Container: {
-    marginTop: 15,
-  },
-  picture: {
-    //importante el position
-    position: 'relative',
-    width: 50,
-    height: 50,
-  },
+
   textInput1: {
     width: 300,
     height: 30,
