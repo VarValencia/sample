@@ -7,9 +7,9 @@
  */
 import 'react-native-gesture-handler';
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Importación de las vistas
 import LandingPage from '@screens/LandingPage';
@@ -33,52 +33,6 @@ const App: () => React$Node = () => {
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
-      {/* <NavigationContainer>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            <View style={styles.body}>
-              <View style={styles.sectionImageContainer}>
-                <View style={styles.imageContainer}>
-                  <Text style={styles.sectionTitle}>Bienvenidos</Text>
-                  <View style={styles.ButtonContainer}>
-                    <Image
-                      styles={styles.form}
-                      source={require('./screenstest/descarga.png')}
-                    />
-                  </View>
-                  <Text tyle={styles.sectionMessage}>
-                    Entra a Un lugar donde puedes ser
-                </Text>
-                </View>
-              </View>
-              <View style={styles.sectionContainerButton}>
-                <View style={styles.ButtonContainer}>
-                  <Button
-                    onPress={() => {
-                      console.log('you tapped the button Iniciar');
-                    }}
-                    title="INICIAR SESIÓN"
-                  />
-                </View>
-              </View>
-
-              <View style={styles.sectionContainerButton1}>
-                <View style={styles.ButtonContainer}>
-                  <Button
-                    onPress={() => {
-                      console.log('you tapped the button regist');
-                    }}
-                    title="REGISTRARSE "
-                  />
-                </View>
-              </View>
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </NavigationContainer> */}
     </>
   );
 };
