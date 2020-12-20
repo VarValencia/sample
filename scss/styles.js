@@ -1,20 +1,20 @@
-import {StyleSheet} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 // App Color Theme
-const Colors = {
-  black: '#000',
-  gudBlack: '#505050',
-  gudWhite: '#FFF',
-  gudGreenLight: '#E0F0F0',
-  gudGreenMedium: '#C1E3E2',
-  gudGreenRegular: '#A2D6D6',
-  gudGreenDark: '#62BDBA',
-};
+EStyleSheet.build({
+  $black: '#000',
+  $gudBlack: '#505050',
+  $gudWhite: '#FFF',
+  $gudGreenLight: '#E0F0F0',
+  $gudGreenMedium: '#C1E3E2',
+  $gudGreenRegular: '#A2D6D6',
+  $gudGreenDark: '#62BDBA',
+})
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   gudButton: {
-    backgroundColor: Colors.gudGreenLight,
-    color: Colors.black,
+    backgroundColor: '$gudGreenLight',
+    color: '$gudBlack',
   },
   engine: {
     position: 'absolute',
@@ -46,13 +46,13 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   sectionMessage: {
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   sectionDescription: {
     marginTop: 8,
@@ -123,14 +123,14 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   //landing screen
   ButtonTextLandingSc: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   //parte de abajo de loginSc
   sectionContainerLogSc: {
@@ -150,7 +150,7 @@ export default StyleSheet.create({
     textAlign: 'left',
     fontSize: 14,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
     marginHorizontal: '0%',
     marginVertical: '2%',
   },
@@ -178,7 +178,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   ButtonRegisterSc: {
     margin: '10%',
@@ -195,7 +195,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
-    color: Colors.black,
+    color: '$gudBlack',
   },
   ButtonLandingSc2: {
     margin: '10%',
