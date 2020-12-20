@@ -9,6 +9,7 @@ module.exports = {
           '@styles': './scss',
           '@assets': './icons_app',
           '@screens': './screens',
+          '@android': './android/app/src/main/assets',
         },
       },
     ],
