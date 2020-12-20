@@ -14,6 +14,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 // Importación de las vistas
 import LandingPage from '@screens/LandingPage';
 import LoginScreen from '@screens/LoginScreen';
+import RegisterScreen from '@screens/RegisterScreen';
 
 const RootStack = createStackNavigator();
 
@@ -25,6 +26,10 @@ const App: () => React$Node = () => {
           <RootStack.Navigator initialRouteName="LandingPage" headerMode="none">
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
+            <RootStack.Screen
+              name="RegisterScreen"
+              component={RegisterScreen}
+            />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
