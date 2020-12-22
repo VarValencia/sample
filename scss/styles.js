@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 // Import Dimensions for screen measurement
-import { Dimensions } from 'react-native';
+import {Dimensions} from 'react-native';
 
 // App Theme
 EStyleSheet.build({
@@ -16,13 +16,13 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyMarginH: "20%",
-  $gudBodyMarginV: "20%",
+  $gudBodyMarginH: '20%',
+  $gudBodyMarginV: '20%',
   // Titles
-  $gudTitlePaddingTop: "5%",
-  $gudTitlePaddingBottom: "20%",
+  $gudTitlePaddingTop: '5%',
+  $gudTitlePaddingBottom: '20%',
   // Buttons
-  $gudButtonMarginH: "40%",
+  $gudButtonMarginH: '40%',
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
@@ -39,12 +39,12 @@ EStyleSheet.build({
 
   // General styling
   $gudBorderRadius: 15,
-})
+});
 
 export default EStyleSheet.create({
   // New styles
   scrollView: {
-    position: "relative"
+    position: 'relative',
   },
   body: {
     position: 'relative',
@@ -53,35 +53,37 @@ export default EStyleSheet.create({
     textAlign: 'center',
     marginHorizontal: '$gudBodyMarginH',
     marginVertical: '$gudBodyMarginV',
-    backgroundColor: "$gudWhite",
+    backgroundColor: '$gudWhite',
   },
 
   // Containers
   cardContainer: {
     position: 'relative',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   appImageContainer: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
   // Text styles
   gudText: {
     fontFamily: '$sb',
     color: '$gudBlack',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   title: {
     fontFamily: '$b',
     paddingTop: '$gudTitlePaddingTop',
-    paddingBottom: '$gudTitlePaddingBottom'
+    paddingBottom: '$gudTitlePaddingBottom',
   },
   gudButtonText: {
     fontFamily: '$sb',
-    marginVertical: "4%",
-    color: '$gudGreenDark'
+    elevation: 99,
+    zIndex: 99,
+    marginVertical: '4%',
+    color: '$gudGreenDark',
   },
 
   // Text sizes and weight
@@ -97,15 +99,15 @@ export default EStyleSheet.create({
 
   // Text decorations
   textFocus: {
-    color: '$gudGreenDark'
+    color: '$gudGreenDark',
   },
 
   // Image styling
   gudCardImage: {
     resizeMode: 'contain',
-    width: Dimensions.get('window').width * 80 / 100,
-    height: Dimensions.get('window').height * 30 / 100,
-    margin: 10
+    width: (Dimensions.get('window').width * 80) / 100,
+    height: (Dimensions.get('window').height * 30) / 100,
+    margin: 10,
   },
 
   // Button styling
@@ -115,11 +117,11 @@ export default EStyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Dimensions.get("window").height * 10 / 100,
+    marginTop: (Dimensions.get('window').height * 10) / 100,
   },
   credentialButton: {
-    width: Dimensions.get("window").width * 60 / 100,
-    height: Dimensions.get("window").height * 5 / 100,
+    width: (Dimensions.get('window').width * 60) / 100,
+    height: (Dimensions.get('window').height * 5) / 100,
     marginHorizontal: '$gudButtonMarginH',
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
@@ -132,12 +134,10 @@ export default EStyleSheet.create({
     borderColor: '$gudGreenLight',
   },
   touchableActive: {
-    width: Dimensions.get("window").width * 60 / 100,
-    height: Dimensions.get("window").height * 5 / 100,
+    width: (Dimensions.get('window').width * 60) / 100,
+    height: (Dimensions.get('window').height * 5) / 100,
     borderRadius: '$gudBorderRadius',
   },
-
-
 
   // Old styles
   gudButton: {
@@ -194,9 +194,8 @@ export default EStyleSheet.create({
   gudSuccess: {
     margin: '10%',
   },
-
-
-  textInput1: {
+  //modelo de cualquier text input
+  gudInput: {
     width: 300,
     height: 30,
     borderColor: 'gray',
@@ -212,15 +211,14 @@ export default EStyleSheet.create({
     fontWeight: '600',
     color: '$gudBlack',
   },
-  //landing screen
   ButtonTextLandingSc: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
     color: '$gudBlack',
   },
-  //parte de abajo de loginSc
-  sectionContainerLogSc: {
+  //Contiene un text input y un text dentro de la parte de abajo de la logcreen
+  GudContainerBigMarin: {
     position: 'relative',
     marginVertical: '5%',
     textAlign: 'center',
@@ -233,7 +231,7 @@ export default EStyleSheet.create({
     marginHorizontal: '20%',
     marginVertical: '10%',
   },
-  TextLogSc: {
+  gudTextUpButton: {
     textAlign: 'left',
     fontSize: 14,
     fontWeight: '600',
@@ -241,7 +239,7 @@ export default EStyleSheet.create({
     marginHorizontal: '0%',
     marginVertical: '2%',
   },
-  ButtonLogSc: {
+  gudButtonDark: {
     margin: '10%',
     position: 'relative',
     width: 300,
@@ -261,7 +259,7 @@ export default EStyleSheet.create({
     textAlign: 'center',
     marginHorizontal: '20%',
   },
-  ButtonTextLogSc: {
+  gudButtonDark: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
@@ -278,24 +276,10 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderColor: '#fff',
   },
-  ButtonTextRegisterSc: {
+  GudText: {
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
     color: '$gudBlack',
-  },
-  ButtonLandingSc2: {
-    margin: '10%',
-    position: 'relative',
-    width: 200,
-    height: 40,
-    backgroundColor: '#C1E3E2',
-    textAlign: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-    opacity: 0.4,
-    marginHorizontal: '10%',
-    marginVertical: '0%',
   },
 });
