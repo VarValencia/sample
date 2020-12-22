@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 // Import Dimensions for screen measurement
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 
 // App Theme
 EStyleSheet.build({
@@ -137,6 +137,8 @@ export default EStyleSheet.create({
     width: (Dimensions.get('window').width * 60) / 100,
     height: (Dimensions.get('window').height * 5) / 100,
     borderRadius: '$gudBorderRadius',
+    display: 'flex',
+    justifyContent: 'center',
   },
 
   // Old styles
