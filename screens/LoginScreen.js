@@ -41,18 +41,18 @@ const LoginScreen: () => React$Node = () => {
                 style={[styles.GudText, styles.TextLogSc]}
                 text="Email"
               />
-              <TextInput style={styles.gudInput} editable maxLength={40} />
+              <TextInput style={styles.gudInput} maxLength={40} />
             </View>
             <View style={styles.gudContainierBigMargin}>
               <GudText style={[styles.TextUpButton]} text="Contraseña" />
-              <TextInput style={styles.gudInput} editable maxLength={40} />
+              <TextInput style={styles.gudInput} maxLength={40} />
             </View>
-            <View style={styles.ButtonLogSc}>
+            <View style={styles.GudButtonDarks}>
               <TouchableHighlight
                 onPress={() => {
                   console.log('you tapped the button ACCEDER');
                 }}>
-                <GudText style={styles.GudButtonDark} text="Login" />
+                <GudText style={styles.GudButtonDark} text="Acceder" />
               </TouchableHighlight>
             </View>
           </View>
@@ -62,4 +62,4 @@ const LoginScreen: () => React$Node = () => {
   );
 };
 
-export default LoginScreen;
+export default LoginScreen;
