@@ -41,7 +41,7 @@ const LoginScreen: () => React$Node = () => {
                 style={[styles.GudText, styles.TextLogSc]}
                 text="Email"
               />
-              <TextInput style={styles.gudInput1} editable maxLength={40} />
+              <TextInput style={styles.gudInput} editable maxLength={40} />
             </View>
             <View style={styles.gudContainierBigMargin}>
               <GudText style={[styles.TextUpButton]} text="Contraseña" />
