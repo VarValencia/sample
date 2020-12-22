@@ -15,6 +15,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import LandingPage from '@screens/LandingPage';
 import LoginScreen from '@screens/LoginScreen';
 import RegisterScreen from '@screens/RegisterScreen';
+import RegisterScreenComplete from '@screens/RegisterScreenComplete';
 
 const RootStack = createStackNavigator();
 
@@ -28,13 +29,17 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LoginScreen"
+            initialRouteName="RegisterScreen"
             headerMode="none">
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
             <RootStack.Screen
               name="RegisterScreen"
               component={RegisterScreen}
+            />
+            <RootStack.Screen
+              name="RegisterScreenComplete"
+              component={RegisterScreenComplete}
             />
           </RootStack.Navigator>
         </NavigationContainer>

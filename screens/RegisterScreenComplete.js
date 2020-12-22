@@ -13,7 +13,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const RegisterScreen: () => React$Node = () => {
+const RegisterScreenComplete: () => React$Node = () => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -23,30 +23,35 @@ const RegisterScreen: () => React$Node = () => {
             <View style={styles.appImageContainer}>
               <Image source={require('../iconos_app/1x/GUDLogo.png')} />
             </View>
-            <View style={styles.gudContainerBigMargin}>
-              <GudText
-                style={[styles.title, styles.textUp]}
-                text="Introduce tu email y contraseña para comenzar el registro "
-              />
-            </View>
+            <GudText
+              style={[styles.title, styles.textMD]}
+              text="Completa tu cuenta"
+            />
             <View style={styles.gudContainerBigMargin}>
               <GudText
                 style={[styles.GudText, styles.gudTextUpButton]}
-                text="Email"
+                text="Nombre de usuario"
               />
               <TextInput style={styles.gudInput} maxLength={40} />
             </View>
             <View style={styles.gudContainerBigMargin}>
               <GudText
                 style={[styles.GudText, styles.gudTextUpButton]}
-                text="Contraseña"
+                text="Fecha de nacimiento"
               />
               <TextInput style={styles.gudInput} maxLength={40} />
             </View>
             <View style={styles.gudContainerBigMargin}>
               <GudText
                 style={[styles.GudText, styles.gudTextUpButton]}
-                text="Repite contraseña"
+                text="Nacionalidad"
+              />
+              <TextInput style={styles.gudInput} maxLength={40} />
+            </View>
+            <View style={styles.gudContainerBigMargin}>
+              <GudText
+                style={[styles.GudText, styles.gudTextUpButton]}
+                text="Idioma"
               />
               <TextInput style={styles.gudInput} maxLength={40} />
             </View>
@@ -65,4 +70,4 @@ const RegisterScreen: () => React$Node = () => {
   );
 };
 
-export default RegisterScreen;
+export default RegisterScreenComplete;
