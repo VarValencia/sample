@@ -149,10 +149,8 @@ export default EStyleSheet.create({
 
   // GUD Radio Button
   gudRadioButtonGroup: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    textAlign: "left"
   },
   rbCircle: {
     height: 20,
