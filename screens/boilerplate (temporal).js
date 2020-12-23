@@ -7,144 +7,62 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Button,
-  TouchableHighlight
-} from 'react-native';
+import {View, StatusBar, Image, TextInput} from 'react-native';
+import styles from '@styles/styles';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
+import GudText from '../components/GudText';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from  'react-native/Libraries/NewAppScreen';
-
-const App:   () => React$Node = () => {
+const OpenEmailScreen: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar hidden={true} />
       <SafeAreaView>
-        <ScrollView
-         contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          {/* <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+        <View style={styles.body}>
+          <View style={styles.cardContainer}>
+            <View style={styles.appImageContainer}>
+              <Image source={require('../iconos_app/1x/GUDLogo.png')} />
             </View>
-          )} */}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <View style={styles.ButtonContainer}>
-                 <Button 
-                  onPress ={()=> {
-                  console.log("you tapped the button 1");
-                  }}
-                  title= "GUD?"
-                  /> 
-              </View>            
-            </View> 
-            
-              <View style={styles.sectionContainer1}>
-                <View style={styles.ButtonContainer}>
-                  <Button 
-                    onPress ={()=> {
-                    console.log("you tapped the button 2");
-                    }}
-                    title= "Mas GUD?"
-                  />
-                </View>                
-              
-               {/* <Text style={styles.sectionTitle}>Paso uno</Text>  */}
-               {/* <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits. 
-                  </Text>  */}
-              </View> 
-            {/* <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View> */}
-            {/* <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View> */}
-            {/* <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View> */}
-            {/* <LearnMoreLinks /> */}
+            <GudText
+              style={[styles.gudMessage, styles.textLG]}
+              text="Enhorabuena!"
+            />
+            <GudText
+              style={[styles.gudMessage, styles.textMD]}
+              text="Estás a un paso de ser GUD"
+            />
+            <GudText
+              style={[styles.gudMessage, styles.textSM]}
+              text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
+            />
           </View>
-        </ScrollView>
+          <View style={styles.appImageContainer}>
+            <Image
+              style={styles.gudCardImage}
+              source={require('../android/app/src/main/assets/images/LoginScreen.png')}
+            />
+          </View>
+          <View style={styles.gudButtonDark}>
+            <TouchableHighlight
+              onPress={() => {
+                console.log('you tapped the button FINALIZAR');
+              }}>
+              <GudText
+                style={[styles.gudButtonText, styles.textMD]}
+                text="FINALIZAR"
+              />
+            </TouchableHighlight>
+          </View>
+          <View style={styles.gudContainerBigMargin}>
+            <GudText
+              style={[styles.GudText, styles.gudTextUpButton]}
+              text="Email"
+            />
+            <TextInput style={styles.gudInput} maxLength={40} />
+          </View>
+        </View>
       </SafeAreaView>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.black,
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems:'center',
-    flexWrap: "nowrap",
-  },
-  sectionContainer: {
-    marginTop: "70%", 
-    marginHorizontal: "10%",
-    backgroundColor: Colors.black,
-  },
-  sectionContainer1: {
-    marginTop: "2%", 
-    marginHorizontal: "10%",
-    backgroundColor: Colors.black,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-  ButtonContainer:{
-    margin:"0%",
-  },
-});
-
-export default App;
+export default OpenEmailScreen;
