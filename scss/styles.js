@@ -20,7 +20,7 @@ EStyleSheet.build({
   $gudBodyMarginV: '20%',
   // Titles
   $gudTitlePaddingTop: '5%',
-  $gudTitlePaddingBottom: '20%',
+  $gudSeparatorPaddingBottom: '20%',
   // Buttons
   $gudButtonMarginH: '40%',
 
@@ -82,7 +82,6 @@ export default EStyleSheet.create({
   title: {
     fontFamily: '$b',
     paddingTop: '$gudTitlePaddingTop',
-    paddingBottom: '$gudTitlePaddingBottom',
   },
   gudButtonText: {
     fontFamily: '$sb',
@@ -158,7 +157,7 @@ export default EStyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '$gudGreenDark',
-    alignItems: 'center', // To center the checked circle…
+    alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 10,
   },
@@ -166,8 +165,19 @@ export default EStyleSheet.create({
     width: 14,
     height: 14,
     borderRadius: 7,
-    backgroundColor: '$gudGreenMedium' // You can set it default or with yours one…
+    backgroundColor: '$gudGreenMedium'
   },
+
+  // General Styling
+  gudSeparator: {
+    position: 'relative',
+    width: Dimensions.get("window").width * 8 / 100,
+    height: Dimensions.get("window").height * 0.5 / 100,
+    backgroundColor: '$gudGreenDark',
+    borderRadius: '$gudBorderRadius',
+    marginBottom: '$gudSeparatorPaddingBottom'
+  },
+
 
   // Old styles
   gudButton: {
