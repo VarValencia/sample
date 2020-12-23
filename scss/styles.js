@@ -147,6 +147,30 @@ export default EStyleSheet.create({
     justifyContent: 'center',
   },
 
+  // GUD Radio Button
+  gudRadioButtonGroup: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  rbCircle: {
+    height: 20,
+    width: 20,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '$gudGreenDark',
+    alignItems: 'center', // To center the checked circle…
+    justifyContent: 'center',
+    marginHorizontal: 10,
+  },
+  rbCheckedCircle: {
+    width: 14,
+    height: 14,
+    borderRadius: 7,
+    backgroundColor: '$gudGreenMedium' // You can set it default or with yours one…
+  },
+
   // Old styles
   gudButton: {
     backgroundColor: '$gudGreenLight',
