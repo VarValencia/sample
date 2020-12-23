@@ -20,7 +20,8 @@ EStyleSheet.build({
   $gudBodyMarginV: '20%',
   // Titles
   $gudTitlePaddingTop: '5%',
-  $gudSeparatorPaddingBottom: '20%',
+  $gudSubTitlePaddingBottom: '20%',
+  $gudSeparatorPaddingBottom: '5%',
   // Buttons
   $gudButtonMarginH: '40%',
 
@@ -106,6 +107,10 @@ export default EStyleSheet.create({
   textFocus: {
     color: '$gudGreenDark',
   },
+  sectionDescription: {
+    textAlign: 'center',
+    paddingBottom: '$gudSubTitlePaddingBottom'
+  },
 
   // Image styling
   gudCardImage: {
@@ -179,6 +184,7 @@ export default EStyleSheet.create({
   },
 
 
+
   // Old styles
   gudButton: {
     backgroundColor: '$gudGreenLight',
@@ -213,12 +219,6 @@ export default EStyleSheet.create({
     fontWeight: '600',
     color: '$gudBlack',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 17,
-    fontWeight: '400',
-    textAlign: 'center',
-  },
   highlight: {
     fontWeight: '700',
   },
@@ -242,9 +242,10 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#00000030',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   //LogIn container botones especificos
-  sectionContainerU: {},
   sectionTitle1: {
     textAlign: 'center',
     fontSize: 20,

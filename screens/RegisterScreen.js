@@ -7,10 +7,10 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
+import { View, StatusBar, Image, TextInput } from 'react-native';
 import styles from '@styles/styles';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableHighlight} from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
 const RegisterScreen: () => React$Node = () => {
@@ -23,9 +23,14 @@ const RegisterScreen: () => React$Node = () => {
             <View style={styles.appImageContainer}>
               <Image source={require('../iconos_app/1x/GUDLogo.png')} />
             </View>
+            <GudText
+              style={[styles.title, styles.textLG]}
+              text="¡BIENVENIDO!"
+            />
+            <View style={styles.gudSeparator} />
             <View style={styles.gudContainerBigMargin}>
               <GudText
-                style={[styles.title, styles.textUp]}
+                style={[styles.subTitle, styles.textUp]}
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
             </View>

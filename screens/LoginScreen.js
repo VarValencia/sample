@@ -7,10 +7,10 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
+import { View, StatusBar, Image, TextInput } from 'react-native';
 import styles from '@styles/styles';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableHighlight} from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
 const LoginScreen: () => React$Node = () => {
@@ -30,6 +30,7 @@ const LoginScreen: () => React$Node = () => {
               style={[styles.GudText, styles.sectionTitle]}
               text="¡BIENVENIDO!"
             />
+            <View style={styles.gudSeparator} />
             <GudText
               style={[styles.GudText, styles.sectionDescription]}
               text="Introduce Email y contraseña para acceder a tu cuenta"
@@ -38,13 +39,13 @@ const LoginScreen: () => React$Node = () => {
           <View style={[styles.cardContainer, styles.bottomContainer]}>
             <View style={styles.gudContainerBigMargin}>
               <GudText
-                style={[styles.GudText, styles.gudTextUpButton]}
+                style={[styles.gudTextUpButton, styles.textSM]}
                 text="Email"
               />
-              <TextInput style={styles.gudInput} maxLength={40} />
+              <TextInput style={styles.gudInput} maxLength={40} placeholder="Email" />
             </View>
             <View style={styles.gudContainierBigMargin}>
-              <GudText style={[styles.gudTextUpButton]} text="Contraseña" />
+              <GudText style={[styles.gudTextUpButton, styles.textSM]} text="Contraseña" />
               <TextInput style={styles.gudInput} maxLength={40} />
             </View>
             <View style={styles.GudButtonDark}>

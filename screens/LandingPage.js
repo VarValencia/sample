@@ -39,7 +39,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
               />
             </View>
             <GudText
-              style={[styles.textLG]}
+              style={[styles.textLG, styles.sectionDescription]}
               text="Entra al espacio donde puedes SER"
             />
           </View>
