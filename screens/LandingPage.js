@@ -38,7 +38,6 @@ const LandingPage: () => React$Node = ({ navigation }) => {
               style={[styles.textLG]}
               text="Entra al espacio donde puedes SER"
             />
-            {/* <GudText style={[styles.textFocus, styles.textLG]} text='SER' /> */}
           </View>
           <View style={styles.credentialButtonsContainer}>
             <View style={[styles.credentialButton, styles.active]}>
