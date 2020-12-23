@@ -8,11 +8,12 @@
 
 import React from 'react';
 import { View, StatusBar, Image } from 'react-native';
-import styles from '@styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import GudText from '../components/GudText';
+
+// Styles
 import EStyleSheet from 'react-native-extended-stylesheet';
+import styles from '@styles/styles';
 
 const LandingPage: () => React$Node = ({ navigation }) => {
   return (
@@ -71,7 +72,6 @@ const LandingPage: () => React$Node = ({ navigation }) => {
       </SafeAreaView>
     </>
   );
-
   function navigateTo(screen) {
     navigation.navigate(screen);
   }
