@@ -7,14 +7,14 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image} from 'react-native';
+import { View, StatusBar, Image } from 'react-native';
 import styles from '@styles/styles';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableHighlight} from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const LandingPage: () => React$Node = () => {
+const LandingPage: () => React$Node = ({ navigation }) => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -46,7 +46,7 @@ const LandingPage: () => React$Node = () => {
                 style={styles.touchableActive}
                 underlayColor={EStyleSheet.value('$gudGreenMedium')}
                 onPress={() => {
-                  console.log('you tapped the button Iniciar');
+                  navigateTo('LoginScreen')
                 }}>
                 <GudText
                   style={[styles.gudButtonText, styles.textMD]}
@@ -59,7 +59,7 @@ const LandingPage: () => React$Node = () => {
                 style={styles.touchableActive}
                 underlayColor={EStyleSheet.value('$gudGreenMedium')}
                 onPress={() => {
-                  console.log('you tapped the button Iniciar');
+                  navigateTo('RegisterScreen')
                 }}>
                 <GudText
                   style={[styles.gudButtonText, styles.textMD]}
@@ -72,6 +72,11 @@ const LandingPage: () => React$Node = () => {
       </SafeAreaView>
     </>
   );
+
+  function navigateTo(screen) {
+    navigation.navigate(screen);
+  }
+  
 };
 
 export default LandingPage;
