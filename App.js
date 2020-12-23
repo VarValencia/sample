@@ -17,8 +17,6 @@ import LoginScreen from '@screens/LoginScreen';
 import RegisterScreen from '@screens/RegisterScreen';
 import RegisterScreenComplete from '@screens/RegisterScreenComplete';
 
-import scripts from '@scripts/scripts';
-
 
 
 const RootStack = createStackNavigator();
