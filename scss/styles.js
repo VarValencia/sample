@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 // Import Dimensions for screen measurement
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 
 // App Theme
 EStyleSheet.build({
@@ -59,12 +59,18 @@ export default EStyleSheet.create({
   // Containers
   cardContainer: {
     position: 'relative',
-    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   appImageContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  bottomContainer: {
+    justifyContent: 'flex-end'
   },
 
   // Text styles
