@@ -39,7 +39,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
               text="Entra al espacio donde puedes SER"
             />
           </View>
-          <View style={styles.credentialButtonsContainer}>
+          <View style={[styles.credentialButtonsContainer, styles.bottomContainer]}>
             <View style={[styles.credentialButton, styles.active]}>
               <TouchableHighlight
                 style={styles.touchableActive}
@@ -75,7 +75,6 @@ const LandingPage: () => React$Node = ({ navigation }) => {
   function navigateTo(screen) {
     navigation.navigate(screen);
   }
-  
 };
 
 export default LandingPage;

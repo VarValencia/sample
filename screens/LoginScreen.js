@@ -28,14 +28,14 @@ const LoginScreen: () => React$Node = () => {
             </View>
             <GudText
               style={[styles.GudText, styles.sectionTitle]}
-              text="¡BIENVENIDO"
+              text="¡BIENVENIDO!"
             />
             <GudText
               style={[styles.GudText, styles.sectionDescription]}
               text="Introduce Email y contraseña para acceder a tu cuenta"
             />
           </View>
-          <View style={styles.Container}>
+          <View style={[styles.cardContainer, styles.bottomContainer]}>
             <View style={styles.gudContainerBigMargin}>
               <GudText
                 style={[styles.GudText, styles.gudTextUpButton]}
