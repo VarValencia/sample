@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 // Import Dimensions for screen measurement
-import { Dimensions } from 'react-native';
+import {Dimensions} from 'react-native';
 
 // App Theme
 EStyleSheet.build({
