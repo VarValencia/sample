@@ -71,7 +71,7 @@ export default EStyleSheet.create({
   },
 
   bottomContainer: {
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
 
   // Text styles
@@ -207,13 +207,13 @@ export default EStyleSheet.create({
     position: 'relative',
     marginHorizontal: '50%',
   },
-  sectionTitle: {
+  gudTitle: {
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
     color: '$gudBlack',
   },
-  sectionMessage: {
+  gudMessage: {
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
@@ -318,8 +318,22 @@ export default EStyleSheet.create({
     borderColor: '#fff',
   },
   GudText: {
+    marginVertical: 0,
     textAlign: 'center',
     fontSize: 16,
+    fontWeight: '600',
+    color: '$gudBlack',
+  },
+  gudImageBackgroundText: {
+    fontFamily: '$sb',
+    elevation: 99,
+    zIndex: 99,
+    marginVertical: '30%',
+    color: '$gudBlack',
+  },
+  gudMessage1: {
+    textAlign: 'center',
+    fontSize: 24,
     fontWeight: '600',
     color: '$gudBlack',
   },

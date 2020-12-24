@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
+import {View, StatusBar, Image} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
@@ -19,10 +19,7 @@ const OpenEmailScreen: () => React$Node = () => {
       <StatusBar hidden={true} />
       <SafeAreaView>
         <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <View style={styles.appImageContainer}>
-              <Image source={require('../iconos_app/1x/GUDLogo.png')} />
-            </View>
+          <View style={styles.Container}>
             <GudText
               style={[styles.gudMessage, styles.textLG]}
               text="Enhorabuena!"
@@ -53,16 +50,10 @@ const OpenEmailScreen: () => React$Node = () => {
               />
             </TouchableHighlight>
           </View>
-          <View style={styles.gudContainerBigMargin}>
-            <GudText
-              style={[styles.GudText, styles.gudTextUpButton]}
-              text="Email"
-            />
-            <TextInput style={styles.gudInput} maxLength={40} />
-          </View>
         </View>
       </SafeAreaView>
     </>
   );
 };
+
 export default OpenEmailScreen;

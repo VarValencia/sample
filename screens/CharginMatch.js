@@ -13,7 +13,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const OpenEmailScreen: () => React$Node = () => {
+const CharginMatch: () => React$Node = () => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -65,4 +65,4 @@ const OpenEmailScreen: () => React$Node = () => {
     </>
   );
 };
-export default OpenEmailScreen;
+export default CharginMatch;

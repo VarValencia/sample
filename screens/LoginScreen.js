@@ -48,8 +48,9 @@ const LoginScreen: () => React$Node = () => {
               <GudText style={[styles.gudTextUpButton, styles.textSM]} text="Contraseña" />
               <TextInput style={styles.gudInput} maxLength={40} />
             </View>
-            <View style={styles.GudButtonDark}>
+            <View style={styles.credentialNuttonContainer}>
               <TouchableHighlight
+                style={styles.credentialButton}
                 onPress={() => {
                   console.log('you tapped the button ACCEDER');
                 }}>

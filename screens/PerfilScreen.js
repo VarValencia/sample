@@ -7,29 +7,33 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image} from 'react-native';
+import {View, StatusBar, Image, TextInput} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const AbreElCorreoScreen: () => React$Node = () => {
+const OpenEmailScreen: () => React$Node = () => {
   return (
     <>
       <StatusBar hidden={true} />
       <SafeAreaView>
         <View style={styles.body}>
-          <View style={styles.Container}>
+          <View style={styles.cardContainer}>
+            <View style={styles.appImageContainer}>
+              <Image source={require('../iconos_app/1x/GUDLogo.png')} />
+              <GudText
+                style={[styles.gudMessage, styles.textLG]}
+                text="Enhorabuena!"
+              />
+            </View>
+
             <GudText
-              style={[styles.gudMessage, styles.textLG]}
-              text="Enhorabuena!"
-            />
-            <GudText
-              style={[styles.Message, styles.textMD]}
+              style={[styles.gudMessage, styles.textMD]}
               text="Estás a un paso de ser GUD"
             />
             <GudText
-              style={[styles.Message, styles.textSM]}
+              style={[styles.gudMessage, styles.textSM]}
               text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
             />
           </View>
@@ -41,9 +45,8 @@ const AbreElCorreoScreen: () => React$Node = () => {
           </View>
           <View style={styles.gudButtonDark}>
             <TouchableHighlight
-              style={styles.touchableActive}
               onPress={() => {
-                console.log('you tapped the button Iniciar');
+                console.log('you tapped the button FINALIZAR');
               }}>
               <GudText
                 style={[styles.gudButtonText, styles.textMD]}
@@ -51,10 +54,16 @@ const AbreElCorreoScreen: () => React$Node = () => {
               />
             </TouchableHighlight>
           </View>
+          <View style={styles.gudContainerBigMargin}>
+            <GudText
+              style={[styles.GudText, styles.gudTextUpButton]}
+              text="Email"
+            />
+            <TextInput style={styles.gudInput} maxLength={40} />
+          </View>
         </View>
       </SafeAreaView>
     </>
   );
 };
-
-export default AbreElCorreoScreen;
+export default OpenEmailScreen;
