@@ -23,6 +23,7 @@ import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';
 import PerfilScreen from '@screens/PerfilScreen';
 import CharginGud from '@screens/CharginGud';
 import CharginMatch from '@screens/CharginMatch';
+import GudConfigIdiom from '@screens/GudConfigIdiom';
 
 const RootStack = createStackNavigator();
 
@@ -36,7 +37,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="CharginMatch"
+            initialRouteName="GudConfigIdiom"
             headerMode="none">
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
@@ -63,6 +64,10 @@ const App: () => React$Node = () => {
             <RootStack.Screen name="CharginMatch" component={CharginMatch} />
             <RootStack.Screen name="CharginGud" component={CharginGud} />
             <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
+            <RootStack.Screen
+              name="GudConfigIdiom"
+              component={GudConfigIdiom}
+            />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
