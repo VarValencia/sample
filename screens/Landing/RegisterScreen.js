@@ -71,7 +71,6 @@ class RegisterScreen extends React.Component {
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
             </View>
-            <View style={styles.cardContainer}>
             <View style={styles.bottomContainer}>
               <GudText style={styles.textSM} text="Email" />
               <TextInput
@@ -122,7 +121,6 @@ class RegisterScreen extends React.Component {
                   </TouchableOpacity>
                 </View>
               </View>
-            </View>
             </View>
           </View>
         </SafeAreaView>

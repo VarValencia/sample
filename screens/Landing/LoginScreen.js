@@ -34,21 +34,22 @@ const LoginScreen: () => React$Node = () => {
               text="Introduce Email y contraseña para acceder a tu cuenta"
             />
           </View>
-          <View style={styles.cardContainer}>
           <View style={styles.bottomContainer}>
-            <GudText style={styles.textSM} text="Email" />
+            <View style={styles.inputContainer}>
+              <GudText style={styles.textSM} text="Email" />
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
                 placeholder="Email"
               />
 
-            <GudText style={styles.textSM} text="Contraseña" />
+              <GudText style={[styles.textSM]} text="Contraseña" />
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
                 placeholder="Contraseña"
               />
+            </View>
             <View style={styles.buttonContainer}>
               <View style={[styles.gudButton, styles.active]}>
                 <TouchableHighlight
@@ -65,7 +66,6 @@ const LoginScreen: () => React$Node = () => {
               </View>
             </View>
           </View>
-        </View>
         </View>
       </SafeAreaView>
     </>
