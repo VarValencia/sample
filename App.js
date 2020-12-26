@@ -12,10 +12,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 // Importación de las vistas
-import LandingPage from '@screens/LandingPage';
-import LoginScreen from '@screens/LoginScreen';
-import RegisterScreen from '@screens/RegisterScreen';
-import RegisterScreenComplete from '@screens/RegisterScreenComplete';
+import LandingPage from '@screens/Landing/LandingPage';
+import LoginScreen from '@screens/Landing/LoginScreen';
+import RegisterScreen from '@screens/Landing/RegisterScreen';
+import RegisterScreenComplete from '@screens/Landing/RegisterScreenComplete';
 import OpenEmailScreen from '@screens/OpenEmailScreen';
 import GudAfterMatchScreen from '@screens/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';

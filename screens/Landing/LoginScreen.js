@@ -11,7 +11,7 @@ import { View, StatusBar, Image, TextInput } from 'react-native';
 import styles from '@styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import GudText from '../components/GudText';
+import GudText from '../../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 const LoginScreen: () => React$Node = () => {
@@ -23,7 +23,7 @@ const LoginScreen: () => React$Node = () => {
           <View style={styles.cardContainer}>
             <View style={styles.appImageContainer}>
               <Image
-                source={require('../iconos_app/1x/GUDLogo.png')}
+                source={require('@icons/1x/GUDLogo.png')}
               />
             </View>
             <GudText

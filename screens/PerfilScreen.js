@@ -21,7 +21,7 @@ const OpenEmailScreen: () => React$Node = () => {
         <View style={styles.body}>
           <View style={styles.cardContainer}>
             <View style={styles.appImageContainer}>
-              <Image source={require('../iconos_app/1x/GUDLogo.png')} />
+              <Image source={require('@icons/1x/GUDLogo.png')} />
               <GudText
                 style={[styles.gudMessage, styles.textLG]}
                 text="Enhorabuena!"
