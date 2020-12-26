@@ -213,6 +213,14 @@ export default EStyleSheet.create({
     paddingLeft: 15,
     margin: '2%',
   },
+  valid: {
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular'
+  },
+  invalid: {
+    borderWidth: 1,
+    borderColor: 'red'
+  },
 
   // GUD Radio Button
   gudRadioButtonGroup: {
