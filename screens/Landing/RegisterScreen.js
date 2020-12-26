@@ -16,17 +16,27 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import ValidationComponent from 'react-native-form-validator';
 
+import {Input} from 'react-native-elements';
+
 class RegisterScreen extends React.Component {
   constructor() {
     super();
     this.state = {
       isFormFilled: false,
-      user: {
-        email: null,
-        password: null,
-        passwordConfirmation: null,
-      },
+      email: 'Email',
+      password: '',
+      passwordConfirmation: '',
     };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state != nextState;
+  }
+
+  onChange(str) {
+    this.setState({email: str})
+    console.log('Text', str);
   }
 
   onSubmit() {
@@ -41,6 +51,7 @@ class RegisterScreen extends React.Component {
     });
   }
   render() {
+    console.log('State', this.state.email);
     return (
       <>
         <StatusBar hidden={true} />
@@ -62,11 +73,12 @@ class RegisterScreen extends React.Component {
               <View style={styles.bottomContainer}>
                 <GudText style={styles.textSM} text="Email" />
                 <TextInput
-                  ref="email"
+                  editable={true}
+                  autoFocus={true}
+                  ref="Email"
                   style={styles.gudInput}
-                  maxLength={20}
                   placeholder="Email"
-                  onChange={(email) => this.setState({email})}
+                  onChangeText={(text) => this.onChange(text)}
                   value={this.state.email}
                 />
 
