@@ -17,7 +17,7 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '20%',
+  $gudBodyPaddingH: '10%',
   $gudBodyPaddingV: '0%',
 
   // Titles
@@ -68,7 +68,6 @@ export default EStyleSheet.create({
     height: Dimensions.get('window').height,
     paddingRight: '$gudBodyPaddingH',
     paddingLeft: '$gudBodyPaddingH',
-    paddingTop: '$gudBodyPaddingV',
     alignItems: 'stretch',
     justifyContent: 'center',
     display: 'flex',
@@ -77,8 +76,7 @@ export default EStyleSheet.create({
   // Containers
   cardContainer: {
     position: 'relative',
-    display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   appImageContainer: {
@@ -86,10 +84,15 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   bottomContainer: {
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    position: 'relative',
+    textAlign: 'left',
+    flex: Dimensions.get("window").height * 0.11/100,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  inputContainer: {
+    textAlign: 'left',
   },
 
   // Text styles
@@ -204,6 +207,7 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderRadius: '$gudBorderRadius',
     paddingLeft: 15,
+    margin: '2%',
   },
 
   // GUD Radio Button
