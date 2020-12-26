@@ -30,30 +30,27 @@ const LoginScreen: () => React$Node = () => {
             />
             <View style={styles.gudSeparator} />
             <GudText
-              style={[styles.textLG, styles.sectionDescription]}
+              style={[styles.sectionDescription, styles.textLG]}
               text="Introduce Email y contraseña para acceder a tu cuenta"
             />
           </View>
+          <View style={styles.cardContainer}>
           <View style={styles.bottomContainer}>
             <GudText style={styles.textSM} text="Email" />
-            <View style={styles.gudInputContainer}>
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
                 placeholder="Email"
               />
-            </View>
 
             <GudText style={styles.textSM} text="Contraseña" />
-            <View style={styles.gudInputContainer}>
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
                 placeholder="Contraseña"
               />
-            </View>
             <View style={styles.buttonContainer}>
-              <View style={[styles.credentialButton, styles.active]}>
+              <View style={[styles.gudButton, styles.active]}>
                 <TouchableHighlight
                   style={styles.touchableActive}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
@@ -61,13 +58,14 @@ const LoginScreen: () => React$Node = () => {
                     navigateTo('LandingPage');
                   }}>
                   <GudText
-                    style={[styles.gudButtonText, styles.textMD]}
+                    style={[styles.gudButtonText, styles.textLG]}
                     text="Acceder"
                   />
                 </TouchableHighlight>
               </View>
             </View>
           </View>
+        </View>
         </View>
       </SafeAreaView>
     </>
