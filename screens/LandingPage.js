@@ -35,7 +35,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}
-                source={require('../android/app/src/main/assets/images/LoginScreen.png')}
+                source={require('@android/images/LoginScreen.png')}
               />
             </View>
             <GudText
@@ -43,7 +43,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
               text="Entra al espacio donde puedes SER"
             />
           </View>
-          <View style={styles.buttonContainer}>
+          <View style={[styles.buttonContainer, styles.bottomContainer]}>
             <View style={[styles.credentialButton, styles.active]}>
               <TouchableHighlight
                 style={styles.touchableActive}
