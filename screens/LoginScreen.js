@@ -12,6 +12,7 @@ import styles from '@styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 const LoginScreen: () => React$Node = () => {
   return (
@@ -22,39 +23,35 @@ const LoginScreen: () => React$Node = () => {
           <View style={styles.cardContainer}>
             <View style={styles.appImageContainer}>
               <Image
-                style={styles.logo}
                 source={require('../iconos_app/1x/GUDLogo.png')}
               />
             </View>
             <GudText
-              style={[styles.GudText, styles.sectionTitle]}
+              style={[styles.title, styles.textLG]}
               text="¡BIENVENIDO!"
             />
             <View style={styles.gudSeparator} />
             <GudText
-              style={[styles.GudText, styles.sectionDescription]}
+              style={[styles.textLG, styles.sectionDescription]}
               text="Introduce Email y contraseña para acceder a tu cuenta"
             />
           </View>
-          <View style={[styles.cardContainer, styles.bottomContainer]}>
-            <View style={styles.gudContainerBigMargin}>
-              <GudText
-                style={[styles.gudTextUpButton, styles.textSM]}
-                text="Email"
-              />
-              <TextInput style={styles.gudInput} maxLength={40} placeholder="Email" />
-            </View>
-            <View style={styles.gudContainierBigMargin}>
-              <GudText style={[styles.gudTextUpButton, styles.textSM]} text="Contraseña" />
-              <TextInput style={styles.gudInput} maxLength={40} />
-            </View>
-            <View style={styles.credentialNuttonContainer}>
+          <GudText
+            style={[styles.alignLeft, styles.textSM]}
+            text="Email"
+          />
+          <TextInput style={styles.gudInput} maxLength={40} placeholder="Email" />
+          <GudText style={[styles.textSM, styles.alignLeft]} text="Contraseña" />
+          <TextInput style={styles.gudInput} maxLength={40} placeholder="Contraseña" />
+          <View style={[styles.buttonContainer]}>
+            <View style={[styles.credentialButton, styles.active]}>
               <TouchableHighlight
-                style={styles.credentialButton}
+                style={styles.touchableActive}
+                underlayColor={EStyleSheet.value('$gudGreenMedium')}
                 onPress={() => {
-                  console.log('you tapped the button ACCEDER');
+                  navigateTo('LandingPage')
                 }}>
-                <GudText style={styles.GudButtonDark} text="Acceder" />
+                <GudText style={[styles.gudButtonText, styles.textMD]} text="Acceder" />
               </TouchableHighlight>
             </View>
           </View>
@@ -62,6 +59,9 @@ const LoginScreen: () => React$Node = () => {
       </SafeAreaView>
     </>
   );
+  function navigateTo(screen) {
+    navigation.navigate(screen);
+  }
 };
 
 export default LoginScreen;
