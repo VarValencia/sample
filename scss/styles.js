@@ -16,7 +16,7 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPadding: '10%',
+  $gudBodyPadding: '15%',
 
   // Titles
   $gudTitlePaddingTop: '5%',
@@ -31,9 +31,9 @@ EStyleSheet.build({
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudSM: 10,
-  $gudMD: 12,
-  $gudLG: 16,
+  $gudSM: 12,
+  $gudMD: 16,
+  $gudLG: 20.5,
 
   $gudTextPadding: 3,
   $gudTextMarginTop: Dimensions.get("window").height * 0.1 / 100,
@@ -117,7 +117,8 @@ export default EStyleSheet.create({
   },
   sectionDescription: {
     textAlign: 'center',
-    paddingBottom: '$gudSubTitlePaddingBottom'
+    paddingBottom: '$gudSubTitlePaddingBottom',
+    fontFamily: '$b'
   },
 
   // Image styling
@@ -140,7 +141,7 @@ export default EStyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: (Dimensions.get('window').height * 3) / 100,
+    marginTop: (Dimensions.get('window').height * 10) / 100,
   },
   credentialButton: {
     width: (Dimensions.get('window').width * 60) / 100,
