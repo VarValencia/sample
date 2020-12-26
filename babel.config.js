@@ -10,7 +10,8 @@ module.exports = {
           '@assets': './icons_app',
           '@screens': './screens',
           '@android': './android/app/src/main/assets',
-          '@components': './components'
+          '@components': './components',
+          '@icons': './iconos_app'
         },
       },
     ],
