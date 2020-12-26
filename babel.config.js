@@ -11,7 +11,8 @@ module.exports = {
           '@screens': './screens',
           '@android': './android/app/src/main/assets',
           '@components': './components',
-          '@icons': './iconos_app'
+          '@icons': './iconos_app',
+          '@scripts': './scripts'
         },
       },
     ],
