@@ -13,10 +13,11 @@ EStyleSheet.build({
   $gudGreenMedium: '#C1E3E2',
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
+  $gudGray: '#dadada',
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPadding: '15%',
+  $gudBodyPadding: '20%',
 
   // Titles
   $gudTitlePaddingTop: '5%',
@@ -24,16 +25,16 @@ EStyleSheet.build({
   $gudSeparatorPaddingBottom: '5%',
   
   // Buttons
-  $gudBottomContainerMargin: Dimensions.get("window").height * 2/100,
+  $gudBottomContainerMargin: Dimensions.get("window").height * 0/100,
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudSM: 12,
-  $gudMD: 16,
-  $gudLG: 20.5,
+  $gudSM: Dimensions.get("window").width * 12/Dimensions.get("window").height*1.7,
+  $gudMD: Dimensions.get("window").width * 16/Dimensions.get("window").height*1.2,
+  $gudLG: Dimensions.get("window").width * 20.5/Dimensions.get("window").height*1.3,
 
   $gudTextPadding: 3,
   $gudTextMarginTop: Dimensions.get("window").height * 0.1 / 100,
@@ -98,6 +99,8 @@ export default EStyleSheet.create({
     zIndex: 99,
     color: '$gudGreenDark',
     textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   // Text sizes and weight
@@ -152,9 +155,24 @@ export default EStyleSheet.create({
     borderColor: '$gudGreenRegular',
     margin: '2%',
   },
+  gudButton: {
+    backgroundColor: '$gudWhite',
+    borderRadius: '$gudBorderRadius',
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    width: Dimensions.get("window").width * 80/100,
+    alignItems: 'center'
+  },
   active: {
     backgroundColor: '$gudGreenLight',
     borderColor: '$gudGreenLight',
+    borderRadius: '$gudBorderRadius',
+  },
+  inactive: {
+    backgroundColor: '$gudWhite',
+    borderColor: '$gudGray',
+    borderRadius: '$gudBorderRadius',
+    color: "$gudGray"
   },
   touchableActive: {
     width: (Dimensions.get('window').width * 60) / 100,
@@ -171,8 +189,7 @@ export default EStyleSheet.create({
     borderColor: '$gudGreenRegular',
     borderWidth: 1,
     borderRadius: '$gudBorderRadius',
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingLeft: 15,
   },
 
   // GUD Radio Button
@@ -210,10 +227,6 @@ export default EStyleSheet.create({
 
 
   // Old styles
-  gudButton: {
-    backgroundColor: '$gudGreenLight',
-    color: '$gudBlack',
-  },
   engine: {
     position: 'absolute',
     right: 0,
@@ -272,46 +285,11 @@ export default EStyleSheet.create({
     fontWeight: '600',
     color: '$gudBlack',
   },
-  ButtonContainer: {
-    position: 'relative',
-    textAlign: 'center',
-    marginTop: '20%',
-    marginHorizontal: '20%',
-    marginVertical: '10%',
-  },
-  gudTextUpButton: {
-    textAlign: 'left',
-    fontSize: 14,
-    fontWeight: '600',
-    color: '$gudBlack',
-    marginHorizontal: '0%',
-    marginVertical: '2%',
-  },
-  gudButtonDark: {
-    margin: '10%',
-    position: 'relative',
-    width: 300,
-    height: 30,
-    backgroundColor: '#62BDBA',
-    textAlign: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-    opacity: 0.4,
-    marginHorizontal: '10%',
-    marginVertical: '15%',
-  },
   sectionContainerMarginTop: {
     position: 'relative',
     marginVertical: '25%',
     textAlign: 'center',
     marginHorizontal: '20%',
-  },
-  gudButtonDark: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '600',
-    color: '$gudBlack',
   },
   ButtonRegisterSc: {
     margin: '10%',
