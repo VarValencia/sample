@@ -113,6 +113,11 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  gudInputText: {
+    fontFamily: '$sb',
+    textAlign: 'left',
+    paddingLeft: '2.6%',
+  },
 
   // Text sizes and weight
   textLG: {

@@ -16,14 +16,12 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import ValidationComponent from 'react-native-form-validator';
 
-import {Input} from 'react-native-elements';
-
 class RegisterScreen extends React.Component {
   constructor() {
     super();
     this.state = {
       isFormFilled: false,
-      email: 'Email',
+      email: '',
       password: '',
       passwordConfirmation: '',
     };
@@ -34,9 +32,19 @@ class RegisterScreen extends React.Component {
     return this.state != nextState;
   }
 
-  onChange(str) {
-    this.setState({email: str});
-    console.log('Text', str);
+  onChange(str, ref) {
+    switch (ref) {
+      case 0:
+        this.setState({email: str});
+        break;
+      case 1:
+        this.setState({password: str});
+        break;
+      case 2:
+        this.setState({passwordConfirmation: str});
+        break;
+    }
+    console.log('Text', str, ref);
   }
 
   onSubmit() {
@@ -51,7 +59,11 @@ class RegisterScreen extends React.Component {
     });
   }
   render() {
-    console.log('State', this.state.email);
+    const EMAIL = 0;
+    const PASS = 1;
+    const PASS_CONFIRMATION = 2;
+
+    console.log('State', this.state);
     return (
       <>
         <StatusBar hidden={true} />
@@ -72,29 +84,37 @@ class RegisterScreen extends React.Component {
               />
             </View>
             <View style={styles.bottomContainer}>
-              <GudText style={styles.textSM} text="Email" />
-              <TextInput
-                ref="Email"
-                style={styles.gudInput}
-                placeholder="Email"
-                onChangeText={(text) => this.onChange(text)}
-                value={this.state.email}
-              />
+              <View style={styles.inputContainer}>
+                <GudText style={[styles.textSM, styles.gudInputText]} text="Email" />
+                <TextInput
+                  ref="Email"
+                  style={styles.gudInput}
+                  placeholder="Email"
+                  onChangeText={(text) => this.onChange(text, EMAIL)}
+                  value={this.state.email}
+                />
 
-              <GudText style={styles.textSM} text="Contraseña" />
-              <TextInput
-                style={styles.gudInput}
-                maxLength={40}
-                placeholder="Contraseña"
-              />
+                <GudText style={[styles.textSM, styles.gudInputText]} text="Contraseña" />
+                <TextInput
+                  ref="Password"
+                  secureTextEntry={true}
+                  style={styles.gudInput}
+                  placeholder="Contraseña"
+                  onChangeText={(text) => this.onChange(text, PASS)}
+                  value={this.state.password}
+                />
 
-              <GudText style={styles.textSM} text="Repite contraseña" />
-              <TextInput
-                style={styles.gudInput}
-                maxLength={40}
-                placeholder="Repite tu contraseña"
-              />
-
+                <GudText style={[styles.textSM, styles.gudInputText]} text="Repite contraseña" />
+                <TextInput
+                  ref="PasswordConffirmation"
+                  style={styles.gudInput}
+                  secureTextEntry={true}
+                  onChangeText={(text) =>
+                    this.onChange(text, PASS_CONFIRMATION)
+                  }
+                  placeholder="Repite tu contraseña"
+                />
+              </View>
               <View style={styles.buttonContainer}>
                 <View
                   style={[

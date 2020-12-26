@@ -36,14 +36,14 @@ const LoginScreen: () => React$Node = () => {
           </View>
           <View style={styles.bottomContainer}>
             <View style={styles.inputContainer}>
-              <GudText style={styles.textSM} text="Email" />
+              <GudText style={[styles.textSM, styles.gudInputText]} text="Email" />
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
                 placeholder="Email"
               />
 
-              <GudText style={[styles.textSM]} text="Contraseña" />
+              <GudText style={[styles.textSM, styles.gudInputText]} text="Contraseña" />
               <TextInput
                 style={styles.gudInput}
                 maxLength={40}
