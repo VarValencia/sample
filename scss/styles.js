@@ -17,7 +17,7 @@ EStyleSheet.build({
   // PADDINGS & MARGINS
   // Body
   $gudBodyMarginH: '10%',
-  $gudBodyMarginV: '20%',
+  $gudBodyMarginV: '10%',
   // Titles
   $gudTitlePaddingTop: '5%',
   $gudSubTitlePaddingBottom: '20%',
@@ -31,8 +31,11 @@ EStyleSheet.build({
   $rg: 'Poppins-Regular',
 
   $gudSM: 10,
-  $gudMD: 15,
-  $gudLG: 20,
+  $gudMD: 12,
+  $gudLG: 16,
+
+  $gudTextPadding: 3,
+  $gudTextMarginTop: Dimensions.get("window").height * 0.1/100,
 
   // Screen Dimensions
   $scrWidth: Dimensions.get('window').width,
@@ -79,6 +82,8 @@ export default EStyleSheet.create({
     fontFamily: '$sb',
     color: '$gudBlack',
     textAlign: 'center',
+    padding: "$gudTextPadding",
+    marginTop: '$gudTextMarginTop'
   },
   title: {
     fontFamily: '$b',
@@ -88,7 +93,6 @@ export default EStyleSheet.create({
     fontFamily: '$sb',
     elevation: 99,
     zIndex: 99,
-    marginVertical: '4%',
     color: '$gudGreenDark',
   },
   alignLeft: {
@@ -313,13 +317,6 @@ export default EStyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#fff',
-  },
-  GudText: {
-    marginVertical: 0,
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '600',
-    color: '$gudBlack',
   },
   gudImageBackgroundText: {
     fontFamily: '$sb',
