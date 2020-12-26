@@ -35,7 +35,7 @@ class RegisterScreen extends React.Component {
   }
 
   onChange(str) {
-    this.setState({email: str})
+    this.setState({email: str});
     console.log('Text', str);
   }
 
@@ -70,59 +70,59 @@ class RegisterScreen extends React.Component {
                 style={[styles.sectionDescription, styles.textLG]}
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
-              <View style={styles.bottomContainer}>
-                <GudText style={styles.textSM} text="Email" />
-                <TextInput
-                  editable={true}
-                  autoFocus={true}
-                  ref="Email"
-                  style={styles.gudInput}
-                  placeholder="Email"
-                  onChangeText={(text) => this.onChange(text)}
-                  value={this.state.email}
-                />
+            </View>
+            <View style={styles.cardContainer}>
+            <View style={styles.bottomContainer}>
+              <GudText style={styles.textSM} text="Email" />
+              <TextInput
+                ref="Email"
+                style={styles.gudInput}
+                placeholder="Email"
+                onChangeText={(text) => this.onChange(text)}
+                value={this.state.email}
+              />
 
-                <GudText style={styles.textSM} text="Contraseña" />
-                <TextInput
-                  style={styles.gudInput}
-                  maxLength={40}
-                  placeholder="Contraseña"
-                />
+              <GudText style={styles.textSM} text="Contraseña" />
+              <TextInput
+                style={styles.gudInput}
+                maxLength={40}
+                placeholder="Contraseña"
+              />
 
-                <GudText style={styles.textSM} text="Repite contraseña" />
-                <TextInput
-                  style={styles.gudInput}
-                  maxLength={40}
-                  placeholder="Repite tu contraseña"
-                />
+              <GudText style={styles.textSM} text="Repite contraseña" />
+              <TextInput
+                style={styles.gudInput}
+                maxLength={40}
+                placeholder="Repite tu contraseña"
+              />
 
-                <View style={styles.buttonContainer}>
-                  <View
-                    style={[
-                      styles.gudButton,
-                      this.state.isFormFilled ? styles.active : styles.inactive,
-                    ]}>
-                    <TouchableOpacity
-                      disabled={!this.state.isFormFilled}
-                      style={styles.touchableActive}
-                      underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                      onPress={() => {
-                        // navigateTo('LandingPage');
-                      }}>
-                      <GudText
-                        style={[
-                          styles.gudButtonText,
-                          styles.textMD,
-                          this.state.isFormFilled
-                            ? styles.active
-                            : styles.inactive,
-                        ]}
-                        text="Siguiente"
-                      />
-                    </TouchableOpacity>
-                  </View>
+              <View style={styles.buttonContainer}>
+                <View
+                  style={[
+                    styles.gudButton,
+                    this.state.isFormFilled ? styles.active : styles.inactive,
+                  ]}>
+                  <TouchableOpacity
+                    disabled={!this.state.isFormFilled}
+                    style={styles.touchableActive}
+                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                    onPress={() => {
+                      // navigateTo('LandingPage');
+                    }}>
+                    <GudText
+                      style={[
+                        styles.gudButtonText,
+                        styles.textMD,
+                        this.state.isFormFilled
+                          ? styles.active
+                          : styles.inactive,
+                      ]}
+                      text="Siguiente"
+                    />
+                  </TouchableOpacity>
                 </View>
               </View>
+            </View>
             </View>
           </View>
         </SafeAreaView>
