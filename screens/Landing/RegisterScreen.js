@@ -11,16 +11,15 @@ import {View, StatusBar, Image, TextInput} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import GudText from '../../components/GudText';
+import GudText from '@components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
-
-import ValidationComponent from 'react-native-form-validator';
+import ValidationField from '../../components/ValidationField';
 
 class RegisterScreen extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      isFormFilled: false,
+      isFormFilled: true,
       email: '',
       password: '',
       passwordConfirmation: '',
@@ -33,6 +32,7 @@ class RegisterScreen extends React.Component {
   }
 
   onChange(str, ref) {
+    console.log('Event', str);
     switch (ref) {
       case 0:
         this.setState({email: str});
@@ -44,20 +44,8 @@ class RegisterScreen extends React.Component {
         this.setState({passwordConfirmation: str});
         break;
     }
-    console.log('Text', str, ref);
   }
 
-  onSubmit() {
-    this.ValidationComponent.validate({
-      email: {
-        minLength: 6,
-        required: true,
-      },
-      passwordConfirmation: {
-        equalPassword: this.state.password,
-      },
-    });
-  }
   render() {
     const EMAIL = 0;
     const PASS = 1;
@@ -85,27 +73,48 @@ class RegisterScreen extends React.Component {
             </View>
             <View style={styles.bottomContainer}>
               <View style={styles.inputContainer}>
-                <GudText style={[styles.textSM, styles.gudInputText]} text="Email" />
+                {/* <GudText
+                  style={[styles.textSM, styles.gudInputText]}
+                  text="Email"
+                />
                 <TextInput
                   ref="Email"
                   style={styles.gudInput}
                   placeholder="Email"
                   onChangeText={(text) => this.onChange(text, EMAIL)}
                   value={this.state.email}
+                /> */}
+                <ValidationField
+                  placeholder={'Email'}
+                  maxLength={30}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, EMAIL)}
                 />
-
-                <GudText style={[styles.textSM, styles.gudInputText]} text="Contraseña" />
-                <TextInput
+                {/* <GudText
+                  style={[styles.textSM, styles.gudInputText]}
+                  text="Contraseña"
+                  />
+                  <TextInput
                   ref="Password"
                   secureTextEntry={true}
                   style={styles.gudInput}
                   placeholder="Contraseña"
                   onChangeText={(text) => this.onChange(text, PASS)}
                   value={this.state.password}
+                /> */}
+                <ValidationField
+                  placeholder={'Contraseña'}
+                  maxLength={12}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, PASS)}
+                  password={true}
                 />
 
-                <GudText style={[styles.textSM, styles.gudInputText]} text="Repite contraseña" />
-                <TextInput
+                {/* <GudText
+                  style={[styles.textSM, styles.gudInputText]}
+                  text="Repite contraseña"
+                  />
+                  <TextInput
                   ref="PasswordConffirmation"
                   style={styles.gudInput}
                   secureTextEntry={true}
@@ -113,6 +122,13 @@ class RegisterScreen extends React.Component {
                     this.onChange(text, PASS_CONFIRMATION)
                   }
                   placeholder="Repite tu contraseña"
+                /> */}
+                <ValidationField
+                  placeholder={'Repite tu contraseña'}
+                  maxLength={12}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, PASS_CONFIRMATION)}
+                  password={true}
                 />
               </View>
               <View style={styles.buttonContainer}>
@@ -126,7 +142,7 @@ class RegisterScreen extends React.Component {
                     style={styles.touchableActive}
                     underlayColor={EStyleSheet.value('$gudGreenMedium')}
                     onPress={() => {
-                      // navigateTo('LandingPage');
+                      this.onSubmit();
                     }}>
                     <GudText
                       style={[
