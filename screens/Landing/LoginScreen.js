@@ -44,7 +44,7 @@ const LoginScreen: () => React$Node = () => {
             <GudText style={styles.textSM} text="Contraseña" />
             <TextInput style={styles.gudInput} maxLength={40} placeholder="Contraseña" />
 
-            <View style={[styles.buttonContainer]}>
+            <View style={styles.buttonContainer}>
               <View style={[styles.credentialButton, styles.active]}>
                 <TouchableHighlight
                   style={styles.touchableActive}

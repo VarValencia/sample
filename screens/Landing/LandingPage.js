@@ -7,17 +7,15 @@
  */
 
 import React from 'react';
-import { View, StatusBar, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableHighlight } from 'react-native-gesture-handler';
-
+import {View, StatusBar, Image} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {TouchableHighlight} from 'react-native-gesture-handler';
 
 // Styles
 import EStyleSheet from 'react-native-extended-stylesheet';
 import styles from '@styles/styles';
 
-
-const LandingPage: () => React$Node = ({ navigation }) => {
+const LandingPage: () => React$Node = ({navigation}) => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -49,7 +47,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
                 style={styles.touchableActive}
                 underlayColor={EStyleSheet.value('$gudGreenMedium')}
                 onPress={() => {
-                  navigateTo('LoginScreen')
+                  navigateTo('LoginScreen');
                 }}>
                 <GudText
                   style={[styles.gudButtonText, styles.textMD]}
@@ -62,7 +60,7 @@ const LandingPage: () => React$Node = ({ navigation }) => {
                 style={styles.touchableActive}
                 underlayColor={EStyleSheet.value('$gudGreenMedium')}
                 onPress={() => {
-                  navigateTo('RegisterScreen')
+                  navigateTo('RegisterScreen');
                 }}>
                 <GudText
                   style={[styles.gudButtonText, styles.textMD]}

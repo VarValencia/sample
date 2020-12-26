@@ -7,67 +7,116 @@
  */
 
 import React from 'react';
-import { View, StatusBar, Image, TextInput } from 'react-native';
+import {View, StatusBar, Image, TextInput} from 'react-native';
 import styles from '@styles/styles';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import GudText from '../../components/GudText';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
-const RegisterScreen: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <View style={styles.appImageContainer}>
-              <Image source={require('@icons/1x/GUDLogo.png')} />
-            </View>
-            <GudText
-              style={[styles.title, styles.textLG]}
-              text="¡BIENVENIDO!"
-            />
-            <View style={styles.gudSeparator} />
-            <View style={styles.gudContainerBigMargin}>
+import ValidationComponent from 'react-native-form-validator';
+
+class RegisterScreen extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isFormFilled: false,
+      user: {
+        email: null,
+        password: null,
+        passwordConfirmation: null,
+      },
+    };
+  }
+
+  onSubmit() {
+    this.ValidationComponent.validate({
+      email: {
+        minLength: 6,
+        required: true,
+      },
+      passwordConfirmation: {
+        equalPassword: this.state.password,
+      },
+    });
+  }
+  render() {
+    return (
+      <>
+        <StatusBar hidden={true} />
+        <SafeAreaView>
+          <View style={styles.body}>
+            <View style={styles.cardContainer}>
+              <View style={styles.appImageContainer}>
+                <Image source={require('@icons/1x/GUDLogo.png')} />
+              </View>
               <GudText
-                style={[styles.subTitle, styles.textUp]}
+                style={[styles.title, styles.textLG]}
+                text="¡BIENVENIDO!"
+              />
+              <View style={styles.gudSeparator} />
+              <GudText
+                style={[styles.sectionDescription, styles.textLG]}
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
-            </View>
-            <View style={styles.gudContainerBigMargin}>
-              <GudText
-                style={[styles.GudText, styles.gudTextUpButton]}
-                text="Email"
-              />
-              <TextInput style={styles.gudInput} maxLength={40} />
-            </View>
-            <View style={styles.gudContainerBigMargin}>
-              <GudText
-                style={[styles.GudText, styles.gudTextUpButton]}
-                text="Contraseña"
-              />
-              <TextInput style={styles.gudInput} maxLength={40} />
-            </View>
-            <View style={styles.gudContainerBigMargin}>
-              <GudText
-                style={[styles.GudText, styles.gudTextUpButton]}
-                text="Repite contraseña"
-              />
-              <TextInput style={styles.gudInput} maxLength={40} />
-            </View>
-            <View style={styles.gudButtonDark}>
-              <TouchableHighlight
-                onPress={() => {
-                  console.log('you tapped the button ACCEDER');
-                }}>
-                <GudText style={styles.gudButtonDark} text="Acceder" />
-              </TouchableHighlight>
+              <View style={styles.bottomContainer}>
+                <GudText style={styles.textSM} text="Email" />
+                <TextInput
+                  ref="email"
+                  style={styles.gudInput}
+                  maxLength={20}
+                  placeholder="Email"
+                  onChange={(email) => this.setState({email})}
+                  value={this.state.email}
+                />
+
+                <GudText style={styles.textSM} text="Contraseña" />
+                <TextInput
+                  style={styles.gudInput}
+                  maxLength={40}
+                  placeholder="Contraseña"
+                />
+
+                <GudText style={styles.textSM} text="Repite contraseña" />
+                <TextInput
+                  style={styles.gudInput}
+                  maxLength={40}
+                  placeholder="Repite tu contraseña"
+                />
+
+                <View style={styles.buttonContainer}>
+                  <View
+                    style={[
+                      styles.gudButton,
+                      this.state.isFormFilled ? styles.active : styles.inactive,
+                    ]}>
+                    <TouchableOpacity
+                      disabled={!this.state.isFormFilled}
+                      style={styles.touchableActive}
+                      underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                      onPress={() => {
+                        // navigateTo('LandingPage');
+                      }}>
+                      <GudText
+                        style={[
+                          styles.gudButtonText,
+                          styles.textMD,
+                          this.state.isFormFilled
+                            ? styles.active
+                            : styles.inactive,
+                        ]}
+                        text="Siguiente"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
             </View>
           </View>
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
+        </SafeAreaView>
+      </>
+    );
+  }
+}
 
 export default RegisterScreen;
