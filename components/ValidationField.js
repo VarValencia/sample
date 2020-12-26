@@ -15,6 +15,7 @@ class ValidationField extends React.Component {
       });
 
     this.onChange = this.onChange.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
   shouldComponentUpdate(nextProps, nextState) {
     return this.state != nextState;
@@ -23,6 +24,9 @@ class ValidationField extends React.Component {
     this.setState({value: str});
     this.props.handleValue;
     this.validate();
+  }
+  onBlur(){
+    this.props.handleValue(this.state.value)
   }
 
   //   Maybe validate sizes here and validate format in parent
@@ -53,7 +57,7 @@ class ValidationField extends React.Component {
           secureTextEntry={this.state.isPassword}
           placeholder={this.props.placeholder}
           onChangeText={(text) => this.onChange(text)}
-          onBlur={this.props.handleValue(this.state.value)}
+          onBlur={this.onBlur}
           value={this.state.value}
         />
       </>
