@@ -37,22 +37,23 @@ const LoginScreen: () => React$Node = () => {
             />
           </View>
           <View style={styles.bottomContainer}>
-            <View style={[styles.cardContainer, styles.bottomContainer]}>
-              <GudText style={styles.textSM} text="Email" />
-              <TextInput style={styles.gudInput} maxLength={40} placeholder="Email" />
-              <GudText style={styles.textSM} text="Contraseña" />
-              <TextInput style={styles.gudInput} maxLength={40} placeholder="Contraseña" />
-              <View style={[styles.buttonContainer]}>
-                <View style={[styles.credentialButton, styles.active]}>
-                  <TouchableHighlight
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      navigateTo('LandingPage')
-                    }}>
-                    <GudText style={[styles.gudButtonText, styles.textMD]} text="Acceder" />
-                  </TouchableHighlight>
-                </View>
+
+            <GudText style={styles.textSM} text="Email" />
+            <TextInput style={styles.gudInput} maxLength={40} placeholder="Email" />
+
+            <GudText style={styles.textSM} text="Contraseña" />
+            <TextInput style={styles.gudInput} maxLength={40} placeholder="Contraseña" />
+
+            <View style={[styles.buttonContainer]}>
+              <View style={[styles.credentialButton, styles.active]}>
+                <TouchableHighlight
+                  style={styles.touchableActive}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    navigateTo('LandingPage')
+                  }}>
+                  <GudText style={[styles.gudButtonText, styles.textMD]} text="Acceder" />
+                </TouchableHighlight>
               </View>
             </View>
           </View>
