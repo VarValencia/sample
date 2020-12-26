@@ -16,7 +16,7 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyMarginH: '20%',
+  $gudBodyMarginH: '10%',
   $gudBodyMarginV: '20%',
   // Titles
   $gudTitlePaddingTop: '5%',
@@ -71,7 +71,7 @@ export default EStyleSheet.create({
   },
 
   bottomContainer: {
-    justifyContent: 'flex-end',
+    bottom: 0,
   },
 
   // Text styles
@@ -90,6 +90,9 @@ export default EStyleSheet.create({
     zIndex: 99,
     marginVertical: '4%',
     color: '$gudGreenDark',
+  },
+  alignLeft: {
+    textAlign: 'left' 
   },
 
   // Text sizes and weight
@@ -121,7 +124,7 @@ export default EStyleSheet.create({
   },
 
   // Button styling
-  credentialButtonsContainer: {
+  buttonContainer: {
     position: 'relative',
     textAlign: 'center',
     display: 'flex',
@@ -149,6 +152,17 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
     display: 'flex',
     justifyContent: 'center',
+  },
+
+  // Input styling
+  gudInput: {
+    width: Dimensions.get("window").width *80/100,
+    height: Dimensions.get("window").height * 5/100,
+    borderColor: '$gudGreenRegular',
+    borderWidth: 1,
+    borderRadius: '$gudBorderRadius',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   // GUD Radio Button
@@ -234,17 +248,7 @@ export default EStyleSheet.create({
   gudSuccess: {
     margin: '10%',
   },
-  //modelo de cualquier text input
-  gudInput: {
-    width: 300,
-    height: 30,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: '#00000030',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+
   //LogIn container botones especificos
   sectionTitle1: {
     textAlign: 'center',
@@ -257,13 +261,6 @@ export default EStyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     color: '$gudBlack',
-  },
-  //Contiene un text input y un text dentro de la parte de abajo de la logcreen
-  GudContainerBigMarin: {
-    position: 'relative',
-    marginVertical: '5%',
-    textAlign: 'center',
-    marginHorizontal: '10%',
   },
   ButtonContainer: {
     position: 'relative',
