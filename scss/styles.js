@@ -87,7 +87,6 @@ export default EStyleSheet.create({
   bottomContainer: {
     position: 'relative',
     textAlign: 'left',
-    flex: Dimensions.get("window").height * 0.11/100,
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
