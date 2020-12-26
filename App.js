@@ -36,7 +36,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="RegisterScreen"
+            initialRouteName="LandingPage"
             headerMode="none">
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
