@@ -17,7 +17,8 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPadding: '20%',
+  $gudBodyPaddingH: '20%',
+  $gudBodyPaddingV: '0%',
 
   // Titles
   $gudTitlePaddingTop: '5%',
@@ -26,6 +27,7 @@ EStyleSheet.build({
 
   // Buttons
   $gudBottomContainerMargin: (Dimensions.get('window').height * 0) / 100,
+  $touchableWidth: (Dimensions.get('window').width * 80) / 100,
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
@@ -60,13 +62,16 @@ export default EStyleSheet.create({
     position: 'relative',
   },
   body: {
-    position: 'absolute',
+    position: 'relative',
     textAlign: 'center',
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    padding: '$gudBodyPadding',
-    alignItems: 'center',
-    flex: 1,
+    paddingRight: '$gudBodyPaddingH',
+    paddingLeft: '$gudBodyPaddingH',
+    paddingTop: '$gudBodyPaddingV',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    display: 'flex',
   },
 
   // Containers
@@ -83,9 +88,8 @@ export default EStyleSheet.create({
   },
 
   bottomContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    // marginBottom: '$gudBottomContainerMargin'
+    justifyContent: 'center',
+    alignItems: 'flex-start',
   },
 
   // Text styles
@@ -94,7 +98,6 @@ export default EStyleSheet.create({
     color: '$gudBlack',
     padding: '$gudTextPadding',
     marginTop: '$gudTextMarginTop',
-    elevation: 50,
   },
   title: {
     fontFamily: '$b',
@@ -102,8 +105,6 @@ export default EStyleSheet.create({
   },
   gudButtonText: {
     fontFamily: '$sb',
-    elevation: 50,
-    zIndex: 50,
     color: '$gudGreenDark',
     textAlign: 'center',
     justifyContent: 'center',
@@ -167,7 +168,7 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
-    width: (Dimensions.get('window').width * 80) / 100,
+    width: '$touchableWidth',
     alignItems: 'center',
   },
   active: {
@@ -181,8 +182,14 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
     color: '$gudGray',
   },
+  credentialsTouchableActive: {
+    height: (Dimensions.get('window').height * 5) / 100,
+    borderRadius: '$gudBorderRadius',
+    display: 'flex',
+    justifyContent: 'center',
+  },
   touchableActive: {
-    width: (Dimensions.get('window').width * 60) / 100,
+    width: '$touchableWidth',
     height: (Dimensions.get('window').height * 5) / 100,
     borderRadius: '$gudBorderRadius',
     display: 'flex',
@@ -190,12 +197,6 @@ export default EStyleSheet.create({
   },
 
   // Input styling
-  gudInputContainer: {
-    position: 'relative',
-    marginVertical: '5%',
-    textAlign: 'center',
-    marginHorizontal: '10%',
-  },
   gudInput: {
     width: (Dimensions.get('window').width * 80) / 100,
     height: (Dimensions.get('window').height * 5) / 100,
@@ -203,8 +204,6 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderRadius: '$gudBorderRadius',
     paddingLeft: 15,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 
   // GUD Radio Button
