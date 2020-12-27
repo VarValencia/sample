@@ -42,7 +42,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
             />
           </View>
           <View style={[styles.buttonContainer, styles.bottomContainer]}>
-            <View style={[styles.credentialButton, styles.active]}>
+            <View style={[styles.credentialButton, styles.activeBtn]}>
               <TouchableHighlight
                 style={styles.credentialsTouchableActive}
                 underlayColor={EStyleSheet.value('$gudGreenMedium')}
