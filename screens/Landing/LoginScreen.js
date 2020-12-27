@@ -14,7 +14,7 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const LoginScreen: () => React$Node = () => {
+const LoginScreen: () => React$Node = ({navigation}) => {
   return (
     <>
       <StatusBar hidden={true} />

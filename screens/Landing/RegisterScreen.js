@@ -13,7 +13,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import GudText from '@components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import ValidationField from '../../components/ValidationField';
+import ValidationField from '@components/ValidationField';
 
 class RegisterScreen extends React.Component {
   constructor(props) {
@@ -25,12 +25,15 @@ class RegisterScreen extends React.Component {
       passwordConfirmation: '',
     };
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return this.state != nextState;
   }
 
+  // User functions
   onChange(str, ref) {
     console.log('Event', str);
     switch (ref) {
@@ -44,6 +47,12 @@ class RegisterScreen extends React.Component {
         this.setState({passwordConfirmation: str});
         break;
     }
+  }
+  onSubmit() {
+    this.navigateTo('RegisterStepTwo');
+  }
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
   }
 
   render() {
@@ -127,7 +136,9 @@ class RegisterScreen extends React.Component {
                   placeholder={'Repite tu contraseña'}
                   maxLength={12}
                   minLength={6}
-                  handleValue={(event) => this.onChange(event, PASS_CONFIRMATION)}
+                  handleValue={(event) =>
+                    this.onChange(event, PASS_CONFIRMATION)
+                  }
                   password={true}
                 />
               </View>
