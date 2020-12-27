@@ -171,23 +171,25 @@ export default EStyleSheet.create({
     margin: '2%',
   },
   gudButton: {
+    width: '$touchableWidth',
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
-    width: '$touchableWidth',
     alignItems: 'center',
   },
-  active: {
+  activeBtn: {
     backgroundColor: '$gudGreenLight',
     borderColor: '$gudGreenLight',
     borderRadius: '$gudBorderRadius',
   },
-  inactive: {
+  inactiveBtn: {
     backgroundColor: '$gudWhite',
     borderColor: '$gudGray',
     borderRadius: '$gudBorderRadius',
-    color: '$gudGray',
+  },
+  inactiveText: {
+    color: '$gudGray'
   },
   credentialsTouchableActive: {
     height: (Dimensions.get('window').height * 5) / 100,
@@ -301,13 +303,7 @@ export default EStyleSheet.create({
     margin: '10%',
   },
 
-  //LogIn container botones especificos
-  sectionTitle1: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: '600',
-    color: '$gudBlack',
-  },
+  //LogIn container botones especifico
   ButtonTextLandingSc: {
     textAlign: 'center',
     fontSize: 16,
