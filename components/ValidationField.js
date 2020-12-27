@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@styles/styles';
 import GudText from './GudText';
-import {TextInput} from 'react-native';
+import {TextInput, Keyboard} from 'react-native';
 
 class ValidationField extends React.Component {
   constructor(props) {
@@ -15,18 +15,19 @@ class ValidationField extends React.Component {
       });
 
     this.onChange = this.onChange.bind(this);
-    this.onBlur = this.onBlur.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state != nextState;
-  }
+
+  // User functions
   onChange(str) {
     this.setState({value: str});
-    this.props.handleValue;
     this.validate();
+    if (this.state.isValid) {
+      this.props.handleValue(str);
+    }
   }
-  onBlur(){
-    this.props.handleValue(this.state.value)
+  onSubmit() {
+    Keyboard.dismiss(0);
   }
 
   //   Maybe validate sizes here and validate format in parent
@@ -57,7 +58,7 @@ class ValidationField extends React.Component {
           secureTextEntry={this.state.isPassword}
           placeholder={this.props.placeholder}
           onChangeText={(text) => this.onChange(text)}
-          onBlur={this.onBlur}
+          onSubmitEditing={this.onSubmit}
           value={this.state.value}
         />
       </>
