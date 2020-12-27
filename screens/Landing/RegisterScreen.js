@@ -10,7 +10,7 @@ import React from 'react';
 import {View, StatusBar, Image, TextInput} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '@components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import ValidationField from '@components/ValidationField';
@@ -19,7 +19,7 @@ class RegisterScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFormFilled: true,
+      isFormFilled: false,
       email: '',
       password: '',
       passwordConfirmation: '',
@@ -141,31 +141,31 @@ class RegisterScreen extends React.Component {
                   }
                   password={true}
                 />
-              </View>
-              <View style={styles.buttonContainer}>
-                <View
-                  style={[
-                    styles.gudButton,
-                    this.state.isFormFilled ? styles.active : styles.inactive,
-                  ]}>
-                  <TouchableOpacity
-                    disabled={!this.state.isFormFilled}
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      this.onSubmit();
-                    }}>
-                    <GudText
-                      style={[
-                        styles.gudButtonText,
-                        styles.textMD,
-                        this.state.isFormFilled
-                          ? styles.active
-                          : styles.inactive,
-                      ]}
-                      text="Siguiente"
-                    />
-                  </TouchableOpacity>
+                <View style={styles.buttonContainer}>
+                  <View
+                    style={[
+                      styles.gudButton,
+                      this.state.isFormFilled ? styles.activeBtn : styles.inactiveBtn,
+                    ]}>
+                    <TouchableHighlight
+                      disabled={!this.state.isFormFilled}
+                      style={styles.touchableActive}
+                      underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                      onPress={() => {
+                        this.onSubmit();
+                      }}>
+                      <GudText
+                        style={[
+                          styles.gudButtonText,
+                          styles.textMD,
+                          this.state.isFormFilled
+                            ? null
+                            : styles.inactiveText,
+                        ]}
+                        text="Siguiente"
+                      />
+                    </TouchableHighlight>
+                  </View>
                 </View>
               </View>
             </View>
