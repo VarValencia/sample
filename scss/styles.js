@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 // Import Dimensions for screen measurement
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 
 // App Theme
 EStyleSheet.build({
@@ -17,36 +17,27 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '10%',
-  $gudBodyPaddingV: '0%',
+  $gudBodyPadding: '20%',
 
   // Titles
   $gudTitlePaddingTop: '5%',
   $gudSubTitlePaddingBottom: '20%',
   $gudSeparatorPaddingBottom: '5%',
-
+  
   // Buttons
-  $gudBottomContainerMargin: (Dimensions.get('window').height * 0) / 100,
-  $touchableWidth: (Dimensions.get('window').width * 80) / 100,
+  $gudBottomContainerMargin: Dimensions.get("window").height * 0/100,
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudSM:
-    ((Dimensions.get('window').width * 12) / Dimensions.get('window').height) *
-    1.7,
-  $gudMD:
-    ((Dimensions.get('window').width * 16) / Dimensions.get('window').height) *
-    1.2,
-  $gudLG:
-    ((Dimensions.get('window').width * 20.5) /
-      Dimensions.get('window').height) *
-    1.3,
+  $gudSM: Dimensions.get("window").width * 12/Dimensions.get("window").height*1.7,
+  $gudMD: Dimensions.get("window").width * 16/Dimensions.get("window").height*1.2,
+  $gudLG: Dimensions.get("window").width * 20.5/Dimensions.get("window").height*1.3,
 
   $gudTextPadding: 3,
-  $gudTextMarginTop: (Dimensions.get('window').height * 0.1) / 100,
+  $gudTextMarginTop: Dimensions.get("window").height * 0.1 / 100,
 
   // Screen Dimensions
   $scrWidth: Dimensions.get('window').width,
@@ -62,21 +53,20 @@ export default EStyleSheet.create({
     position: 'relative',
   },
   body: {
-    position: 'relative',
+    position: 'absolute',
     textAlign: 'center',
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-    paddingRight: '$gudBodyPaddingH',
-    paddingLeft: '$gudBodyPaddingH',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    display: 'flex',
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+    padding: "$gudBodyPadding",
+    alignItems: 'center',
+    flex: 1
   },
 
   // Containers
   cardContainer: {
     position: 'relative',
-    justifyContent: 'flex-start',
+    display: 'flex',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   appImageContainer: {
@@ -84,22 +74,20 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   bottomContainer: {
-    position: 'relative',
-    textAlign: 'left',
+    flex: 1,
     justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
-  inputContainer: {
-    textAlign: 'left',
+    marginBottom: '$gudBottomContainerMargin'
   },
 
   // Text styles
   gudText: {
     fontFamily: '$sb',
     color: '$gudBlack',
-    padding: '$gudTextPadding',
+    padding: "$gudTextPadding",
     marginTop: '$gudTextMarginTop',
+    elevation: 99
   },
   title: {
     fontFamily: '$b',
@@ -107,15 +95,12 @@ export default EStyleSheet.create({
   },
   gudButtonText: {
     fontFamily: '$sb',
+    elevation: 99,
+    zIndex: 99,
     color: '$gudGreenDark',
     textAlign: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  gudInputText: {
-    fontFamily: '$sb',
-    textAlign: 'left',
-    paddingLeft: '2.6%',
+    alignItems: 'center'
   },
 
   // Text sizes and weight
@@ -136,7 +121,7 @@ export default EStyleSheet.create({
   sectionDescription: {
     textAlign: 'center',
     paddingBottom: '$gudSubTitlePaddingBottom',
-    fontFamily: '$b',
+    fontFamily: '$b'
   },
 
   // Image styling
@@ -148,8 +133,8 @@ export default EStyleSheet.create({
   },
   gudBackgroundImage: {
     flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
+    resizeMode: "cover",
+    justifyContent: "center"
   },
 
   // Button styling
@@ -171,34 +156,26 @@ export default EStyleSheet.create({
     margin: '2%',
   },
   gudButton: {
-    width: '$touchableWidth',
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
-    alignItems: 'center',
+    width: Dimensions.get("window").width * 80/100,
+    alignItems: 'center'
   },
-  activeBtn: {
+  active: {
     backgroundColor: '$gudGreenLight',
     borderColor: '$gudGreenLight',
     borderRadius: '$gudBorderRadius',
   },
-  inactiveBtn: {
+  inactive: {
     backgroundColor: '$gudWhite',
     borderColor: '$gudGray',
     borderRadius: '$gudBorderRadius',
-  },
-  inactiveText: {
-    color: '$gudGray'
-  },
-  credentialsTouchableActive: {
-    height: (Dimensions.get('window').height * 5) / 100,
-    borderRadius: '$gudBorderRadius',
-    display: 'flex',
-    justifyContent: 'center',
+    color: "$gudGray"
   },
   touchableActive: {
-    width: '$touchableWidth',
+    width: (Dimensions.get('window').width * 60) / 100,
     height: (Dimensions.get('window').height * 5) / 100,
     borderRadius: '$gudBorderRadius',
     display: 'flex',
@@ -207,27 +184,18 @@ export default EStyleSheet.create({
 
   // Input styling
   gudInput: {
-    width: (Dimensions.get('window').width * 80) / 100,
-    height: (Dimensions.get('window').height * 5) / 100,
+    width: Dimensions.get("window").width * 80 / 100,
+    height: Dimensions.get("window").height * 5 / 100,
     borderColor: '$gudGreenRegular',
     borderWidth: 1,
     borderRadius: '$gudBorderRadius',
     paddingLeft: 15,
-    margin: '2%',
-  },
-  valid: {
-    borderWidth: 1,
-    borderColor: '$gudGreenRegular'
-  },
-  invalid: {
-    borderWidth: 1,
-    borderColor: 'red'
   },
 
   // GUD Radio Button
   gudRadioButtonGroup: {
     flexDirection: 'row',
-    textAlign: 'left',
+    textAlign: "left"
   },
   rbCircle: {
     height: 20,
@@ -243,19 +211,20 @@ export default EStyleSheet.create({
     width: 14,
     height: 14,
     borderRadius: 7,
-    backgroundColor: '$gudGreenMedium',
+    backgroundColor: '$gudGreenMedium'
   },
 
   // General Styling
   gudSeparator: {
     position: 'relative',
     // provisional
-    width: (Dimensions.get('window').width * 8) / 100,
-    height: (Dimensions.get('window').height * 0.5) / 100,
+    width: Dimensions.get("window").width * 8 / 100,
+    height: Dimensions.get("window").height * 0.5 / 100,
     backgroundColor: '$gudGreenDark',
     borderRadius: '$gudBorderRadius',
-    marginBottom: '$gudSeparatorPaddingBottom',
+    marginBottom: '$gudSeparatorPaddingBottom'
   },
+
 
   // Old styles
   engine: {
@@ -303,7 +272,13 @@ export default EStyleSheet.create({
     margin: '10%',
   },
 
-  //LogIn container botones especifico
+  //LogIn container botones especificos
+  sectionTitle1: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: '600',
+    color: '$gudBlack',
+  },
   ButtonTextLandingSc: {
     textAlign: 'center',
     fontSize: 16,
@@ -326,6 +301,13 @@ export default EStyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#fff',
+  },
+  gudImageBackgroundText: {
+    fontFamily: '$sb',
+    elevation: 99,
+    zIndex: 99,
+    marginVertical: '30%',
+    color: '$gudBlack',
   },
   gudMessage1: {
     textAlign: 'center',

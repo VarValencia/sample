@@ -15,7 +15,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import LandingPage from '@screens/Landing/LandingPage';
 import LoginScreen from '@screens/Landing/LoginScreen';
 import RegisterScreen from '@screens/Landing/RegisterScreen';
-import RegisterStepTwo from '@screens/Landing/RegisterStepTwo';
+import RegisterScreenComplete from '@screens/Landing/RegisterScreenComplete';
 import OpenEmailScreen from '@screens/OpenEmailScreen';
 import GudAfterMatchScreen from '@screens/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';
@@ -45,8 +45,8 @@ const App: () => React$Node = () => {
               component={RegisterScreen}
             />
             <RootStack.Screen
-              name="RegisterStepTwo"
-              component={RegisterStepTwo}
+              name="RegisterScreenComplete"
+              component={RegisterScreenComplete}
             />
             <RootStack.Screen
               name="OpenEmailScreen"
