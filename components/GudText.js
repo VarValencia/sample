@@ -3,8 +3,8 @@ import {Text} from 'react-native';
 import styles from '@styles/styles';
 
 const GudText = (props) => {
-  const originalText = props.text.slice(0, props.text.trim().lastIndexOf(' ')).trim();
-  const accent = props.text.slice(props.text.trim().lastIndexOf(' ') + 1).trim();
+  const originalText = props.text.trim().slice(0, props.text.trim().lastIndexOf(' ')).trim();
+  const accent = props.text.trim().slice(props.text.trim().lastIndexOf(' ') + 1).trim();
   return (
     <>
       {props.accent ? (
