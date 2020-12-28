@@ -53,7 +53,9 @@ class ValidationField extends React.Component {
             styles.gudInput,
             this.state.isValid ? styles.valid : styles.invalid,
           ]}
-          secureTextEntry={this.state.isPassword}
+          secureTextEntry={
+            this.state.isPassword && this.state.value.length > 0 ? true : false
+          }
           placeholder={this.props.placeholder}
           onChangeText={(text) => this.onChange(text)}
           onSubmitEditing={this.onSubmit}
