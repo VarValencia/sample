@@ -45,7 +45,8 @@ const App: () => React$Node = () => {
   }, []);
 
   if (initializing) return null;
-  if (user) {
+
+  if (!user) {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
@@ -84,16 +85,6 @@ const App: () => React$Node = () => {
             initialRouteName="LoadingMatch"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
-            {/* <RootStack.Screen name="LandingPage" component={LandingPage} />
-            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
-            <RootStack.Screen
-              name="RegisterScreen"
-              component={RegisterScreen}
-            />
-            <RootStack.Screen
-              name="RegisterStepTwo"
-              component={RegisterStepTwo}
-            /> */}
             <RootStack.Screen
               name="MatchConfigurationScreen"
               component={MatchConfigurationScreen}
