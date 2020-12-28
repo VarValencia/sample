@@ -7,13 +7,16 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../../components/GudText';
+
+// Styles
+import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import ValidationField from '../../components/ValidationField';
+
+// Scripts
+import AuthenticationService from '../../scripts/authentication/AuthenticationService';
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -96,7 +99,7 @@ class LoginScreen extends React.Component {
                     style={styles.touchableActive}
                     underlayColor={EStyleSheet.value('$gudGreenMedium')}
                     onPress={() => {
-                      this.navigateTo('LandingPage');
+                      AuthenticationService.login({email: this.state.email, pwd: this.state.password})
                     }}>
                     <GudText
                       style={[
