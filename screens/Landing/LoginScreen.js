@@ -29,7 +29,6 @@ class LoginScreen extends React.Component {
 
   // User functions
   onChange(str, ref) {
-    console.log('Event parent', str);
     switch (ref) {
       case 0:
         this.setState({email: str});
@@ -40,7 +39,9 @@ class LoginScreen extends React.Component {
     }
   }
   validate = () => {
-    return !Object.values(this.state).some(entry => entry.toString().length <= 0);
+    return !Object.values(this.state).some(
+      (entry) => entry.toString().length <= 0,
+    );
   };
   navigateTo(screen) {
     this.props.navigation.navigate(screen);

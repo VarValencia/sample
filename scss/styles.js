@@ -86,7 +86,6 @@ export default EStyleSheet.create({
   },
   bottomContainer: {
     position: 'relative',
-    textAlign: 'left',
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
