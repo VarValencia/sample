@@ -11,7 +11,7 @@ import {View, StatusBar, Image} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-const CharginGud: () => React$Node = () => {
+const Splash: () => React$Node = () => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -30,4 +30,4 @@ const CharginGud: () => React$Node = () => {
     </>
   );
 };
-export default CharginGud;
+export default Splash;

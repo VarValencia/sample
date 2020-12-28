@@ -13,7 +13,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const CharginMatch: () => React$Node = () => {
+const LoadingMatch: () => React$Node = () => {
   return (
     <>
       <StatusBar hidden={true} />
@@ -65,4 +65,4 @@ const CharginMatch: () => React$Node = () => {
     </>
   );
 };
-export default CharginMatch;
+export default LoadingMatch;

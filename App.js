@@ -20,8 +20,8 @@ import OpenEmailScreen from '@screens/OpenEmailScreen';
 import GudAfterMatchScreen from '@screens/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';
 import PerfilScreen from '@screens/PerfilScreen';
-import CharginGud from '@screens/CharginGud';
-import CharginMatch from '@screens/CharginMatch';
+import Splash from '@screens/Splash';
+import LoadingMatch from '@screens/LoadingMatch';
 import GudConfigIdiom from '@screens/GudConfigIdiom';
 
 const RootStack = createStackNavigator();
@@ -36,8 +36,9 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LandingPage"
+            initialRouteName="LoginScreen"
             headerMode="none">
+            <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
             <RootStack.Screen
@@ -49,19 +50,18 @@ const App: () => React$Node = () => {
               component={RegisterStepTwo}
             />
             <RootStack.Screen
-              name="OpenEmailScreen"
-              component={OpenEmailScreen}
+              name="MatchConfigurationScreen"
+              component={MatchConfigurationScreen}
             />
+            <RootStack.Screen name="LoadingMatch" component={LoadingMatch} />
             <RootStack.Screen
               name="GudAfterMatchScreen"
               component={GudAfterMatchScreen}
             />
             <RootStack.Screen
-              name="MatchConfigurationScreen"
-              component={MatchConfigurationScreen}
+              name="OpenEmailScreen"
+              component={OpenEmailScreen}
             />
-            <RootStack.Screen name="CharginMatch" component={CharginMatch} />
-            <RootStack.Screen name="CharginGud" component={CharginGud} />
             <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
             <RootStack.Screen
               name="GudConfigIdiom"
