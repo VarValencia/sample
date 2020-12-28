@@ -38,6 +38,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
             </View>
             <GudText
               style={[styles.textLG, styles.sectionDescription]}
+              accent={true}
               text="Entra al espacio donde puedes SER"
             />
           </View>
