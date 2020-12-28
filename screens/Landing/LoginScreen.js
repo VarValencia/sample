@@ -19,7 +19,6 @@ class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFormValid: false,
       email: '',
       password: '',
     };
@@ -39,27 +38,9 @@ class LoginScreen extends React.Component {
         this.setState({password: str});
         break;
     }
-<<<<<<< HEAD
   }
   validate = () => {
-    this.setState({
-      isFormValid: !Object.entries(this.state).find(
-        (entry) => {
-          console.log('Entry length ' + entry[0], entry[1].length);
-          entry[1].length <= 0;
-        }
-      ),
-    });
-=======
-    this.validate();
-  }
-  validate = () => {
-    if (!this.isFormFilled && this.state.email && this.state.password) {
-      this.setState({isFormFilled: true});
-    } else {
-      this.setState({isFormFilled: false});
-    }
->>>>>>> d006644fc829a1f17f34e880ae5a53a266c7d9b2
+    return !Object.values(this.state).some(entry => entry.toString().length <= 0);
   };
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -68,7 +49,8 @@ class LoginScreen extends React.Component {
   render() {
     const EMAIL = 0;
     const PASS = 1;
-    console.log('Parent', this.state);
+    var isValid = this.validate();
+
     return (
       <>
         <StatusBar hidden={true} />
@@ -103,11 +85,7 @@ class LoginScreen extends React.Component {
                   placeholder={'Email'}
                   maxLength={30}
                   minLength={6}
-<<<<<<< HEAD
-                  handleValue={(event) => this.onChange(event, EMAIL), this.validate()}
-=======
                   handleValue={(event) => this.onChange(event, EMAIL)}
->>>>>>> d006644fc829a1f17f34e880ae5a53a266c7d9b2
                 />
                 {/* <GudText
                   style={[styles.textSM, styles.gudInputText]}
@@ -130,20 +108,10 @@ class LoginScreen extends React.Component {
                 <View
                   style={[
                     styles.gudButton,
-<<<<<<< HEAD
-                    this.state.isFormValid
-=======
-                    this.state.isFormFilled
->>>>>>> d006644fc829a1f17f34e880ae5a53a266c7d9b2
-                      ? styles.activeBtn
-                      : styles.inactiveBtn,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}>
                   <TouchableHighlight
-<<<<<<< HEAD
-                    disabled={!this.state.isFormValid}
-=======
-                    disabled={!this.state.isFormFilled}
->>>>>>> d006644fc829a1f17f34e880ae5a53a266c7d9b2
+                    disabled={!isValid}
                     style={styles.touchableActive}
                     underlayColor={EStyleSheet.value('$gudGreenMedium')}
                     onPress={() => {
@@ -153,11 +121,7 @@ class LoginScreen extends React.Component {
                       style={[
                         styles.gudButtonText,
                         styles.textMD,
-<<<<<<< HEAD
-                        this.state.isFormValid ? null : styles.inactiveText,
-=======
-                        this.state.isFormFilled ? null : styles.inactiveText,
->>>>>>> d006644fc829a1f17f34e880ae5a53a266c7d9b2
+                        isValid ? null : styles.inactiveText,
                       ]}
                       text="Acceder"
                     />

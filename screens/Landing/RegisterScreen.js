@@ -19,7 +19,6 @@ class RegisterScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFormValid: false,
       email: '',
       password: '',
       passwordConfirmation: '',
@@ -35,7 +34,6 @@ class RegisterScreen extends React.Component {
 
   // User functions
   onChange(str, ref) {
-    console.log('Event', str);
     switch (ref) {
       case 0:
         this.setState({email: str});
@@ -47,11 +45,9 @@ class RegisterScreen extends React.Component {
         this.setState({passwordConfirmation: str});
         break;
     }
-    this.validate();
   }
   validate = () => {
-    console.log('Validation', !Object.entries(this.state).find(entry => entry[1].length <= 0));
-    this.setState({isFormValid: !Object.entries(this.state).find(entry => entry[1].length <= 0)})
+    return !Object.values(this.state).some(entry => entry.toString().length <= 0);
   };
   onSubmit() {
     this.navigateTo('RegisterStepTwo');
@@ -64,8 +60,8 @@ class RegisterScreen extends React.Component {
     const EMAIL = 0;
     const PASS = 1;
     const PASS_CONFIRMATION = 2;
-
-    console.log('State', this.state);
+    var isValid = this.validate();
+    
     return (
       <>
         <StatusBar hidden={true} />
@@ -150,10 +146,10 @@ class RegisterScreen extends React.Component {
                   <View
                     style={[
                       styles.gudButton,
-                      this.state.isFormValid ? styles.activeBtn : styles.inactiveBtn,
+                      isValid ? styles.activeBtn : styles.inactiveBtn,
                     ]}>
                     <TouchableHighlight
-                      disabled={!this.state.isFormValid}
+                      disabled={!isValid}
                       style={styles.touchableActive}
                       underlayColor={EStyleSheet.value('$gudGreenMedium')}
                       onPress={() => {
@@ -163,7 +159,7 @@ class RegisterScreen extends React.Component {
                         style={[
                           styles.gudButtonText,
                           styles.textMD,
-                          this.state.isFormValid
+                          isValid
                             ? null
                             : styles.inactiveText,
                         ]}
