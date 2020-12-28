@@ -38,7 +38,6 @@ class ConfirmEmail extends React.Component {
                 text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
               />
             </View>
-            {/* se supone que los textos deben superponerse a la imagen */}
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}

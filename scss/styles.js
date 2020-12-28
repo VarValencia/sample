@@ -176,6 +176,7 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
     alignItems: 'center',
+    margin: '2%',
   },
   activeBtn: {
     backgroundColor: '$gudGreenLight',

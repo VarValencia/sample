@@ -23,6 +23,7 @@ import PerfilScreen from '@screens/PerfilScreen';
 import Splash from '@screens/Landing/Splash';
 import LoadingMatch from '@screens/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
+import HelpCenter from '@screens/HelpCenter';
 
 const RootStack = createStackNavigator();
 
@@ -36,7 +37,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LandingPage"
+            initialRouteName="HelpCenter"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -58,6 +59,7 @@ const App: () => React$Node = () => {
               name="GudAfterMatchScreen"
               component={GudAfterMatchScreen}
             />
+            <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
             <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
             <RootStack.Screen
