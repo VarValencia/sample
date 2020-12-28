@@ -7,7 +7,7 @@ module.exports = {
         root: ['.'],
         alias: {
           '@styles': './scss',
-          '@assets': './icons_app',
+          '@assets': './assets',
           '@screens': './screens',
           '@android': './android/app/src/main/assets',
           '@components': './components',

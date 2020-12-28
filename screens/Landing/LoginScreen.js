@@ -7,13 +7,16 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../../components/GudText';
+
+// Styles
+import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import ValidationField from '../../components/ValidationField';
+
+// Scripts
+import AuthenticationService from '../../scripts/authentication/AuthenticationService';
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -71,7 +74,6 @@ class LoginScreen extends React.Component {
                 text="Introduce Email y contraseña para acceder a tu cuenta"
               />
             </View>
-            <View style={styles.bottomContainer}>
               <View style={styles.inputContainer}>
                 <ValidationField
                   placeholder={'Email'}
@@ -88,30 +90,30 @@ class LoginScreen extends React.Component {
                 />
               </View>
               <View style={styles.buttonContainer}>
-                <View
+                <TouchableHighlight
+                  disabled={!isValid}
                   style={[
+                    styles.touchableActive,
                     styles.gudButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
-                  ]}>
-                  <TouchableHighlight
-                    disabled={!isValid}
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      this.navigateTo('LandingPage');
-                    }}>
-                    <GudText
-                      style={[
-                        styles.gudButtonText,
-                        styles.textMD,
-                        isValid ? null : styles.inactiveText,
-                      ]}
-                      text="Acceder"
-                    />
-                  </TouchableHighlight>
-                </View>
+                  ]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    AuthenticationService.login({
+                      email: this.state.email,
+                      pwd: this.state.password,
+                    });
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      styles.textMD,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Acceder"
+                  />
+                </TouchableHighlight>
               </View>
-            </View>
           </View>
         </SafeAreaView>
       </>

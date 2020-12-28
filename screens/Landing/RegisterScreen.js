@@ -7,13 +7,16 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '@components/GudText';
+
+// Styles
+import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import ValidationField from '@components/ValidationField';
+
+// Scripts
+import AuthenticationService from '../../scripts/authentication/AuthenticationService';
 
 class RegisterScreen extends React.Component {
   constructor(props) {
@@ -47,10 +50,16 @@ class RegisterScreen extends React.Component {
     }
   }
   validate = () => {
-    return !Object.values(this.state).some(entry => entry.toString().length <= 0);
+    return !Object.values(this.state).some(
+      (entry) => entry.toString().length <= 0,
+    );
   };
   onSubmit() {
-    this.navigateTo('RegisterStepTwo');
+    AuthenticationService.signup({
+      email: this.state.email,
+      pwd: this.state.password,
+    });
+    // this.navigateTo('RegisterStepTwo');
   }
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -61,7 +70,7 @@ class RegisterScreen extends React.Component {
     const PASS = 1;
     const PASS_CONFIRMATION = 2;
     var isValid = this.validate();
-    
+
     return (
       <>
         <StatusBar hidden={true} />
@@ -81,92 +90,49 @@ class RegisterScreen extends React.Component {
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
             </View>
-            <View style={styles.bottomContainer}>
-              <View style={styles.inputContainer}>
-                {/* <GudText
-                  style={[styles.textSM, styles.gudInputText]}
-                  text="Email"
-                />
-                <TextInput
-                  ref="Email"
-                  style={styles.gudInput}
-                  placeholder="Email"
-                  onChangeText={(text) => this.onChange(text, EMAIL)}
-                  value={this.state.email}
-                /> */}
-                <ValidationField
-                  placeholder={'Email'}
-                  maxLength={30}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, EMAIL)}
-                />
-                {/* <GudText
-                  style={[styles.textSM, styles.gudInputText]}
-                  text="Contraseña"
-                  />
-                  <TextInput
-                  ref="Password"
-                  secureTextEntry={true}
-                  style={styles.gudInput}
-                  placeholder="Contraseña"
-                  onChangeText={(text) => this.onChange(text, PASS)}
-                  value={this.state.password}
-                /> */}
-                <ValidationField
-                  placeholder={'Contraseña'}
-                  maxLength={12}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, PASS)}
-                  password={true}
-                />
-
-                {/* <GudText
-                  style={[styles.textSM, styles.gudInputText]}
-                  text="Repite contraseña"
-                  />
-                  <TextInput
-                  ref="PasswordConffirmation"
-                  style={styles.gudInput}
-                  secureTextEntry={true}
-                  onChangeText={(text) =>
-                    this.onChange(text, PASS_CONFIRMATION)
-                  }
-                  placeholder="Repite tu contraseña"
-                /> */}
-                <ValidationField
-                  placeholder={'Repite tu contraseña'}
-                  maxLength={12}
-                  minLength={6}
-                  handleValue={(event) =>
-                    this.onChange(event, PASS_CONFIRMATION)
-                  }
-                  password={true}
-                />
-                <View style={styles.buttonContainer}>
-                  <View
-                    style={[
-                      styles.gudButton,
-                      isValid ? styles.activeBtn : styles.inactiveBtn,
-                    ]}>
-                    <TouchableHighlight
-                      disabled={!isValid}
-                      style={styles.touchableActive}
-                      underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                      onPress={() => {
-                        this.onSubmit();
-                      }}>
-                      <GudText
-                        style={[
-                          styles.gudButtonText,
-                          styles.textMD,
-                          isValid
-                            ? null
-                            : styles.inactiveText,
-                        ]}
-                        text="Siguiente"
-                      />
-                    </TouchableHighlight>
-                  </View>
+            <View style={styles.inputContainer}>
+              <ValidationField
+                placeholder={'Email'}
+                maxLength={30}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, EMAIL)}
+              />
+              <ValidationField
+                placeholder={'Contraseña'}
+                maxLength={12}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, PASS)}
+                password={true}
+              />
+              <ValidationField
+                placeholder={'Repite tu contraseña'}
+                maxLength={12}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, PASS_CONFIRMATION)}
+                password={true}
+              />
+              <View style={styles.buttonContainer}>
+                <View
+                  style={[
+                    styles.gudButton,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                  ]}>
+                  <TouchableHighlight
+                    disabled={!isValid}
+                    style={styles.touchableActive}
+                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                    onPress={() => {
+                      this.onSubmit();
+                    }}>
+                    <GudText
+                      style={[
+                        styles.gudButtonText,
+                        styles.textMD,
+                        isValid ? null : styles.inactiveText,
+                      ]}
+                      text="Siguiente"
+                    />
+                  </TouchableHighlight>
                 </View>
               </View>
             </View>

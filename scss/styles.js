@@ -26,7 +26,6 @@ EStyleSheet.build({
   $gudSeparatorPaddingBottom: '5%',
 
   // Buttons
-  $gudBottomContainerMargin: (Dimensions.get('window').height * 0) / 100,
   $touchableWidth: (Dimensions.get('window').width * 80) / 100,
 
   // FONTS & SIZES
@@ -82,11 +81,6 @@ export default EStyleSheet.create({
   appImageContainer: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  bottomContainer: {
-    position: 'relative',
-    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   inputContainer: {

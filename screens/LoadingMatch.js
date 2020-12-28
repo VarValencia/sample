@@ -31,7 +31,7 @@ const LoadingMatch: () => React$Node = () => {
           </View>
           <View style={styles.appImageContainer}>
             <Image
-              source={require('../iconos_app/RadarGud.gif')}
+              source={require('@icons/RadarGud.gif')}
             />
           </View>
             <View style={styles.buttonContiner}>
