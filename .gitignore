@@ -1,6 +1,6 @@
 # APP STUFF
 #
-
+./android/app/google-services.json
 .package-lock.json
 yarn.lock
 
