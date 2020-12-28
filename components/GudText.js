@@ -3,8 +3,8 @@ import {Text} from 'react-native';
 import styles from '@styles/styles';
 
 const GudText = (props) => {
-  const originalText = props.text.trim().slice(0, props.text.lastIndexOf(' '));
-  const accent = props.text.slice(props.text.lastIndexOf(' ') + 1);
+  const originalText = props.text.slice(0, props.text.trim().lastIndexOf(' ')).trim();
+  const accent = props.text.slice(props.text.trim().lastIndexOf(' ') + 1).trim();
   return (
     <>
       {props.accent ? (
@@ -12,7 +12,7 @@ const GudText = (props) => {
           {originalText} <Text style={styles.gudButtonText}>{accent}</Text>
         </Text>
       ) : (
-        <Text style={[styles.gudText, props.style]}>{props.text}</Text>
+        <Text style={[styles.gudText, props.style]}>{props.text.trim()}</Text>
       )}
     </>
   );
