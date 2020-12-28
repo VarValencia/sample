@@ -29,7 +29,6 @@ class LoginScreen extends React.Component {
 
   // User functions
   onChange(str, ref) {
-    console.log('Event parent', str);
     switch (ref) {
       case 0:
         this.setState({email: str});
@@ -72,30 +71,12 @@ class LoginScreen extends React.Component {
             </View>
             <View style={styles.bottomContainer}>
               <View style={styles.inputContainer}>
-                {/* <GudText
-                  style={[styles.textSM, styles.gudInputText]}
-                  text="Email"
-                />
-                <TextInput
-                  style={styles.gudInput}
-                  maxLength={40}
-                  placeholder="Email"
-                /> */}
                 <ValidationField
                   placeholder={'Email'}
                   maxLength={30}
                   minLength={6}
                   handleValue={(event) => this.onChange(event, EMAIL)}
                 />
-                {/* <GudText
-                  style={[styles.textSM, styles.gudInputText]}
-                  text="Contraseña"
-                  />
-                  <TextInput
-                  style={styles.gudInput}
-                  maxLength={40}
-                  placeholder="Contraseña"
-                /> */}
                 <ValidationField
                   placeholder={'Contraseña'}
                   maxLength={30}
