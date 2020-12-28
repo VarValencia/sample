@@ -42,7 +42,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
               text="Entra al espacio donde puedes SER"
             />
           </View>
-          <View style={[styles.buttonContainer, styles.bottomContainer]}>
+          <View style={[styles.buttonContainer]}>
             <View style={[styles.credentialButton, styles.activeBtn]}>
               <TouchableHighlight
                 style={styles.credentialsTouchableActive}

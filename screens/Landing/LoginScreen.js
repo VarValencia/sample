@@ -42,7 +42,9 @@ class LoginScreen extends React.Component {
     }
   }
   validate = () => {
-    return !Object.values(this.state).some(entry => entry.toString().length <= 0);
+    return !Object.values(this.state).some(
+      (entry) => entry.toString().length <= 0,
+    );
   };
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -72,7 +74,6 @@ class LoginScreen extends React.Component {
                 text="Introduce Email y contraseña para acceder a tu cuenta"
               />
             </View>
-            <View style={styles.bottomContainer}>
               <View style={styles.inputContainer}>
                 <ValidationField
                   placeholder={'Email'}
@@ -89,30 +90,30 @@ class LoginScreen extends React.Component {
                 />
               </View>
               <View style={styles.buttonContainer}>
-                <View
+                <TouchableHighlight
+                  disabled={!isValid}
                   style={[
+                    styles.touchableActive,
                     styles.gudButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
-                  ]}>
-                  <TouchableHighlight
-                    disabled={!isValid}
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      AuthenticationService.login({email: this.state.email, pwd: this.state.password})
-                    }}>
-                    <GudText
-                      style={[
-                        styles.gudButtonText,
-                        styles.textMD,
-                        isValid ? null : styles.inactiveText,
-                      ]}
-                      text="Acceder"
-                    />
-                  </TouchableHighlight>
-                </View>
+                  ]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    AuthenticationService.login({
+                      email: this.state.email,
+                      pwd: this.state.password,
+                    });
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      styles.textMD,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Acceder"
+                  />
+                </TouchableHighlight>
               </View>
-            </View>
           </View>
         </SafeAreaView>
       </>

@@ -55,7 +55,10 @@ class RegisterScreen extends React.Component {
     );
   };
   onSubmit() {
-    AuthenticationService.signup({email: this.state.email, pwd: this.state.password})
+    AuthenticationService.signup({
+      email: this.state.email,
+      pwd: this.state.password,
+    });
     // this.navigateTo('RegisterStepTwo');
   }
   navigateTo(screen) {
@@ -87,53 +90,49 @@ class RegisterScreen extends React.Component {
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
             </View>
-            <View style={styles.bottomContainer}>
-              <View style={styles.inputContainer}>
-                <ValidationField
-                  placeholder={'Email'}
-                  maxLength={30}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, EMAIL)}
-                />
-                <ValidationField
-                  placeholder={'Contraseña'}
-                  maxLength={12}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, PASS)}
-                  password={true}
-                />
-                <ValidationField
-                  placeholder={'Repite tu contraseña'}
-                  maxLength={12}
-                  minLength={6}
-                  handleValue={(event) =>
-                    this.onChange(event, PASS_CONFIRMATION)
-                  }
-                  password={true}
-                />
-                <View style={styles.buttonContainer}>
-                  <View
-                    style={[
-                      styles.gudButton,
-                      isValid ? styles.activeBtn : styles.inactiveBtn,
-                    ]}>
-                    <TouchableHighlight
-                      disabled={!isValid}
-                      style={styles.touchableActive}
-                      underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                      onPress={() => {
-                        this.onSubmit();
-                      }}>
-                      <GudText
-                        style={[
-                          styles.gudButtonText,
-                          styles.textMD,
-                          isValid ? null : styles.inactiveText,
-                        ]}
-                        text="Siguiente"
-                      />
-                    </TouchableHighlight>
-                  </View>
+            <View style={styles.inputContainer}>
+              <ValidationField
+                placeholder={'Email'}
+                maxLength={30}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, EMAIL)}
+              />
+              <ValidationField
+                placeholder={'Contraseña'}
+                maxLength={12}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, PASS)}
+                password={true}
+              />
+              <ValidationField
+                placeholder={'Repite tu contraseña'}
+                maxLength={12}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, PASS_CONFIRMATION)}
+                password={true}
+              />
+              <View style={styles.buttonContainer}>
+                <View
+                  style={[
+                    styles.gudButton,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                  ]}>
+                  <TouchableHighlight
+                    disabled={!isValid}
+                    style={styles.touchableActive}
+                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                    onPress={() => {
+                      this.onSubmit();
+                    }}>
+                    <GudText
+                      style={[
+                        styles.gudButtonText,
+                        styles.textMD,
+                        isValid ? null : styles.inactiveText,
+                      ]}
+                      text="Siguiente"
+                    />
+                  </TouchableHighlight>
                 </View>
               </View>
             </View>

@@ -40,7 +40,6 @@ class RegisterStepTwo extends React.Component {
                 text="Completa tu cuenta para finalizar el registro"
               />
             </View>
-            <View style={styles.bottomContainer}>
               <View style={styles.inputContainer}>
                 <GudText style={styles.textMD} text="Nombre de usuario" />
                 <TextInput style={styles.gudInput} maxLength={40} />
@@ -73,7 +72,6 @@ class RegisterStepTwo extends React.Component {
                   </TouchableHighlight>
                 </View>
               </View>
-            </View>
           </View>
         </SafeAreaView>
       </>
