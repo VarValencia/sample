@@ -7,12 +7,13 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
+
 import GudText from '../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import styles from '@styles/styles';
 
 const LoadingMatch: () => React$Node = () => {
   return (
@@ -21,16 +22,16 @@ const LoadingMatch: () => React$Node = () => {
       <SafeAreaView>
         <View style={styles.body}>
           <View style={styles.cardContainer}>
-            <GudText style={[styles.gudMessage, styles.textLG]} text="Match" />
+            <GudText style={styles.textLG} text="Match" />
             <GudText
-              style={[styles.gudMessage, styles.textMD]}
+              style={styles.textMD}
+              accent={true}
               text="Conectando perfiles"
             />
           </View>
           <View style={styles.appImageContainer}>
             <Image
-              style={styles.gudCardImage}
-              source={require('@android/images/LoginScreen.png')}
+              source={require('../iconos_app/RadarGud.gif')}
             />
           </View>
             <View style={styles.buttonContiner}>
