@@ -189,7 +189,7 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
   },
   inactiveText: {
-    color: '$gudGray'
+    color: '$gudGray',
   },
   credentialsTouchableActive: {
     height: (Dimensions.get('window').height * 5) / 100,
@@ -217,11 +217,11 @@ export default EStyleSheet.create({
   },
   valid: {
     borderWidth: 1,
-    borderColor: '$gudGreenRegular'
+    borderColor: '$gudGreenRegular',
   },
   invalid: {
     borderWidth: 1,
-    borderColor: 'red'
+    borderColor: 'red',
   },
 
   // GUD Radio Button
