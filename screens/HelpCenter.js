@@ -62,7 +62,11 @@ class HelpCenter extends React.Component {
                   />
                 </TouchableHighlight>
                 <TouchableHighlight
-                  style={[styles.gudButton, styles.touchableActive]}
+                  style={[
+                    styles.gudButton,
+                    styles.touchableActive,
+                    styles.activeBtn,
+                  ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
                     console.log('you tapped the button technic support');

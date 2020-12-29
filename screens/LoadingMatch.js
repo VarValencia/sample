@@ -15,25 +15,28 @@ import GudText from '../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import styles from '@styles/styles';
 
-const LoadingMatch: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <GudText style={styles.textLG} text="Match" />
-            <GudText
-              style={styles.textMD}
-              accent={true}
-              text="Conectando perfiles"
-            />
-          </View>
-          <View style={styles.appImageContainer}>
-            <Image
-              source={require('@icons/RadarGud.gif')}
-            />
-          </View>
+class LoadingMatch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <>
+        <StatusBar hidden={true} />
+        <SafeAreaView>
+          <View style={styles.body}>
+            <View style={styles.cardContainer}>
+              <GudText style={styles.textLG} text="Match" />
+              <GudText
+                style={styles.textMD}
+                accent={true}
+                text="Conectando perfiles"
+              />
+            </View>
+            <View style={styles.appImageContainer}>
+              <Image source={require('@icons/RadarGud.gif')} />
+            </View>
             <View style={styles.buttonContiner}>
               <View style={styles.gudButton}>
                 <TouchableHighlight
@@ -50,8 +53,9 @@ const LoadingMatch: () => React$Node = () => {
               </View>
             </View>
           </View>
-      </SafeAreaView>
-    </>
-  );
-};
+        </SafeAreaView>
+      </>
+    );
+  }
+}
 export default LoadingMatch;
