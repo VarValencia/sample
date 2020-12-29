@@ -44,30 +44,26 @@ class GudAfterMatchScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.appImageContainer}>
-                <ImageBackground
-                  source={require('../android/app/src/main/assets/images/LoginScreen.png')}
-                  style={styles.gudCardImage}>
-                  <GudText
-                    style={[styles.gudImageBackgroundText, styles.textLG]}
-                    text="Hey Pablo,"
-                  />
-                  <GudText
-                    style={[styles.gudText, styles.textMD]}
-                    text=" cómo ha sido la experiencia con este Gudder?"
-                  />
-                </ImageBackground>
-              </View>
-              <View styles={styles.cardContainer}>
-                <GRadioButtonGroup style={styles.textSM} options={opt} />
-                {/* Set this editable to read from GRadioButtonGroup selected value */}
-                <TextInput
-                  editable={false}
-                  style={[styles.gudInput]}
-                  maxLength={40}
+              <ImageBackground
+                source={require('@android/images/LoginScreen.png')}
+                //no funciona el estilo gudBackgroundImage
+                style={styles.gudBackgroundImage}>
+                <GudText style={[styles.textLG]} text="Hey Pablo," />
+                <GudText
+                  style={[styles.textMD]}
+                  text=" cómo ha sido la experiencia con este Gudder?"
                 />
-              </View>
+              </ImageBackground>
             </View>
+            <GRadioButtonGroup
+              style={[styles.GRadioButtonGroup]}
+              options={opt}
+            />
+            <TextInput
+              editable={false}
+              style={[styles.gudInput]}
+              maxLength={40}
+            />
           </View>
         </SafeAreaView>
       </>

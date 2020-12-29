@@ -13,71 +13,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const optAnon = [
-  {
-    name: 'Chat',
-    key: 1,
-  },
-  {
-    name: 'Llamada',
-    key: 2,
-  },
-  {
-    name: 'Videollamada',
-    key: 3,
-  },
-  {
-    name: 'Sorpréndeme',
-    key: '4',
-  },
-];
-
-const optIdiom = [
-  {
-    name: 'Mi idioma',
-    key: 1,
-  },
-  {
-    name: 'Otra',
-    key: 2,
-  },
-  {
-    name: 'Sorpréndeme',
-    key: 3,
-  },
-];
-const optAge = [
-  {
-    name: '18-30',
-    key: 1,
-  },
-  {
-    name: '31-50',
-    key: 2,
-  },
-  {
-    name: '51-',
-    key: 3,
-  },
-  {
-    name: 'Sorpréndeme',
-    key: 4,
-  },
-];
-const optConfigMode = [
-  {
-    name: 'Mi Match básico',
-    key: 1,
-  },
-  {
-    name: 'Establecer nueva configuración',
-    key: 2,
-  },
-  {
-    name: 'Sorpréndeme',
-    key: 3,
-  },
-];
 class MatchConfigurationScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -86,13 +21,13 @@ class MatchConfigurationScreen extends React.Component {
   count = 0;
 
   //functions
-  onhange(count, ref) {
+  onhange(count) {
     switch (count) {
       case 0:
-        anonHdd = false;
+        privacyHdd = false;
         break;
       case 1:
-        idiomHdd = true;
+        languageHdd = true;
         break;
       case 2:
         ageHdd = true;
@@ -103,6 +38,70 @@ class MatchConfigurationScreen extends React.Component {
     }
   }
   render() {
+    const optAnon = [
+      {
+        name: 'Chat',
+        key: 1,
+      },
+      {
+        name: 'Llamada',
+        key: 2,
+      },
+      {
+        name: 'Videollamada',
+        key: 3,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 4,
+      },
+    ];
+    const optIdiom = [
+      {
+        name: 'Mi idioma',
+        key: 1,
+      },
+      {
+        name: 'Otro',
+        key: 2,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 3,
+      },
+    ];
+    const optAge = [
+      {
+        name: '18-30',
+        key: 1,
+      },
+      {
+        name: '31-50',
+        key: 2,
+      },
+      {
+        name: '51+',
+        key: 3,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 4,
+      },
+    ];
+    const optConfigMode = [
+      {
+        name: 'Mi Match básico',
+        key: 1,
+      },
+      {
+        name: 'Establecer nueva configuración',
+        key: 2,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 3,
+      },
+    ];
     const anonHdd = true;
     const idiomHdd = true;
     const ageHdd = true;
@@ -113,22 +112,26 @@ class MatchConfigurationScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View
-                source={require('../android/app/src/main/assets/images/LoginScreen.png')}
-                style={styles.gudCardImage}>
-                <View style={styles.appImageContainer}>
-                  <Image source={require('@icons/1x/GUDLogo.png')} />
-                </View>
-                <GudText
-                  style={[styles.gudMessage, styles.textLG]}
-                  text="Configura tu Match!"
-                />
-                <GudText
-                  style={[styles.gudMessage, styles.textSM]}
-                  text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento!"
-                />
+              <View style={styles.appImageContainer}>
+                <Image source={require('@icons/1x/GUDLogo.png')} />
               </View>
+              <GudText
+                style={styles.textLG}
+                accent={true}
+                text="Configura tu Match"
+              />
+              <View style={styles.gudSeparator} />
             </View>
+            {/* Instancia 4 GRadioButtonGroups con las opciones que tienes ya
+            definidas (optAnon, etc) */}
+            <GudText
+              style={[styles.sectionDescription, styles.textSM]}
+              text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento!"
+            />
+            <GRadioButtonGroup options={optAge} />
+            <GRadioButtonGroup options={optAnon} />
+            <GRadioButtonGroup options={optIdiom} />
+            <GRadioButtonGroup options={optConfigMode} />
             {/* componente movil abajo */}
             <View style={styles.gudcardContainer}>
               {/* componente  movil aquí */}

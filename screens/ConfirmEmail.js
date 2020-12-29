@@ -24,17 +24,17 @@ class ConfirmEmail extends React.Component {
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
-            <View style={styles.Container}>
+            {/* necesario estilo que alinee a la izquierda */}
+            <View style={styles.cardContainer}>
+              <GudText style={styles.textLG} text="Enhorabuena!" />
+              {/* the separator should be allign to the left */}
+              <View style={styles.gudSeparator} />
               <GudText
-                style={[styles.gudMessage, styles.textLG]}
-                text="Enhorabuena!"
-              />
-              <GudText
-                style={[styles.gudMessage, styles.textMD]}
+                style={styles.textMD}
                 text="Estás a un paso de ser GUD"
               />
               <GudText
-                style={[styles.gudMessage, styles.textSM]}
+                style={styles.textSM}
                 text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
               />
             </View>
@@ -44,10 +44,12 @@ class ConfirmEmail extends React.Component {
                 source={require('@android/images/LoginScreen.png')}
               />
             </View>
-            <View style={styles.gudButtonDark}>
+            <View style={styles.buttonContainer}>
               <TouchableHighlight
+                // gudButton no se corresponde al estilo del boton de la pantalla
+                style={[styles.touchableActive, styles.gudButton]}
                 onPress={() => {
-                  console.log('you tapped the button FINALIZAR');
+                  console.log('user pressed FINALIZAR');
                 }}>
                 <GudText
                   style={[styles.gudButtonText, styles.textMD]}
