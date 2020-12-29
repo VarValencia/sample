@@ -37,6 +37,11 @@ const AuthenticationService = {
         console.error(error);
       });
   },
+  logout() {
+    auth()
+      .signOut()
+      .then(() => console.log('User signed out!'));
+  },
 };
 
 export default AuthenticationService;
