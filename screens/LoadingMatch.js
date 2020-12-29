@@ -34,29 +34,27 @@ const LoadingMatch: () => React$Node = () => {
             />
           </View>
           <View style={styles.appImageContainer}>
-            <Image
-              source={require('@icons/RadarGud.gif')}
-            />
+            <Image source={require('@icons/RadarGud.gif')} />
           </View>
-            <View style={styles.buttonContiner}>
-              <View style={styles.gudButton}>
-                <TouchableHighlight
-                  style={styles.touchableActive}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                  onPress={() => {
-                    AuthenticationService.logout();
-                  }}>
-                  <GudText
-                    style={[styles.gudButtonText, styles.textMD]}
-                    text="Cancelar"
-                  />
-                </TouchableHighlight>
-              </View>
+          <View style={styles.buttonContiner}>
+            <View style={styles.gudButton}>
+              <TouchableHighlight
+                style={styles.touchableActive}
+                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                onPress={() => {
+                  AuthenticationService.logout();
+                }}>
+                <GudText
+                  style={[styles.gudButtonText, styles.textMD]}
+                  text="Cancelar"
+                />
+              </TouchableHighlight>
             </View>
           </View>
-        </SafeAreaView>
-      </>
-    );
-  }
-}
+        </View>
+      </SafeAreaView>
+    </>
+  );
+};
+
 export default LoadingMatch;
