@@ -74,46 +74,43 @@ class LoginScreen extends React.Component {
                 text="Introduce Email y contraseña para acceder a tu cuenta"
               />
             </View>
-              <View style={styles.inputContainer}>
-                <ValidationField
-                  placeholder={'Email'}
-                  maxLength={30}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, EMAIL)}
-                />
-                <ValidationField
-                  placeholder={'Contraseña'}
-                  maxLength={30}
-                  minLength={6}
-                  handleValue={(event) => this.onChange(event, PASS)}
-                  password={true}
-                />
-              </View>
-              <View style={styles.buttonContainer}>
-                <TouchableHighlight
-                  disabled={!isValid}
+            <View style={styles.inputContainer}>
+              <ValidationField
+                placeholder={'Email'}
+                maxLength={30}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, EMAIL)}
+              />
+              <ValidationField
+                placeholder={'Contraseña'}
+                maxLength={30}
+                minLength={6}
+                handleValue={(event) => this.onChange(event, PASS)}
+                password={true}
+              />
+            </View>
+            <View style={styles.buttonContainer}>
+              <TouchableHighlight
+                disabled={!isValid}
+                style={[
+                  styles.touchableActive,
+                  styles.gudButton,
+                  isValid ? styles.activeBtn : styles.inactiveBtn,
+                ]}
+                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                onPress={() => {
+                  AuthenticationService.devSign();
+                }}>
+                <GudText
                   style={[
-                    styles.touchableActive,
-                    styles.gudButton,
-                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                    styles.gudButtonText,
+                    styles.textMD,
+                    isValid ? null : styles.inactiveText,
                   ]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                  onPress={() => {
-                    AuthenticationService.login({
-                      email: this.state.email,
-                      pwd: this.state.password,
-                    });
-                  }}>
-                  <GudText
-                    style={[
-                      styles.gudButtonText,
-                      styles.textMD,
-                      isValid ? null : styles.inactiveText,
-                    ]}
-                    text="Acceder"
-                  />
-                </TouchableHighlight>
-              </View>
+                  text="Acceder"
+                />
+              </TouchableHighlight>
+            </View>
           </View>
         </SafeAreaView>
       </>
