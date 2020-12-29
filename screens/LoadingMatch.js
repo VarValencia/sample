@@ -11,9 +11,13 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
+// Styles
 import GudText from '../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import styles from '@styles/styles';
+
+// Scripts
+import AuthenticationService from '../scripts/authentication/AuthenticationService';
 
 const LoadingMatch: () => React$Node = () => {
   return (
@@ -40,7 +44,7 @@ const LoadingMatch: () => React$Node = () => {
                   style={styles.touchableActive}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    console.log('you tapped the button FINALIZAR');
+                    AuthenticationService.logout();
                   }}>
                   <GudText
                     style={[styles.gudButtonText, styles.textMD]}
