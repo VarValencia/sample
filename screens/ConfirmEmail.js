@@ -27,21 +27,20 @@ class ConfirmEmail extends React.Component {
             {/* necesario estilo que alinee a la izquierda */}
             <View style={styles.cardContainer}>
               <GudText style={styles.textLG} text="Enhorabuena!" />
-              {/* the separator should be allign to the left */}
               <View style={styles.gudSeparator} />
               <GudText
-                style={styles.textMD}
+                style={styles.textLG}
                 text="Estás a un paso de ser GUD"
               />
               <GudText
-                style={styles.textSM}
+                style={styles.textMD}
                 text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
               />
             </View>
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}
-                source={require('@android/images/LoginScreen.png')}
+                source={require('@icons/SignupLogo.png')}
               />
             </View>
             <View style={styles.buttonContainer}>
