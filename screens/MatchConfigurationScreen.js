@@ -13,48 +13,148 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const MatchConfigurationScreen: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <ImageBackground
-              source={require('../android/app/src/main/assets/images/LoginScreen.png')}
-              style={styles.gudCardImage}>
+class MatchConfigurationScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  count = 0;
+
+  //functions
+  onhange(count) {
+    switch (count) {
+      case 0:
+        privacyHdd = false;
+        break;
+      case 1:
+        languageHdd = true;
+        break;
+      case 2:
+        ageHdd = true;
+        break;
+      case 3:
+        configHidden = true;
+        break;
+    }
+  }
+  render() {
+    const optAnon = [
+      {
+        name: 'Chat',
+        key: 1,
+      },
+      {
+        name: 'Llamada',
+        key: 2,
+      },
+      {
+        name: 'Videollamada',
+        key: 3,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 4,
+      },
+    ];
+    const optIdiom = [
+      {
+        name: 'Mi idioma',
+        key: 1,
+      },
+      {
+        name: 'Otro',
+        key: 2,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 3,
+      },
+    ];
+    const optAge = [
+      {
+        name: '18-30',
+        key: 1,
+      },
+      {
+        name: '31-50',
+        key: 2,
+      },
+      {
+        name: '51+',
+        key: 3,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 4,
+      },
+    ];
+    const optConfigMode = [
+      {
+        name: 'Mi Match básico',
+        key: 1,
+      },
+      {
+        name: 'Establecer nueva configuración',
+        key: 2,
+      },
+      {
+        name: 'Sorpréndeme',
+        key: 3,
+      },
+    ];
+    const anonHdd = true;
+    const idiomHdd = true;
+    const ageHdd = true;
+    const configHidden = true;
+    return (
+      <>
+        <StatusBar hidden={true} />
+        <SafeAreaView>
+          <View style={styles.body}>
+            <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
                 <Image source={require('@icons/1x/GUDLogo.png')} />
               </View>
               <GudText
-                style={[styles.gudMessage, styles.textLG]}
-                text="Configura tu Match!"
+                style={styles.textLG}
+                accent={true}
+                text="Configura tu Match"
               />
-            </ImageBackground>
-
+              <View style={styles.gudSeparator} />
+            </View>
+            {/* Instancia 4 GRadioButtonGroups con las opciones que tienes ya
+            definidas (optAnon, etc) */}
             <GudText
-              style={[styles.gudMessage, styles.textMD]}
-              text="Selecciona los filtros con los que encontrar una persona para conversar en este mimo momento:"
+              style={[styles.sectionDescription, styles.textSM]}
+              text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento!"
             />
+            <GRadioButtonGroup options={optAge} />
+            <GRadioButtonGroup options={optAnon} />
+            <GRadioButtonGroup options={optIdiom} />
+            <GRadioButtonGroup options={optConfigMode} />
+            {/* componente movil abajo */}
+            <View style={styles.gudcardContainer}>
+              {/* componente  movil aquí */}
+              <View style={styles.gudButtonContainer}>
+                <TouchableHighlight
+                  onPress={() => {
+                    console.log('you tapped the button Siguiente');
+                    console.log({anonHdd});
+                    console.log({idiomHdd});
+                    console.log({ageHdd});
+                    console.log({configHidden});
+                  }}>
+                  <GudText
+                    style={[styles.gudButtonText, styles.textMD]}
+                    text="Siguiente"
+                  />
+                </TouchableHighlight>
+              </View>
+            </View>
           </View>
-          {/* componente movil abajo */}
-          <View style={styles.gudcardContainer}>
-            {/* componente  movil aquí */}
-          </View>
-          <View style={styles.gudButtonDark}>
-            <TouchableHighlight
-              onPress={() => {
-                console.log('you tapped the button FINALIZAR');
-              }}>
-              <GudText
-                style={[styles.gudButtonText, styles.textMD]}
-                text="Match"
-              />
-            </TouchableHighlight>
-          </View>
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
+        </SafeAreaView>
+      </>
+    );
+  }
+}
 export default MatchConfigurationScreen;

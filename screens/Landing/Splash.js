@@ -21,7 +21,7 @@ const Splash: () => React$Node = () => {
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}
-                source={require('../android/app/src/main/assets/images/LoginScreen.png')}
+                source={require('@android/images/LoginScreen.png')}
               />
             </View>
           </View>
