@@ -55,11 +55,11 @@ class RegisterScreen extends React.Component {
     );
   };
   onSubmit() {
-    AuthenticationService.signup({
-      email: this.state.email,
-      pwd: this.state.password,
-    });
-    // this.navigateTo('RegisterStepTwo');
+    // AuthenticationService.signup({
+    //   email: this.state.email,
+    //   pwd: this.state.password,
+    // });
+    this.navigateTo('RegisterStepTwo');
   }
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -84,12 +84,14 @@ class RegisterScreen extends React.Component {
                 style={[styles.title, styles.textLG]}
                 text="¡BIENVENIDO!"
               />
-              <View style={styles.gudSeparator} />
               <GudText
                 style={[styles.sectionDescription, styles.textLG]}
+                accent={true}
                 text="Introduce tu email y contraseña para comenzar el registro "
               />
+              <View style={styles.gudSeparator} />
             </View>
+
             <View style={styles.inputContainer}>
               <ValidationField
                 placeholder={'Email'}
@@ -130,7 +132,7 @@ class RegisterScreen extends React.Component {
                         styles.textMD,
                         isValid ? null : styles.inactiveText,
                       ]}
-                      text="Siguiente"
+                      text="CONTINUAR"
                     />
                   </TouchableHighlight>
                 </View>

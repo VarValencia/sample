@@ -12,7 +12,7 @@ import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
-
+import EStyleSheet from 'react-native-extended-stylesheet';
 class MatchConfigurationScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +38,7 @@ class MatchConfigurationScreen extends React.Component {
     }
   }
   render() {
-    const optAnon = [
+    const privacySettings = [
       {
         name: 'Chat',
         key: 1,
@@ -56,7 +56,7 @@ class MatchConfigurationScreen extends React.Component {
         key: 4,
       },
     ];
-    const optIdiom = [
+    const languageSettings = [
       {
         name: 'Mi idioma',
         key: 1,
@@ -70,7 +70,7 @@ class MatchConfigurationScreen extends React.Component {
         key: 3,
       },
     ];
-    const optAge = [
+    const ageSettings = [
       {
         name: '18-30',
         key: 1,
@@ -88,7 +88,7 @@ class MatchConfigurationScreen extends React.Component {
         key: 4,
       },
     ];
-    const optConfigMode = [
+    const matchSettingMode = [
       {
         name: 'Mi Match básico',
         key: 1,
@@ -103,7 +103,7 @@ class MatchConfigurationScreen extends React.Component {
       },
     ];
     const anonHdd = true;
-    const idiomHdd = true;
+    const languageHdd = true;
     const ageHdd = true;
     const configHidden = true;
     return (
@@ -122,32 +122,23 @@ class MatchConfigurationScreen extends React.Component {
               />
               <View style={styles.gudSeparator} />
             </View>
-            {/* Instancia 4 GRadioButtonGroups con las opciones que tienes ya
-            definidas (optAnon, etc) */}
             <GudText
               style={[styles.sectionDescription, styles.textSM]}
               text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento!"
             />
-            <GRadioButtonGroup options={optAge} />
-            <GRadioButtonGroup options={optAnon} />
-            <GRadioButtonGroup options={optIdiom} />
-            <GRadioButtonGroup options={optConfigMode} />
-            {/* componente movil abajo */}
-            <View style={styles.gudcardContainer}>
-              {/* componente  movil aquí */}
-              <View style={styles.gudButtonContainer}>
+            <GRadioButtonGroup options={privacySettings} />
+            <GRadioButtonGroup options={languageSettings} />
+            <GRadioButtonGroup options={ageSettings} />
+            <GRadioButtonGroup options={matchSettingMode} />
+            <View style={styles.gudButtonContainer}>
+              <View style={styles.gudButton}>
                 <TouchableHighlight
+                  style={styles.touchableActive}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    console.log('you tapped the button Siguiente');
-                    console.log({anonHdd});
-                    console.log({idiomHdd});
-                    console.log({ageHdd});
-                    console.log({configHidden});
+                    console.log('you tapped the button ACCEDER');
                   }}>
-                  <GudText
-                    style={[styles.gudButtonText, styles.textMD]}
-                    text="Siguiente"
-                  />
+                  <GudText style={styles.gudButtonText} text="FINALIZAR" />
                 </TouchableHighlight>
               </View>
             </View>

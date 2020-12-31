@@ -26,15 +26,12 @@ class HelpCenter extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <GudText
-                style={[styles.gudMessage, styles.textLG]}
-                text="Enhorabuena!"
-              />
+              <GudText style={styles.textLG} text="Centro de ayuda" />
               <View style={styles.appImageContainer}>
                 <Image source={require('@icons/GudMatchLogo.png')} />
               </View>
               <GudText
-                style={[styles.gudMessage, styles.textSM]}
+                style={[styles.textSM]}
                 text="Version 1.00.0.01 de Gud match"
               />
               <GudText
@@ -42,41 +39,33 @@ class HelpCenter extends React.Component {
                 text="Esta es la última versión de Gud match"
               />
             </View>
-            {/* se supone que los textos deben superponerse a la imagen */}
-
-            <View style={styles.bottomContainer}>
-              <View style={styles.buttonContainer}>
-                <TouchableHighlight
-                  style={[
-                    styles.gudButton,
-                    styles.touchableActive,
-                    styles.activeBtn,
-                  ]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                  onPress={() => {
-                    console.log('you tapped the button HelpCenter');
-                  }}>
-                  <GudText
-                    style={[styles.gudButtonText, styles.textMD]}
-                    text="Ir al centro de ayuda"
-                  />
-                </TouchableHighlight>
-                <TouchableHighlight
-                  style={[
-                    styles.gudButton,
-                    styles.touchableActive,
-                    styles.activeBtn,
-                  ]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                  onPress={() => {
-                    console.log('you tapped the button technic support');
-                  }}>
-                  <GudText
-                    style={[styles.gudButtonText, styles.textMD]}
-                    text="Contacta al soporte técnico"
-                  />
-                </TouchableHighlight>
-              </View>
+            <View style={styles.buttonContainer}>
+              <TouchableHighlight
+                style={[
+                  styles.gudButton,
+                  styles.touchableActive,
+                  styles.activeBtn,
+                ]}
+                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                onPress={() => {
+                  console.log('you tapped the button HelpCenter');
+                }}>
+                <GudText
+                  style={[styles.gudButtonText, styles.textMD]}
+                  text="Ir al centro de ayuda"
+                />
+              </TouchableHighlight>
+              <TouchableHighlight
+                style={[styles.gudButton, styles.touchableActive]}
+                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                onPress={() => {
+                  console.log('you tapped the button technic support');
+                }}>
+                <GudText
+                  style={[styles.gudButtonText, styles.textMD]}
+                  text="Contacta al soporte técnico"
+                />
+              </TouchableHighlight>
             </View>
           </View>
         </SafeAreaView>

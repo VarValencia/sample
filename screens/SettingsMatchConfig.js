@@ -12,6 +12,7 @@ import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 const optMatch = [
   {
@@ -71,7 +72,7 @@ class SettingsMatchConfig extends React.Component {
                 style={[styles.gudTextUpButton, styles.textSM]}
                 text="Selecciona qué nivel de anonimato eliges para los match por defecto:"
               />
-              {/* por algun motivo no se alinean a la izq los radio buttons */}
+
               <View style={styles.inputContainer}>
                 <GRadioButtonGroup
                   style={styles.gudRadioButtonGroup}
@@ -84,24 +85,30 @@ class SettingsMatchConfig extends React.Component {
               />
               <GudText
                 style={[styles.gudTextUpButton, styles.textSM]}
-                text="Selecciona qué nivel de anonimato eliges para los match por defecto:"
+                text="Selecciona qué idioma quieres para los match por defecto:"
               />
               <View>
                 <GRadioButtonGroup
-                  style={[styles.textSM, styles.gudTextUpButton]}
+                  style={[styles.gudRadioButtonGroup]}
                   options={optLanguage}
                 />
               </View>
-              <View style={styles.gudButtonDark}>
+              <View style={styles.buttonContainer}>
                 <TouchableHighlight
+                  style={[
+                    styles.touchableActive,
+                    styles.gudButton,
+                    true ? styles.activeBtn : styles.inactiveBtn,
+                  ]}
                   onPress={() => {
                     console.log('you tapped the button FINALIZAR');
                   }}
-                />
-                <GudText
-                  style={[styles.gudButtonText]}
-                  text="GUARDAR CAMBIOS"
-                />
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}>
+                  <GudText
+                    style={[styles.gudButtonText]}
+                    text="GUARDAR CAMBIOS"
+                  />
+                </TouchableHighlight>
               </View>
             </View>
           </View>

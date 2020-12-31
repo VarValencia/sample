@@ -17,15 +17,41 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 class RegisterStepTwo extends React.Component {
   constructor(props) {
     super(props),
-    this.state = {
-      isFormFilled: true,
-      name: '',
-      birthday: '',
-      country: '',
-      language: ''
+      (this.state = {
+        name: '',
+        birthday: '',
+        country: '',
+        language: '',
+      });
+    this.onChange = this.onChange.bind(this);
+  }
+  // User functions
+  onChange(str, ref) {
+    switch (ref) {
+      case 0:
+        this.setState({name: str});
+        break;
+      case 1:
+        this.setState({birthday: str});
+        break;
+      case 2:
+        this.setState({country: str});
+        break;
+      case 3:
+        this.setState({language: str});
     }
   }
+  validate = () => {
+    return !Object.values(this.state).some(
+      (entry) => entry.toString().length <= 0,
+    );
+  };
   render() {
+    const NAME = 0;
+    const BIRTHDAY = 1;
+    const COUNTRY = 2;
+    const LANGUAGE = 3;
+    var isValid = this.validate();
     return (
       <>
         <StatusBar hidden={true} />
@@ -37,41 +63,62 @@ class RegisterStepTwo extends React.Component {
               </View>
               <GudText
                 style={[styles.title, styles.textLG]}
-                text="Completa tu cuenta para finalizar el registro"
+                accent={true}
+                text="Completa tu cuenta"
+              />
+              <View style={styles.gudSeparator} />
+            </View>
+
+            <View style={styles.inputContainer}>
+              <ValidationField
+                placeholder={'Nombre de usuario'}
+                maxLength={30}
+                minLength={2}
+                handleValue={(event) => this.onChange(event, NAME)}
+              />
+              <ValidationField
+                placeholder={'Fecha de nacimiento'}
+                maxLength={12}
+                minLength={5}
+                handleValue={(event) => this.onChange(event, BIRTHDAY)}
+              />
+              <ValidationField
+                placeholder={'Nacionalidad'}
+                maxLength={30}
+                minLength={3}
+                handleValue={(event) => this.onChange(event, COUNTRY)}
+              />
+              <ValidationField
+                placeholder={'Idioma'}
+                maxLength={30}
+                minLength={3}
+                handleValue={(event) => this.onChange(event, LANGUAGE)}
               />
             </View>
-              <View style={styles.inputContainer}>
-                <GudText style={styles.textMD} text="Nombre de usuario" />
-                <TextInput style={styles.gudInput} maxLength={40} />
-                <GudText
-                  style={[styles.GudText, styles.gudTextUpButton]}
-                  text="Fecha de nacimiento"
-                />
-                <TextInput style={styles.gudInput} maxLength={40} />
-                <GudText
-                  style={[styles.GudText, styles.gudTextUpButton]}
-                  text="Nacionalidad"
-                />
-                <TextInput style={styles.gudInput} maxLength={40} />
-                <GudText
-                  style={[styles.GudText, styles.gudTextUpButton]}
-                  text="Idioma"
-                />
-                <TextInput style={styles.gudInput} maxLength={40} />
+            <View style={styles.buttonContainer}>
+              <View
+                style={[
+                  styles.gudButton,
+                  isValid ? styles.activeBtn : styles.inactiveBtn,
+                ]}>
+                <TouchableHighlight
+                  disabled={!isValid}
+                  style={styles.touchableActive}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    console.log('you tapped the button ACCEDER');
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      styles.textMD,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="FINALIZAR"
+                  />
+                </TouchableHighlight>
               </View>
-              <View style={styles.buttonContainer}>
-                <View style={styles.gudButton}>
-                  <TouchableHighlight
-                    disabled={!this.state.isFormFilled}
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      console.log('you tapped the button ACCEDER');
-                    }}>
-                    <GudText style={styles.gudButtonText} text="Acceder" />
-                  </TouchableHighlight>
-                </View>
-              </View>
+            </View>
           </View>
         </SafeAreaView>
       </>

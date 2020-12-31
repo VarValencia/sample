@@ -24,13 +24,13 @@ class ConfirmEmail extends React.Component {
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
-            {/* necesario estilo que alinee a la izquierda */}
             <View style={styles.cardContainer}>
-              <GudText style={styles.textLG} text="Enhorabuena!" />
+              <GudText style={styles.textLG} text="¡Enhorabuena!" />
               <View style={styles.gudSeparator} />
               <GudText
                 style={styles.textLG}
-                text="Estás a un paso de ser GUD"
+                accent={true}
+                text="Estás a un paso de ser Gud"
               />
               <GudText
                 style={styles.textMD}
@@ -45,8 +45,11 @@ class ConfirmEmail extends React.Component {
             </View>
             <View style={styles.buttonContainer}>
               <TouchableHighlight
-                // gudButton no se corresponde al estilo del boton de la pantalla
-                style={[styles.touchableActive, styles.gudButton]}
+                style={[
+                  styles.touchableActive,
+                  styles.gudButton,
+                  true ? styles.activeBtn : styles.inactiveBtn,
+                ]}
                 onPress={() => {
                   console.log('user pressed FINALIZAR');
                 }}>

@@ -10,10 +10,9 @@ import React from 'react';
 import {View, StatusBar, Image, ImageBackground} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {TextInput, TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 
-const opt = [
+const opinion = [
   {
     name: 'Genial, guardar a este Guder',
     key: 1,
@@ -28,10 +27,9 @@ const opt = [
   },
   {
     name: 'Otros',
-    key: '4',
+    key: 4,
   },
 ];
-
 class GudAfterMatchScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -45,24 +43,18 @@ class GudAfterMatchScreen extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <ImageBackground
-                source={require('@android/images/LoginScreen.png')}
-                //no funciona el estilo gudBackgroundImage
-                style={styles.gudBackgroundImage}>
+                source={require('@icons/GudCircles.png')}
+                style={[styles.gudBackgroundImage]}>
                 <GudText style={[styles.textLG]} text="Hey Pablo," />
                 <GudText
                   style={[styles.textMD]}
-                  text=" cómo ha sido la experiencia con este Gudder?"
+                  text="¿Cómo ha sido la experiencia con este Gudder?"
                 />
               </ImageBackground>
             </View>
             <GRadioButtonGroup
               style={[styles.GRadioButtonGroup]}
-              options={opt}
-            />
-            <TextInput
-              editable={false}
-              style={[styles.gudInput]}
-              maxLength={40}
+              options={opinion}
             />
           </View>
         </SafeAreaView>
