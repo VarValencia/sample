@@ -83,9 +83,19 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="MatchConfigurationScreen"
+            initialRouteName="SettingsMatchConfig"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
+            <RootStack.Screen name="LandingPage" component={LandingPage} />
+            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
+            <RootStack.Screen
+              name="RegisterScreen"
+              component={RegisterScreen}
+            />
+            <RootStack.Screen
+              name="RegisterStepTwo"
+              component={RegisterStepTwo}
+            />
             <RootStack.Screen
               name="MatchConfigurationScreen"
               component={MatchConfigurationScreen}
