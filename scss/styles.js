@@ -140,8 +140,9 @@ export default EStyleSheet.create({
     margin: 10,
   },
   gudBackgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
+    display: 'flex',
+    width: '50%',
+    height: '50%',
     justifyContent: 'center',
   },
 
@@ -252,76 +253,7 @@ export default EStyleSheet.create({
   },
 
   // Old styles
-  engine: {
-    position: 'absolute',
-    right: 0,
-    top: 0,
-  },
-  sectionContainerButton: {
-    position: 'relative',
-    textAlign: 'center',
-    marginTop: '20%',
-    marginHorizontal: '20%',
-    marginVertical: '10%',
-  },
-  sectionImageContainer: {
-    marginTop: '10%',
-    position: 'relative',
-    marginHorizontal: '50%',
-  },
   gudTitle: {
-    textAlign: 'center',
-    fontSize: 24,
-    fontWeight: '600',
-    color: '$gudBlack',
-  },
-  gudMessage: {
-    textAlign: 'center',
-    fontSize: 24,
-    fontWeight: '600',
-    color: '$gudBlack',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-
-  // Valencia styles
-  gudSuccess: {
-    margin: '10%',
-  },
-
-  //LogIn container botones especifico
-  ButtonTextLandingSc: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '600',
-    color: '$gudBlack',
-  },
-  sectionContainerMarginTop: {
-    position: 'relative',
-    marginVertical: '25%',
-    textAlign: 'center',
-    marginHorizontal: '20%',
-  },
-  ButtonRegisterSc: {
-    margin: '10%',
-    position: 'relative',
-    width: 200,
-    height: 40,
-    backgroundColor: '#C1E3E2',
-    textAlign: 'center',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-  },
-  gudMessage1: {
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
