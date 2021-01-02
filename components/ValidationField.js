@@ -56,6 +56,7 @@ class ValidationField extends React.Component {
           secureTextEntry={
             this.state.isPassword && this.state.value.length > 0 ? true : false
           }
+          autoCapitalize={this.state.isPassword ? 'none' : 'sentences'}
           placeholder={this.props.placeholder}
           onChangeText={(text) => this.onChange(text)}
           onSubmitEditing={this.onSubmit}
