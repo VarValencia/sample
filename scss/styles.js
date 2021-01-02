@@ -87,6 +87,24 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
+  carouselContainer: {
+    flexDirection: 'column',
+    padding: 20,
+    borderRadius: '$gudBorderRadius',
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
+    backgroundColor: 'white',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: Dimensions.get("window").width * 0.7
+  },
+  carouselCard: {
+    position: 'relative',
+    width: Dimensions.get("window").width * 0.61
+  },
 
   // Text styles
   gudText: {
