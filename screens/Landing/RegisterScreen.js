@@ -55,7 +55,6 @@ class RegisterScreen extends React.Component {
     const PASS = 'password';
     const PASS_CONFIRMATION = 'passwordConfirmation';
     var isValid = this.validate();
-    console.log('State', this.state);
 
     return (
       <>
