@@ -10,7 +10,6 @@ import { name as appName } from './app.json';
 import GudText from '@components/GudText';
 import GRadioButtonGroup from '@components/GRadioButtonGroup';
 import ValidationField from '@components/ValidationField';
-import CarouselCard from '@components/CarouselCard';
 
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService'
@@ -27,7 +26,6 @@ global.EStyleSheet = EStyleSheet;
 global.GudText = GudText;
 global.GRadioButtonGroup = GRadioButtonGroup;
 global.ValidationField = ValidationField;
-global.CarouselCard = CarouselCard;
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;
