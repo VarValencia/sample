@@ -35,6 +35,7 @@ class GRadioButtonGroup extends React.Component {
       }
       return entry;
     });
+    this.props.getKey(key);
     this.setState({ options: options });
   }
   render() {
