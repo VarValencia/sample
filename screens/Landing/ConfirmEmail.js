@@ -11,7 +11,7 @@ import {View, StatusBar, Image} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../components/GudText';
+import GudText from '@components/GudText';
 
 class ConfirmEmail extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class ConfirmEmail extends React.Component {
               <GudText
                 style={[styles.sectionDescription, styles.textMD]}
                 accent={true}
-                text="Estás a un paso de ser GUD"
+                text="Estás a un paso de ser gud"
               />
               <GudText
                 style={styles.textMD}
