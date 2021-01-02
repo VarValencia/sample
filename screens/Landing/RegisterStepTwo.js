@@ -7,18 +7,17 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../../components/GudText';
-import EStyleSheet from 'react-native-extended-stylesheet';
 
 class RegisterStepTwo extends React.Component {
   constructor(props) {
     super(props),
       (this.state = {
-        name: '',
+        currentSlide: 0,
+        clear: false,
+        userName: '',
         birthday: '',
         country: '',
         language: '',
@@ -29,19 +28,10 @@ class RegisterStepTwo extends React.Component {
   }
   // User functions
   onChange(str, ref) {
-    switch (ref) {
-      case 0:
-        this.setState({name: str});
-        break;
-      case 1:
-        this.setState({birthday: str});
-        break;
-      case 2:
-        this.setState({country: str});
-        break;
-      case 3:
-        this.setState({language: str});
-    }
+    var newState = this.state;
+    newState[ref] = str;
+
+    this.setState(newState);
   }
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -52,7 +42,7 @@ class RegisterStepTwo extends React.Component {
     //   email: this.state.email,
     //   pwd: this.state.password,
     // });
-    this.navigateTo('ConfirmEmail');
+    // this.navigateTo('ConfirmEmail');
   }
 
   validate = () => {
@@ -60,12 +50,14 @@ class RegisterStepTwo extends React.Component {
       (entry) => entry.toString().length <= 0,
     );
   };
+
   render() {
-    const NAME = 0;
-    const BIRTHDAY = 1;
-    const COUNTRY = 2;
-    const LANGUAGE = 3;
+    const NAME = "userName";
+    const BIRTHDAY = "birthday";
+    const COUNTRY = "country";
+    const LANGUAGE = "language";
     var isValid = this.validate();
+    console.log('State', this.state);
     return (
       <>
         <StatusBar hidden={true} />
