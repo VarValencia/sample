@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text} from 'react-native';
 import styles from '@styles/styles';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 const GudText = (props) => {
   const originalText = props.text.trim();
@@ -10,7 +11,7 @@ const GudText = (props) => {
     <>
       {props.accent ? (
         <Text style={[styles.gudText, props.style]}>
-          {regularText} <Text style={styles.gudButtonText}>{accent}</Text>
+          {regularText} <Text style={{color: EStyleSheet.value('$gudGreenDark')}}>{accent}</Text>
         </Text>
       ) : (
         <Text style={[styles.gudText, props.style]}>{originalText}</Text>
