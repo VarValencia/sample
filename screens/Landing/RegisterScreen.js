@@ -15,8 +15,6 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-// Scripts
-import AuthenticationService from '../../scripts/authentication/AuthenticationService';
 
 class RegisterScreen extends React.Component {
   constructor(props) {
@@ -55,10 +53,10 @@ class RegisterScreen extends React.Component {
     );
   };
   onSubmit() {
-    // AuthenticationService.signup({
-    //   email: this.state.email,
-    //   pwd: this.state.password,
-    // });
+    AuthenticationService.signup({
+      email: this.state.email,
+      pwd: this.state.password,
+    });
     this.navigateTo('RegisterStepTwo');
   }
   navigateTo(screen) {

@@ -15,8 +15,6 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-// Scripts
-import AuthenticationService from '../../scripts/authentication/AuthenticationService';
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -100,7 +98,7 @@ class LoginScreen extends React.Component {
                   ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    AuthenticationService.devSign();
+                    AuthenticationService.login({email: this.state.email, pwd: this.state.password});
                   }}>
                   <GudText
                     style={[
