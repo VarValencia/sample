@@ -61,55 +61,56 @@ class LoginScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.appImageContainer}>
+              <View style={styles.appLogoContainer}>
                 <Image source={require('@icons/1x/GUDLogo.png')} />
               </View>
-              <GudText
-                style={[styles.title, styles.textLG]}
-                text="¡BIENVENIDO!"
-              />
+              <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />
               <GudText
-                style={[styles.sectionDescription, styles.textLG]}
+                style={styles.sectionDescription}
+                accent={true}
                 text="Introduce Email y contraseña para acceder a tu cuenta"
               />
             </View>
-            <View style={styles.inputContainer}>
-              <ValidationField
-                placeholder={'Email'}
-                maxLength={30}
-                minLength={6}
-                handleValue={(event) => this.onChange(event, EMAIL)}
-              />
-              <ValidationField
-                placeholder={'Contraseña'}
-                maxLength={30}
-                minLength={6}
-                handleValue={(event) => this.onChange(event, PASS)}
-                password={true}
-              />
-            </View>
-            <View style={styles.buttonContainer}>
-              <TouchableHighlight
-                disabled={!isValid}
-                style={[
-                  styles.touchableActive,
-                  styles.gudButton,
-                  isValid ? styles.activeBtn : styles.inactiveBtn,
-                ]}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                onPress={() => {
-                  AuthenticationService.devSign();
-                }}>
-                <GudText
-                  style={[
-                    styles.gudButtonText,
-                    styles.textMD,
-                    isValid ? null : styles.inactiveText,
-                  ]}
-                  text="Acceder"
+            <View style={styles.cardContainer}>
+              <View style={styles.inputContainer}>
+                <ValidationField
+                  placeholder={'Email'}
+                  maxLength={30}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, EMAIL)}
                 />
-              </TouchableHighlight>
+                <ValidationField
+                  placeholder={'Contraseña'}
+                  maxLength={30}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, PASS)}
+                  password={true}
+                />
+              </View>
+            </View>
+            <View style={styles.cardContainer}>
+              <View style={styles.buttonContainer}>
+                <TouchableHighlight
+                  disabled={!isValid}
+                  style={[
+                    styles.touchableActive,
+                    styles.gudButton,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                  ]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    AuthenticationService.devSign();
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Acceder"
+                  />
+                </TouchableHighlight>
+              </View>
             </View>
           </View>
         </SafeAreaView>

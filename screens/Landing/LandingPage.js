@@ -22,13 +22,10 @@ const LandingPage: () => React$Node = ({navigation}) => {
       <SafeAreaView>
         <View style={styles.body}>
           <View style={styles.cardContainer}>
-            <View style={styles.appImageContainer}>
+            <View style={styles.appLogoContainer}>
               <Image source={require('@icons/1x/GUDLogo.png')} />
             </View>
-            <GudText
-              style={[styles.title, styles.textLG]}
-              text="¡BIENVENIDO!"
-            />
+            <GudText style={styles.title} text="¡BIENVENIDO!" />
             <View style={styles.gudSeparator} />
             <View style={styles.appImageContainer}>
               <Image
@@ -37,37 +34,33 @@ const LandingPage: () => React$Node = ({navigation}) => {
               />
             </View>
             <GudText
-              style={[styles.textLG, styles.sectionDescription]}
+              style={styles.sectionDescription}
               accent={true}
               text="Entra al espacio donde puedes SER"
             />
           </View>
-          <View style={[styles.buttonContainer]}>
-            <View style={[styles.credentialButton, styles.activeBtn]}>
-              <TouchableHighlight
-                style={styles.credentialsTouchableActive}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                onPress={() => {
-                  navigateTo('LoginScreen');
-                }}>
-                <GudText
-                  style={[styles.gudButtonText, styles.textMD]}
-                  text="Iniciar sesión"
-                />
-              </TouchableHighlight>
-            </View>
-            <View style={styles.credentialButton}>
-              <TouchableHighlight
-                style={styles.credentialsTouchableActive}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                onPress={() => {
-                  navigateTo('RegisterScreen');
-                }}>
-                <GudText
-                  style={[styles.gudButtonText, styles.textMD]}
-                  text="Regístrate"
-                />
-              </TouchableHighlight>
+          <View style={styles.cardContainer}>
+            <View style={styles.buttonContainer}>
+              <View style={[styles.credentialButton, styles.activeBtn]}>
+                <TouchableHighlight
+                  style={styles.credentialsTouchableActive}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    navigateTo('LoginScreen');
+                  }}>
+                  <GudText style={styles.gudButtonText} text="Iniciar sesión" />
+                </TouchableHighlight>
+              </View>
+              <View style={styles.credentialButton}>
+                <TouchableHighlight
+                  style={styles.credentialsTouchableActive}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    navigateTo('RegisterScreen');
+                  }}>
+                  <GudText style={styles.gudButtonText} text="Regístrate" />
+                </TouchableHighlight>
+              </View>
             </View>
           </View>
         </View>

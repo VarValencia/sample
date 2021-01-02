@@ -31,7 +31,7 @@ class RegisterScreen extends React.Component {
     this.navigateTo = this.navigateTo.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextState) {
     return this.state != nextState;
   }
 
@@ -77,65 +77,64 @@ class RegisterScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.appImageContainer}>
+              <View style={styles.appLogoContainer}>
                 <Image source={require('@icons/1x/GUDLogo.png')} />
               </View>
-              <GudText
-                style={[styles.title, styles.textLG]}
-                text="¡BIENVENIDO!"
-              />
-              <GudText
-                style={[styles.sectionDescription, styles.textLG]}
-                accent={true}
-                text="Introduce tu email y contraseña para comenzar el registro "
-              />
+              <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />
+              <GudText
+                style={styles.sectionDescription}
+                accent={true}
+                text="Introduce tu email y contraseña para comenzar el registro"
+              />
             </View>
-
-            <View style={styles.inputContainer}>
-              <ValidationField
-                placeholder={'Email'}
-                maxLength={30}
-                minLength={6}
-                handleValue={(event) => this.onChange(event, EMAIL)}
-              />
-              <ValidationField
-                placeholder={'Contraseña'}
-                maxLength={12}
-                minLength={6}
-                handleValue={(event) => this.onChange(event, PASS)}
-                password={true}
-              />
-              <ValidationField
-                placeholder={'Repite tu contraseña'}
-                maxLength={12}
-                minLength={6}
-                handleValue={(event) => this.onChange(event, PASS_CONFIRMATION)}
-                password={true}
-              />
+            <View style={styles.cardContainer}>
+              <View style={styles.inputContainer}>
+                <ValidationField
+                  placeholder={'Email'}
+                  maxLength={30}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, EMAIL)}
+                />
+                <ValidationField
+                  placeholder={'Contraseña'}
+                  maxLength={12}
+                  minLength={6}
+                  handleValue={(event) => this.onChange(event, PASS)}
+                  password={true}
+                />
+                <ValidationField
+                  placeholder={'Repite tu contraseña'}
+                  maxLength={12}
+                  minLength={6}
+                  handleValue={(event) =>
+                    this.onChange(event, PASS_CONFIRMATION)
+                  }
+                  password={true}
+                />
+              </View>
+            </View>
+            <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
-                <View
+                <TouchableHighlight
+                  disabled={!isValid}
                   style={[
+                    styles.touchableActive,
                     styles.gudButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
-                  ]}>
-                  <TouchableHighlight
-                    disabled={!isValid}
-                    style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                    onPress={() => {
-                      this.onSubmit();
-                    }}>
-                    <GudText
-                      style={[
-                        styles.gudButtonText,
-                        styles.textMD,
-                        isValid ? null : styles.inactiveText,
-                      ]}
-                      text="CONTINUAR"
-                    />
-                  </TouchableHighlight>
-                </View>
+                  ]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    this.onSubmit();
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Continuar"
+                  />
+                </TouchableHighlight>
               </View>
             </View>
           </View>

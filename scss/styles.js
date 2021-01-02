@@ -17,12 +17,12 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '10%',
-  $gudBodyPaddingV: '0%',
+  $gudBodyPaddingH: '15%',
+  $gudBodyPadding: '15%',
 
   // Titles
-  $gudTitlePaddingTop: '5%',
-  $gudSubTitlePaddingBottom: '20%',
+  $gudTitlePaddingTop: '0%',
+  $gudSubTitlePaddingBottom: '3%',
   $gudSeparatorPaddingBottom: '5%',
 
   // Buttons
@@ -33,19 +33,12 @@ EStyleSheet.build({
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudSM:
-    ((Dimensions.get('window').width * 12) / Dimensions.get('window').height) *
-    1.7,
-  $gudMD:
-    ((Dimensions.get('window').width * 16) / Dimensions.get('window').height) *
-    1.2,
-  $gudLG:
-    ((Dimensions.get('window').width * 20.5) /
-      Dimensions.get('window').height) *
-    1.3,
+  $gudSM: (Dimensions.get('window').height * 1.5) / 100,
+  $gudMD: (Dimensions.get('window').height * 2) / 100,
+  $gudLG: (Dimensions.get('window').height * 2.5) / 100,
 
-  $gudTextPadding: 3,
-  $gudTextMarginTop: (Dimensions.get('window').height * 0.1) / 100,
+  $gudTextPadding: 1,
+  $gudTextMarginTop: 0,
 
   // Screen Dimensions
   $scrWidth: Dimensions.get('window').width,
@@ -67,39 +60,51 @@ export default EStyleSheet.create({
     height: Dimensions.get('window').height,
     paddingRight: '$gudBodyPaddingH',
     paddingLeft: '$gudBodyPaddingH',
+    padding: '$gudBodyPadding',
     alignItems: 'stretch',
-    justifyContent: 'center',
-    display: 'flex',
+    justifyContent: 'space-between',
   },
 
   // Containers
   cardContainer: {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  cardContainerLeft: {
     position: 'relative',
     justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+  },
+  appLogoContainer: {
     alignItems: 'center',
   },
   appImageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
+    margin: (Dimensions.get('window').height * 5) / 100,
     alignItems: 'center',
   },
   inputContainer: {
     textAlign: 'left',
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    marginTop: (Dimensions.get('window').height * 10) / 100,
   },
 
   // Text styles
   gudText: {
-    fontFamily: '$sb',
+    fontFamily: '$rg',
     color: '$gudBlack',
     padding: '$gudTextPadding',
     marginTop: '$gudTextMarginTop',
   },
   title: {
     fontFamily: '$b',
+    fontSize: '$gudLG',
     paddingTop: '$gudTitlePaddingTop',
   },
   gudButtonText: {
     fontFamily: '$sb',
+    fontSize: '$gudSM',
     color: '$gudGreenDark',
     textAlign: 'center',
     justifyContent: 'center',
@@ -109,6 +114,12 @@ export default EStyleSheet.create({
     fontFamily: '$sb',
     textAlign: 'left',
     paddingLeft: '2.6%',
+  },
+  sectionDescription: {
+    fontFamily: '$sb',
+    textAlign: 'center',
+    fontSize: '$gudMD',
+    paddingBottom: '$gudSubTitlePaddingBottom',
   },
 
   // Text sizes and weight
@@ -125,11 +136,6 @@ export default EStyleSheet.create({
   // Text decorations
   textFocus: {
     color: '$gudGreenDark',
-  },
-  sectionDescription: {
-    textAlign: 'center',
-    paddingBottom: '$gudSubTitlePaddingBottom',
-    fontFamily: '$b',
   },
 
   // Image styling
@@ -150,10 +156,8 @@ export default EStyleSheet.create({
   buttonContainer: {
     position: 'relative',
     textAlign: 'center',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: (Dimensions.get('window').height * 10) / 100,
   },
   credentialButton: {
     width: (Dimensions.get('window').width * 60) / 100,
@@ -166,11 +170,11 @@ export default EStyleSheet.create({
   },
   gudButton: {
     width: '$touchableWidth',
+    height: (Dimensions.get('window').height * 5) / 100,
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
-    alignItems: 'center',
     margin: '2%',
   },
   activeBtn: {
