@@ -27,6 +27,7 @@ import LoadingMatch from '@screens/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
 
+
 const RootStack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -83,7 +84,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="RegisterStepTwo"
+            initialRouteName="MatchConfigurationScreen"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />

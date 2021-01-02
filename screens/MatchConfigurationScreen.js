@@ -13,132 +13,75 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import GudText from '../components/GudText';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import MatchConfigurator from '@components/MatchConfigurator';
+
 class MatchConfigurationScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedKey: {
+        0: null,
+        1: null,
+        2: null
+      },
+    };
+
+    this.onChange = this.onChange.bind(this);
   }
-  count = 0;
 
   //functions
-  onhange(count) {
-    switch (count) {
-      case 0:
-        privacyHdd = false;
-        break;
-      case 1:
-        languageHdd = true;
-        break;
-      case 2:
-        ageHdd = true;
-        break;
-      case 3:
-        configHidden = true;
-        break;
-    }
+  onChange(key) {
+    this.setState({selectedKey: key});
   }
+
+  validate = () => {
+    return !Object.values(this.state).some(
+      (entry) => entry.toString().length <= 0,
+    );
+  };
+
   render() {
-    const privacySettings = [
-      {
-        name: 'Chat',
-        key: 1,
-      },
-      {
-        name: 'Llamada',
-        key: 2,
-      },
-      {
-        name: 'Videollamada',
-        key: 3,
-      },
-      {
-        name: 'Sorpréndeme',
-        key: 4,
-      },
-    ];
-    const languageSettings = [
-      {
-        name: 'Mi idioma',
-        key: 1,
-      },
-      {
-        name: 'Otro',
-        key: 2,
-      },
-      {
-        name: 'Sorpréndeme',
-        key: 3,
-      },
-    ];
-    const ageSettings = [
-      {
-        name: '18-30',
-        key: 1,
-      },
-      {
-        name: '31-50',
-        key: 2,
-      },
-      {
-        name: '51+',
-        key: 3,
-      },
-      {
-        name: 'Sorpréndeme',
-        key: 4,
-      },
-    ];
-    const matchSettingMode = [
-      {
-        name: 'Mi Match básico',
-        key: 1,
-      },
-      {
-        name: 'Establecer nueva configuración',
-        key: 2,
-      },
-      {
-        name: 'Sorpréndeme',
-        key: 3,
-      },
-    ];
-    const anonHdd = true;
-    const languageHdd = true;
-    const ageHdd = true;
-    const configHidden = true;
+    var isValid = this.validate();
     return (
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.appImageContainer}>
+              <View style={styles.appLogoContainer}>
                 <Image source={require('@icons/1x/GUDLogo.png')} />
               </View>
               <GudText
-                style={styles.textLG}
+                style={styles.title}
                 accent={true}
                 text="Configura tu Match"
               />
               <View style={styles.gudSeparator} />
+              <GudText
+                style={styles.sectionDescription}
+                text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento"
+              />
             </View>
-            <GudText
-              style={[styles.sectionDescription, styles.textSM]}
-              text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento!"
-            />
-            <GRadioButtonGroup options={privacySettings} />
-            <GRadioButtonGroup options={languageSettings} />
-            <GRadioButtonGroup options={ageSettings} />
-            <GRadioButtonGroup options={matchSettingMode} />
-            <View style={styles.gudButtonContainer}>
-              <View style={styles.gudButton}>
+            <MatchConfigurator />
+            <View style={styles.cardContainer}>
+              <View style={styles.buttonContainer}>
                 <TouchableHighlight
-                  style={styles.touchableActive}
+                  style={[
+                    styles.touchableActive,
+                    styles.gudButton,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                  ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
                     console.log('you tapped the button ACCEDER');
                   }}>
-                  <GudText style={styles.gudButtonText} text="FINALIZAR" />
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Aceptar"
+                  />
                 </TouchableHighlight>
               </View>
             </View>
