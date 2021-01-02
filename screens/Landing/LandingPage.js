@@ -11,9 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-// Styles
-import EStyleSheet from 'react-native-extended-stylesheet';
-import styles from '@styles/styles';
 
 const LandingPage: () => React$Node = ({navigation}) => {
   return (

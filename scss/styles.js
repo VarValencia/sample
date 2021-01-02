@@ -83,7 +83,6 @@ export default EStyleSheet.create({
     alignItems: 'center',
   },
   inputContainer: {
-    textAlign: 'left',
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'flex-start',
