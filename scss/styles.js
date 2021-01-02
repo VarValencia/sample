@@ -86,7 +86,6 @@ export default EStyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    marginTop: (Dimensions.get('window').height * 10) / 100,
   },
 
   // Text styles
