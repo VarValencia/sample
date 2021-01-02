@@ -30,7 +30,7 @@ const OpenEmailScreen: () => React$Node = () => {
 
             <GudText
               style={[styles.gudMessage, styles.textMD]}
-              text="Estás a un paso de ser GUD"
+              text="Estás a un paso de ser gud"
             />
             <GudText
               style={[styles.gudMessage, styles.textSM]}
