@@ -19,25 +19,25 @@ class MatchConfigurationScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedKey: {
-        0: null,
-        1: null,
-        2: null
-      },
+      privacy: '',
+      language: '',
+      age: '',
     };
 
     this.onChange = this.onChange.bind(this);
   }
 
   //functions
-  onChange(key) {
-    this.setState({selectedKey: key});
+  onChange(menuItem) {
+    var newState = this.state;
+    newState[menuItem.ref] = menuItem.key;
+    this.setState(newState);
   }
 
   validate = () => {
-    return !Object.values(this.state).some(
-      (entry) => entry.toString().length <= 0,
-    );
+    return !Object.values(this.state).some((entry) => {
+      return entry.toString().length <= 0;
+    });
   };
 
   render() {
@@ -62,10 +62,13 @@ class MatchConfigurationScreen extends React.Component {
                 text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento"
               />
             </View>
-            <MatchConfigurator />
+            <MatchConfigurator
+              onChange={(menuItem) => this.onChange(menuItem)}
+            />
             <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
+                  disabled={!isValid}
                   style={[
                     styles.touchableActive,
                     styles.gudButton,
