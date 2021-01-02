@@ -37,6 +37,7 @@ const AuthenticationService = {
         console.error(error);
       });
   },
+  
   logout() {
     auth()
       .signOut()
