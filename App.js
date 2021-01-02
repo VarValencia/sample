@@ -14,15 +14,16 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import auth from '@react-native-firebase/auth';
 
 // Importación de las vistas
+import Splash from '@screens/Landing/Splash';
 import LandingPage from '@screens/Landing/LandingPage';
 import LoginScreen from '@screens/Landing/LoginScreen';
 import RegisterScreen from '@screens/Landing/RegisterScreen';
 import RegisterStepTwo from '@screens/Landing/RegisterStepTwo';
-import ConfirmEmail from '@screens/ConfirmEmail';
+import ConfirmEmail from '@screens/Landing/ConfirmEmail';
+
 import GudAfterMatchScreen from '@screens/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';
 import PerfilScreen from '@screens/PerfilScreen';
-import Splash from '@screens/Landing/Splash';
 import LoadingMatch from '@screens/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
