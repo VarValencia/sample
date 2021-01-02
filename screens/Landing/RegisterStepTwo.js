@@ -14,14 +14,12 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 class RegisterStepTwo extends React.Component {
   constructor(props) {
     super(props),
-      (this.state = {
-        currentSlide: 0,
-        clear: false,
+      this.state = {
         userName: '',
         birthday: '',
         country: '',
         language: '',
-      });
+      };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.navigateTo = this.navigateTo.bind(this);
@@ -38,11 +36,12 @@ class RegisterStepTwo extends React.Component {
   }
 
   onSubmit() {
-    // AuthenticationService.signup({
-    //   email: this.state.email,
-    //   pwd: this.state.password,
-    // });
-    // this.navigateTo('ConfirmEmail');
+    const {email, password} = this.props.route.params;
+    AuthenticationService.signup({
+      email: email,
+      pwd: password,
+    });
+    this.navigateTo('ConfirmEmail');
   }
 
   validate = () => {
@@ -52,12 +51,12 @@ class RegisterStepTwo extends React.Component {
   };
 
   render() {
-    const NAME = "userName";
-    const BIRTHDAY = "birthday";
-    const COUNTRY = "country";
-    const LANGUAGE = "language";
+    const NAME = 'userName';
+    const BIRTHDAY = 'birthday';
+    const COUNTRY = 'country';
+    const LANGUAGE = 'language';
     var isValid = this.validate();
-    console.log('State', this.state);
+
     return (
       <>
         <StatusBar hidden={true} />

@@ -30,14 +30,10 @@ class LoginScreen extends React.Component {
 
   // User functions
   onChange(str, ref) {
-    switch (ref) {
-      case 0:
-        this.setState({email: str});
-        break;
-      case 1:
-        this.setState({password: str});
-        break;
-    }
+    var newState = this.state;
+    newState[ref] = str;
+
+    this.setState(newState);
   }
   validate = () => {
     return !Object.values(this.state).some(
@@ -49,8 +45,8 @@ class LoginScreen extends React.Component {
   }
 
   render() {
-    const EMAIL = 0;
-    const PASS = 1;
+    const EMAIL = "email";
+    const PASS = "password";
     var isValid = this.validate();
 
     return (

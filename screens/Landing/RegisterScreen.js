@@ -11,7 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-
 class RegisterScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -31,17 +30,10 @@ class RegisterScreen extends React.Component {
 
   // User functions
   onChange(str, ref) {
-    switch (ref) {
-      case 0:
-        this.setState({email: str});
-        break;
-      case 1:
-        this.setState({password: str});
-        break;
-      case 2:
-        this.setState({passwordConfirmation: str});
-        break;
-    }
+    var newState = this.state;
+    newState[ref] = str;
+
+    this.setState(newState);
   }
   validate = () => {
     return !Object.values(this.state).some(
@@ -49,21 +41,21 @@ class RegisterScreen extends React.Component {
     );
   };
   onSubmit() {
-    AuthenticationService.signup({
-      email: this.state.email,
-      pwd: this.state.password,
-    });
     this.navigateTo('RegisterStepTwo');
   }
   navigateTo(screen) {
-    this.props.navigation.navigate(screen);
+    this.props.navigation.navigate(screen, {
+      email: this.state.email,
+      password: this.state.password,
+    });
   }
 
   render() {
-    const EMAIL = 0;
-    const PASS = 1;
-    const PASS_CONFIRMATION = 2;
+    const EMAIL = 'email';
+    const PASS = 'password';
+    const PASS_CONFIRMATION = 'passwordConfirmation';
     var isValid = this.validate();
+    console.log('State', this.state);
 
     return (
       <>
