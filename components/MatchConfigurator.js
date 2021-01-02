@@ -18,6 +18,7 @@ class MatchConfigurator extends React.Component {
     newState[ref] = key;
 
     this.setState(newState);
+    this.props.onChange({ref, key});
   }
   buildString(screen) {
     return (
@@ -29,8 +30,6 @@ class MatchConfigurator extends React.Component {
   render() {
     const MENUS = ['privacy', 'language', 'age'];
 
-
-    console.log('State', this.state);
     let privacy = [
       {
         name: 'Chat',
