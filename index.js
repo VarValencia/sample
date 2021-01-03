@@ -11,6 +11,7 @@ import GudText from '@gud/GudText';
 import GRadioButtonGroup from '@gud/GRadioButtonGroup';
 import ValidationField from '@gud/ValidationField';
 import TitleCard from '@gud/TitleCard';
+import GudDropDown from '@gud/GudDropDown';
 
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService'
@@ -28,6 +29,7 @@ global.GudText = GudText;
 global.GRadioButtonGroup = GRadioButtonGroup;
 global.ValidationField = ValidationField;
 global.TitleCard = TitleCard;
+global.GudDropDown = GudDropDown
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;
