@@ -6,6 +6,7 @@ const AuthenticationService = {
       .signInWithEmailAndPassword(user.email, user.pwd)
       .then(() => {
         console.log('Logged in!');
+        return 1;
       })
       .catch((error) => {
         if (error.code === 'auth/user-not-found') {
@@ -49,10 +50,12 @@ const AuthenticationService = {
       .signInAnonymously()
       .then(() => {
         console.log('User signed in anonymously');
+        return 1;
       })
       .catch((error) => {
         if (error.code === 'auth/operation-not-allowed') {
           console.log('Enable anonymous in your firebase console.');
+          return 0;
         }
 
         console.error(error);
