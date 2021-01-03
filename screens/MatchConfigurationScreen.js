@@ -25,6 +25,7 @@ class MatchConfigurationScreen extends React.Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
   }
 
   //functions
@@ -39,6 +40,10 @@ class MatchConfigurationScreen extends React.Component {
       return entry.toString().length <= 0;
     });
   };
+
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
 
   render() {
     var isValid = this.validate();
@@ -76,7 +81,7 @@ class MatchConfigurationScreen extends React.Component {
                   ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    console.log('you tapped the button ACCEDER');
+                    this.navigateTo('LoadingMatch')
                   }}>
                   <GudText
                     style={[
