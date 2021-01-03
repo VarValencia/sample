@@ -14,7 +14,8 @@ module.exports = {
           '@android': './android/app/src/main/assets',
           '@components': './components',
           '@icons': './iconos_app',
-          '@scripts': './scripts'
+          '@scripts': './scripts',
+          '@gud': './components/global'
         },
       },
     ],
