@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import styles from '../../scss/styles';
+import styles from '@styles/styles';
 
 class TitleCard extends React.Component {
   constructor(props) {
@@ -29,7 +29,6 @@ class TitleCard extends React.Component {
               <View style={styles.flatCardItemComponent}>{body}</View>
             </View>
           </View>
-          <View style={styles.gudItemSeparator} />
         </View>
       </View>
     );
