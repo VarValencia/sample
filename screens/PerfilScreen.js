@@ -58,7 +58,6 @@ class OpenEmailScreen extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <TitleCard text={dummyBody} body={dummyComp} />
-              {/* <View style={styles.gudItemSeparator} /> */}
             </View>
           </View>
         </SafeAreaView>
