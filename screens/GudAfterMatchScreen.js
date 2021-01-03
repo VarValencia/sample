@@ -7,7 +7,12 @@
  */
 
 import React from 'react';
-import {View, StatusBar, TouchableHighlight, ImageBackground} from 'react-native';
+import {
+  View,
+  StatusBar,
+  TouchableHighlight,
+  ImageBackground,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 // Components
@@ -35,45 +40,53 @@ class GudAfterMatchScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedKey: ''
+      selectedKey: '',
+      text: '',
     };
     this.validate = this.validate.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
   }
-  validate(){
-    return !this.state.selectedKey.toString().length <= 0;
+  validate(key, text) {
+    if (key == 3 && text.length > 0) {
+      return true;
+    } else if (key !== 3) {
+      return true;
+    }
+    return false;
   }
-  onChange(key) {
-    this.setState({selectedKey: key});
+  onChange(id, key) {
+    if (id == 0) {
+      this.setState({selectedKey: key});
+    } else if (id == 1) {
+      this.setState({text: key});
+    }
+  }
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
   }
   render() {
-    let isValid = this.validate();
+    let isValid = this.validate(this.state.selectedKey, this.state.text);
     return (
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
-            <View style={styles.cardContainer}>
-              <ImageBackground
-                source={require('@icons/GudCircles.png')}
-                style={styles.gudBackgroundImage}>
-                <View style={styles.gudImageBackgroundContainer}>
-                  <GudText
-                    style={styles.title}
-                    accent={true}
-                    text="Hey Pablo"
-                  />
-                  <View style={styles.gudSeparator} />
-                  <GudText
-                    style={styles.sectionDescription}
-                    accent={true}
-                    text="¿Cómo ha sido la experiencia con este Guder?"
-                  />
-                </View>
-              </ImageBackground>
-            </View>
+            <ImageBackground
+              source={require('@icons/GudCircles.png')}
+              style={styles.gudBackgroundImage}>
+              <View style={styles.gudImageBackgroundContainer}>
+                <GudText style={styles.title} accent={true} text="Hey Pablo" />
+                <View style={styles.gudSeparator} />
+                <GudText
+                  style={styles.sectionDescription}
+                  accent={true}
+                  text="¿Cómo ha sido la experiencia con este Guder?"
+                />
+              </View>
+            </ImageBackground>
 
-            <AfterMatchRating onChange={key => this.onChange(key)}/>
+            <AfterMatchRating onChange={(id, key) => this.onChange(id, key)} />
 
             <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
