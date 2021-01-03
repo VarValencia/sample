@@ -7,9 +7,9 @@ import App from './App';
 import { name as appName } from './app.json';
 
 // Component imports
-import GudText from '@components/GudText';
-import GRadioButtonGroup from '@components/GRadioButtonGroup';
-import ValidationField from '@components/ValidationField';
+import GudText from '@gud/GudText';
+import GRadioButtonGroup from '@gud/GRadioButtonGroup';
+import ValidationField from '@gud/ValidationField';
 
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService'
