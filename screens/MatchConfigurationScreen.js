@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput, ImageBackground} from 'react-native';
+import {View, StatusBar, Image, ImageBackground} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
@@ -53,19 +53,22 @@ class MatchConfigurationScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.appLogoContainer}>
-                <Image source={require('@icons/1x/GUDLogo.png')} />
-              </View>
-              <GudText
-                style={styles.title}
-                accent={true}
-                text="Configura tu Match"
-              />
-              <View style={styles.gudSeparator} />
-              <GudText
-                style={styles.sectionDescription}
-                text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento"
-              />
+              <ImageBackground
+                source={require('@icons/GudCircles.png')}
+                style={styles.gudBackgroundImage}>
+                <View style={styles.gudImageBackgroundContainer}>
+                  <GudText
+                    style={styles.title}
+                    accent={true}
+                    text="Configura tu Match"
+                  />
+                  <View style={styles.gudSeparator} />
+                  <GudText
+                    style={styles.sectionDescription}
+                    text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento"
+                  />
+                </View>
+              </ImageBackground>
             </View>
             <MatchConfigurator
               onChange={(menuItem) => this.onChange(menuItem)}
@@ -81,7 +84,7 @@ class MatchConfigurationScreen extends React.Component {
                   ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    this.navigateTo('LoadingMatch')
+                    this.navigateTo('LoadingMatch');
                   }}>
                   <GudText
                     style={[
