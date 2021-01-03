@@ -5,110 +5,119 @@
  * @format
  * @flow strict-local
  */
+import 'react-native-gesture-handler';
+import React, {useState, useEffect} from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import auth from '@react-native-firebase/auth';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// Importación de las vistas
+import Splash from '@landing/Splash';
+import LandingPage from '@landing/LandingPage';
+import LoginScreen from '@landing/LoginScreen';
+import RegisterScreen from '@landing/RegisterScreen';
+import RegisterStepTwo from '@landing/RegisterStepTwo';
+import ConfirmEmail from '@landing/ConfirmEmail';
+
+import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
+import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
+import PerfilScreen from '@screens/PerfilScreen';
+import LoadingMatch from '@match/LoadingMatch';
+import SettingsMatchConfig from '@screens/SettingsMatchConfig';
+import HelpCenter from '@screens/HelpCenter';
+
+const RootStack = createStackNavigator();
 
 const App: () => React$Node = () => {
+  // Set an initializing state whilst Firebase connects
+  const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState();
+
+  // Handle user state changes
+  function onAuthStateChanged(user) {
+    setUser(user);
+    if (initializing) setInitializing(false);
+  }
+
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  if (initializing) return null;
+
+  // if (!user) {
+  if (false) {
+    return (
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <RootStack.Navigator
+            screenOptions={{
+              headerStyle: {elevation: 0},
+              cardStyle: {backgroundColor: '#fff'},
+            }}
+            initialRouteName="LandingPage"
+            headerMode="none">
+            <RootStack.Screen name="Splash" component={Splash} />
+            <RootStack.Screen name="LandingPage" component={LandingPage} />
+            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
+            <RootStack.Screen
+              name="RegisterScreen"
+              component={RegisterScreen}
+            />
+            <RootStack.Screen
+              name="RegisterStepTwo"
+              component={RegisterStepTwo}
+            />
+          </RootStack.Navigator>
+        </NavigationContainer>
+      </SafeAreaProvider>
+    );
+  }
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <RootStack.Navigator
+            screenOptions={{
+              headerStyle: {elevation: 0},
+              cardStyle: {backgroundColor: '#fff'},
+            }}
+            initialRouteName="PerfilScreen"
+            headerMode="none">
+            <RootStack.Screen name="Splash" component={Splash} />
+            <RootStack.Screen name="LandingPage" component={LandingPage} />
+            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
+            <RootStack.Screen
+              name="RegisterScreen"
+              component={RegisterScreen}
+            />
+            <RootStack.Screen
+              name="RegisterStepTwo"
+              component={RegisterStepTwo}
+            />
+            <RootStack.Screen
+              name="MatchConfigurationScreen"
+              component={MatchConfigurationScreen}
+            />
+            <RootStack.Screen name="LoadingMatch" component={LoadingMatch} />
+            <RootStack.Screen
+              name="GudAfterMatchScreen"
+              component={GudAfterMatchScreen}
+            />
+            <RootStack.Screen name="HelpCenter" component={HelpCenter} />
+            <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
+            <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
+            <RootStack.Screen
+              name="SettingsMatchConfig"
+              component={SettingsMatchConfig}
+            />
+          </RootStack.Navigator>
+        </NavigationContainer>
+      </SafeAreaProvider>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
-
 export default App;
