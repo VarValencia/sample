@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, ImageBackground} from 'react-native';
+import {View, StatusBar, TouchableHighlight, ImageBackground} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import GudText from '../components/GudText';
@@ -33,9 +33,20 @@ const opinion = [
 class GudAfterMatchScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      selectedKey: ''
+    };
+    this.validate = this.validate.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+  validate(){
+    return !this.state.selectedKey.toString().length <= 0;
+  }
+  onChange(key) {
+    this.setState({selectedKey: key});
   }
   render() {
+    let isValid = this.validate();
     return (
       <>
         <StatusBar hidden={true} />
@@ -44,18 +55,47 @@ class GudAfterMatchScreen extends React.Component {
             <View style={styles.cardContainer}>
               <ImageBackground
                 source={require('@icons/GudCircles.png')}
-                style={[styles.gudBackgroundImage]}>
-                <GudText style={[styles.textLG]} text="Hey Pablo," />
-                <GudText
-                  style={[styles.textMD]}
-                  text="¿Cómo ha sido la experiencia con este Gudder?"
-                />
+                style={styles.gudBackgroundImage}>
+                <View style={styles.gudImageBackgroundContainer}>
+                  <GudText
+                    style={styles.title}
+                    accent={true}
+                    text="Hey Pablo"
+                  />
+                  <View style={styles.gudSeparator} />
+                  <GudText
+                    style={styles.sectionDescription}
+                    text="¿Cómo ha sido la experiencia con este Gudder?"
+                  />
+                </View>
               </ImageBackground>
             </View>
-            <GRadioButtonGroup
-              style={[styles.GRadioButtonGroup]}
-              options={opinion}
-            />
+            <View style={styles.cardContainerLeft}>
+              <GRadioButtonGroup options={opinion} onPress={key => this.onChange(key)}/>
+            </View>
+            <View style={styles.cardContainer}>
+              <View style={styles.buttonContainer}>
+                <TouchableHighlight
+                  disabled={!isValid}
+                  style={[
+                    styles.touchableActive,
+                    styles.gudButton,
+                    isValid ? styles.activeBtn : styles.inactiveBtn,
+                  ]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    this.navigateTo('LoadingMatch');
+                  }}>
+                  <GudText
+                    style={[
+                      styles.gudButtonText,
+                      isValid ? null : styles.inactiveText,
+                    ]}
+                    text="Aceptar"
+                  />
+                </TouchableHighlight>
+              </View>
+            </View>
           </View>
         </SafeAreaView>
       </>
