@@ -19,42 +19,49 @@ import styles from '@styles/styles';
 // Scripts
 import AuthenticationService from '../scripts/authentication/AuthenticationService';
 
-const LoadingMatch: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <GudText style={styles.textLG} text="Match" />
-            <GudText
-              style={styles.textMD}
-              accent={true}
-              text="Conectando perfiles"
-            />
-          </View>
-          <View style={styles.appImageContainer}>
-            <Image source={require('@icons/RadarGud.gif')} />
-          </View>
-          <View style={styles.buttonContiner}>
-            <View style={styles.gudButton}>
-              <TouchableHighlight
-                style={styles.touchableActive}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
-                onPress={() => {
-                  AuthenticationService.logout();
-                }}>
-                <GudText
-                  style={[styles.gudButtonText, styles.textMD]}
-                  text="Cancelar"
-                />
-              </TouchableHighlight>
+class LoadingMatch extends React.Component {
+  constructor(props){
+    super(props);
+    this.navigateTo = this.navigateTo.bind(this);
+  }
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
+  render() {
+    return (
+      <>
+        <StatusBar hidden={true} />
+        <SafeAreaView>
+          <View style={styles.body}>
+            <View style={styles.cardContainer}>
+              <GudText style={styles.title} text="Match" />
+              <GudText
+                style={styles.sectionDescription}
+                accent={true}
+                text="Conectando perfiles"
+              />
+            </View>
+            <View style={styles.appImageContainer}>
+              <Image source={require('@icons/RadarGud.gif')} />
+            </View>
+
+            <View style={styles.cardContainer}>
+              <View style={styles.buttonContiner}>
+                <TouchableHighlight
+                  style={[styles.gudButton, styles.touchableActive]}
+                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  onPress={() => {
+                    this.navigateTo('MatchConfigurationScreen');
+                    AuthenticationService.logout();
+                  }}>
+                  <GudText style={styles.gudButtonText} text="Cancelar" />
+                </TouchableHighlight>
+              </View>
             </View>
           </View>
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
-
+        </SafeAreaView>
+      </>
+    );
+  }
+}
 export default LoadingMatch;
