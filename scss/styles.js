@@ -135,10 +135,10 @@ export default EStyleSheet.create({
     alignItems: 'flex-start',
     padding: height * 0.01,
     width: width * 0.9,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   flatCardItemComponent: {
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
 
   // Text styles
@@ -343,8 +343,16 @@ export default EStyleSheet.create({
     height: 1,
     backgroundColor: '$gudDarkGray',
   },
-  gudDropDown: {
+  gudDropDownContainer: {
     width: width * 0.8,
     height: height * 0.05,
+  },
+  gudDropDown: {
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    borderRadius: '$gudBorderRadius',
+  },
+  gudDropDownItems: {
+    backgroundColor: '#fff',
   }
 });
