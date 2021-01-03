@@ -42,7 +42,7 @@ class GRadioButtonGroup extends React.Component {
     const { options } = this.state;
     var radioButtons = options.map((option) => {
       return (
-        <View style={styles.gudRadioButtonGroup} key={option.key}>
+        <View style={[styles.gudRadioButtonGroup, {marginVertical: this.props.spaced}]} key={option.key}>
           <TouchableOpacity
             style={styles.rbCircle}
             onPress={() => this.onPress(option.key)}>
