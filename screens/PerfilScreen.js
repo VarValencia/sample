@@ -7,25 +7,62 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../components/global/GudText';
+import styles from '../scss/styles';
 
-const OpenEmailScreen: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar hidden={true} />
-      <SafeAreaView>
-        <View style={styles.body}>
-          <View style={styles.cardContainerLeft}>
-            <GudText style={styles.sectionDescription} text="Perfil" />
-          </View>
-          <View style={styles.cardContainer}></View>
+class OpenEmailScreen extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Dummy data
+    let items = [
+      {label: 'Test 1', icon: require('@icons/placeholder.png')},
+      {label: 'Test 2', icon: require('@icons/placeholder.png')},
+      {label: 'Test 3', icon: require('@icons/placeholder.png')},
+      {label: 'Test 4', icon: require('@icons/placeholder.png')},
+      {label: 'Test 5', icon: require('@icons/placeholder.png')},
+      {label: 'Test 6', icon: require('@icons/placeholder.png')},
+      {label: 'Test', icon: require('@icons/placeholder.png')},
+    ];
+    // Dummy component
+    let dummyComp = (
+      <View style={styles.cardContainer}>
+        <View style={styles.buttonContainer}>
+          <TouchableHighlight
+            style={[
+              styles.touchableActive,
+              styles.gudButton,
+              styles.inactiveBtn,
+            ]}
+            underlayColor={ESS.value('$gudGreenMedium')}
+            onPress={() => {}}>
+            <GudText style={[styles.gudButtonText]} text="Acceder" />
+          </TouchableHighlight>
+          <GudDropDown
+            onItemSelected={(item) => console.log('Item', item)}
+            items={items}
+          />
         </View>
-      </SafeAreaView>
-    </>
-  );
-};
+      </View>
+    );
+    var dummyBody = 'Lorem ipsum dolor sit amet rican pieyaso colocao';
+    return (
+      <>
+        <StatusBar hidden={true} />
+        <SafeAreaView>
+          <View style={styles.body}>
+            <View style={styles.cardContainer}>
+              <TitleCard text={dummyBody} body={dummyComp} />
+              {/* <View style={styles.gudItemSeparator} /> */}
+            </View>
+          </View>
+        </SafeAreaView>
+      </>
+    );
+  }
+}
+
 export default OpenEmailScreen;

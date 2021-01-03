@@ -85,7 +85,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LandingPage"
+            initialRouteName="PerfilScreen"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
