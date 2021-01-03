@@ -10,11 +10,12 @@ import React from 'react';
 import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
+import Toast from 'react-native-simple-toast';
+
 
 // Styles
 import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
-
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -45,8 +46,14 @@ class LoginScreen extends React.Component {
   }
 
   render() {
-    const EMAIL = "email";
-    const PASS = "password";
+    const EMAIL = 'email';
+    const PASS = 'password';
+
+    const LOGIN_TITLE_KO = '¡Ups!';
+    const LOGIN_TITLE_OK = '¡Bienvenido de vuelta!';
+    const LOGIN_BODY_KO = 'Comprueba tu email y contraseña.';
+    const LOGIN_BODY_OK = '¿Cómo te encuentras hoy?';
+
     var isValid = this.validate();
 
     return (
@@ -94,7 +101,16 @@ class LoginScreen extends React.Component {
                   ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    AuthenticationService.login({email: this.state.email, pwd: this.state.password});
+                    if (
+                      AuthenticationService.login({
+                        email: this.state.email,
+                        pwd: this.state.password,
+                      })
+                    ) {
+                      this.navigateTo('MatchConfigurationScreen');
+                    } else {
+                      Toast.show(LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO, Toast.LONG);
+                    }
                   }}>
                   <GudText
                     style={[
