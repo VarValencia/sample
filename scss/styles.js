@@ -89,7 +89,7 @@ export default EStyleSheet.create({
   },
   carouselContainer: {
     flexDirection: 'column',
-    padding: 20,
+    padding: 15,
     borderRadius: '$gudBorderRadius',
     shadowColor: 'black',
     shadowOpacity: 0.26,
@@ -103,7 +103,33 @@ export default EStyleSheet.create({
   },
   carouselCard: {
     position: 'relative',
-    width: Dimensions.get('window').width * 0.61,
+    width: Dimensions.get('window').width * 0.62,
+  },
+  textInputContainer: {
+    position:'relative',
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    borderRadius: '$gudBorderRadius',
+    height: Dimensions.get("window").height * 26/100,
+    textAlignVertical: 'top',
+    padding: 15
+  },
+  flatCardContainer: {
+    padding: 20,
+    borderRadius: '$gudBorderRadius',
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
+    backgroundColor: 'white',
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    width: Dimensions.get('window').width * 0.7,
+    height: (Dimensions.get('window').height * 20) / 100,
+  },
+  flatCardItem: {
+    justifyContent: 'space-evenly',
   },
 
   // Text styles
@@ -177,7 +203,7 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    marginTop: Dimensions.get("window").height * 29/100,
+    marginTop: (Dimensions.get('window').height * 29) / 100,
   },
 
   // Button styling
@@ -254,12 +280,11 @@ export default EStyleSheet.create({
   // GUD Radio Button
   gudRadioButtonGroup: {
     flexDirection: 'row',
-    textAlign: 'left',
   },
   rbCircle: {
-    height: 20,
-    width: 20,
-    borderRadius: 10,
+    height: 25,
+    width: 25,
+    borderRadius: 20,
     borderWidth: 1,
     borderColor: '$gudGreenDark',
     alignItems: 'center',
@@ -267,9 +292,9 @@ export default EStyleSheet.create({
     marginHorizontal: 10,
   },
   rbCheckedCircle: {
-    width: 14,
-    height: 14,
-    borderRadius: 7,
+    width: 15,
+    height: 15,
+    borderRadius: 10,
     backgroundColor: '$gudGreenMedium',
   },
 
