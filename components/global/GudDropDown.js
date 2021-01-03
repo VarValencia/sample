@@ -35,12 +35,14 @@ class GudDropDown extends React.Component {
       <DropDownPicker
         items={this.selections()}
         defaultValue={this.state.value}
-        containerStyle={styles.gudDropDown}
-        style={{backgroundColor: '#fafafa'}}
+        containerStyle={styles.gudDropDownContainer}
+        style={[styles.gudDropDown]}
+        labelStyle={[{fontFamily: ESS.value('$rg')}, this.props.fontFamily, this.props.fontSize]}
+        placeholder={'Selecciona una opción'}
         itemStyle={{
           justifyContent: 'flex-start',
         }}
-        dropDownStyle={{backgroundColor: '#fafafa'}}
+        dropDownStyle={styles.gudDropDownItems}
         onChangeItem={(item) =>
           this.handleChange(item)
         }
