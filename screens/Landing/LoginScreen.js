@@ -12,7 +12,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import Toast from 'react-native-simple-toast';
 
-
 // Styles
 import styles from '@styles/styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
@@ -101,16 +100,15 @@ class LoginScreen extends React.Component {
                   ]}
                   underlayColor={EStyleSheet.value('$gudGreenMedium')}
                   onPress={() => {
-                    if (
-                      AuthenticationService.login({
-                        email: this.state.email,
-                        pwd: this.state.password,
-                      })
-                    ) {
-                      this.navigateTo('MatchConfigurationScreen');
-                    } else {
-                      Toast.show(LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO, Toast.LONG);
-                    }
+                    AuthenticationService.login({
+                      email: this.state.email,
+                      pwd: this.state.password,
+                    });
+                    this.navigateTo('MatchConfigurationScreen');
+                    // Toast.show(
+                    //   LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO,
+                    //   Toast.LONG,
+                    // );
                   }}>
                   <GudText
                     style={[
