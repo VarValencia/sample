@@ -8,9 +8,10 @@
 
 import React from 'react';
 import {View, StatusBar, TouchableHighlight, ImageBackground} from 'react-native';
-import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import GudText from '../components/GudText';
+
+// Components
+import AfterMatchRating from '@components/AfterMatchRating';
 
 const opinion = [
   {
@@ -65,14 +66,15 @@ class GudAfterMatchScreen extends React.Component {
                   <View style={styles.gudSeparator} />
                   <GudText
                     style={styles.sectionDescription}
-                    text="¿Cómo ha sido la experiencia con este Gudder?"
+                    accent={true}
+                    text="¿Cómo ha sido la experiencia con este Guder?"
                   />
                 </View>
               </ImageBackground>
             </View>
-            <View style={styles.cardContainerLeft}>
-              <GRadioButtonGroup options={opinion} onPress={key => this.onChange(key)}/>
-            </View>
+
+            <AfterMatchRating onChange={key => this.onChange(key)}/>
+
             <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
