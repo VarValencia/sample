@@ -12,6 +12,7 @@ class ValidationField extends React.Component {
         maxLength: props.maxLength,
         minLength: props.minLength,
         isPassword: props.password,
+        placeholder: props.placeholder || '',
       });
 
     this.onChange = this.onChange.bind(this);
@@ -41,21 +42,26 @@ class ValidationField extends React.Component {
     }
   }
   render() {
+    var isValid = this.state.isValid
     return (
       <>
         <GudText
           style={[styles.textSM, styles.gudInputText]}
-          text={this.props.placeholder}
+          text={this.state.placeholder}
         />
         <TextInput
           ref={this.props.ref}
           style={[
-            styles.gudInput,
-            this.state.isValid ? styles.valid : styles.invalid,
+            this.props.style ? this.props.style : styles.gudInput,
+            isValid ? styles.valid : styles.invalid,
+            this.props.disableAccent ? styles.valid : null
           ]}
           secureTextEntry={
             this.state.isPassword && this.state.value.length > 0 ? true : false
           }
+          autoFocus={this.props.autoFocus}
+          multiline={this.props.multiline}
+          numberOfLines={this.props.numberOfLines}
           autoCapitalize={this.state.isPassword ? 'none' : 'sentences'}
           placeholder={this.props.placeholder}
           onChangeText={(text) => this.onChange(text)}
