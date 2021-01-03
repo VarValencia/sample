@@ -11,7 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-
 const LandingPage: () => React$Node = ({navigation}) => {
   return (
     <>
@@ -20,7 +19,10 @@ const LandingPage: () => React$Node = ({navigation}) => {
         <View style={styles.body}>
           <View style={styles.cardContainer}>
             <View style={styles.appLogoContainer}>
-              <Image source={require('@icons/1x/GUDLogo.png')} />
+              <Image
+                style={styles.appLogo}
+                source={require('@icons/4x/GUDLogo.png')}
+              />
             </View>
             <GudText style={styles.title} text="¡BIENVENIDO!" />
             <View style={styles.gudSeparator} />

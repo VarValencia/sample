@@ -20,8 +20,8 @@ const OpenEmailScreen: () => React$Node = () => {
       <SafeAreaView>
         <View style={styles.body}>
           <View style={styles.cardContainer}>
-            <View style={styles.appImageContainer}>
-              <Image source={require('@icons/1x/GUDLogo.png')} />
+            <View style={styles.appLogoContainer}>
+              <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />
               <GudText
                 style={[styles.gudMessage, styles.textLG]}
                 text="Enhorabuena!"

@@ -64,7 +64,7 @@ class RegisterStepTwo extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
-                <Image source={require('@icons/1x/GUDLogo.png')} />
+                <Image sstyles={styles.appLogo} ource={require('@icons/4x/GUDLogo.png')} />
               </View>
               <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />
