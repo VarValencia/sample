@@ -230,6 +230,11 @@ export default EStyleSheet.create({
     textAlign: 'center',
     marginTop: (height * 29) / 100,
   },
+  gudIcon: {
+    resizeMode: 'contain',
+    width: width * 0.06,
+    height: width * 0.06,
+  },
 
   // Button styling
   buttonContainer: {
@@ -338,4 +343,8 @@ export default EStyleSheet.create({
     height: 1,
     backgroundColor: '$gudDarkGray',
   },
+  gudDropDown: {
+    width: width * 0.8,
+    height: height * 0.05,
+  }
 });
