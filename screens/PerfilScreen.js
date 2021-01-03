@@ -29,7 +29,7 @@ class OpenEmailScreen extends React.Component {
     ];
     // Dummy component
     let dummyComp = (
-      <>
+      <View style={styles.cardContainer}>
         <View style={styles.buttonContainer}>
           <TouchableHighlight
             style={[
@@ -48,7 +48,7 @@ class OpenEmailScreen extends React.Component {
             items={items}
           />
         </View>
-      </>
+      </View>
     );
     var dummyBody = 'Lorem ipsum dolor sit amet rican pieyaso colocao';
     return (
