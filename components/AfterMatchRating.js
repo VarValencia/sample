@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import {View, TextInput, FlatList} from 'react-native';
 import GRadioButtonGroup from './GRadioButtonGroup';
 
 class AfterMatchRating extends React.Component {
@@ -39,19 +39,30 @@ class AfterMatchRating extends React.Component {
 
     let slides = [{key: 0}, {key: 1}];
     var radioButtons = (
-         <View style={styles.carouselCard}> 
-          <GRadioButtonGroup
-            spaced={'8%'}
-            options={ratings}
-            getKey={(key) => this.handleKey(key)}
-          />
-        </View>
+      <View style={styles.carouselCard}>
+        <GRadioButtonGroup
+          spaced={'8%'}
+          options={ratings}
+          getKey={(key) => this.handleKey(key)}
+        />
+      </View>
     );
-    var othersBox= (
-        <View style={styles.flatCardContainer}>
-
-        </View>
-    )
+    var othersBox = (
+      <View style={styles.carouselCard}>
+        <GudText
+          style={[styles.sectionDescription, {padding: 10}]}
+          text={'Explícanos qué ha sucedido:'}
+        />
+        <TextInput
+          style={styles.textInputContainer}
+          autoFocus={true}
+          multiline={true}
+          numberOfLines={4}
+          onChangeText={(text) => this.setState({text})}
+          value={this.state.text}
+        />
+      </View>
+    );
 
     return (
       <View style={styles.carouselContainer}>
@@ -60,10 +71,10 @@ class AfterMatchRating extends React.Component {
           style={styles.carouselCard}
           keyExtractor={(item) => item.key.toString()}
           renderItem={({item}) => {
-            if (item.key == 0){
-                return radioButtons
-            } else if (item.key == 1){
-                return othersBox;
+            if (item.key == 0) {
+              return radioButtons;
+            } else if (item.key == 1) {
+              return othersBox;
             }
           }}
           pagingEnabled
