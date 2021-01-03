@@ -25,17 +25,26 @@ class HelpCenter extends React.Component {
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
+            <View style={styles.cardContainerLeft}>
+              <GudText
+                style={styles.sectionDescription}
+                text="Centro de ayuda"
+              />
+            </View>
             <View style={styles.cardContainer}>
-              <GudText style={styles.textLG} text="Centro de ayuda" />
               <View style={styles.appImageContainer}>
                 <Image source={require('@icons/GudMatchLogo.png')} />
               </View>
               <GudText
-                style={[styles.textSM]}
-                text="Version 1.00.0.01 de Gud match"
+                style={[styles.textSM, {fontFamily: EStyleSheet.value('$sb')}]}
+                text="Version 0.00.0.01 de Gud Match."
               />
               <GudText
-                style={styles.textMD}
+                style={[styles.textSM]}
+                text="©2020 Gud Match y Gud Company."
+              />
+              <GudText
+                style={[styles.textSM, {fontFamily: EStyleSheet.value('$sb')}]}
                 text="Esta es la última versión de Gud match"
               />
             </View>
