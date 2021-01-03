@@ -7,12 +7,11 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, ImageBackground} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar, ImageBackground} from 'react-native';
+
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../../components/GudText';
-import EStyleSheet from 'react-native-extended-stylesheet';
+
 import MatchConfigurator from '@components/MatchConfigurator';
 
 class MatchConfigurationScreen extends React.Component {

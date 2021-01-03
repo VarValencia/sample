@@ -11,13 +11,9 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-// Styles
-import GudText from '../../components/GudText';
-import EStyleSheet from 'react-native-extended-stylesheet';
-import styles from '@styles/styles';
 
 // Scripts
-import AuthenticationService from '../../scripts/authentication/AuthenticationService';
+import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
 class LoadingMatch extends React.Component {
   constructor(props){

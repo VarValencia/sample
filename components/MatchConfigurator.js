@@ -1,6 +1,5 @@
 import React from 'react';
 import {FlatList, View} from 'react-native';
-import GRadioButtonGroup from './GRadioButtonGroup';
 
 class MatchConfigurator extends React.Component {
   constructor(props) {

@@ -11,7 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '@components/GudText';
 
 class ConfirmEmail extends React.Component {
   constructor(props) {

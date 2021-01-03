@@ -7,12 +7,10 @@
  */
 
 import React from 'react';
-import {View, StatusBar, Image, TextInput} from 'react-native';
-import styles from '@styles/styles';
+import {View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../components/GudText';
-import EStyleSheet from 'react-native-extended-stylesheet';
+
 
 const optMatch = [
   {

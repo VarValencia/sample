@@ -1,8 +1,6 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
-import GRadioButtonGroup from './GRadioButtonGroup';
-import GudText from './GudText';
+
 
 const MIN_LENGTH = 12;
 

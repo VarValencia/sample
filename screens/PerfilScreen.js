@@ -11,7 +11,7 @@ import {View, StatusBar, Image, TextInput} from 'react-native';
 import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '../components/GudText';
+import GudText from '../components/global/GudText';
 
 const OpenEmailScreen: () => React$Node = () => {
   return (
@@ -19,48 +19,10 @@ const OpenEmailScreen: () => React$Node = () => {
       <StatusBar hidden={true} />
       <SafeAreaView>
         <View style={styles.body}>
-          <View style={styles.cardContainer}>
-            <View style={styles.appLogoContainer}>
-              <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />
-              <GudText
-                style={[styles.gudMessage, styles.textLG]}
-                text="Enhorabuena!"
-              />
-            </View>
-
-            <GudText
-              style={[styles.gudMessage, styles.textMD]}
-              text="Estás a un paso de ser gud"
-            />
-            <GudText
-              style={[styles.gudMessage, styles.textSM]}
-              text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
-            />
+          <View style={styles.cardContainerLeft}>
+            <GudText style={styles.sectionDescription} text="Perfil" />
           </View>
-          <View style={styles.appImageContainer}>
-            <Image
-              style={styles.gudCardImage}
-              source={require('../android/app/src/main/assets/images/LoginScreen.png')}
-            />
-          </View>
-          <View style={styles.gudButtonDark}>
-            <TouchableHighlight
-              onPress={() => {
-                console.log('you tapped the button FINALIZAR');
-              }}>
-              <GudText
-                style={[styles.gudButtonText, styles.textMD]}
-                text="FINALIZAR"
-              />
-            </TouchableHighlight>
-          </View>
-          <View style={styles.gudContainerBigMargin}>
-            <GudText
-              style={[styles.GudText, styles.gudTextUpButton]}
-              text="Email"
-            />
-            <TextInput style={styles.gudInput} maxLength={40} />
-          </View>
+          <View style={styles.cardContainer}></View>
         </View>
       </SafeAreaView>
     </>
