@@ -3,6 +3,9 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 // Import Dimensions for screen measurement
 import {Dimensions} from 'react-native';
 
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
+
 // App Theme
 EStyleSheet.build({
   // COLORS
@@ -19,6 +22,7 @@ EStyleSheet.build({
   // Body
   $gudBodyPaddingH: '15%',
   $gudBodyPadding: '15%',
+  $gudRadioButtonMarginVertical: height * 0.01,
 
   // Titles
   $gudTitlePaddingTop: '0%',
@@ -26,23 +30,19 @@ EStyleSheet.build({
   $gudSeparatorPaddingBottom: '5%',
 
   // Buttons
-  $touchableWidth: (Dimensions.get('window').width * 80) / 100,
+  $touchableWidth: width * 0.8,
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudSM: (Dimensions.get('window').height * 1.5) / 100,
-  $gudMD: (Dimensions.get('window').height * 2) / 100,
-  $gudLG: (Dimensions.get('window').height * 2.5) / 100,
+  $gudSM: (height * 1.5) / 100,
+  $gudMD: (height * 2) / 100,
+  $gudLG: (height * 2.5) / 100,
 
   $gudTextPadding: 1,
   $gudTextMarginTop: 0,
-
-  // Screen Dimensions
-  $scrWidth: Dimensions.get('window').width,
-  $scrheight: Dimensions.get('window').height,
 
   // General styling
   $gudBorderRadius: 15,
@@ -56,8 +56,8 @@ export default EStyleSheet.create({
   body: {
     position: 'relative',
     textAlign: 'center',
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: width,
+    height: height,
     paddingRight: '$gudBodyPaddingH',
     paddingLeft: '$gudBodyPaddingH',
     padding: '$gudBodyPadding',
@@ -79,7 +79,7 @@ export default EStyleSheet.create({
     alignItems: 'center',
   },
   appImageContainer: {
-    margin: (Dimensions.get('window').height * 5) / 100,
+    margin: height * 0.05,
     alignItems: 'center',
   },
   inputContainer: {
@@ -89,7 +89,7 @@ export default EStyleSheet.create({
   },
   carouselContainer: {
     flexDirection: 'column',
-    padding: 15,
+    padding: width * 0.03,
     borderRadius: '$gudBorderRadius',
     shadowColor: 'black',
     shadowOpacity: 0.26,
@@ -99,20 +99,22 @@ export default EStyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    width: Dimensions.get('window').width * 0.7,
+    width: width * 0.7,
   },
   carouselCard: {
     position: 'relative',
-    width: Dimensions.get('window').width * 0.62,
+    width: width * 0.62,
   },
   textInputContainer: {
-    position:'relative',
+    position: 'relative',
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
     borderRadius: '$gudBorderRadius',
-    height: Dimensions.get("window").height * 26/100,
+    height: height * 0.15,
     textAlignVertical: 'top',
-    padding: 15
+    fontSize: '$gudMD',
+    fontFamily: '$rg',
+    padding: 15,
   },
   flatCardContainer: {
     padding: 20,
@@ -125,8 +127,8 @@ export default EStyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
-    width: Dimensions.get('window').width * 0.7,
-    height: (Dimensions.get('window').height * 20) / 100,
+    width: width * 0.7,
+
   },
   flatCardItem: {
     justifyContent: 'space-evenly',
@@ -163,6 +165,18 @@ export default EStyleSheet.create({
     fontSize: '$gudMD',
     paddingBottom: '$gudSubTitlePaddingBottom',
   },
+  // For 'back' text in user experience screen
+  carouselText: {
+    fontFamily: '$sb',
+    textAlign: 'center',
+    fontSize: '$gudLG',
+    justifyContent: 'center',
+    paddingBottom: '$gudSubTitlePaddingBottom',
+    textAlignVertical: 'center',
+    padding: 20,
+    backgroundColor: '$gudGreenLight',
+    borderRadius: '$gudBorderRadius',
+  },
 
   // Text sizes and weight
   textLG: {
@@ -183,19 +197,19 @@ export default EStyleSheet.create({
   // Image styling
   gudCardImage: {
     resizeMode: 'contain',
-    width: (Dimensions.get('window').width * 80) / 100,
-    height: (Dimensions.get('window').height * 30) / 100,
+    width: (width * 80) / 100,
+    height: (height * 30) / 100,
     margin: 10,
   },
   gudBackgroundImage: {
-    width: (Dimensions.get('window').width * 70) / 100,
-    height: (Dimensions.get('window').width * 70) / 100,
+    width: (width * 70) / 100,
+    height: (width * 70) / 100,
     justifyContent: 'center',
     alignItems: 'center',
   },
   appLogo: {
-    width: (Dimensions.get('window').width * 20) / 100,
-    height: (Dimensions.get('window').width * 20) / 100,
+    width: (width * 20) / 100,
+    height: (width * 20) / 100,
     resizeMode: 'contain',
   },
   gudImageBackgroundContainer: {
@@ -203,7 +217,7 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    marginTop: (Dimensions.get('window').height * 29) / 100,
+    marginTop: (height * 29) / 100,
   },
 
   // Button styling
@@ -214,8 +228,8 @@ export default EStyleSheet.create({
     alignItems: 'center',
   },
   credentialButton: {
-    width: (Dimensions.get('window').width * 60) / 100,
-    height: (Dimensions.get('window').height * 5) / 100,
+    width: (width * 60) / 100,
+    height: (height * 5) / 100,
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
@@ -224,7 +238,7 @@ export default EStyleSheet.create({
   },
   gudButton: {
     width: '$touchableWidth',
-    height: (Dimensions.get('window').height * 5) / 100,
+    height: (height * 5) / 100,
     backgroundColor: '$gudWhite',
     borderRadius: '$gudBorderRadius',
     borderWidth: 1,
@@ -245,14 +259,14 @@ export default EStyleSheet.create({
     color: '$gudGray',
   },
   credentialsTouchableActive: {
-    height: (Dimensions.get('window').height * 5) / 100,
+    height: (height * 5) / 100,
     borderRadius: '$gudBorderRadius',
     display: 'flex',
     justifyContent: 'center',
   },
   touchableActive: {
     width: '$touchableWidth',
-    height: (Dimensions.get('window').height * 5) / 100,
+    height: (height * 5) / 100,
     borderRadius: '$gudBorderRadius',
     display: 'flex',
     justifyContent: 'center',
@@ -260,8 +274,8 @@ export default EStyleSheet.create({
 
   // Input styling
   gudInput: {
-    width: (Dimensions.get('window').width * 80) / 100,
-    height: (Dimensions.get('window').height * 5) / 100,
+    width: (width * 80) / 100,
+    height: (height * 5) / 100,
     borderColor: '$gudGreenRegular',
     borderWidth: 1,
     borderRadius: '$gudBorderRadius',
@@ -302,8 +316,8 @@ export default EStyleSheet.create({
   gudSeparator: {
     position: 'relative',
     // provisional
-    width: (Dimensions.get('window').width * 8) / 100,
-    height: (Dimensions.get('window').height * 0.5) / 100,
+    width: (width * 8) / 100,
+    height: (height * 0.5) / 100,
     backgroundColor: '$gudGreenDark',
     borderRadius: '$gudBorderRadius',
     marginBottom: '$gudSeparatorPaddingBottom',
