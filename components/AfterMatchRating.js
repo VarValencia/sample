@@ -60,7 +60,7 @@ class AfterMatchRating extends React.Component {
     var radioButtons = (
       <View style={styles.carouselCard}>
         <GRadioButtonGroup
-          spaced={EStyleSheet.value('$gudRadioButtonMarginVertical')}
+          spaced={ESS.value('$gudRadioButtonMarginVertical')}
           options={ratings}
           getKey={(key) => this.handleKey(key)}
         />

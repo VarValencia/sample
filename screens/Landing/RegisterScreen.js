@@ -108,7 +108,7 @@ class RegisterScreen extends React.Component {
                     styles.gudButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
                     this.onSubmit();
                   }}>

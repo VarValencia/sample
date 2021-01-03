@@ -101,7 +101,7 @@ class SettingsMatchConfig extends React.Component {
                   onPress={() => {
                     console.log('you tapped the button FINALIZAR');
                   }}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}>
+                  underlayColor={ESS.value('$gudGreenMedium')}>
                   <GudText
                     style={[styles.gudButtonText]}
                     text="GUARDAR CAMBIOS"

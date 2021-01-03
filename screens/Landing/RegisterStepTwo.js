@@ -64,7 +64,7 @@ class RegisterStepTwo extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
-                <Image sstyles={styles.appLogo} ource={require('@icons/4x/GUDLogo.png')} />
+                <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />
               </View>
               <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />
@@ -113,7 +113,7 @@ class RegisterStepTwo extends React.Component {
                   <TouchableHighlight
                     disabled={!isValid}
                     style={styles.touchableActive}
-                    underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                    underlayColor={ESS.value('$gudGreenMedium')}
                     onPress={() => {
                       this.onSubmit();
                     }}>

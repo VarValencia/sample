@@ -43,7 +43,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
               <View style={[styles.credentialButton, styles.activeBtn]}>
                 <TouchableHighlight
                   style={styles.credentialsTouchableActive}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
                     navigateTo('LoginScreen');
                   }}>
@@ -53,7 +53,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
               <View style={styles.credentialButton}>
                 <TouchableHighlight
                   style={styles.credentialsTouchableActive}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
                     navigateTo('RegisterScreen');
                   }}>

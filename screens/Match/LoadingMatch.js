@@ -45,7 +45,7 @@ class LoadingMatch extends React.Component {
               <View style={styles.buttonContiner}>
                 <TouchableHighlight
                   style={[styles.gudButton, styles.touchableActive]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
                     this.navigateTo('MatchConfigurationScreen');
                     AuthenticationService.logout();

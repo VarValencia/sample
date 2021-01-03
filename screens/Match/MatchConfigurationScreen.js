@@ -69,9 +69,11 @@ class MatchConfigurationScreen extends React.Component {
                 </View>
               </ImageBackground>
             </View>
-            <MatchConfigurator
-              onChange={(menuItem) => this.onChange(menuItem)}
-            />
+            <View style={styles.cardContainer}>
+              <MatchConfigurator
+                onChange={(menuItem) => this.onChange(menuItem)}
+              />
+            </View>
             <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
@@ -81,7 +83,7 @@ class MatchConfigurationScreen extends React.Component {
                     styles.gudButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}
-                  underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
                     this.navigateTo('LoadingMatch');
                   }}>

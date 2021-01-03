@@ -11,8 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-import styles from '@styles/styles';
-import EStyleSheet from 'react-native-extended-stylesheet';
 
 class HelpCenter extends React.Component {
   constructor(props) {
@@ -36,7 +34,7 @@ class HelpCenter extends React.Component {
                 <Image source={require('@icons/GudMatchLogo.png')} />
               </View>
               <GudText
-                style={[styles.textSM, {fontFamily: EStyleSheet.value('$sb')}]}
+                style={[styles.textSM, {fontFamily: ESS.value('$sb')}]}
                 text="Version 0.00.0.01 de Gud Match."
               />
               <GudText
@@ -44,7 +42,7 @@ class HelpCenter extends React.Component {
                 text="©2020 Gud Match y Gud Company."
               />
               <GudText
-                style={[styles.textSM, {fontFamily: EStyleSheet.value('$sb')}]}
+                style={[styles.textSM, {fontFamily: ESS.value('$sb')}]}
                 text="Esta es la última versión de Gud match"
               />
             </View>
@@ -55,7 +53,7 @@ class HelpCenter extends React.Component {
                   styles.touchableActive,
                   styles.activeBtn,
                 ]}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                underlayColor={ESS.value('$gudGreenMedium')}
                 onPress={() => {
                   console.log('you tapped the button HelpCenter');
                 }}>
@@ -66,7 +64,7 @@ class HelpCenter extends React.Component {
               </TouchableHighlight>
               <TouchableHighlight
                 style={[styles.gudButton, styles.touchableActive]}
-                underlayColor={EStyleSheet.value('$gudGreenMedium')}
+                underlayColor={ESS.value('$gudGreenMedium')}
                 onPress={() => {
                   console.log('you tapped the button technic support');
                 }}>
