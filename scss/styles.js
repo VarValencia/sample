@@ -17,11 +17,12 @@ EStyleSheet.build({
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
   $gudGray: '#dadada',
+  $gudDarkGray: '#b2b2b2',
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '15%',
-  $gudBodyPadding: '15%',
+  $gudBodyPaddingH: '10%',
+  $gudBodyPadding: '10%',
   $gudRadioButtonMarginVertical: height * 0.01,
 
   // Titles
@@ -128,10 +129,16 @@ export default EStyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
     width: width * 0.7,
-
   },
   flatCardItem: {
-    justifyContent: 'space-evenly',
+    position: 'relative',
+    alignItems: 'flex-start',
+    padding: height * 0.01,
+    width: width * 0.9,
+    flexDirection: 'row'
+  },
+  flatCardItemComponent: {
+    alignItems: 'flex-end'
   },
 
   // Text styles
@@ -177,7 +184,11 @@ export default EStyleSheet.create({
     backgroundColor: '$gudGreenLight',
     borderRadius: '$gudBorderRadius',
   },
-
+  titleCardText: {
+    fontFamily: '$rg',
+    fontSize: '$gudMD',
+    paddingBottom: '$gudSubTitlePaddingBottom',
+  },
   // Text sizes and weight
   textLG: {
     fontSize: '$gudLG',
@@ -315,19 +326,16 @@ export default EStyleSheet.create({
   // General Styling
   gudSeparator: {
     position: 'relative',
-    // provisional
     width: (width * 8) / 100,
     height: (height * 0.5) / 100,
     backgroundColor: '$gudGreenDark',
     borderRadius: '$gudBorderRadius',
     marginBottom: '$gudSeparatorPaddingBottom',
   },
-
-  // Old styles
-  gudTitle: {
-    textAlign: 'center',
-    fontSize: 24,
-    fontWeight: '600',
-    color: '$gudBlack',
+  gudItemSeparator: {
+    position: 'relative',
+    width: width * 0.9,
+    height: 1,
+    backgroundColor: '$gudDarkGray',
   },
 });
