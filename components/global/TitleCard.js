@@ -30,6 +30,7 @@ class TitleCard extends React.Component {
             </View>
           </View>
         </View>
+        <View style={styles.gudItemSeparator} />
       </View>
     );
   }
