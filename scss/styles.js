@@ -99,11 +99,11 @@ export default EStyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    width: Dimensions.get("window").width * 0.7
+    width: Dimensions.get('window').width * 0.7,
   },
   carouselCard: {
     position: 'relative',
-    width: Dimensions.get("window").width * 0.61
+    width: Dimensions.get('window').width * 0.61,
   },
 
   // Text styles
@@ -162,10 +162,22 @@ export default EStyleSheet.create({
     margin: 10,
   },
   gudBackgroundImage: {
-    display: 'flex',
-    width: '50%',
-    height: '50%',
+    width: (Dimensions.get('window').width * 70) / 100,
+    height: (Dimensions.get('window').width * 70) / 100,
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  appLogo: {
+    width: (Dimensions.get('window').width * 20) / 100,
+    height: (Dimensions.get('window').width * 20) / 100,
+    resizeMode: 'contain',
+  },
+  gudImageBackgroundContainer: {
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginTop: Dimensions.get("window").height * 29/100,
   },
 
   // Button styling
