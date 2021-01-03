@@ -208,8 +208,8 @@ export default EStyleSheet.create({
     alignItems: 'center',
   },
   appLogo: {
-    width: (width * 20) / 100,
-    height: (width * 20) / 100,
+    width: (width * 10) / 100,
+    height: (width * 10) / 100,
     resizeMode: 'contain',
   },
   gudImageBackgroundContainer: {
