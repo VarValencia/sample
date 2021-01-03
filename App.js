@@ -14,17 +14,17 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import auth from '@react-native-firebase/auth';
 
 // Importación de las vistas
-import Splash from '@screens/Landing/Splash';
-import LandingPage from '@screens/Landing/LandingPage';
-import LoginScreen from '@screens/Landing/LoginScreen';
-import RegisterScreen from '@screens/Landing/RegisterScreen';
-import RegisterStepTwo from '@screens/Landing/RegisterStepTwo';
-import ConfirmEmail from '@screens/Landing/ConfirmEmail';
+import Splash from '@landing/Splash';
+import LandingPage from '@landing/LandingPage';
+import LoginScreen from '@landing/LoginScreen';
+import RegisterScreen from '@landing/RegisterScreen';
+import RegisterStepTwo from '@landing/RegisterStepTwo';
+import ConfirmEmail from '@landing/ConfirmEmail';
 
-import GudAfterMatchScreen from '@screens/GudAfterMatchScreen';
-import MatchConfigurationScreen from '@screens/MatchConfigurationScreen';
+import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
+import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
 import PerfilScreen from '@screens/PerfilScreen';
-import LoadingMatch from '@screens/LoadingMatch';
+import LoadingMatch from '@match/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
 
@@ -48,7 +48,8 @@ const App: () => React$Node = () => {
 
   if (initializing) return null;
 
-  if (!user) {
+  // if (!user) {
+  if (false) {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
