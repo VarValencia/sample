@@ -28,7 +28,7 @@ import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
 
 import UserProfileConfig from '@preferences/UserProfileConfig';
-import PreferencesMainScreen from '@screens/PreferencesMainScreen';
+import PreferencesScreen from '@screens/PreferencesScreen';
 
 const RootStack = createStackNavigator();
 
@@ -87,7 +87,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="PreferencesMainScreen"
+            initialRouteName="PreferencesScreen"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -120,8 +120,8 @@ const App: () => React$Node = () => {
               component={SettingsMatchConfig}
             />
             <RootStack.Screen
-              name="PreferencesMainScreen"
-              component={PreferencesMainScreen}
+              name="PreferencesScreen"
+              component={PreferencesScreen}
             />
           </RootStack.Navigator>
         </NavigationContainer>
