@@ -101,12 +101,13 @@ export default EStyleSheet.create({
     elevation: 3,
     backgroundColor: 'white',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    width: width * 0.7,
+    alignItems: 'center',
+    width: width * 0.9,
+    height: height * 0.265,
   },
   carouselCard: {
     position: 'relative',
-    width: width * 0.62,
+    width: width * 0.8,
   },
   textInputContainer: {
     position: 'relative',
@@ -157,6 +158,17 @@ export default EStyleSheet.create({
     fontFamily: '$b',
     fontSize: '$gudLG',
     paddingTop: '$gudTitlePaddingTop',
+  },
+  userName: {
+    fontFamily: '$sb',
+    fontSize: '$gudLG',
+    paddingLeft: 20
+  },
+  userDescription: {
+    fontFamily: '$rg',
+    fontSize: '$gudMD',
+    fontStyle: 'italic',
+    paddingLeft: 20
   },
   gudButtonText: {
     fontFamily: '$sb',

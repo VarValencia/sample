@@ -8,7 +8,6 @@
 
 import React from 'react';
 import {View, Image, StatusBar} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
 import UserProfileCard from '../../components/global/profile_items/UserProfileCard';
 import GudText from '../../components/global/GudText';
