@@ -42,7 +42,7 @@ class MenuItem extends React.Component {
         style={styles.menuItemBase}
         underlayColor={ESS.value('$gudLightGray')}
         onPress={() => {
-          this.props.extendable
+          this.props.expansive
             ? this.toggle()
             : this.props.onClick(this.props.id);
         }}>
