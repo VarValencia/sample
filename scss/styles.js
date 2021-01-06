@@ -17,11 +17,12 @@ EStyleSheet.build({
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
   $gudGray: '#dadada',
+  $gudLightGray: '#f0f0f0',
   $gudDarkGray: '#b2b2b2',
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '10%',
+  $gudBodyPaddingH: '5%',
   $gudBodyPadding: '10%',
   $gudRadioButtonMarginVertical: height * 0.01,
 
@@ -47,12 +48,13 @@ EStyleSheet.build({
 
   // General styling
   $gudBorderRadius: 15,
+  $menuItemBorderRadius: 10,
 });
 
 export default EStyleSheet.create({
   // New styles
   scrollView: {
-    position: 'relative',
+    justifyContent: 'center',
   },
   body: {
     position: 'relative',
@@ -72,10 +74,10 @@ export default EStyleSheet.create({
     justifyContent: 'space-between',
   },
   cardContainerLeft: {
-    position: 'relative',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
   },
+
   appLogoContainer: {
     alignItems: 'center',
   },
@@ -99,12 +101,13 @@ export default EStyleSheet.create({
     elevation: 3,
     backgroundColor: 'white',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    width: width * 0.7,
+    alignItems: 'center',
+    width: width * 0.9,
+    height: height * 0.265,
   },
   carouselCard: {
     position: 'relative',
-    width: width * 0.62,
+    width: width * 0.8,
   },
   textInputContainer: {
     position: 'relative',
@@ -131,14 +134,21 @@ export default EStyleSheet.create({
     width: width * 0.7,
   },
   flatCardItem: {
-    position: 'relative',
     alignItems: 'flex-start',
-    padding: height * 0.01,
     width: width * 0.9,
-    flexDirection: 'row',
   },
   flatCardItemComponent: {
     alignItems: 'flex-end',
+  },
+  titleCardContainer: {
+    width: width * 0.8,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    display: 'flex',
+  },
+  containerButtonRight: {
+    alignItems: 'flex-end',
+    width: width * 0.87,
   },
 
   // Text styles
@@ -152,6 +162,17 @@ export default EStyleSheet.create({
     fontFamily: '$b',
     fontSize: '$gudLG',
     paddingTop: '$gudTitlePaddingTop',
+  },
+  userName: {
+    fontFamily: '$sb',
+    fontSize: '$gudLG',
+    paddingLeft: width * 0.08,
+  },
+  userDescription: {
+    fontFamily: '$rg',
+    fontSize: '$gudMD',
+    fontStyle: 'italic',
+    paddingLeft: width * 0.08,
   },
   gudButtonText: {
     fontFamily: '$sb',
@@ -188,7 +209,45 @@ export default EStyleSheet.create({
     fontFamily: '$rg',
     fontSize: '$gudMD',
     paddingBottom: '$gudSubTitlePaddingBottom',
+    paddingLeft: width * 0.03
   },
+  titleCardTitle: {
+    fontFamily: '$sb',
+    fontSize: '$gudMD',
+    paddingBottom: '$gudSubTitlePaddingBottom',
+  },
+  menuItemBase: {
+    flexDirection: 'row',
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '$touchableWidth',
+    height: (height * 4.6) / 100,
+    borderRadius: '$menuItemBorderRadius',
+  },
+  profileCard: {
+    flexDirection: 'row',
+    display: 'flex',
+    borderRadius: '$menuItemBorderRadius',
+    width: width * 0.8,
+    marginBottom: '10%',
+  },
+  menuItemContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    textAlignVertical: 'center',
+  },
+  menuItemText: {
+    paddingLeft: width * 0.06,
+    fontFamily: '$rg',
+    fontSize: '$gudLG',
+    paddingBottom: height * 0.0015,
+  },
+  titleCardEditable: {
+    fontFamily: '$sb',
+    color: '$gudGreenDark',
+  },
+
   // Text sizes and weight
   textLG: {
     fontSize: '$gudLG',
@@ -232,8 +291,17 @@ export default EStyleSheet.create({
   },
   gudIcon: {
     resizeMode: 'contain',
-    width: width * 0.06,
-    height: width * 0.06,
+    width: width * 0.09,
+    height: width * 0.09,
+  },
+  gudArrowIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width * 0.1,
+  },
+  profilePicture: {
+    width: width * 0.14,
+    height: width * 0.14,
   },
 
   // Button styling
@@ -286,6 +354,10 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
     display: 'flex',
     justifyContent: 'center',
+  },
+  titleCardEditButton: {
+    backgroundColor: '$gudWhite',
+    margin: '2%',
   },
 
   // Input styling
@@ -341,7 +413,15 @@ export default EStyleSheet.create({
     position: 'relative',
     width: width * 0.9,
     height: 1,
-    backgroundColor: '$gudDarkGray',
+    backgroundColor: '$gudGray',
+    marginBottom: height * 0.03,
+  },
+  gudTitleSeparator: {
+    position: 'relative',
+    width: width,
+    height: 1,
+    backgroundColor: '$gudGray',
+    marginBottom: height * 0.03,
   },
   gudDropDownContainer: {
     width: width * 0.8,
@@ -354,5 +434,5 @@ export default EStyleSheet.create({
   },
   gudDropDownItems: {
     backgroundColor: '#fff',
-  }
+  },
 });

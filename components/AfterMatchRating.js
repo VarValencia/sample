@@ -95,6 +95,7 @@ class AfterMatchRating extends React.Component {
           }}
           data={slides}
           style={styles.carouselCard}
+          contentContainerStyle={{justifyContent:'center', alignItems: 'center'}}
           keyExtractor={(item) => item.key.toString()}
           renderItem={({item}) => {
             if (item.key == 0) {
