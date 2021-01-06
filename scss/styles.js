@@ -22,7 +22,7 @@ EStyleSheet.build({
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '10%',
+  $gudBodyPaddingH: '5%',
   $gudBodyPadding: '10%',
   $gudRadioButtonMarginVertical: height * 0.01,
 
@@ -146,6 +146,10 @@ export default EStyleSheet.create({
     alignItems: 'flex-start',
     display: 'flex',
   },
+  containerButtonRight: {
+    alignItems: 'flex-end',
+    width: width * 0.87,
+  },
 
   // Text styles
   gudText: {
@@ -162,13 +166,13 @@ export default EStyleSheet.create({
   userName: {
     fontFamily: '$sb',
     fontSize: '$gudLG',
-    paddingLeft: 20
+    paddingLeft: width * 0.08,
   },
   userDescription: {
     fontFamily: '$rg',
     fontSize: '$gudMD',
     fontStyle: 'italic',
-    paddingLeft: 20
+    paddingLeft: width * 0.08,
   },
   gudButtonText: {
     fontFamily: '$sb',
@@ -205,6 +209,12 @@ export default EStyleSheet.create({
     fontFamily: '$rg',
     fontSize: '$gudMD',
     paddingBottom: '$gudSubTitlePaddingBottom',
+    paddingLeft: width * 0.03
+  },
+  titleCardTitle: {
+    fontFamily: '$sb',
+    fontSize: '$gudMD',
+    paddingBottom: '$gudSubTitlePaddingBottom',
   },
   menuItemBase: {
     flexDirection: 'row',
@@ -217,8 +227,9 @@ export default EStyleSheet.create({
   profileCard: {
     flexDirection: 'row',
     display: 'flex',
-    justifyContent: 'space-between',
     borderRadius: '$menuItemBorderRadius',
+    width: width * 0.8,
+    marginBottom: '10%',
   },
   menuItemContainer: {
     flex: 1,
@@ -231,6 +242,10 @@ export default EStyleSheet.create({
     fontFamily: '$rg',
     fontSize: '$gudLG',
     paddingBottom: height * 0.0015,
+  },
+  titleCardEditable: {
+    fontFamily: '$sb',
+    color: '$gudGreenDark',
   },
 
   // Text sizes and weight
@@ -284,6 +299,10 @@ export default EStyleSheet.create({
     alignItems: 'center',
     width: width * 0.1,
   },
+  profilePicture: {
+    width: width * 0.14,
+    height: width * 0.14,
+  },
 
   // Button styling
   buttonContainer: {
@@ -335,6 +354,10 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
     display: 'flex',
     justifyContent: 'center',
+  },
+  titleCardEditButton: {
+    backgroundColor: '$gudWhite',
+    margin: '2%',
   },
 
   // Input styling
@@ -390,8 +413,8 @@ export default EStyleSheet.create({
     position: 'relative',
     width: width * 0.9,
     height: 1,
-    backgroundColor: '$gudDarkGray',
-    marginVertical: height * 0.03,
+    backgroundColor: '$gudGray',
+    marginBottom: height * 0.03,
   },
   gudTitleSeparator: {
     position: 'relative',
