@@ -46,7 +46,7 @@ class TitleCard extends React.Component {
                 style={[styles.titleCardEditButton]}
                 underlayColor={ESS.value('$gudWhite')}
                 onPress={() => {
-                  this.handleEdit();
+                  this.handleEdit()  ;
                 }}>
                 <GudText
                   style={[styles.titleCardEditable]}
