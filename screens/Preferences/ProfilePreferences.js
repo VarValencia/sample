@@ -7,27 +7,20 @@
  */
 
 import React from 'react';
-import {
-  View,
-  Image,
-  StatusBar,
-  RecyclerViewBackedScrollView,
-} from 'react-native';
+import {View, Image, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {TouchableHighlight} from 'react-native-gesture-handler';
-import styles from '../../scss/styles';
+import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
+import UserProfileCard from '../../components/global/profile_items/UserProfileCard';
+import GudText from '../../components/global/GudText';
 
-class UserConfig extends React.Component {
+class ProfilePreferences extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    let notifyBody = (
+    let profileCard = (
       <View style={styles.cardContainer}>
-        <GudText
-          style={styles.textMD}
-          text={'recibe notificaciones cuando username esté disponible'}
-        />
+        <UserProfileCard />
       </View>
     );
     let restringeBody = (
@@ -42,12 +35,16 @@ class UserConfig extends React.Component {
     );
     let reportBody = (
       <View style={styles.cardContainer}>
+        <GudText
+          style={[styles.sectionDescription, {padding: 10}]}
+          text={'¿Problemas con el guder? Cuéntanos qué ha pasado:'}
+        />
         <ValidationField
-          placeholder={'¿problemas con el Guder? Cuéntanos qué ha pasado'}
+          style={styles.textInputContainer}
           maxLength={12}
           minLength={6}
-          handleValue={(event) => this.onChange(event, PASS)}
-          password={true}
+          multiline={true}
+          numberOfLines={4}
         />
       </View>
     );
@@ -87,8 +84,10 @@ class UserConfig extends React.Component {
     );
     // Dummy component
     let dummyComp = (
-      <View style={styles.cardContainerLeft}>
-        <TitleCard title={'Notificaciones'} text={null} body={notifyBody} />
+      <>
+        <GudText style={styles.title} text="Perfil" />
+        <View style={styles.gudTitleSeparator} />
+        <TitleCard body={profileCard} />
         <TitleCard title={'Restringir'} text={null} body={restringeBody} />
         <TitleCard title={'Denunciar'} text={null} body={reportBody} />
         <TitleCard title={'Eliminar contacto'} text={null} body={DeleteBody} />
@@ -98,26 +97,22 @@ class UserConfig extends React.Component {
             source={require('@icons/ConfigIcon.png')}
           />
         </View>
-      </View>
+      </>
     );
-    var dummyBody = 'Lorem ipsum dolor sit amet rican pieyaso colocao';
     return (
       <>
         <StatusBar hidden={true} />
-        <SafeAreaView>
-          <View style={styles.body}>
-            <View style={styles.cardContainer}>
-              <TitleCard
-                title={'Nombre de usuario'}
-                text={dummyBody}
-                body={dummyComp}
-              />
-            </View>
-          </View>
-        </SafeAreaView>
+        <View style={styles.body}>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            contentContainerStyle={styles.scrollView}
+            showsVerticalScrollIndicator={false}>
+            {dummyComp}
+          </ScrollView>
+        </View>
       </>
     );
   }
 }
 
-export default UserConfig;
+export default ProfilePreferences;

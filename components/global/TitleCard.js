@@ -9,29 +9,32 @@ class TitleCard extends React.Component {
 
   render() {
     let title = (
-      <GudText style={styles.sectionDescription} text={this.props.title} />
+      <GudText
+        style={[styles.sectionDescription, {flexShrink: 1}]}
+        text={this.props.title}
+      />
     );
-    let text = <GudText style={styles.titleCardText} text={this.props.text} />;
+    let text = (
+      <GudText
+        style={[styles.titleCardText, {flexShrink: 1}]}
+        text={this.props.text}
+      />
+    );
     let body = this.props.body;
 
     return (
-      <View style={styles.cardContainer}>
-        <View style={styles.cardContainerLeft}>
+      <>
+        <View style={[styles.cardContainerLeft]}>
           <View style={styles.flatCardItem}>
-            <View
-              style={{
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                flex: 9,
-              }}>
-              {title}
-              {text}
-              <View style={styles.flatCardItemComponent}>{body}</View>
+            <View style={styles.titleCardContainer}>
+              {this.props.title ? title : null}
+              {this.props.text ? text : null}
             </View>
           </View>
+          <View style={styles.flatCardItemComponent}>{body}</View>
+          <View style={[styles.gudItemSeparator]} />
         </View>
-        <View style={styles.gudItemSeparator} />
-      </View>
+      </>
     );
   }
 }

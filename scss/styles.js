@@ -54,7 +54,7 @@ EStyleSheet.build({
 export default EStyleSheet.create({
   // New styles
   scrollView: {
-    position: 'relative',
+    justifyContent: 'center',
   },
   body: {
     position: 'relative',
@@ -74,10 +74,10 @@ export default EStyleSheet.create({
     justifyContent: 'space-between',
   },
   cardContainerLeft: {
-    position: 'relative',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
   },
+
   appLogoContainer: {
     alignItems: 'center',
   },
@@ -133,14 +133,17 @@ export default EStyleSheet.create({
     width: width * 0.7,
   },
   flatCardItem: {
-    position: 'relative',
     alignItems: 'flex-start',
-    padding: height * 0.01,
     width: width * 0.9,
-    flexDirection: 'row',
   },
   flatCardItemComponent: {
     alignItems: 'flex-end',
+  },
+  titleCardContainer: {
+    width: width * 0.8,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    display: 'flex',
   },
 
   // Text styles
@@ -195,9 +198,14 @@ export default EStyleSheet.create({
     flexDirection: 'row',
     display: 'flex',
     justifyContent: 'space-between',
-
     width: '$touchableWidth',
     height: (height * 4.6) / 100,
+    borderRadius: '$menuItemBorderRadius',
+  },
+  profileCard: {
+    flexDirection: 'row',
+    display: 'flex',
+    justifyContent: 'space-between',
     borderRadius: '$menuItemBorderRadius',
   },
   menuItemContainer: {
@@ -210,8 +218,8 @@ export default EStyleSheet.create({
     paddingLeft: width * 0.06,
     fontFamily: '$rg',
     fontSize: '$gudLG',
-    paddingBottom: height * 0.0015
-  }, 
+    paddingBottom: height * 0.0015,
+  },
 
   // Text sizes and weight
   textLG: {
@@ -262,7 +270,7 @@ export default EStyleSheet.create({
   gudArrowIcon: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: width * 0.1
+    width: width * 0.1,
   },
 
   // Button styling
@@ -371,6 +379,14 @@ export default EStyleSheet.create({
     width: width * 0.9,
     height: 1,
     backgroundColor: '$gudDarkGray',
+    marginVertical: height * 0.03,
+  },
+  gudTitleSeparator: {
+    position: 'relative',
+    width: width,
+    height: 1,
+    backgroundColor: '$gudGray',
+    marginBottom: height * 0.03,
   },
   gudDropDownContainer: {
     width: width * 0.8,
