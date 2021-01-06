@@ -23,10 +23,12 @@ import ConfirmEmail from '@landing/ConfirmEmail';
 
 import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
-import PerfilScreen from '@screens/PerfilScreen';
 import LoadingMatch from '@match/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
+
+import UserProfileConfig from '@preferences/UserProfileConfig';
+import PreferencesMainScreen from '@screens/PreferencesMainScreen';
 
 const RootStack = createStackNavigator();
 
@@ -85,7 +87,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="PerfilScreen"
+            initialRouteName="PreferencesMainScreen"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -109,10 +111,17 @@ const App: () => React$Node = () => {
             />
             <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
-            <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
+            <RootStack.Screen
+              name="UserProfileConfig"
+              component={UserProfileConfig}
+            />
             <RootStack.Screen
               name="SettingsMatchConfig"
               component={SettingsMatchConfig}
+            />
+            <RootStack.Screen
+              name="PreferencesMainScreen"
+              component={PreferencesMainScreen}
             />
           </RootStack.Navigator>
         </NavigationContainer>
