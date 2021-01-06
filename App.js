@@ -27,8 +27,9 @@ import LoadingMatch from '@match/LoadingMatch';
 import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
 
-import UserProfileConfig from '@preferences/UserProfileConfig';
+import ProfilePreferences from '@preferences/ProfilePreferences';
 import PreferencesScreen from '@screens/PreferencesScreen';
+import UserProfile from '@screens/UserProfile';
 
 const RootStack = createStackNavigator();
 
@@ -87,7 +88,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="PreferencesScreen"
+            initialRouteName="UserProfile"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -112,8 +113,8 @@ const App: () => React$Node = () => {
             <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
             <RootStack.Screen
-              name="UserProfileConfig"
-              component={UserProfileConfig}
+              name="ProfilePreferences"
+              component={ProfilePreferences}
             />
             <RootStack.Screen
               name="SettingsMatchConfig"
@@ -122,6 +123,10 @@ const App: () => React$Node = () => {
             <RootStack.Screen
               name="PreferencesScreen"
               component={PreferencesScreen}
+            />
+            <RootStack.Screen
+              name="UserProfile"
+              component={UserProfile}
             />
           </RootStack.Navigator>
         </NavigationContainer>
