@@ -13,89 +13,35 @@ import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleEdit = this.handleEdit.bind(this);
   }
+
+  handleEdit(id) {
+    console.log('Id', id);
+  }
+
   render() {
     let profileCard = (
       <View style={styles.cardContainer}>
         <UserProfileCard />
       </View>
     );
-    let restringeBody = (
-      <View style={styles.cardContainer}>
-        <GudText
-          style={styles.textMD}
-          text={
-            'Limita la interacción con este usuario sin necesidad de denunciar o eliminar contacto'
-          }
-        />
-      </View>
-    );
-    let reportBody = (
-      <View style={styles.cardContainer}>
-        <GudText
-          style={[styles.sectionDescription, {padding: 10}]}
-          text={'¿Problemas con el guder? Cuéntanos qué ha pasado:'}
-        />
-        <ValidationField
-          style={styles.textInputContainer}
-          maxLength={12}
-          minLength={6}
-          multiline={true}
-          numberOfLines={4}
-        />
-      </View>
-    );
-    let DeleteBody = (
-      <View style={styles.cardContainer}>
-        <GudText
-          style={styles.textMD}
-          text={'¿Estás seguro de que deseas eliminar este contacto?'}
-        />
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Si eliminar" />
-          </TouchableHighlight>
-        </View>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Mejor no" />
-          </TouchableHighlight>
-        </View>
-      </View>
-    );
+    let dummyText = 'Lorem ipsum dolor sit amet';
+
     // Dummy component
     let dummyComp = (
       <>
         <GudText style={styles.title} text="Perfil" />
         <View style={styles.gudTitleSeparator} />
-        <TitleCard body={profileCard} />
-        <TitleCard title={'Restringir'} text={null} body={restringeBody} />
-        <TitleCard title={'Denunciar'} text={null} body={reportBody} />
-        <TitleCard title={'Eliminar contacto'} text={null} body={DeleteBody} />
-        <View style={styles.appImageContainer}>
-          <Image
-            style={styles.gudCardImage}
-            source={require('@icons/ConfigIcon.png')}
-          />
-        </View>
+        {profileCard}
+        <TitleCard onEdit={id => this.handleEdit(id)} id='summary' title={'Presentación'} text={dummyText} editable buttonText="Editar"/>
+        <TitleCard onEdit={id => this.handleEdit(id)} id='languages' title={'Idiomas para conversar'} text={dummyText} editable buttonText="Editar"/>
+        <TitleCard onEdit={id => this.handleEdit(id)} id='interests' title={'Intereses'} text={dummyText} editable buttonText="Editar"/>
+        <TitleCard onEdit={id => this.handleEdit(id)} id='native' title={'Idioma nativo'} text={dummyText} editable buttonText="Editar"/>
       </>
     );
+
     return (
       <>
         <StatusBar hidden={true} />
