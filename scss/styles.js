@@ -17,6 +17,7 @@ EStyleSheet.build({
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
   $gudGray: '#dadada',
+  $gudLightGray: '#f0f0f0',
   $gudDarkGray: '#b2b2b2',
 
   // PADDINGS & MARGINS
@@ -47,6 +48,7 @@ EStyleSheet.build({
 
   // General styling
   $gudBorderRadius: 15,
+  $menuItemBorderRadius: 10,
 });
 
 export default EStyleSheet.create({
@@ -189,6 +191,28 @@ export default EStyleSheet.create({
     fontSize: '$gudMD',
     paddingBottom: '$gudSubTitlePaddingBottom',
   },
+  menuItemBase: {
+    flexDirection: 'row',
+    display: 'flex',
+    justifyContent: 'space-between',
+
+    width: '$touchableWidth',
+    height: (height * 4.6) / 100,
+    borderRadius: '$menuItemBorderRadius',
+  },
+  menuItemContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    textAlignVertical: 'center',
+  },
+  menuItemText: {
+    paddingLeft: width * 0.06,
+    fontFamily: '$rg',
+    fontSize: '$gudLG',
+    paddingBottom: height * 0.0015
+  }, 
+
   // Text sizes and weight
   textLG: {
     fontSize: '$gudLG',
@@ -232,8 +256,13 @@ export default EStyleSheet.create({
   },
   gudIcon: {
     resizeMode: 'contain',
-    width: width * 0.06,
-    height: width * 0.06,
+    width: width * 0.09,
+    height: width * 0.09,
+  },
+  gudArrowIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width * 0.1
   },
 
   // Button styling
@@ -354,5 +383,5 @@ export default EStyleSheet.create({
   },
   gudDropDownItems: {
     backgroundColor: '#fff',
-  }
+  },
 });
