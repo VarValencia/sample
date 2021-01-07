@@ -30,6 +30,7 @@ import HelpCenter from '@screens/HelpCenter';
 import ProfilePreferences from '@preferences/ProfilePreferences';
 import PreferencesScreen from '@screens/PreferencesScreen';
 import UserProfile from '@screens/UserProfile';
+import AccountPreferences from '@screens/AccountPreferences';
 
 const RootStack = createStackNavigator();
 
@@ -88,7 +89,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="UserProfile"
+            initialRouteName="AccountPreferences"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -125,9 +126,10 @@ const App: () => React$Node = () => {
               component={PreferencesScreen}
             />
             <RootStack.Screen
-              name="UserProfile"
-              component={UserProfile}
+              name="AccountPreferences"
+              component={AccountPreferences}
             />
+            <RootStack.Screen name="UserProfile" component={UserProfile} />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>

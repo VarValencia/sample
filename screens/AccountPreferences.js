@@ -7,17 +7,12 @@
  */
 
 import React from 'react';
-import {
-  View,
-  Image,
-  StatusBar,
-  RecyclerViewBackedScrollView,
-} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {View, Image, StatusBar} from 'react-native';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import styles from '@styles/styles';
+import {ScrollView} from 'react-native-gesture-handler';
 
-class UserConfig extends React.Component {
+class AccountPreferences extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -31,19 +26,6 @@ class UserConfig extends React.Component {
             minLength={6}
           />
         </View>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Mostrar" />
-          </TouchableHighlight>
-        </View>
       </View>
     );
     let passwordBody = (
@@ -56,109 +38,59 @@ class UserConfig extends React.Component {
             password={true}
           />
         </View>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Cambiar contraseña" />
-          </TouchableHighlight>
-        </View>
       </View>
     );
-    let SuscriptionBody = (
-      <View>
-        <GudText
-          style={styles.sectionDescription}
-          accent={true}
-          text="Susripción Gud Match"
-        />
-      </View>
-    );
-    let licenseBody = (
-      <View style={styles.cardContainer}>
-        <TitleCard
-          title={'Suscripcion a Gud Match'}
-          text={null}
-          body={SuscriptionBody}
-        />
-      </View>
-    );
-    let DeleteBody = (
-      <View style={styles.cardContainer}>
-        <GudText
-          style={styles.textMD}
-          text={'¿Estás seguro de que deseas eliminar este contacto?'}
-        />
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Si eliminar" />
-          </TouchableHighlight>
-        </View>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            style={[
-              styles.touchableActive,
-              styles.gudButton,
-              true ? styles.activeBtn : styles.inactiveBtn,
-            ]}
-            onPress={() => {
-              this.onSubmit();
-            }}>
-            <GudText style={styles.gudButtonText} text="Mejor no" />
-          </TouchableHighlight>
-        </View>
-      </View>
-    );
+    let licenseBody = null;
+    let deleteBody = null;
     // Dummy component
     let dummyComp = (
       <View style={styles.cardContainerLeft}>
+        <GudText style={styles.title} text="Cuenta" />
         <TitleCard
           title={'Correo electrónico para inicio de sesión'}
-          text={null}
           body={emailBody}
+          editable
+          buttonText="Mostrar"
         />
         <TitleCard
           title={'Contraseña de inicio de sesión'}
-          text={null}
           body={passwordBody}
+          editable
+          buttonText="Cambiar contraseña"
         />
-        <TitleCard title={'Denunciar'} text={null} body={reportBody} />
-        <TitleCard title={'Eliminar contacto'} text={null} body={DeleteBody} />
-        <View style={styles.appImageContainer}>
-          <Image
-            style={styles.gudCardImage}
-            source={require('@icons/ConfigIcon.png')}
-          />
+        <View style={styles.cardContainerLeft}>
+          <GudText style={styles.SM} text="Tipo de licencia" />
         </View>
+        <TitleCard
+          title={'Subscripición Gud Match'}
+          text={'Finalización del periodo de prueba en:'}
+          body={licenseBody}
+          editable
+          buttonText="Actualizar"
+        />
+        <TitleCard
+          title="Eliminar tu cuenta Gud Match"
+          text={'cuenta cuya eliminación solicitas eliminar'}
+          body={deleteBody}
+          editable
+          buttonText="Eliminar cuenta"
+        />
       </View>
     );
     return (
       <>
         <StatusBar hidden={true} />
-        <SafeAreaView>
-          <View style={styles.body}>
-            <View style={styles.cardContainer}>
-              <TitleCard title={'Cuenta'} text={null} body={dummyComp} />
-            </View>
-          </View>
-        </SafeAreaView>
+        <View style={styles.body}>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            contentContainerStyle={styles.scrollView}
+            showsVerticalScrollIndicator={false}>
+            {dummyComp}
+          </ScrollView>
+        </View>
       </>
     );
   }
 }
 
-export default UserConfig;
+export default AccountPreferences;
