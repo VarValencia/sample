@@ -8,7 +8,6 @@
 
 import React from 'react';
 import {View, Image, StatusBar} from 'react-native';
-import {TouchableHighlight} from 'react-native-gesture-handler';
 import styles from '@styles/styles';
 import {ScrollView} from 'react-native-gesture-handler';
 
