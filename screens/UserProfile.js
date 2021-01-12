@@ -7,8 +7,8 @@
  */
 
 import React from 'react';
-import {View, Image, StatusBar} from 'react-native';
-import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
+import {View, StatusBar} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -22,9 +22,13 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    let user = {
+      name: 'Juan',
+      description: 'Vividor soñador',
+    };
     let profileCard = (
       <View style={styles.cardContainer}>
-        <UserProfileCard />
+        <UserProfileCard user={user} />
       </View>
     );
     let dummyText = 'Lorem ipsum dolor sit amet';
@@ -35,10 +39,38 @@ class UserProfile extends React.Component {
         <GudText style={styles.title} text="Perfil" />
         <View style={styles.gudTitleSeparator} />
         {profileCard}
-        <TitleCard onEdit={id => this.handleEdit(id)} id='summary' title={'Presentación'} text={dummyText} editable buttonText="Editar"/>
-        <TitleCard onEdit={id => this.handleEdit(id)} id='languages' title={'Idiomas para conversar'} text={dummyText} editable buttonText="Editar"/>
-        <TitleCard onEdit={id => this.handleEdit(id)} id='interests' title={'Intereses'} text={dummyText} editable buttonText="Editar"/>
-        <TitleCard onEdit={id => this.handleEdit(id)} id='native' title={'Idioma nativo'} text={dummyText} editable buttonText="Editar"/>
+        <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="summary"
+          title={'Presentación'}
+          text={dummyText}
+          editable
+          buttonText="Editar"
+        />
+        <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="languages"
+          title={'Idiomas para conversar'}
+          text={dummyText}
+          editable
+          buttonText="Editar"
+        />
+        <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="interests"
+          title={'Intereses'}
+          text={dummyText}
+          editable
+          buttonText="Cambiar Contraseña"
+        />
+        <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="native"
+          title={'Idioma nativo'}
+          text={dummyText}
+          editable
+          buttonText="Editar"
+        />
       </>
     );
 
