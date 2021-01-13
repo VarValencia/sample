@@ -24,13 +24,14 @@ import ConfirmEmail from '@landing/ConfirmEmail';
 import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
 import LoadingMatch from '@match/LoadingMatch';
-import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
 
 import ProfilePreferences from '@preferences/ProfilePreferences';
 import PreferencesScreen from '@screens/PreferencesScreen';
 import UserProfile from '@screens/UserProfile';
 import AccountPreferences from '@screens/AccountPreferences';
+import BasicMatchPreferences from '@screens/BasicMatchPreferences';
+import NotificationsPreferences from '@screens/NotificationsPreferences';
 
 const RootStack = createStackNavigator();
 
@@ -89,7 +90,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="AccountPreferences"
+            initialRouteName="ProfilePreferences"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -118,16 +119,20 @@ const App: () => React$Node = () => {
               component={ProfilePreferences}
             />
             <RootStack.Screen
-              name="SettingsMatchConfig"
-              component={SettingsMatchConfig}
-            />
-            <RootStack.Screen
               name="PreferencesScreen"
               component={PreferencesScreen}
             />
             <RootStack.Screen
               name="AccountPreferences"
               component={AccountPreferences}
+            />
+            <RootStack.Screen
+              name="BasicMatchPreferences"
+              component={BasicMatchPreferences}
+            />
+            <RootStack.Screen
+              name="NotificationsPreferences"
+              component={NotificationsPreferences}
             />
             <RootStack.Screen name="UserProfile" component={UserProfile} />
           </RootStack.Navigator>

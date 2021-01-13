@@ -11,7 +11,7 @@ class UserProfileCard extends React.Component {
     return (
       <View style={styles.profileCard}>
         <Image
-        style={styles.profilePicture}
+          style={styles.profilePicture}
           source={this.props.source || require('@icons/placeholder.png')}
         />
         <View>
