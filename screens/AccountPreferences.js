@@ -14,6 +14,11 @@ import {ScrollView} from 'react-native-gesture-handler';
 class AccountPreferences extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleEdit = this.handleEdit.bind(this);
+  }
+  handleEdit(id) {
+    console.log('Id', id);
   }
   render() {
     let emailBody = (
@@ -23,6 +28,7 @@ class AccountPreferences extends React.Component {
             placeholder={'email@email.com'}
             maxLength={30}
             minLength={6}
+            handleValue={(event) => null}
           />
         </View>
       </View>
@@ -35,6 +41,7 @@ class AccountPreferences extends React.Component {
             maxLength={30}
             minLength={6}
             password={true}
+            handleValue={(event) => null}
           />
         </View>
       </View>
@@ -46,12 +53,16 @@ class AccountPreferences extends React.Component {
       <View style={styles.cardContainerLeft}>
         <GudText style={styles.title} text="Cuenta" />
         <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="Correo"
           title={'Correo electrónico para inicio de sesión'}
           body={emailBody}
           editable
           buttonText="Mostrar"
         />
         <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="Password"
           title={'Contraseña de inicio de sesión'}
           body={passwordBody}
           editable
@@ -61,6 +72,8 @@ class AccountPreferences extends React.Component {
           <GudText style={styles.SM} text="Tipo de licencia" />
         </View>
         <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="License"
           title={'Subscripición Gud Match'}
           text={'Finalización del periodo de prueba en:'}
           body={licenseBody}
@@ -68,6 +81,8 @@ class AccountPreferences extends React.Component {
           buttonText="Actualizar"
         />
         <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="Delete"
           title="Eliminar tu cuenta Gud Match"
           text={'cuenta cuya eliminación solicitas eliminar'}
           body={deleteBody}
