@@ -39,7 +39,7 @@ class ConfirmEmail extends React.Component {
               />
               <View style={styles.gudSeparator} />
               <GudText
-                style={[styles.sectionDescription, styles.textMD]}
+                style={styles.sectionDescription}
                 accent={true}
                 text="Estás a un paso de ser gud"
               />

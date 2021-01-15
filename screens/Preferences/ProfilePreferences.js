@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {View, Image, StatusBar} from 'react-native';
+import {View, Image, Switch, StatusBar} from 'react-native';
 import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
 import UserProfileCard from '../../components/global/profile_items/UserProfileCard';
 import GudText from '../../components/global/GudText';
@@ -17,11 +17,6 @@ class ProfilePreferences extends React.Component {
     super(props);
   }
   render() {
-    let profileCard = (
-      <View style={styles.cardContainer}>
-        <UserProfileCard />
-      </View>
-    );
     let restringeBody = (
       <View style={styles.cardContainer}>
         <GudText
@@ -86,7 +81,6 @@ class ProfilePreferences extends React.Component {
       <>
         <GudText style={styles.title} text="Perfil" />
         <View style={styles.gudTitleSeparator} />
-        <TitleCard body={profileCard} />
         <TitleCard title={'Restringir'} text={null} body={restringeBody} />
         <TitleCard title={'Denunciar'} text={null} body={reportBody} />
         <TitleCard title={'Eliminar contacto'} text={null} body={DeleteBody} />
