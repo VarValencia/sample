@@ -31,7 +31,7 @@ class UserProfile extends React.Component {
         <UserProfileCard user={user} />
       </View>
     );
-    let dummyText = 'Lorem ipsum dolor sit amet';
+    let dummyText = '';
 
     // Dummy component
     let dummyComp = (

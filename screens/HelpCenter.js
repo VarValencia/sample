@@ -11,7 +11,6 @@ import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-
 class HelpCenter extends React.Component {
   constructor(props) {
     super(props);
@@ -34,11 +33,11 @@ class HelpCenter extends React.Component {
                 <Image source={require('@icons/GudMatchLogo.png')} />
               </View>
               <GudText
-                style={[styles.textSM, {fontFamily: ESS.value('$sb')}]}
+                style={{fontFamily: ESS.value('$sb')}}
                 text="Version 0.00.0.01 de Gud Match."
               />
               <GudText
-                style={[styles.textSM]}
+                style={styles.textSM}
                 text="©2020 Gud Match y Gud Company."
               />
               <GudText
@@ -58,7 +57,7 @@ class HelpCenter extends React.Component {
                   console.log('you tapped the button HelpCenter');
                 }}>
                 <GudText
-                  style={[styles.gudButtonText, styles.textMD]}
+                  style={styles.gudButtonText}
                   text="Ir al centro de ayuda"
                 />
               </TouchableHighlight>
@@ -69,7 +68,7 @@ class HelpCenter extends React.Component {
                   console.log('you tapped the button technic support');
                 }}>
                 <GudText
-                  style={[styles.gudButtonText, styles.textMD]}
+                  style={styles.gudButtonText}
                   text="Contacta al soporte técnico"
                 />
               </TouchableHighlight>
