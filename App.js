@@ -31,7 +31,11 @@ import PreferencesScreen from '@screens/PreferencesScreen';
 import UserProfile from '@screens/UserProfile';
 import AccountPreferences from '@screens/AccountPreferences';
 import BasicMatchPreferences from '@screens/BasicMatchPreferences';
-import NotificationsPreferences from '@screens/NotificationsPreferences';
+import NotificationPreferences from '@screens/NotificationPreferences';
+
+import StartConfiguring from '@screens/StartConfiguring';
+import EmptyContact from '@screens/EmptyContact';
+import PerfilScreen from '@screens/PerfilScreen';
 
 const RootStack = createStackNavigator();
 
@@ -90,7 +94,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="ProfilePreferences"
+            initialRouteName="PerfilScreen"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -131,10 +135,17 @@ const App: () => React$Node = () => {
               component={BasicMatchPreferences}
             />
             <RootStack.Screen
-              name="NotificationsPreferences"
-              component={NotificationsPreferences}
+              name="NotificationPreferences"
+              component={NotificationPreferences}
             />
+
+            <RootStack.Screen
+              name="StartConfiguring"
+              component={StartConfiguring}
+            />
+            <RootStack.Screen name="EmptyContact" component={EmptyContact} />
             <RootStack.Screen name="UserProfile" component={UserProfile} />
+            <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
