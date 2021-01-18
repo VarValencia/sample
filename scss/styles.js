@@ -150,6 +150,10 @@ export default EStyleSheet.create({
     alignItems: 'flex-end',
     width: width * 0.87,
   },
+  containerRow: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
 
   // Text styles
   gudText: {
@@ -209,7 +213,7 @@ export default EStyleSheet.create({
     fontFamily: '$rg',
     fontSize: '$gudMD',
     paddingBottom: '$gudSubTitlePaddingBottom',
-    paddingLeft: width * 0.03
+    paddingLeft: width * 0.03,
   },
   titleCardTitle: {
     fontFamily: '$sb',
