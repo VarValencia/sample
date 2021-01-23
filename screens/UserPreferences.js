@@ -10,7 +10,7 @@ import React from 'react';
 import {View, StatusBar} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 
-class UserProfile extends React.Component {
+class UserPreferences extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,8 +23,10 @@ class UserProfile extends React.Component {
 
   render() {
     let user = {
-      name: 'Juan',
-      description: 'Vividor soñador',
+      name: 'Pablo',
+      description: 'Explorador',
+      bio:
+        'Soy un buscador, me gusta conocer y descubrir siempre algo nuevo ahi fuera',
     };
     let profileCard = (
       <View style={styles.cardContainer}>
@@ -43,7 +45,7 @@ class UserProfile extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="summary"
           title={'Presentación'}
-          text={dummyText}
+          text={'Soy un buscador, me gusta conocer '}
           editable
           buttonText="Editar"
         />
@@ -51,7 +53,7 @@ class UserProfile extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="languages"
           title={'Idiomas para conversar'}
-          text={dummyText}
+          text={'Español  y algo de francés'}
           editable
           buttonText="Editar"
         />
@@ -59,7 +61,7 @@ class UserProfile extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="interests"
           title={'Intereses'}
-          text={dummyText}
+          text={'idhfidhfishioshfiodhgiodsfhiodsahfiodshfisdo'}
           editable
           buttonText="Cambiar Contraseña"
         />
@@ -67,7 +69,7 @@ class UserProfile extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="native"
           title={'Idioma nativo'}
-          text={dummyText}
+          text={'dfdsbodbiodbfiodbfiabfi'}
           editable
           buttonText="Editar"
         />
@@ -90,4 +92,4 @@ class UserProfile extends React.Component {
   }
 }
 
-export default UserProfile;
+export default UserPreferences;
