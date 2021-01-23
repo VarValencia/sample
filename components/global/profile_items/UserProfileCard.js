@@ -23,6 +23,10 @@ class UserProfileCard extends React.Component {
             style={styles.userDescription}
             text={user ? user.description : 'Descripción'}
           />
+          <GudText
+            style={styles.userDescription}
+            text={user ? user.bio : 'Bio'}
+          />
         </View>
       </View>
     );
