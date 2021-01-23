@@ -28,7 +28,7 @@ import HelpCenter from '@screens/HelpCenter';
 
 import ProfilePreferences from '@preferences/ProfilePreferences';
 import PreferencesScreen from '@screens/PreferencesScreen';
-import UserProfile from '@screens/UserProfile';
+import UserPreferences from '@screens/UserPreferences';
 import AccountPreferences from '@screens/AccountPreferences';
 import BasicMatchPreferences from '@screens/BasicMatchPreferences';
 import NotificationPreferences from '@screens/NotificationPreferences';
@@ -36,7 +36,8 @@ import NotificationPreferences from '@screens/NotificationPreferences';
 import StartConfiguring from '@screens/StartConfiguring';
 import EmptyContact from '@screens/EmptyContact';
 import PerfilScreen from '@screens/PerfilScreen';
-
+import NonFriendProfile from '@screens/NonFriendProfile';
+import Home from '@screens/Home';
 const RootStack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -94,7 +95,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="PerfilScreen"
+            initialRouteName="Home"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -144,8 +145,16 @@ const App: () => React$Node = () => {
               component={StartConfiguring}
             />
             <RootStack.Screen name="EmptyContact" component={EmptyContact} />
-            <RootStack.Screen name="UserProfile" component={UserProfile} />
+            <RootStack.Screen
+              name="UserPreferences"
+              component={UserPreferences}
+            />
             <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
+            <RootStack.Screen
+              name="NonFriendProfile"
+              component={NonFriendProfile}
+            />
+            <RootStack.Screen name="Home" component={Home} />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
