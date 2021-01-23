@@ -178,6 +178,16 @@ export default EStyleSheet.create({
     fontStyle: 'italic',
     paddingLeft: width * 0.08,
   },
+  pressTitle: {
+    fontFamily: '$b',
+    fontSize: '$gudLG',
+    paddingLeft: width * 0.08,
+  },
+  pressDescription: {
+    fontFamily: '$rg',
+    fontSize: '$gudMD',
+    paddingLeft: width * 0.08,
+  },
   gudButtonText: {
     fontFamily: '$sb',
     fontSize: '$gudSM',
