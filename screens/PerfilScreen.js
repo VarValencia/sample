@@ -25,6 +25,8 @@ class PerfilScreen extends React.Component {
     let user = {
       name: 'Pablo',
       description: 'Explorador',
+      bio:
+        'Soy un explorador que le gusta buscar y descubrir... La verdad está ahi fuera',
     };
     let profileCard = (
       <View style={styles.cardContainer}>
@@ -70,14 +72,14 @@ class PerfilScreen extends React.Component {
             styles.cardContainer,
             {backgroundColor: ESS.value('$gudGreenMedium')},
             {width: 500},
-            {height: 500},
+            {height: 300},
           ]}>
           <GudText
             style={styles.sectionDescription}
             text={'Mensaje de llamada a la acción'}
           />
           <TouchableHighlight
-            style={[styles.gudButton, styles.buttonContainer]}
+            style={[styles.gudButton]}
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('Boton');
