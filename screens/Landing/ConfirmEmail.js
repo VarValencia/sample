@@ -31,7 +31,7 @@ class ConfirmEmail extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.body}>
+          <View style={styles.bodyLogin}>
             <View style={styles.cardContainerLeft}>
               <GudText
                 style={[styles.title, styles.textLG]}

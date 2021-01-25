@@ -56,7 +56,7 @@ class LoginScreen extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.body}>
+          <View style={styles.bodyLogin}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
                 <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />

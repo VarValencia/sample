@@ -60,7 +60,7 @@ class RegisterScreen extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.body}>
+          <View style={styles.bodyLogin}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
                 <Image
