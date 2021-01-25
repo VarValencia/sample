@@ -9,6 +9,7 @@
 import React from 'react';
 import {View, StatusBar} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
+import {Appbar} from 'react-native-paper';
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,7 +23,6 @@ class Home extends React.Component {
   }
 
   render() {
-    let dummyText = '';
     let press1 = {
       title: 'Sala de Match',
       description:
@@ -55,11 +55,29 @@ class Home extends React.Component {
     // Dummy componentx
     let dummyComp = (
       <>
-        <View style={styles.cardContainer} />
-        {pressCard1}
-        {pressCard2}
-        {pressCardAccent}
-        {pressCardDown}
+        <View style={styles.cardContainer}>
+          {pressCard1}
+          {pressCard2}
+          {pressCardAccent}
+          <Appbar style={styles.bottom}>
+            <Appbar.Action
+              icon={require('@icons/ConfigIcon.png')}
+              onPress={() => console.log('Pressed archive')}
+            />
+            <Appbar.Action
+              icon="mail"
+              onPress={() => console.log('Pressed mail')}
+            />
+            <Appbar.Action
+              icon="label"
+              onPress={() => console.log('Pressed label')}
+            />
+            <Appbar.Action
+              icon="delete"
+              onPress={() => console.log('Pressed delete')}
+            />
+          </Appbar>
+        </View>
       </>
     );
 

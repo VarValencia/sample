@@ -449,4 +449,10 @@ export default EStyleSheet.create({
   gudDropDownItems: {
     backgroundColor: '#fff',
   },
+  bottom: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
 });
