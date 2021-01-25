@@ -16,14 +16,16 @@ EStyleSheet.build({
   $gudGreenMedium: '#C1E3E2',
   $gudGreenRegular: '#A2D6D6',
   $gudGreenDark: '#62BDBA',
+  $gudGreenDarkest: '#129089',
   $gudGray: '#dadada',
   $gudLightGray: '#f0f0f0',
   $gudDarkGray: '#b2b2b2',
+  
 
   // PADDINGS & MARGINS
   // Body
   $gudBodyPaddingH: '5%',
-  $gudBodyPadding: '10%',
+  $gudBodyPadding: '4%',
   $gudRadioButtonMarginVertical: height * 0.01,
 
   // Titles
@@ -56,18 +58,63 @@ export default EStyleSheet.create({
   scrollView: {
     justifyContent: 'center',
   },
-  body: {
+  bodyLogin: {
     position: 'relative',
     textAlign: 'center',
     width: width,
     height: height,
     paddingRight: '$gudBodyPaddingH',
     paddingLeft: '$gudBodyPaddingH',
+    padding: '10%',
+    alignItems: 'stretch',
+    justifyContent: 'space-between',
+  },
+  body: {
+    position: 'relative',
+    textAlign: 'center',
+    width: width,
+    height: height * 0.95,
+    paddingRight: '$gudBodyPaddingH',
+    paddingLeft: '$gudBodyPaddingH',
     padding: '$gudBodyPadding',
     alignItems: 'stretch',
     justifyContent: 'space-between',
   },
-
+  appbar: {
+    borderWidth: 1,
+    borderColor: '$gudGreenLight',
+    backgroundColor: '$gudWhite',
+    position: 'absolute',
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    height: height * 0.065,
+    paddingHorizontal: 30,
+    left: 0,
+    right: 0,
+  },
+  toolbar: {
+    borderWidth: 1,
+    borderColor: '$gudGreenLight',
+    backgroundColor: '$gudWhite',
+    position: 'absolute',
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    height: height * 0.065,
+    paddingHorizontal: 30,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  toolbarIcon: {
+    resizeMode: 'contain',
+    borderRadius: 20,
+    borderColor: '$gudGreenRegular',
+  },
+  toolbarProfile: {
+    height: width * 0.089,
+    borderRadius: 20,
+    borderColor: '$gudGreenRegular',
+  },
   // Containers
   cardContainer: {
     alignItems: 'center',
@@ -398,8 +445,8 @@ export default EStyleSheet.create({
     flexDirection: 'row',
   },
   rbCircle: {
-    height: 25,
-    width: 25,
+    height: 20,
+    width: 20,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: '$gudGreenDark',
@@ -448,11 +495,5 @@ export default EStyleSheet.create({
   },
   gudDropDownItems: {
     backgroundColor: '#fff',
-  },
-  bottom: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });
