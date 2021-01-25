@@ -10,6 +10,7 @@ import React, {useState, useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Appbar} from 'react-native-paper';
 
 import auth from '@react-native-firebase/auth';
 
@@ -38,6 +39,7 @@ import EmptyContact from '@screens/EmptyContact';
 import PerfilScreen from '@screens/PerfilScreen';
 import NonFriendProfile from '@screens/NonFriendProfile';
 import Home from '@screens/Home';
+
 const RootStack = createStackNavigator();
 
 const App: () => React$Node = () => {
@@ -86,8 +88,31 @@ const App: () => React$Node = () => {
       </SafeAreaProvider>
     );
   }
+
   return (
     <>
+      {/* <Appbar.Header 
+      style={styles.appbar}>
+        <Appbar.BackAction
+          style={styles.toolbarIcon}
+          color={ESS.value('$gudGreenDarkest')}
+          icon={require('@icons/HomeIcon.png')}
+          onPress={() => console.log('Pressed archive')}
+        />
+        <Appbar.Content title="Sala de Match" />
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          icon={require('@icons/ChatIcon.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => console.log('Pressed label')}
+        />
+        <Appbar.Action
+          style={styles.toolbarProfile}
+          icon={require('@icons/placeholder.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => console.log('Pressed delete')}
+        />
+      </Appbar.Header> */}
       <SafeAreaProvider>
         <NavigationContainer>
           <RootStack.Navigator
@@ -95,7 +120,7 @@ const App: () => React$Node = () => {
               headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="Home"
+            initialRouteName='LandingPage'
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
@@ -158,7 +183,36 @@ const App: () => React$Node = () => {
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
+      <Appbar style={styles.toolbar}>
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          color={ESS.value('$gudGreenDarkest')}
+          icon={require('@icons/HomeIcon.png')}
+          onPress={() => navigateTo('Home')}
+        />
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          color={ESS.value('$gudGreenDarkest')}
+          icon={require('@icons/MatchIcon.png')}
+          onPress={() => navigateTo('MatchConfigurationScreen')}
+        />
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          icon={require('@icons/ChatIcon.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => navigateTo('Splash')}
+        />
+        <Appbar.Action
+          style={styles.toolbarProfile}
+          icon={require('@icons/placeholder.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => navigateTo('PerfilScreen')}
+        />
+      </Appbar>
     </>
   );
+  function navigateTo(screen) {
+    navigation.navigate(screen);
+  }
 };
 export default App;
