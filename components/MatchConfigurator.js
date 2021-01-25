@@ -105,7 +105,7 @@ class MatchConfigurator extends React.Component {
             return (
               <View style={styles.carouselCard}>
                 <GudText
-                  style={[{flexShrink: 1, padding: 20}, styles.textMD]}
+                  style={[{flexShrink: 1, padding: 10}, styles.textMD]}
                   slice={[15, this.getAccentEnd(item.key)]}
                   text={this.buildString(item.key).processedString}
                 />
