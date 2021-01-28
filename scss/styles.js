@@ -20,7 +20,6 @@ EStyleSheet.build({
   $gudGray: '#dadada',
   $gudLightGray: '#f0f0f0',
   $gudDarkGray: '#b2b2b2',
-  
 
   // PADDINGS & MARGINS
   // Body
@@ -420,6 +419,15 @@ export default EStyleSheet.create({
     backgroundColor: '$gudWhite',
     margin: '2%',
   },
+  gudMediumButton: {
+    width: width * 0.2,
+    backgroundColor: '$gudWhite',
+    borderRadius: '$gudBorderRadius',
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    margin: '2%',
+    paddingLeft: 5,
+  },
 
   // Input styling
   gudInput: {
@@ -495,5 +503,19 @@ export default EStyleSheet.create({
   },
   gudDropDownItems: {
     backgroundColor: '#fff',
+  },
+  dropCardContainer: {
+    paddingRight: 20,
+    elevation: 3,
+    width: width * 0.7,
+  },
+  dropTextContainer: {
+    padding: 20,
+    elevation: 3,
+    width: width * 0.5,
+  },
+  dropDownCard: {
+    flexDirection: 'row',
+    width: width * 0.9,
   },
 });
