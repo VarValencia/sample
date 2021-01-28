@@ -9,18 +9,24 @@
 import React from 'react';
 import {View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import styles from '../../scss/styles';
 
 class PreferencesScreen extends React.Component {
   constructor(props) {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
   }
 
-  handleClick(id){
+  handleClick(id) {
     console.log('Id', id);
+    this.state;
   }
 
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
   render() {
     return (
       <>
@@ -28,30 +34,31 @@ class PreferencesScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <View style={styles.buttonContainer}>
+              <GudText styles={styles.title} text="Nombre de usuario" />
+              <View style={[styles.buttonContainer]}>
                 <MenuItem
                   id="profile"
                   text="Perfil"
                   icon={require('@icons/4x/profile.png')}
-                  onClick={(id) => this.handleClick(id)}
+                  onClick={() => this.navigateTo('UserPreferences')}
                 />
                 <MenuItem
                   id="account"
                   text="Cuenta"
                   icon={require('@icons/4x/account.png')}
-                  onClick={(id) => this.handleClick(id)}
+                  onClick={() => this.navigateTo('AccountPreferences')}
                 />
                 <MenuItem
                   id="match"
                   text="Match Básico"
                   icon={require('@icons/4x/match.png')}
-                  onClick={(id) => this.handleClick(id)}
+                  onClick={() => this.navigateTo('BasicMatchPreferences')}
                 />
                 <MenuItem
                   id="notifications"
                   text="Notificaciones"
                   icon={require('@icons/4x/notifications.png')}
-                  onClick={(id) => this.handleClick(id)}
+                  onClick={() => this.navigateTo('NotificationPreferences')}
                 />
                 <MenuItem
                   id="invoice"
@@ -63,7 +70,7 @@ class PreferencesScreen extends React.Component {
                   id="help"
                   text="Centro de ayuda"
                   icon={require('@icons/4x/help.png')}
-                  onClick={(id) => this.handleClick(id)}
+                  onClick={() => this.navigateTo('HelpCenter')}
                 />
               </View>
             </View>
