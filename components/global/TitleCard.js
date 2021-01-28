@@ -10,8 +10,8 @@ class TitleCard extends React.Component {
     this.handleEdit = this.handleEdit.bind(this);
   }
 
-  handleEdit(){
-    this.props.onEdit(this.props.id)
+  handleEdit() {
+    this.props.onEdit(this.props.id);
   }
 
   render() {
@@ -31,8 +31,8 @@ class TitleCard extends React.Component {
 
     return (
       <>
-        <View style={[styles.cardContainerLeft]}>
-          <View style={[styles.gudItemSeparator]} />
+        <View style={styles.cardContainerLeft}>
+          <View style={styles.gudItemSeparator} />
           <View style={styles.flatCardItem}>
             <View style={styles.titleCardContainer}>
               {this.props.title ? title : null}
@@ -43,13 +43,13 @@ class TitleCard extends React.Component {
           {this.props.editable ? (
             <View style={styles.containerButtonRight}>
               <TouchableHighlight
-                style={[styles.titleCardEditButton]}
+                style={styles.titleCardEditButton}
                 underlayColor={ESS.value('$gudWhite')}
                 onPress={() => {
-                  this.handleEdit()  ;
+                  this.handleEdit();
                 }}>
                 <GudText
-                  style={[styles.titleCardEditable]}
+                  style={styles.titleCardEditable}
                   text={this.props.buttonText}
                 />
               </TouchableHighlight>

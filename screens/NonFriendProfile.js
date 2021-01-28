@@ -42,7 +42,7 @@ class NonFriendProfile extends React.Component {
         {profileCard}
         <View style={styles.containerRow}>
           <TouchableHighlight
-            style={[styles.gudButton, styles.touchableActive]}
+            style={styles.gudMediumButton}
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Contact');
@@ -50,7 +50,7 @@ class NonFriendProfile extends React.Component {
             <GudText style={styles.gudButtonText} text="CONTACTO GUD" />
           </TouchableHighlight>
           <TouchableHighlight
-            style={[styles.gudButton, styles.touchableActive]}
+            style={styles.gudMediumButton}
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Conversar');
