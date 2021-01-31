@@ -101,7 +101,7 @@ class LoginScreen extends React.Component {
                       email: this.state.email,
                       pwd: this.state.password,
                     });
-                    this.navigateTo('MatchConfigurationScreen');
+                    this.navigateTo('Home');
                     // Toast.show(
                     //   LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO,
                     //   Toast.LONG,
