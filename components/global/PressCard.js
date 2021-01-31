@@ -13,13 +13,13 @@ class UserProfileCard extends React.Component {
         {this.props.important ? (
           <View
             style={[
-              styles.profileCard,
+              styles.pressCard,
               {backgroundColor: ESS.value('$gudGreenMedium')},
             ]}>
-            <View>
+            <View style={styles.pressRight}>
               <GudText
-                style={styles.textSM}
-                text={press ? press.cattegory : 'cattegory'}
+                style={styles.pressDescription}
+                text={press ? press.category : 'Category'}
               />
               <GudText
                 style={styles.pressTitle}
@@ -32,8 +32,8 @@ class UserProfileCard extends React.Component {
             </View>
           </View>
         ) : (
-          <View style={styles.profileCard}>
-            <View>
+          <View style={styles.pressCard}>
+            <View style={styles.pressLeft}>
               <GudText
                 style={styles.pressTitle}
                 text={press ? press.title : 'Title'}
@@ -44,10 +44,12 @@ class UserProfileCard extends React.Component {
                 text={press ? press.description : 'Descripción'}
               />
             </View>
-            <Image
-              style={styles.profilePicture}
-              source={this.props.source || require('@icons/placeholder.png')}
-            />
+            <View styles={styles.pressRight}>
+              <Image
+                style={styles.pressCardPicture}
+                source={this.props.source || require('@icons/placeholder.png')}
+              />
+            </View>
           </View>
         )}
       </>
