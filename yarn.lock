@@ -2554,6 +2554,11 @@
   dependencies:
     "webidl-conversions" "^5.0.0"
 
+"dooboolab-welcome@^1.1.0":
+  "integrity" "sha512-XgEbjJHAsKLge/e8jtuHsv84Ovg1Gx0GvnOTOmOlVGV1643nduTAkT3fyo/mxKbzvyXBr47RHaJAY4R2toI0UA=="
+  "resolved" "https://registry.npmjs.org/dooboolab-welcome/-/dooboolab-welcome-1.2.0.tgz"
+  "version" "1.2.0"
+
 "ecc-jsbn@~0.1.1":
   "integrity" "sha1-OoOpBOVDUyh4dMVkt1SThoSamMk="
   "resolved" "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz"
@@ -5997,6 +6002,13 @@
   "integrity" "sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
+
+"react-native-drop-down-item@^1.1.0":
+  "integrity" "sha512-kyaCr+L9HrcdHy/0M2p3KQ9xy+QC31Or0l06y8Kwz2oe00kXlNZpZjvj35Z4XORa4rBnzn4qJ082rnASgTe9vw=="
+  "resolved" "https://registry.npmjs.org/react-native-drop-down-item/-/react-native-drop-down-item-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "dooboolab-welcome" "^1.1.0"
 
 "react-native-dropdown-picker@^3.7.6":
   "integrity" "sha512-d7siIbuQusQiLQv632Oin3jq+fZp4uAfY8e/7xKiPcKElxg6eH3H9CA3CtT0FAe0hEFqqoWC3kwFSQ1JAhzMgw=="
