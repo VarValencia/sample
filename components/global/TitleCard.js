@@ -33,7 +33,7 @@ class TitleCard extends React.Component {
       <>
         <View style={[styles.cardContainerLeft]}>
           <View style={[styles.gudItemSeparator]} />
-          <View style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: this.props.direction}}>
             <View style={styles.flatCardItem}>
               <View style={styles.titleCardContainer}>
                 {this.props.title ? title : null}
