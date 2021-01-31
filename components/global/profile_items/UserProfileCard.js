@@ -14,13 +14,13 @@ class UserProfileCard extends React.Component {
           style={styles.profilePicture}
           source={this.props.source || require('@icons/placeholder.png')}
         />
-        <View>
+        <View style={{flexShrink: 1}}>
           <GudText
             style={styles.userName}
             text={user ? user.name : 'Usuario'}
           />
           <GudText
-            style={styles.userDescription}
+            style={styles.userNickname}
             text={user ? user.description : 'Descripción'}
           />
           <GudText
