@@ -17,6 +17,16 @@ class ProfilePreferences extends React.Component {
     super(props);
   }
   render() {
+    let notificationsBody = (
+      <View style={styles.cardContainer}>
+        <GudText
+          style={styles.textMD}
+          text={
+            'Recibe notificaciones cuando un username esté disponible'
+          }
+        />
+      </View>
+    );
     let restringeBody = (
       <View style={styles.cardContainer}>
         <GudText
@@ -81,6 +91,7 @@ class ProfilePreferences extends React.Component {
       <>
         <GudText style={styles.title} text="Perfil" />
         <View style={styles.gudTitleSeparator} />
+        <TitleCard title={'Notificaciones'} text={null} body={notificationsBody} />
         <TitleCard title={'Restringir'} text={null} body={restringeBody} />
         <TitleCard title={'Denunciar'} text={null} body={reportBody} />
         <TitleCard title={'Eliminar contacto'} text={null} body={DeleteBody} />
