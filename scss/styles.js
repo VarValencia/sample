@@ -43,6 +43,7 @@ EStyleSheet.build({
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
+  $gudXS: height * 0.017,
   $gudSM: (height * 1.5) / 100,
   $gudMD: (height * 2) / 100,
   $gudLG: (height * 2.5) / 100,
@@ -133,7 +134,13 @@ export default EStyleSheet.create({
     backgroundColor: '$gudGreenLight',
     borderRadius: '$cardButtonRadius',
     justifyContent: 'center',
-    padding: 20
+    padding: 20,
+  },
+  pressCardContainer: {
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: 10,
+    height: height,
   },
   profileCardContainer: {
     alignItems: 'center',
@@ -262,7 +269,7 @@ export default EStyleSheet.create({
   },
   pressDescription: {
     fontFamily: '$rg',
-    fontSize: '$gudMD',
+    fontSize: '$gudXS',
     paddingLeft: width * 0.08,
   },
   gudButtonText: {
@@ -316,13 +323,32 @@ export default EStyleSheet.create({
     height: (height * 4.6) / 100,
     borderRadius: '$menuItemBorderRadius',
   },
+  pressCard: {
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
+    backgroundColor: 'white',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    borderRadius: '$menuItemBorderRadius',
+    width: width * 0.87,
+    margin: '2%',
+  },
+  pressLeft: {
+    width: width * 0.6,
+    padding: 15,
+  },
+  pressRight: {
+    padding: 15,
+  },
   profileCard: {
     flexDirection: 'row',
     display: 'flex',
     borderRadius: '$menuItemBorderRadius',
     width: width * 0.8,
-    paddingTop: 10,
-    paddingBottom: 10,
   },
   menuItemContainer: {
     flex: 1,
@@ -397,6 +423,10 @@ export default EStyleSheet.create({
     height: width * 0.18,
     borderRadius: 50,
   },
+  pressCardPicture: {
+    width: width * 0.27,
+    height: height * 0.2,
+  },
 
   // Button styling
   buttonContainer: {
@@ -434,7 +464,7 @@ export default EStyleSheet.create({
     marginVertical: '2.5%',
     marginHorizontal: '1%',
     justifyContent: 'space-between',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
   },
   activeBtn: {
     backgroundColor: '$gudGreenLight',

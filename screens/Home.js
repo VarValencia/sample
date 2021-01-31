@@ -40,24 +40,31 @@ class Home extends React.Component {
       title: 'Temática',
       description:
         'En este espacio hay un texto para animar al usuario a usar Match',
-      cattegory: 'categoría',
+      category: 'categoría',
     };
     let pressCardAccent = <PressCard press={press3} important />;
     let press4 = {
       title: 'Sala de Match',
       description:
         'En este espacio hay un texto para animar al usuario a usar Match',
-      cattegory: 'categoría',
+      category: 'categoría',
     };
-    let pressCardDown = <PressCard press={press4} />;
+
+    let quote = {
+      title: '"',
+      description:
+        'El mundo está lleno de personas solitarias por no dar el primer paso."',
+    };
+    let pressCard3 = <PressCard press={quote} />;
 
     // Dummy componentx
     let dummyComp = (
       <>
-        <View style={styles.cardContainer}>
+        <View style={styles.pressCardContainer}>
           {pressCard1}
           {pressCard2}
           {pressCardAccent}
+          {pressCard3}
         </View>
       </>
     );
