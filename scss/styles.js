@@ -34,6 +34,9 @@ EStyleSheet.build({
 
   // Buttons
   $touchableWidth: width * 0.8,
+  $touchableCardWidth: width * 0.42,
+  $touchableCardHeight: height * 0.035,
+  $cardButtonRadius: 6,
 
   // FONTS & SIZES
   $b: 'Poppins-Bold',
@@ -69,10 +72,10 @@ export default EStyleSheet.create({
     justifyContent: 'space-between',
   },
   body: {
-    position: 'relative',
+    position: 'absolute',
     textAlign: 'center',
     width: width,
-    height: height * 0.95,
+    height: height,
     paddingRight: '$gudBodyPaddingH',
     paddingLeft: '$gudBodyPaddingH',
     padding: '$gudBodyPadding',
@@ -91,11 +94,16 @@ export default EStyleSheet.create({
     left: 0,
     right: 0,
   },
+  toolbarContainer: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
   toolbar: {
     borderWidth: 1,
     borderColor: '$gudGreenLight',
     backgroundColor: '$gudWhite',
-    position: 'absolute',
     justifyContent: 'space-between',
     alignItems: 'stretch',
     height: height * 0.065,
@@ -118,6 +126,21 @@ export default EStyleSheet.create({
   cardContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  emergencyCallContainer: {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '$gudGreenLight',
+    borderRadius: '$cardButtonRadius',
+    justifyContent: 'center',
+    padding: 20
+  },
+  profileCardContainer: {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '$gudGreenLight',
+    borderRadius: '$gudBorderRadius',
+    padding: 10,
   },
   cardContainerLeft: {
     justifyContent: 'flex-start',
@@ -207,6 +230,7 @@ export default EStyleSheet.create({
     color: '$gudBlack',
     padding: '$gudTextPadding',
     marginTop: '$gudTextMarginTop',
+    textAlignVertical: 'top',
   },
   title: {
     fontFamily: '$b',
@@ -217,6 +241,13 @@ export default EStyleSheet.create({
     fontFamily: '$sb',
     fontSize: '$gudLG',
     paddingLeft: width * 0.08,
+  },
+  userNickname: {
+    fontFamily: '$rg',
+    fontSize: '$gudMD',
+    fontStyle: 'italic',
+    paddingLeft: width * 0.08,
+    color: '$gudGreenDarkest',
   },
   userDescription: {
     fontFamily: '$rg',
@@ -239,6 +270,7 @@ export default EStyleSheet.create({
     fontSize: '$gudSM',
     color: '$gudGreenDark',
     textAlign: 'center',
+    textAlignVertical: 'top',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -289,7 +321,8 @@ export default EStyleSheet.create({
     display: 'flex',
     borderRadius: '$menuItemBorderRadius',
     width: width * 0.8,
-    marginBottom: '10%',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   menuItemContainer: {
     flex: 1,
@@ -360,8 +393,9 @@ export default EStyleSheet.create({
     width: width * 0.1,
   },
   profilePicture: {
-    width: width * 0.14,
-    height: width * 0.14,
+    width: width * 0.18,
+    height: width * 0.18,
+    borderRadius: 50,
   },
 
   // Button styling
@@ -388,6 +422,19 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
     margin: '2%',
+    justifyContent: 'center',
+  },
+  cardButton: {
+    flex: 1,
+    height: (height * 5) / 100,
+    backgroundColor: '$gudWhite',
+    borderRadius: '$cardButtonRadius',
+    borderWidth: 1,
+    borderColor: '$gudGreenRegular',
+    marginVertical: '2.5%',
+    marginHorizontal: '1%',
+    justifyContent: 'space-between',
+    alignItems: 'stretch'
   },
   activeBtn: {
     backgroundColor: '$gudGreenLight',
@@ -412,6 +459,13 @@ export default EStyleSheet.create({
     width: '$touchableWidth',
     height: (height * 5) / 100,
     borderRadius: '$gudBorderRadius',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  touchableCardActive: {
+    width: '$touchableCardWidth',
+    height: '$touchableCardHeight',
+    borderRadius: '$cardButtonRadius',
     display: 'flex',
     justifyContent: 'center',
   },

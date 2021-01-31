@@ -29,7 +29,7 @@ class PerfilScreen extends React.Component {
         'Soy un explorador que le gusta buscar y descubrir... La verdad está ahi fuera',
     };
     let profileCard = (
-      <View style={styles.cardContainer}>
+      <View style={styles.profileCardContainer}>
         <UserProfileCard user={user} />
       </View>
     );
@@ -46,7 +46,7 @@ class PerfilScreen extends React.Component {
           id="summary"
           title={'Idiomas'}
           text={
-            'Español,Inglés(nivel conversación y escrito) y algo de francés (no para escribir, pero si para hablar)'
+            'Español, Inglés (nivel conversación y escrito) y algo de francés (no para escribir, pero si para hablar).'
           }
         />
         <TitleCard
@@ -69,13 +69,9 @@ class PerfilScreen extends React.Component {
         />
         <View
           style={[
-            styles.cardContainer,
-            {backgroundColor: ESS.value('$gudGreenMedium')},
-            {width: 500},
-            {height: 300},
+            styles.emergencyCallContainer
           ]}>
           <GudText
-            style={styles.sectionDescription}
             text={'Mensaje de llamada a la acción'}
           />
           <TouchableHighlight
