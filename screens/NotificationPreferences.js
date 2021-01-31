@@ -32,10 +32,12 @@ class NotificationPreferences extends React.Component {
 
   render() {
     let chatNotification = (
-      <Switch
-        onValueChange={(status) => this.toggleSwitch(status)}
-        value={this.state.isEnabled}
-      />
+      <View style={{flexDirection: 'row'}}>
+        <Switch
+          onValueChange={(status) => this.toggleSwitch(status)}
+          value={this.state.isEnabled}
+        />
+      </View>
     );
     let soundNotification = (
       <Switch
