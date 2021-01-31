@@ -205,13 +205,14 @@ export default EStyleSheet.create({
     shadowRadius: 10,
     elevation: 3,
     backgroundColor: 'white',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
     alignItems: 'flex-start',
     width: width * 0.7,
   },
   flatCardItem: {
     alignItems: 'flex-start',
-    width: width * 0.9,
+    width: width * 0.78,
+    justifyContent: 'center'
   },
   flatCardItemComponent: {
     alignItems: 'flex-end',
