@@ -10,7 +10,6 @@ import React from 'react';
 import {View, Switch, StatusBar} from 'react-native';
 import styles from '@styles/styles';
 import {ScrollView} from 'react-native-gesture-handler';
-import {isEnabled} from 'react-native/Libraries/Performance/Systrace';
 
 class NotificationPreferences extends React.Component {
   constructor(props) {

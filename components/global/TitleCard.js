@@ -45,13 +45,13 @@ class TitleCard extends React.Component {
           {this.props.editable ? (
             <View style={styles.containerButtonRight}>
               <TouchableHighlight
-                style={[styles.titleCardEditButton]}
+                style={styles.titleCardEditButton}
                 underlayColor={ESS.value('$gudWhite')}
                 onPress={() => {
                   this.handleEdit();
                 }}>
                 <GudText
-                  style={[styles.titleCardEditable]}
+                  style={styles.titleCardEditable}
                   text={this.props.buttonText}
                 />
               </TouchableHighlight>

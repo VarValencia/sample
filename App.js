@@ -16,6 +16,8 @@ import * as NavigationService from '@scripts/NavigationService';
 import auth from '@react-native-firebase/auth';
 
 // Importación de las vistas
+
+//LANDING
 import Splash from '@landing/Splash';
 import LandingPage from '@landing/LandingPage';
 import LoginScreen from '@landing/LoginScreen';
@@ -23,18 +25,23 @@ import RegisterScreen from '@landing/RegisterScreen';
 import RegisterStepTwo from '@landing/RegisterStepTwo';
 import ConfirmEmail from '@landing/ConfirmEmail';
 
+//MATCH
 import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
 import LoadingMatch from '@match/LoadingMatch';
 import HelpCenter from '@screens/HelpCenter';
 
-import ProfilePreferences from '@preferences/ProfilePreferences';
-import PreferencesScreen from '@screens/PreferencesScreen';
-import UserPreferences from '@screens/UserPreferences';
-import AccountPreferences from '@screens/AccountPreferences';
-import BasicMatchPreferences from '@screens/BasicMatchPreferences';
-import NotificationPreferences from '@screens/NotificationPreferences';
+// cambiar nombre!!
+import FriendSettings from '@preferences/FriendSettings';
 
+//PREFERENCES
+import PreferencesScreen from '@preferences/PreferencesScreen';
+import UserPreferences from '@preferences/UserPreferences';
+import AccountPreferences from '@preferences/AccountPreferences';
+import BasicMatchPreferences from '@preferences/BasicMatchPreferences';
+import NotificationPreferences from '@preferences/NotificationPreferences';
+
+//SCREENS
 import StartConfiguring from '@screens/StartConfiguring';
 import EmptyContact from '@screens/EmptyContact';
 import PerfilScreen from '@screens/PerfilScreen';
@@ -123,8 +130,8 @@ const App: () => React$Node = ({navigator}) => {
             <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
             <RootStack.Screen
-              name="ProfilePreferences"
-              component={ProfilePreferences}
+              name="FriendSettings"
+              component={FriendSettings}
             />
             <RootStack.Screen
               name="PreferencesScreen"
