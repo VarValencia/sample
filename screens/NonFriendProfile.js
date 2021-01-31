@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {View, StatusBar, TouchableHighlight} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {ScrollView} from 'react-native-gesture-handler';
 
 class NonFriendProfile extends React.Component {
@@ -28,7 +29,7 @@ class NonFriendProfile extends React.Component {
       bio: 'Una persona que busca viajar y soñar',
     };
     let profileCard = (
-      <View style={styles.cardContainer}>
+      <View style={styles.profileCardContainer}>
         <UserProfileCard user={user} />
       </View>
     );
@@ -42,20 +43,20 @@ class NonFriendProfile extends React.Component {
         {profileCard}
         <View style={styles.containerRow}>
           <TouchableHighlight
-            style={[styles.gudButton, styles.touchableActive]}
+            style={[styles.cardButton, styles.touchableCardActive]}
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Contact');
             }}>
-            <GudText style={styles.gudButtonText} text="CONTACTO GUD" />
+            <GudText style={styles.gudButtonText} text="Contacto GUD" />
           </TouchableHighlight>
           <TouchableHighlight
-            style={[styles.gudButton, styles.touchableActive]}
+            style={[styles.cardButton, styles.touchableCardActive]}
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Conversar');
             }}>
-            <GudText style={styles.gudButtonText} text="CONVERSAR" />
+            <GudText style={styles.gudButtonText} text="Conversar" />
           </TouchableHighlight>
         </View>
         <TitleCard
