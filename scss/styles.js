@@ -228,8 +228,9 @@ export default EStyleSheet.create({
     width: width * 0.87,
   },
   containerRow: {
-    display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center',
+    width: width * 0.9,
   },
 
   // Text styles
@@ -511,7 +512,6 @@ export default EStyleSheet.create({
     borderWidth: 1,
     borderColor: '$gudGreenRegular',
     margin: '2%',
-    paddingLeft: 5,
   },
 
   // Input styling
@@ -586,21 +586,26 @@ export default EStyleSheet.create({
     borderColor: '$gudGreenRegular',
     borderRadius: '$gudBorderRadius',
   },
+  dropDownItem: {
+    backgroundColor: '#fff'
+  },
+
+
   gudDropDownItems: {
     backgroundColor: '#fff',
   },
   dropCardContainer: {
-    paddingRight: 20,
     elevation: 3,
-    width: width * 0.7,
+    width: width * 0.8,
+    justifyContent: 'center',
+    alignItems: 'stretch'
   },
   dropTextContainer: {
     padding: 20,
     elevation: 3,
-    width: width * 0.5,
+    width: width * 0.9,
   },
   dropDownCard: {
-    flexDirection: 'row',
-    width: width * 0.9,
+    flexDirection: 'column',
   },
 });
