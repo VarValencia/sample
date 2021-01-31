@@ -33,7 +33,6 @@ class UserPreferences extends React.Component {
         <UserProfileCard user={user} />
       </View>
     );
-    let dummyText = '';
 
     // Dummy component
     let dummyComp = (
@@ -61,15 +60,15 @@ class UserPreferences extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="interests"
           title={'Intereses'}
-          text={'idhfidhfishioshfiodhgiodsfhiodsahfiodshfisdo'}
+          text={'Viajar, correr, tocar la guitarra,canturrear. alpinismo'}
           editable
-          buttonText="Cambiar Contraseña"
+          buttonText="Editar"
         />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="native"
           title={'Idioma nativo'}
-          text={'dfdsbodbiodbfiodbfiabfi'}
+          text={'Español'}
           editable
           buttonText="Editar"
         />
