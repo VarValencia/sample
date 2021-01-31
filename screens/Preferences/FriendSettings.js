@@ -49,11 +49,11 @@ class FriendSettings extends React.Component {
               'Limita la interacción con este usuario sin necesidad de denunciar o eliminar contacto'
             }
           />
+          <Switch
+            onValueChange={(status) => this.toggleSwitch(status)}
+            value={this.state.isEnabled}
+          />
         </View>
-        <Switch
-          onValueChange={(status) => this.toggleSwitch(status)}
-          value={this.state.isEnabled}
-        />
       </View>
     );
     let reportBody = (
@@ -65,7 +65,6 @@ class FriendSettings extends React.Component {
             placeholder={'¿Problemas con el Gudder? Cuéntanos qué ha pasado'}
             maxLength={30}
             minLength={3}
-            autoFocus={true}
             multiline={true}
             numberOfLines={4}
             handleValue={(text) => this.onChange(text)}
@@ -84,6 +83,7 @@ class FriendSettings extends React.Component {
         </View>
         <View style={styles.containerRow}>
           <TouchableHighlight
+            underlayColor={ESS.value('$gudGreenLight')}
             style={[styles.gudMediumButton, styles.inactiveBtn]}
             onPress={() => {
               console.log('Es eliminado');
@@ -92,6 +92,7 @@ class FriendSettings extends React.Component {
           </TouchableHighlight>
 
           <TouchableHighlight
+            underlayColor={ESS.value('$gudGreenLight')}
             style={[styles.gudMediumButton, styles.activeBtn]}
             onPress={() => {
               console.log('No es eliminado');
@@ -106,7 +107,6 @@ class FriendSettings extends React.Component {
       <>
         <View style={styles.cardContainer} />
         <DropDownItem
-          style={styles.dropDownItem}
           contentVisible={false}
           invisibleImage={require('@icons/rightArrow.png')}
           visibleImage={require('@icons/downArrow.png')}
