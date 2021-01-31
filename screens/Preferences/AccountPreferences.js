@@ -25,7 +25,7 @@ class AccountPreferences extends React.Component {
       <View>
         <View style={styles.inputContainer}>
           <ValidationField
-            placeholder={'email@email.com'}
+            // placeholder={'email@email.com'}
             maxLength={30}
             minLength={6}
             handleValue={(event) => null}
@@ -37,7 +37,7 @@ class AccountPreferences extends React.Component {
       <View>
         <View style={styles.inputContainer}>
           <ValidationField
-            placeholder={'password'}
+            // placeholder={'password'}
             maxLength={30}
             minLength={6}
             password={true}
