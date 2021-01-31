@@ -60,20 +60,23 @@ class NotificationPreferences extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="ChatNotif"
           title={'Notificaciones de chat'}
+          direction='row'
           text={'Recibe notificaciones para mensajes nuevos'}
           body={chatNotification}
-        />
+          />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="SoundsNotif"
           title={'Sonidos de notificaciones'}
+          direction='row'
           body={soundNotification}
           text={'Reproducir sonidos para mensajes nuevos'}
-        />
+          />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="InspirateNotif"
           title={'Notificaciones de Inspírate'}
+          direction='row'
           body={InspirateNotification}
           text={'Reproducir sonidos para mensajes nuevos'}
         />
