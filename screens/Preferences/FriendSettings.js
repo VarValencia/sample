@@ -57,13 +57,21 @@ class FriendSettings extends React.Component {
       </View>
     );
     let reportBody = (
-      <View style={styles.cardContainer}>
-        <ValidationField
-          placeholder={'¿Problemas con el guder? Cuéntanos qué ha pasado:'}
-          maxLength={30}
-          minLength={6}
-          handleValue={(event) => console.log(event)}
-        />
+      <View style={styles.dropDownCard}>
+        <View style={styles.dropCardContainer}>
+          {/* <View style={styles.cardContainer}> */}
+          <ValidationField
+            style={styles.textInputContainer}
+            placeholder={'¿Problemas con el Gudder? Cuéntanos qué ha pasado'}
+            maxLength={30}
+            minLength={3}
+            autoFocus={true}
+            multiline={true}
+            numberOfLines={4}
+            handleValue={(text) => this.onChange(text)}
+          />
+          {/* </View> */}
+        </View>
       </View>
     );
     let deleteBody = (
@@ -99,7 +107,7 @@ class FriendSettings extends React.Component {
         <View style={styles.cardContainer} />
         <DropDownItem
           style={styles.dropDownItem}
-          contentVisible={true}
+          contentVisible={false}
           invisibleImage={require('@icons/rightArrow.png')}
           visibleImage={require('@icons/downArrow.png')}
           header={
@@ -112,7 +120,7 @@ class FriendSettings extends React.Component {
 
         <DropDownItem
           style={styles.dropDownItem}
-          contentVisible={true}
+          contentVisible={false}
           invisibleImage={require('@icons/rightArrow.png')}
           visibleImage={require('@icons/downArrow.png')}
           header={
@@ -125,7 +133,7 @@ class FriendSettings extends React.Component {
 
         <DropDownItem
           style={styles.dropDownItem}
-          contentVisible={true}
+          contentVisible={false}
           invisibleImage={require('@icons/rightArrow.png')}
           visibleImage={require('@icons/downArrow.png')}
           header={
@@ -137,7 +145,7 @@ class FriendSettings extends React.Component {
         </DropDownItem>
         <DropDownItem
           style={styles.dropDownItem}
-          contentVisible={true}
+          contentVisible={false}
           invisibleImage={require('@icons/rightArrow.png')}
           visibleImage={require('@icons/downArrow.png')}
           header={
