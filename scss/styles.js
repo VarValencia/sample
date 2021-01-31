@@ -73,7 +73,6 @@ export default EStyleSheet.create({
     justifyContent: 'space-between',
   },
   body: {
-    position: 'absolute',
     textAlign: 'center',
     width: width,
     height: height,
