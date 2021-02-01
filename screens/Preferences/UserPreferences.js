@@ -29,7 +29,7 @@ class UserPreferences extends React.Component {
         'Soy un buscador, me gusta conocer y descubrir siempre algo nuevo ahi fuera',
     };
     let profileCard = (
-      <View style={styles.cardContainer}>
+      <View style={styles.profileCardContainer}>
         <UserProfileCard user={user} />
       </View>
     );

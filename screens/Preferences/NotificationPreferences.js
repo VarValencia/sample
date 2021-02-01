@@ -51,8 +51,7 @@ class NotificationPreferences extends React.Component {
       />
     );
 
-    // Dummy component
-    let dummyComp = (
+    let body = (
       <View style={styles.cardContainerLeft}>
         <GudText style={styles.title} text="Notificaciones" />
 
@@ -90,7 +89,7 @@ class NotificationPreferences extends React.Component {
             contentInsetAdjustmentBehavior="automatic"
             contentContainerStyle={styles.scrollView}
             showsVerticalScrollIndicator={false}>
-            {dummyComp}
+            {body}
           </ScrollView>
         </View>
       </>
