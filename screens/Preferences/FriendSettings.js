@@ -50,6 +50,7 @@ class FriendSettings extends React.Component {
             }
           />
           <Switch
+            style={styles.flatCardItemComponent}
             onValueChange={(status) => this.toggleSwitch(status)}
             value={this.state.isEnabled}
           />
