@@ -11,6 +11,8 @@ import {View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 import styles from '@styles/styles';
+import {Title} from 'react-native-paper';
+import TitleCard from '../../components/global/TitleCard';
 
 const optMatch = [
   {
@@ -52,40 +54,42 @@ class BasicMatchPreferences extends React.Component {
     this.state = {};
   }
   render() {
+    let privacy = (
+      <GRadioButtonGroup
+        style={styles.gudRadioButtonGroup}
+        options={optMatch}
+      />
+    );
+    let language = (
+      <GRadioButtonGroup
+        style={styles.gudRadioButtonGroup}
+        options={optLanguage}
+      />
+    );
+    let body = (
+      <View style={styles.cardContainerLeft}>
+        <GudText style={[styles.title, {marginTop: '2%'}]} text="Match Básico" />
+        <TitleCard
+          id="Nivel de anonimato"
+          title="Nivel de anonimato"
+          text="Selecciona qué nivel de anonimato eliges para los match por defecto"
+          body={privacy}
+        />
+        <TitleCard
+          id="Idioma"
+          title="Idioma"
+          text="Selecciona qué idioma quieres para los match por defecto"
+          body={language}
+        />
+      </View>
+    );
+
     return (
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
           <View style={styles.body}>
-            <View style={styles.cardContainer}>
-              <View style={styles.cardContainerLeft}>
-                <GudText style={styles.title} text="Match Básico" />
-
-                <GudText
-                  style={styles.gudTextUpButton}
-                  text="Nivel de anonimato"
-                />
-                <GudText
-                  style={styles.gudTextUpButton}
-                  text="Selecciona qué nivel de anonimato eliges para los match por defecto:"
-                />
-                <GRadioButtonGroup
-                  style={styles.gudRadioButtonGroup}
-                  options={optMatch}
-                />
-              </View>
-              <View style={styles.cardContainerLeft}>
-                <GudText style={styles.gudTextUpButton} text="Idioma" />
-                <GudText
-                  style={styles.gudTextUpButton}
-                  text="Selecciona qué idioma quieres para los match por defecto:"
-                />
-                <GRadioButtonGroup
-                  style={styles.GRadioButtonGroup}
-                  options={optLanguage}
-                />
-              </View>
-            </View>
+            {body}
             <View style={styles.buttonContainer}>
               <TouchableHighlight
                 style={[
