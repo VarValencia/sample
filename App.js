@@ -47,6 +47,7 @@ import EmptyContact from '@screens/EmptyContact';
 import PerfilScreen from '@screens/PerfilScreen';
 import NonFriendProfile from '@screens/NonFriendProfile';
 import Home from '@screens/Home';
+import GudContactScreen from '@screens/GudContactScreen';
 
 const RootStack = createStackNavigator();
 
@@ -106,7 +107,7 @@ const App: () => React$Node = ({navigator}) => {
               header: CustomNaviationBar,
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="Home">
+            initialRouteName="GudContactScreen">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
@@ -165,6 +166,10 @@ const App: () => React$Node = ({navigator}) => {
               component={NonFriendProfile}
             />
             <RootStack.Screen name="Home" component={Home} />
+            <RootStack.Screen
+              name="GudContactScreen"
+              component={GudContactScreen}
+            />
           </RootStack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
