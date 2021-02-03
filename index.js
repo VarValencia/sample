@@ -16,6 +16,7 @@ import MenuItem from '@gud/MenuItem';
 import UserProfileCard from '@gud/profile_items/UserProfileCard';
 
 import PressCard from '@gud/PressCard';
+import ContactPhoto from '@gud/ContactPhoto';
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
@@ -36,6 +37,7 @@ global.GudDropDown = GudDropDown;
 global.MenuItem = MenuItem;
 global.UserProfileCard = UserProfileCard;
 global.PressCard = PressCard;
+global.ContactPhoto = ContactPhoto;
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;

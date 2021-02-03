@@ -211,7 +211,7 @@ export default EStyleSheet.create({
   flatCardItem: {
     alignItems: 'flex-start',
     width: width * 0.78,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   flatCardItemComponent: {
     alignItems: 'flex-end',
@@ -414,6 +414,12 @@ export default EStyleSheet.create({
     width: width * 0.09,
     height: width * 0.09,
   },
+  gudPhoto: {
+    resizeMode: 'cover',
+    width: width * 0.19,
+    height: width * 0.19,
+    borderRadius: 50,
+  },
   gudArrowIcon: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -423,10 +429,15 @@ export default EStyleSheet.create({
     width: width * 0.18,
     height: width * 0.18,
     borderRadius: 50,
+    alignItems: 'flex-end',
   },
   pressCardPicture: {
     width: width * 0.27,
     height: height * 0.2,
+  },
+  OnlineIcon: {
+    width: width * 0.05,
+    width: width * 0.05,
   },
 
   // Button styling
@@ -586,9 +597,8 @@ export default EStyleSheet.create({
     borderRadius: '$gudBorderRadius',
   },
   dropDownItem: {
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
   },
-
 
   gudDropDownItems: {
     backgroundColor: '#fff',
@@ -597,7 +607,7 @@ export default EStyleSheet.create({
     elevation: 3,
     width: width * 0.8,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
   },
   dropTextContainer: {
     padding: 20,
