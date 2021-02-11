@@ -231,7 +231,12 @@ export default EStyleSheet.create({
     justifyContent: 'center',
     width: width * 0.9,
   },
-
+  containerGallery: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: width * 0.9,
+    marginVertical: width * 0.01,
+  },
   // Text styles
   gudText: {
     fontFamily: '$rg',

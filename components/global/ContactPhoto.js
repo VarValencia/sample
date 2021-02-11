@@ -20,7 +20,7 @@ class ContactPhoto extends React.Component {
               style={[styles.gudPhoto, styles.activeBtn]}
               underlayColor={ESS.value('$gudGreenMedium')}
               onPress={() => {
-                this.props.onClick();
+                this.props.onClick() || console.log('sample text');
               }}>
               <View style={styles.gudIcon}>
                 <ImageBackground
@@ -42,7 +42,7 @@ class ContactPhoto extends React.Component {
               style={[styles.gudPhoto, styles.activeBtn]}
               underlayColor={ESS.value('$gudGreenMedium')}
               onPress={() => {
-                this.props.onClick();
+                this.props.onClick() || console.log('sample text');
               }}>
               <View style={styles.gudIcon}>
                 <ImageBackground

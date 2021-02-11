@@ -107,7 +107,7 @@ const App: () => React$Node = ({navigator}) => {
               header: CustomNaviationBar,
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="GudContactScreen">
+            initialRouteName="LoginScreen">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />
             <RootStack.Screen name="LoginScreen" component={LoginScreen} />
