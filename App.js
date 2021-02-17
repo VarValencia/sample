@@ -70,7 +70,7 @@ const App: () => React$Node = ({navigator}) => {
   if (initializing) return null;
 
   // if (!user) {
-  if (false) {
+  if (!user) {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
@@ -107,18 +107,7 @@ const App: () => React$Node = ({navigator}) => {
               header: CustomNaviationBar,
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LoginScreen">
-            <RootStack.Screen name="Splash" component={Splash} />
-            <RootStack.Screen name="LandingPage" component={LandingPage} />
-            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
-            <RootStack.Screen
-              name="RegisterScreen"
-              component={RegisterScreen}
-            />
-            <RootStack.Screen
-              name="RegisterStepTwo"
-              component={RegisterStepTwo}
-            />
+            initialRouteName="Home">
             <RootStack.Screen
               name="MatchConfigurationScreen"
               component={MatchConfigurationScreen}

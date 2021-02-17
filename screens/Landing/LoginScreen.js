@@ -99,11 +99,12 @@ class LoginScreen extends React.Component {
                   ]}
                   underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
+                    console.log('User', this.state);
                     AuthenticationService.login({
                       email: this.state.email,
                       pwd: this.state.password,
                     });
-                    this.navigateTo('Home');
+                    // this.navigateTo('Home');
                     // Toast.show(
                     //   LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO,
                     //   Toast.LONG,
