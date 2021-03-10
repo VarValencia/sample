@@ -16,38 +16,54 @@ class NotificationPreferences extends React.Component {
     super(props);
 
     this.state = {
-      isEnabled: false,
+      isEnabledOne: null,
+      isEnableTwo: null,
+      isEnableThree: null,
     };
-
-    this.toggleSwitch = this.toggleSwitch.bind(this);
+    toggleSwitch = (switchNumber) => {
+      this.setState({
+        isEnabledOne:
+          switchNumber === this.state.isEnabledOne ? null : switchNumber,
+        isEnabledTwo:
+          switchNumber === this.state.isEnabledTwo ? null : switchNumber,
+        isEnabledThree:
+          switchNumber === this.state.isEnabledThree ? null : switchNumber,
+      });
+    };
     this.handleEdit = this.handleEdit.bind(this);
   }
   handleEdit(id) {
     console.log('Id', id);
   }
-  toggleSwitch(status) {
-    this.setState({isEnabled: status});
-  }
+  switchOne = (value) => {
+    toggleSwitch(1);
+  };
+  switchTwo = (value) => {
+    toggleSwitch(2);
+  };
+  switchThree = (value) => {
+    toggleSwitch(3);
+  };
 
   render() {
     let chatNotification = (
       <View style={{flexDirection: 'row'}}>
         <Switch
-          onValueChange={(status) => this.toggleSwitch(status)}
-          value={this.state.isEnabled}
+          onValueChange={this.switchOne}
+          value={this.state.isEnabledOne === 1}
         />
       </View>
     );
     let soundNotification = (
       <Switch
-        onValueChange={(status) => this.toggleSwitch(status)}
-        value={this.state.isEnabled}
+        onValueChange={this.switchTwo}
+        value={this.state.isEnabledTwo === 2}
       />
     );
     let InspirateNotification = (
       <Switch
-        onValueChange={(status) => this.toggleSwitch(status)}
-        value={this.state.isEnabled}
+        onValueChange={this.switchThree}
+        value={this.state.isEnabledThree === 3}
       />
     );
 
@@ -59,23 +75,23 @@ class NotificationPreferences extends React.Component {
           onEdit={(id) => this.handleEdit(id)}
           id="ChatNotif"
           title={'Notificaciones de chat'}
-          direction='row'
+          direction="row"
           text={'Recibe notificaciones para mensajes nuevos'}
           body={chatNotification}
-          />
+        />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="SoundsNotif"
           title={'Sonidos de notificaciones'}
-          direction='row'
+          direction="row"
           body={soundNotification}
           text={'Reproducir sonidos para mensajes nuevos'}
-          />
+        />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="InspirateNotif"
           title={'Notificaciones de Inspírate'}
-          direction='row'
+          direction="row"
           body={InspirateNotification}
           text={'Reproducir sonidos para mensajes nuevos'}
         />
