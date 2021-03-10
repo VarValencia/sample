@@ -7,10 +7,10 @@
  */
 
 import React from 'react';
-import {View, StatusBar, TouchableHighlight} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 
-class PerfilScreen extends React.Component {
+class UserPreferences extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,14 +26,13 @@ class PerfilScreen extends React.Component {
       name: 'Pablo',
       description: 'Explorador',
       bio:
-        'Soy un explorador que le gusta buscar y descubrir... La verdad está ahi fuera',
+        'Soy un buscador, me gusta conocer y descubrir siempre algo nuevo ahi fuera',
     };
     let profileCard = (
       <View style={styles.profileCardContainer}>
         <UserProfileCard user={user} />
       </View>
     );
-    let dummyText = '';
 
     // Dummy component
     let dummyComp = (
@@ -44,45 +43,35 @@ class PerfilScreen extends React.Component {
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="summary"
-          title={'Idiomas'}
-          text={
-            'Español, Inglés (nivel conversación y escrito) y algo de francés (no para escribir, pero si para hablar).'
-          }
+          title={'Presentación'}
+          text={'Soy un buscador, me gusta conocer '}
+          editable
+          buttonText="Editar"
         />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
-          id="Intereses"
+          id="languages"
+          title={'Idiomas para conversar'}
+          text={'Español  y algo de francés'}
+          editable
+          buttonText="Editar"
+        />
+        <TitleCard
+          onEdit={(id) => this.handleEdit(id)}
+          id="interests"
           title={'Intereses'}
-          text={dummyText}
-        />
-        <TitleCard
-          onEdit={(id) => this.handleEdit(id)}
-          id="Fotos"
-          title={'Fotos'}
-          text={dummyText}
+          text={'Viajar, correr, tocar la guitarra,canturrear. alpinismo'}
+          editable
+          buttonText="Editar"
         />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="native"
           title={'Idioma nativo'}
-          text={dummyText}
+          text={'Español'}
+          editable
+          buttonText="Editar"
         />
-        <View
-          style={[
-            styles.emergencyCallContainer
-          ]}>
-          <GudText
-            text={'Mensaje de llamada a la acción'}
-          />
-          <TouchableHighlight
-            style={[styles.gudButton]}
-            underlayColor={ESS.value('$gudGreenMedium')}
-            onPress={() => {
-              console.log('Boton');
-            }}>
-            <GudText style={styles.gudButtonText} text="Boton" />
-          </TouchableHighlight>
-        </View>
       </>
     );
 
@@ -102,4 +91,4 @@ class PerfilScreen extends React.Component {
   }
 }
 
-export default PerfilScreen;
+export default UserPreferences;

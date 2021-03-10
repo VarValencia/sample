@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "568667481678",
-    "project_id": "gudmatch-17729",
-    "storage_bucket": "gudmatch-17729.appspot.com"
+    "project_number": "63628416580",
+    "project_id": "gamelol",
+    "storage_bucket": "gamelol.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:568667481678:android:62df427cbfce074eaf451f",
+        "mobilesdk_app_id": "1:63628416580:android:d28fd21fdd57b29a6d8e11",
         "android_client_info": {
           "package_name": "com.gudmobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "568667481678-rl342auknbachc043cn3hgg9hm2mpv5g.apps.googleusercontent.com",
+          "client_id": "63628416580-ktqmgdpajoa607n9d3jo3urkjnut5sc5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBYoTBrTapvhtmDRBy2MgtwT0xr2kD3vc8"
+          "current_key": "AIzaSyC25qQoO1EwkNjyo26GLaiT5D9s9TRCJ5o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "568667481678-rl342auknbachc043cn3hgg9hm2mpv5g.apps.googleusercontent.com",
+              "client_id": "63628416580-ktqmgdpajoa607n9d3jo3urkjnut5sc5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

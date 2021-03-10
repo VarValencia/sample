@@ -14,21 +14,24 @@ class GudDropDown extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   selections() {
-    var options = this.props.items.map((item, index) => {
+    const options = this.props.items.map((item, index) => {
       return {
         label: item.label.toString(),
         value: item.label.toLowerCase(),
-        icon: () => <Image style={styles.gudIcon} source={item.icon} />,
+        icon: () =>
+          item.icon ? (
+            <Image style={styles.gudIcon} source={item.icon} />
+          ) : null,
         hidden: index == 0 ? true : false,
       };
     });
     return options;
   }
-  handleChange(item){
+  handleChange(item) {
     this.setState({
       value: item.value,
-    })
-    this.props.onItemSelected(item.value)
+    });
+    this.props.onItemSelected(item.value);
   }
   render() {
     return (
@@ -37,15 +40,17 @@ class GudDropDown extends React.Component {
         defaultValue={this.state.value}
         containerStyle={styles.gudDropDownContainer}
         style={[styles.gudDropDown]}
-        labelStyle={[{fontFamily: ESS.value('$rg')}, this.props.fontFamily, this.props.fontSize]}
+        labelStyle={[
+          {fontFamily: ESS.value('$rg')},
+          this.props.fontFamily,
+          this.props.fontSize,
+        ]}
         placeholder={'Selecciona una opción'}
         itemStyle={{
           justifyContent: 'flex-start',
         }}
         dropDownStyle={styles.gudDropDownItems}
-        onChangeItem={(item) =>
-          this.handleChange(item)
-        }
+        onChangeItem={(item) => this.handleChange(item)}
       />
     );
   }

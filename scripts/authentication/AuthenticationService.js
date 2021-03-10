@@ -10,7 +10,10 @@ const AuthenticationService = {
       })
       .catch((error) => {
         if (error.code === 'auth/user-not-found') {
-          console.log('User not found in database');
+          console.log(
+            'User not found in database ' + user.email + ' ' + user.pwd,
+          );
+          console.error(error);
           return 0;
         }
 
@@ -38,7 +41,7 @@ const AuthenticationService = {
         console.error(error);
       });
   },
-  
+
   logout() {
     auth()
       .signOut()

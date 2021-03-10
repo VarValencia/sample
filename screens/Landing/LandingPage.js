@@ -16,7 +16,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
     <>
       <StatusBar hidden={true} />
       <SafeAreaView>
-        <View style={styles.body}>
+        <View style={styles.bodyLogin}>
           <View style={styles.cardContainer}>
             <View style={styles.appLogoContainer}>
               <Image
@@ -29,7 +29,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}
-                source={require('@android/images/LoginScreen.png')}
+                source={require(`@android/images/LoginScreen.png`)}
               />
             </View>
             <GudText

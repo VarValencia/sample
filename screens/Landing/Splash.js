@@ -16,7 +16,7 @@ const Splash: () => React$Node = () => {
     <>
       <StatusBar hidden={true} />
       <SafeAreaView>
-        <View style={styles.body}>
+        <View style={styles.bodyLogin}>
           <View style={styles.cardContainer}>
             <View style={styles.appImageContainer}>
               <Image

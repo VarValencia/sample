@@ -10,10 +10,15 @@ import React, {useState, useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Appbar} from 'react-native-paper';
+import * as NavigationService from '@scripts/NavigationService';
 
 import auth from '@react-native-firebase/auth';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Importación de las vistas
+
+//LANDING
 import Splash from '@landing/Splash';
 import LandingPage from '@landing/LandingPage';
 import LoginScreen from '@landing/LoginScreen';
@@ -21,19 +26,37 @@ import RegisterScreen from '@landing/RegisterScreen';
 import RegisterStepTwo from '@landing/RegisterStepTwo';
 import ConfirmEmail from '@landing/ConfirmEmail';
 
+//MATCH
 import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
 import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
-import PerfilScreen from '@screens/PerfilScreen';
 import LoadingMatch from '@match/LoadingMatch';
-import SettingsMatchConfig from '@screens/SettingsMatchConfig';
 import HelpCenter from '@screens/HelpCenter';
+
+// cambiar nombre!!
+import FriendSettings from '@preferences/FriendSettings';
+
+//PREFERENCES
+import PreferencesScreen from '@preferences/PreferencesScreen';
+import UserPreferences from '@preferences/UserPreferences';
+import AccountPreferences from '@preferences/AccountPreferences';
+import BasicMatchPreferences from '@preferences/BasicMatchPreferences';
+import NotificationPreferences from '@preferences/NotificationPreferences';
+
+//SCREENS
+import StartConfiguring from '@screens/StartConfiguring';
+import EmptyContact from '@screens/EmptyContact';
+import PerfilScreen from '@screens/PerfilScreen';
+import NonFriendProfile from '@screens/NonFriendProfile';
+import Home from '@screens/Home';
+import GudContactScreen from '@screens/GudContactScreen';
 
 const RootStack = createStackNavigator();
 
-const App: () => React$Node = () => {
+const App: () => React$Node = ({navigator}) => {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
+  const Tab = createBottomTabNavigator();
 
   // Handle user state changes
   function onAuthStateChanged(user) {
@@ -48,14 +71,12 @@ const App: () => React$Node = () => {
 
   if (initializing) return null;
 
-  // if (!user) {
-  if (false) {
+  if (!user) {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
           <RootStack.Navigator
             screenOptions={{
-              headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
             initialRouteName="LandingPage"
@@ -76,28 +97,16 @@ const App: () => React$Node = () => {
       </SafeAreaProvider>
     );
   }
+
   return (
     <>
       <SafeAreaProvider>
-        <NavigationContainer>
+        <NavigationContainer ref={NavigationService.navigationRef}>
           <RootStack.Navigator
             screenOptions={{
-              headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="PerfilScreen"
-            headerMode="none">
-            <RootStack.Screen name="Splash" component={Splash} />
-            <RootStack.Screen name="LandingPage" component={LandingPage} />
-            <RootStack.Screen name="LoginScreen" component={LoginScreen} />
-            <RootStack.Screen
-              name="RegisterScreen"
-              component={RegisterScreen}
-            />
-            <RootStack.Screen
-              name="RegisterStepTwo"
-              component={RegisterStepTwo}
-            />
+            initialRouteName="Home">
             <RootStack.Screen
               name="MatchConfigurationScreen"
               component={MatchConfigurationScreen}
@@ -109,15 +118,92 @@ const App: () => React$Node = () => {
             />
             <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
+            <RootStack.Screen
+              name="FriendSettings"
+              component={FriendSettings}
+            />
+            <RootStack.Screen
+              name="PreferencesScreen"
+              component={PreferencesScreen}
+            />
+            <RootStack.Screen
+              name="AccountPreferences"
+              component={AccountPreferences}
+            />
+            <RootStack.Screen
+              name="BasicMatchPreferences"
+              component={BasicMatchPreferences}
+            />
+            <RootStack.Screen
+              name="NotificationPreferences"
+              component={NotificationPreferences}
+            />
+
+            <RootStack.Screen
+              name="StartConfiguring"
+              component={StartConfiguring}
+            />
+            <RootStack.Screen name="EmptyContact" component={EmptyContact} />
+            <RootStack.Screen
+              name="UserPreferences"
+              component={UserPreferences}
+            />
             <RootStack.Screen name="PerfilScreen" component={PerfilScreen} />
             <RootStack.Screen
-              name="SettingsMatchConfig"
-              component={SettingsMatchConfig}
+              name="NonFriendProfile"
+              component={NonFriendProfile}
+            />
+            <RootStack.Screen name="Home" component={Home} />
+            <RootStack.Screen
+              name="GudContactScreen"
+              component={GudContactScreen}
             />
           </RootStack.Navigator>
         </NavigationContainer>
+        <CustomNaviationBar />
       </SafeAreaProvider>
     </>
   );
+  function CustomNaviationBar() {
+    return (
+      <Appbar style={styles.toolbar}>
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          color={ESS.value('$gudGreenDarkest')}
+          icon={require('@icons/HomeIcon.png')}
+          onPress={() => NavigationService.navigateTo('Home')}
+        />
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          color={ESS.value('$gudGreenDarkest')}
+          icon={require('@icons/MatchIcon.png')}
+          onPress={() =>
+            NavigationService.navigateTo('MatchConfigurationScreen')
+          }
+        />
+        <Appbar.Action
+          style={styles.toolbarIcon}
+          icon={require('@icons/ChatIcon.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => NavigationService.navigateTo('Splash')}
+        />
+        <Appbar.Action
+          style={styles.toolbarProfile}
+          icon={require('@icons/placeholder.png')}
+          color={ESS.value('$gudGreenDarkest')}
+          onPress={() => NavigationService.navigateTo('PerfilScreen')}
+        />
+      </Appbar>
+    );
+  }
+
+  function MyTabs() {
+    return (
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Settings" component={NotificationPreferences} />
+      </Tab.Navigator>
+    );
+  }
 };
 export default App;

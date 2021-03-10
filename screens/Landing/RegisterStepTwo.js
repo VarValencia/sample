@@ -14,12 +14,12 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 class RegisterStepTwo extends React.Component {
   constructor(props) {
     super(props),
-      this.state = {
+      (this.state = {
         userName: '',
         birthday: '',
         country: '',
         language: '',
-      };
+      });
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.navigateTo = this.navigateTo.bind(this);
@@ -42,6 +42,17 @@ class RegisterStepTwo extends React.Component {
       pwd: password,
     });
     this.navigateTo('ConfirmEmail');
+
+    firestore
+      .collection('users')
+      .doc('uid_valencia')
+      .set({
+        username: this.state.userName,
+        birthdate: this.state.birthday,
+        country: this.state.country,
+        language: this.state.language,
+      })
+      .then(() => console.log(`user ${this.state.userName} saved!`));
   }
 
   validate = () => {
@@ -61,10 +72,13 @@ class RegisterStepTwo extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.body}>
+          <View style={styles.bodyLogin}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
-                <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />
+                <Image
+                  style={styles.appLogo}
+                  source={require('@icons/4x/GUDLogo.png')}
+                />
               </View>
               <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />

@@ -12,16 +12,11 @@ import styles from '@styles/styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
 
-class ConfirmEmail extends React.Component {
+class EmptyContact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.onSubmit = this.onSubmit.bind(this);
     this.navigateTo = this.navigateTo.bind(this);
-  }
-  onSubmit() {
-    this.navigateTo('HomeScreen');
   }
   navigateTo(screen) {
     this.props.navigation.navigate(screen);
@@ -31,32 +26,23 @@ class ConfirmEmail extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.bodyLogin}>
-            <View style={styles.cardContainerLeft}>
-              <GudText
-                style={[styles.title, styles.textLG]}
-                text="¡Enhorabuena!"
-              />
-              <View style={styles.gudSeparator} />
-              <GudText
-                style={styles.sectionDescription}
-                accent={true}
-                text="Estás a un paso de ser gud"
-              />
-              <GudText
-                style={styles.textMD}
-                text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
-              />
-            </View>
+          <View style={styles.body}>
             <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
                 <Image
                   style={styles.gudCardImage}
-                  source={require('@icons/SignupLogo.png')}
+                  source={require('@icons/emptyContacts.png')}
                 />
               </View>
-            </View>
-            <View style={styles.cardContainer}>
+              <GudText
+                style={styles.sectionDescription}
+                text="¡Ups! Parece que todavía no tienes ningún contacto"
+              />
+              <GudText
+                style={{textAlign: 'center'}}
+                text="Comienza a conocer gente nueva y a agregarlos como amigos para poder consultar el historial de conversaciones aquí"
+              />
+              {/* </View> */}
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
                   style={[
@@ -65,9 +51,13 @@ class ConfirmEmail extends React.Component {
                     true ? styles.activeBtn : styles.inactiveBtn,
                   ]}
                   onPress={() => {
-                    this.onSubmit();
+                    console.log('pressed button');
+                    this.navigateTo('MatchConfigurationScreen');
                   }}>
-                  <GudText style={styles.gudButtonText} text="Finalizar" />
+                  <GudText
+                    style={styles.gudButtonText}
+                    text="¡Vamos a hacer Match!"
+                  />
                 </TouchableHighlight>
               </View>
             </View>
@@ -78,4 +68,4 @@ class ConfirmEmail extends React.Component {
   }
 }
 
-export default ConfirmEmail;
+export default EmptyContact;

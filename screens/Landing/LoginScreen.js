@@ -10,8 +10,7 @@ import React from 'react';
 import {View, StatusBar, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {TouchableHighlight} from 'react-native-gesture-handler';
-import Toast from 'react-native-simple-toast';
-
+// import Toast from 'react-native-simple-toast';
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -56,10 +55,13 @@ class LoginScreen extends React.Component {
       <>
         <StatusBar hidden={true} />
         <SafeAreaView>
-          <View style={styles.body}>
+          <View style={styles.bodyLogin}>
             <View style={styles.cardContainer}>
               <View style={styles.appLogoContainer}>
-                <Image style={styles.appLogo} source={require('@icons/4x/GUDLogo.png')} />
+                <Image
+                  style={styles.appLogo}
+                  source={require('@icons/4x/GUDLogo.png')}
+                />
               </View>
               <GudText style={styles.title} text="¡BIENVENIDO!" />
               <View style={styles.gudSeparator} />
@@ -97,11 +99,12 @@ class LoginScreen extends React.Component {
                   ]}
                   underlayColor={ESS.value('$gudGreenMedium')}
                   onPress={() => {
+                    console.log('User', this.state);
                     AuthenticationService.login({
                       email: this.state.email,
                       pwd: this.state.password,
                     });
-                    this.navigateTo('MatchConfigurationScreen');
+                    // this.navigateTo('Home');
                     // Toast.show(
                     //   LOGIN_TITLE_KO + ' ' + LOGIN_BODY_KO,
                     //   Toast.LONG,

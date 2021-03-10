@@ -8,9 +8,10 @@
 
 import React from 'react';
 import {View, StatusBar, TouchableHighlight} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import {ScrollView} from 'react-native-gesture-handler';
 
-class PerfilScreen extends React.Component {
+class NonFriendProfile extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,10 +24,9 @@ class PerfilScreen extends React.Component {
 
   render() {
     let user = {
-      name: 'Pablo',
-      description: 'Explorador',
-      bio:
-        'Soy un explorador que le gusta buscar y descubrir... La verdad está ahi fuera',
+      name: 'Juan',
+      description: 'Vividor soñador',
+      bio: 'Una persona que busca viajar y soñar',
     };
     let profileCard = (
       <View style={styles.profileCardContainer}>
@@ -41,48 +41,38 @@ class PerfilScreen extends React.Component {
         <GudText style={styles.title} text="Perfil" />
         <View style={styles.gudTitleSeparator} />
         {profileCard}
+        <View style={styles.containerRow}>
+          <TouchableHighlight
+            style={[styles.cardButton, styles.touchableCardActive]}
+            underlayColor={ESS.value('$gudGreenMedium')}
+            onPress={() => {
+              console.log('you tapped the button Contact');
+            }}>
+            <GudText style={styles.gudButtonText} text="Contacto GUD" />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={[styles.cardButton, styles.touchableCardActive]}
+            underlayColor={ESS.value('$gudGreenMedium')}
+            onPress={() => {
+              console.log('you tapped the button Conversar');
+            }}>
+            <GudText style={styles.gudButtonText} text="Conversar" />
+          </TouchableHighlight>
+        </View>
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
-          id="summary"
+          id="languages"
           title={'Idiomas'}
           text={
-            'Español, Inglés (nivel conversación y escrito) y algo de francés (no para escribir, pero si para hablar).'
+            'Español, Inglés(nivel conversación y escrito) y algo de francés (no para escribir, pero si para hablar)'
           }
         />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
-          id="Intereses"
+          id="interests"
           title={'Intereses'}
           text={dummyText}
         />
-        <TitleCard
-          onEdit={(id) => this.handleEdit(id)}
-          id="Fotos"
-          title={'Fotos'}
-          text={dummyText}
-        />
-        <TitleCard
-          onEdit={(id) => this.handleEdit(id)}
-          id="native"
-          title={'Idioma nativo'}
-          text={dummyText}
-        />
-        <View
-          style={[
-            styles.emergencyCallContainer
-          ]}>
-          <GudText
-            text={'Mensaje de llamada a la acción'}
-          />
-          <TouchableHighlight
-            style={[styles.gudButton]}
-            underlayColor={ESS.value('$gudGreenMedium')}
-            onPress={() => {
-              console.log('Boton');
-            }}>
-            <GudText style={styles.gudButtonText} text="Boton" />
-          </TouchableHighlight>
-        </View>
       </>
     );
 
@@ -102,4 +92,4 @@ class PerfilScreen extends React.Component {
   }
 }
 
-export default PerfilScreen;
+export default NonFriendProfile;

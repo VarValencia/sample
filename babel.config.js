@@ -11,11 +11,12 @@ module.exports = {
           '@screens': './screens',
           '@landing': './screens/Landing',
           '@match': './screens/Match',
+          '@preferences': './screens/Preferences',
           '@android': './android/app/src/main/assets',
           '@components': './components',
           '@icons': './iconos_app',
           '@scripts': './scripts',
-          '@gud': './components/global'
+          '@gud': './components/global',
         },
       },
     ],

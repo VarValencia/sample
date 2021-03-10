@@ -2,9 +2,9 @@
  * @format
  */
 
-import { AppRegistry } from 'react-native';
+import {AppRegistry} from 'react-native';
 import App from './App';
-import { name as appName } from './app.json';
+import {name as appName} from './app.json';
 
 // Component imports
 import GudText from '@gud/GudText';
@@ -12,9 +12,15 @@ import GRadioButtonGroup from '@gud/GRadioButtonGroup';
 import ValidationField from '@gud/ValidationField';
 import TitleCard from '@gud/TitleCard';
 import GudDropDown from '@gud/GudDropDown';
+import MenuItem from '@gud/MenuItem';
+import UserProfileCard from '@gud/profile_items/UserProfileCard';
 
+import PressCard from '@gud/PressCard';
+import ContactPhoto from '@gud/ContactPhoto';
+import ContactGallery from '@gud/ContactGallery';
+import HomeCard from '@gud/HomeCard';
 // Scripts import
-import AuthenticationService from '@scripts/authentication/AuthenticationService'
+import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
 // Styles import
 import styles from '@styles/styles';
@@ -29,7 +35,13 @@ global.GudText = GudText;
 global.GRadioButtonGroup = GRadioButtonGroup;
 global.ValidationField = ValidationField;
 global.TitleCard = TitleCard;
-global.GudDropDown = GudDropDown
+global.GudDropDown = GudDropDown;
+global.MenuItem = MenuItem;
+global.UserProfileCard = UserProfileCard;
+global.PressCard = PressCard;
+global.ContactPhoto = ContactPhoto;
+global.ContactGallery = ContactGallery;
+global.HomeCard = HomeCard;
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;
