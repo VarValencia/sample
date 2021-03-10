@@ -18,6 +18,7 @@ import UserProfileCard from '@gud/profile_items/UserProfileCard';
 import PressCard from '@gud/PressCard';
 import ContactPhoto from '@gud/ContactPhoto';
 import ContactGallery from '@gud/ContactGallery';
+import HomeCard from '@gud/HomeCard';
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
@@ -40,6 +41,7 @@ global.UserProfileCard = UserProfileCard;
 global.PressCard = PressCard;
 global.ContactPhoto = ContactPhoto;
 global.ContactGallery = ContactGallery;
+global.HomeCard = HomeCard;
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;

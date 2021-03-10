@@ -9,7 +9,7 @@
 import React from 'react';
 import {View, StatusBar} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
-
+import * as NavigationService from '@scripts/NavigationService';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -27,14 +27,28 @@ class Home extends React.Component {
       description:
         'En este espacio hay un texto para animar al usuario a usar Match',
     };
-    let pressCard1 = <PressCard press={press1} />;
+    let pressCard1 = (
+      <PressCard
+        press={press1}
+        onClick={() => {
+          NavigationService.navigateTo('UserPreferences');
+        }}
+      />
+    );
 
     let press2 = {
       title: 'Las lineas rojas de Gud',
       description:
         'Hay unos límites en todas las aplicaciones de Gud que en ningún caso pueden ser traspasados',
     };
-    let pressCard2 = <PressCard press={press2} />;
+    let pressCard2 = (
+      <PressCard
+        press={press2}
+        onClick={() => {
+          NavigationService.navigateTo('UserPreferences');
+        }}
+      />
+    );
 
     let press3 = {
       title: 'Temática',
@@ -42,7 +56,15 @@ class Home extends React.Component {
         'En este espacio hay un texto para animar al usuario a usar Match',
       category: 'categoría',
     };
-    let pressCardAccent = <PressCard press={press3} important />;
+    let pressCardAccent = (
+      <PressCard
+        press={press3}
+        important
+        onClick={() => {
+          NavigationService.navigateTo('UserPreferences');
+        }}
+      />
+    );
     let press4 = {
       title: 'Sala de Match',
       description:
@@ -55,7 +77,14 @@ class Home extends React.Component {
       description:
         'El mundo está lleno de personas solitarias por no dar el primer paso."',
     };
-    let pressCard3 = <PressCard press={quote} />;
+    let pressCard3 = (
+      <PressCard
+        press={quote}
+        onClick={() => {
+          NavigationService.navigateTo('UserPreferences');
+        }}
+      />
+    );
 
     // Dummy componentx
     let dummyComp = (
