@@ -14,7 +14,7 @@ class GudDropDown extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   selections() {
-    var options = this.props.items.map((item, index) => {
+    const options = this.props.items.map((item, index) => {
       return {
         label: item.label.toString(),
         value: item.label.toLowerCase(),

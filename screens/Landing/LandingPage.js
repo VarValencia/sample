@@ -29,7 +29,7 @@ const LandingPage: () => React$Node = ({navigation}) => {
             <View style={styles.appImageContainer}>
               <Image
                 style={styles.gudCardImage}
-                source={require('@android/images/LoginScreen.png')}
+                source={require(`@android/images/LoginScreen.png`)}
               />
             </View>
             <GudText
