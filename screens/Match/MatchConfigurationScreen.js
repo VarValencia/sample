@@ -36,7 +36,7 @@ class MatchConfigurationScreen extends React.Component {
 
   validate = () => {
     return !Object.values(this.state).some((entry) => {
-      return entry.toString().length <= 0;
+      return entry.toString().length <= 3;
     });
   };
 
@@ -77,7 +77,7 @@ class MatchConfigurationScreen extends React.Component {
             <View style={styles.cardContainer}>
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
-                  disabled={!isValid}
+                  disabled={isValid}
                   style={[
                     styles.touchableActive,
                     styles.gudButton,

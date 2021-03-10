@@ -16,8 +16,11 @@ class EmptyContact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.navigateTo = this.navigateTo.bind(this);
   }
-
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
   render() {
     return (
       <>
@@ -49,6 +52,7 @@ class EmptyContact extends React.Component {
                   ]}
                   onPress={() => {
                     console.log('pressed button');
+                    this.navigateTo('MatchConfigurationScreen');
                   }}>
                   <GudText
                     style={styles.gudButtonText}

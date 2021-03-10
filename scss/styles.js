@@ -111,6 +111,8 @@ export default EStyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
+    position: 'absolute',
+    zIndex: 99,
   },
   toolbarIcon: {
     resizeMode: 'contain',
