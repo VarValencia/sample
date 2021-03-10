@@ -14,6 +14,7 @@ import {Appbar} from 'react-native-paper';
 import * as NavigationService from '@scripts/NavigationService';
 
 import auth from '@react-native-firebase/auth';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Importación de las vistas
 
@@ -55,6 +56,7 @@ const App: () => React$Node = ({navigator}) => {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
+  const Tab = createBottomTabNavigator();
 
   // Handle user state changes
   function onAuthStateChanged(user) {
@@ -69,14 +71,12 @@ const App: () => React$Node = ({navigator}) => {
 
   if (initializing) return null;
 
-  // if (!user) {
   if (!user) {
     return (
       <SafeAreaProvider>
         <NavigationContainer>
           <RootStack.Navigator
             screenOptions={{
-              headerStyle: {elevation: 0},
               cardStyle: {backgroundColor: '#fff'},
             }}
             initialRouteName="LandingPage"
@@ -104,7 +104,6 @@ const App: () => React$Node = ({navigator}) => {
         <NavigationContainer ref={NavigationService.navigationRef}>
           <RootStack.Navigator
             screenOptions={{
-              header: CustomNaviationBar,
               cardStyle: {backgroundColor: '#fff'},
             }}
             initialRouteName="Home">
@@ -161,6 +160,7 @@ const App: () => React$Node = ({navigator}) => {
             />
           </RootStack.Navigator>
         </NavigationContainer>
+        <CustomNaviationBar />
       </SafeAreaProvider>
     </>
   );
@@ -194,6 +194,15 @@ const App: () => React$Node = ({navigator}) => {
           onPress={() => NavigationService.navigateTo('PerfilScreen')}
         />
       </Appbar>
+    );
+  }
+
+  function MyTabs() {
+    return (
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Settings" component={NotificationPreferences} />
+      </Tab.Navigator>
     );
   }
 };
