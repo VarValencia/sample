@@ -16,6 +16,7 @@ import * as NavigationService from '@scripts/NavigationService';
 import auth from '@react-native-firebase/auth';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+import {View, TouchableHighlight, Image, Animated} from 'react-native';
 // Importación de las vistas
 
 //LANDING
@@ -49,6 +50,7 @@ import PerfilScreen from '@screens/PerfilScreen';
 import NonFriendProfile from '@screens/NonFriendProfile';
 import Home from '@screens/Home';
 import GudContactScreen from '@screens/GudContactScreen';
+import styles from './scss/styles';
 
 const RootStack = createStackNavigator();
 
@@ -63,7 +65,6 @@ const App: () => React$Node = ({navigator}) => {
     setUser(user);
     if (initializing) setInitializing(false);
   }
-
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
@@ -104,6 +105,7 @@ const App: () => React$Node = ({navigator}) => {
         <NavigationContainer ref={NavigationService.navigationRef}>
           <RootStack.Navigator
             screenOptions={{
+              header: topBar,
               cardStyle: {backgroundColor: '#fff'},
             }}
             initialRouteName="Home">
@@ -185,7 +187,7 @@ const App: () => React$Node = ({navigator}) => {
           style={styles.toolbarIcon}
           icon={require('@icons/ChatIcon.png')}
           color={ESS.value('$gudGreenDarkest')}
-          onPress={() => NavigationService.navigateTo('Splash')}
+          onPress={() => NavigationService.navigateTo('GudContactScreen')}
         />
         <Appbar.Action
           style={styles.toolbarProfile}
@@ -196,13 +198,14 @@ const App: () => React$Node = ({navigator}) => {
       </Appbar>
     );
   }
-
-  function MyTabs() {
+  function topBar() {
     return (
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Settings" component={NotificationPreferences} />
-      </Tab.Navigator>
+      <Header
+        id="account"
+        text="Cuenta"
+        icon={require('@icons/4x/account.png')}
+        rightButton={require('@icons/placeholder.png')}
+      />
     );
   }
 };
