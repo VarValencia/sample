@@ -19,6 +19,7 @@ import PressCard from '@gud/PressCard';
 import ContactPhoto from '@gud/ContactPhoto';
 import ContactGallery from '@gud/ContactGallery';
 import HomeCard from '@gud/HomeCard';
+import Header from '@gud/Header';
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
@@ -42,6 +43,7 @@ global.PressCard = PressCard;
 global.ContactPhoto = ContactPhoto;
 global.ContactGallery = ContactGallery;
 global.HomeCard = HomeCard;
+global.Header = Header;
 
 // Global scripts
 global.AuthenticationService = AuthenticationService;
