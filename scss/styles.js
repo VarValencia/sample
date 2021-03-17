@@ -230,14 +230,30 @@ export default EStyleSheet.create({
   },
   containerRow: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     width: width * 0.9,
+  },
+  containerRowPadding: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    width: width * 0.3,
+    paddingLeft: 20,
   },
   containerGallery: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: width * 0.9,
     marginVertical: width * 0.01,
+  },
+  leftHeaderContainer: {
+    width: width * 0.3,
+    height: height * 0.05,
+    justifyContent: 'flex-start',
+  },
+  rightHeaderContainer: {
+    width: width * 0.55,
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
   },
   // Text styles
   gudText: {

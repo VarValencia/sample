@@ -16,12 +16,15 @@ class NonFriendProfile extends React.Component {
     super(props);
 
     this.handleEdit = this.handleEdit.bind(this);
+    this.navigateTo = this.navigateTo.bind(this);
   }
 
   handleEdit(id) {
     console.log('Id', id);
   }
-
+  navigateTo(screen) {
+    this.props.navigation.navigate(screen);
+  }
   render() {
     let user = {
       name: 'Juan',
@@ -47,6 +50,7 @@ class NonFriendProfile extends React.Component {
             underlayColor={ESS.value('$gudGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Contact');
+              this.navigateTo('FriendSettings');
             }}>
             <GudText style={styles.gudButtonText} text="Contacto GUD" />
           </TouchableHighlight>

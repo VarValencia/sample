@@ -16,7 +16,7 @@ class ContactGallery extends React.Component {
           <View style={styles.containerGallery}>
             <ContactPhoto
               onClick={() => {
-                NavigationService.navigateTo('UserPreferences');
+                NavigationService.navigateTo('NonFriendProfile');
               }}
               online={true}
             />
@@ -24,7 +24,7 @@ class ContactGallery extends React.Component {
             <ContactPhoto />
             <ContactPhoto
               onClick={() => {
-                NavigationService.navigateTo('UserPreferences');
+                NavigationService.navigateTo('NonFriendProfile');
               }}
               online={true}
             />
