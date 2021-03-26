@@ -45,22 +45,22 @@ class Header extends React.Component {
         <View style={styles.containerRowPadding}>
           <Image
             style={styles.gudIcon}
-            source={this.props.rightButton || require('@icons/placeholder.png')}
+            source={require('@icons/1x/GUDLogo.png')}
           />
         </View>
         <View style={styles.containerRowPadding}>
           <TouchableHighlight
             style={styles.leftHeaderContainer}
             onPress={() => {
-              NavigationService.navigateTo('PreferencesScreen'),
+              NavigationService.navigateTo('PerfilScreen'),
                 console.log('something');
             }}>
-            <View style={{flexDirection: 'row'}}>
-              <Image
-                style={styles.gudIcon}
-                source={this.props.icon || require('@icons/placeholder.png')}
+            <View>
+              <GudText style={styles.gudText} text={'Hola!'} />
+              <GudText
+                style={[styles.gudText, {color: ESS.value('$gudGreenDark')}]}
+                text="Pablo"
               />
-              <GudText style={styles.menuItemText} text={'algo'} />
             </View>
           </TouchableHighlight>
           <View style={styles.rightHeaderContainer}>

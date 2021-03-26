@@ -2,7 +2,6 @@ import React from 'react';
 import {Text} from 'react-native';
 import styles from '@styles/styles';
 
-
 class GudText extends React.Component {
   constructor(props) {
     super(props);
@@ -21,9 +20,7 @@ class GudText extends React.Component {
           <>
             <Text style={[styles.gudText, this.props.style]}>
               {beforeString}
-              <Text style={{color: ESS.value('$gudGreenDark')}}>
-                {accent}
-              </Text>
+              <Text style={{color: ESS.value('$gudGreenDark')}}>{accent}</Text>
               {afterString}
             </Text>
           </>
@@ -52,7 +49,7 @@ class GudText extends React.Component {
         );
       }
     } else {
-      return <Text/>;
+      return <Text />;
     }
   }
 }

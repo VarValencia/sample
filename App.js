@@ -58,7 +58,6 @@ const App: () => React$Node = ({navigator}) => {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
-  const Tab = createBottomTabNavigator();
 
   // Handle user state changes
   function onAuthStateChanged(user) {
@@ -80,7 +79,7 @@ const App: () => React$Node = ({navigator}) => {
             screenOptions={{
               cardStyle: {backgroundColor: '#fff'},
             }}
-            initialRouteName="LandingPage"
+            initialRouteName="RegisterStepTwo"
             headerMode="none">
             <RootStack.Screen name="Splash" component={Splash} />
             <RootStack.Screen name="LandingPage" component={LandingPage} />

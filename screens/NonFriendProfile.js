@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {View, StatusBar, TouchableHighlight} from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
+
 import {ScrollView} from 'react-native-gesture-handler';
 
 class NonFriendProfile extends React.Component {
