@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
 
-
 const MIN_LENGTH = 12;
 
 class AfterMatchRating extends React.Component {
@@ -37,15 +36,15 @@ class AfterMatchRating extends React.Component {
 
     let ratings = [
       {
-        name: 'Genial, guardar a este guder',
+        name: 'Genial, guardar a este Sampleer',
         key: 0,
       },
       {
-        name: 'Bien, pero prefiero probar con otros guders',
+        name: 'Bien, pero prefiero probar con otros Sampleers',
         key: 1,
       },
       {
-        name: 'Mal, problemas con el guder',
+        name: 'Mal, problemas con el Sampleer',
         key: 2,
       },
       {
@@ -60,17 +59,17 @@ class AfterMatchRating extends React.Component {
     var radioButtons = (
       <View style={styles.carouselCard}>
         <GRadioButtonGroup
-          spaced={ESS.value('$gudRadioButtonMarginVertical')}
+          spaced={ESS.value('$SampleRadioButtonMarginVertical')}
           options={ratings}
           getKey={(key) => this.handleKey(key)}
         />
         {/* Implement paging component here */}
-        {/* {key === 3 ? <GudText style={styles.sectionDescription} text="Siguiente"/> : null} */}
+        {/* {key === 3 ? <SampleText style={styles.sectionDescription} text="Siguiente"/> : null} */}
       </View>
     );
     var othersBox = (
       <View style={styles.carouselCard}>
-        <GudText
+        <SampleText
           style={[styles.sectionDescription, {padding: 10}]}
           text={'Explícanos qué ha sucedido:'}
         />
@@ -95,7 +94,10 @@ class AfterMatchRating extends React.Component {
           }}
           data={slides}
           style={styles.carouselCard}
-          contentContainerStyle={{justifyContent:'center', alignItems: 'center'}}
+          contentContainerStyle={{
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
           keyExtractor={(item) => item.key.toString()}
           renderItem={({item}) => {
             if (item.key == 0) {

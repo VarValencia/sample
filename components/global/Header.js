@@ -44,8 +44,8 @@ class Header extends React.Component {
       <>
         <View style={styles.containerRowPadding}>
           <Image
-            style={styles.gudIcon}
-            source={require('@icons/1x/GUDLogo.png')}
+            style={styles.SampleIcon}
+            source={require('@icons/1x/SampleLogo.png')}
           />
         </View>
         <View style={styles.containerRowPadding}>
@@ -56,9 +56,12 @@ class Header extends React.Component {
                 console.log('something');
             }}>
             <View>
-              <GudText style={styles.gudText} text={'Hola!'} />
-              <GudText
-                style={[styles.gudText, {color: ESS.value('$gudGreenDark')}]}
+              <SampleText style={styles.SampleText} text={'Hola!'} />
+              <SampleText
+                style={[
+                  styles.SampleText,
+                  {color: ESS.value('$SampleGreenDark')},
+                ]}
                 text="Pablo"
               />
             </View>
@@ -69,13 +72,13 @@ class Header extends React.Component {
               value={this.state.isEnabled}
             />
             <TouchableHighlight
-              style={styles.gudIcon}
+              style={styles.SampleIcon}
               onPress={() => {
                 NavigationService.navigateTo('PreferencesScreen');
                 console.log('something');
               }}>
               <Image
-                style={styles.gudIcon}
+                style={styles.SampleIcon}
                 source={
                   this.props.rightButton || require('@icons/placeholder.png')
                 }

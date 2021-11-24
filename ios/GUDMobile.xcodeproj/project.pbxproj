@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* GUDMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GUDMobileTests.m */; };
+		00E356F31AD99517003FC87E /* SampleMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SampleMobileTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1964CF435458E2826A2468DC /* libPods-GUDMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4525DBF238C6266D75A7B2D0 /* libPods-GUDMobile-tvOSTests.a */; };
+		1964CF435458E2826A2468DC /* libPods-SampleMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4525DBF238C6266D75A7B2D0 /* libPods-SampleMobile-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* GUDMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GUDMobileTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* SampleMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SampleMobileTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A37A7CDCE965C259EDEC65A8 /* libPods-GUDMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC6E175311D9E485971A79 /* libPods-GUDMobile-tvOS.a */; };
-		A9C00395A0E086DC2F7B7BEA /* libPods-GUDMobile-GUDMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB651D5782C83481028795F6 /* libPods-GUDMobile-GUDMobileTests.a */; };
-		BCC61B06609D8BFFB9E18EBC /* libPods-GUDMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD104D90108C2B6D17EEE66 /* libPods-GUDMobile.a */; };
+		A37A7CDCE965C259EDEC65A8 /* libPods-SampleMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC6E175311D9E485971A79 /* libPods-SampleMobile-tvOS.a */; };
+		A9C00395A0E086DC2F7B7BEA /* libPods-SampleMobile-SampleMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB651D5782C83481028795F6 /* libPods-SampleMobile-SampleMobileTests.a */; };
+		BCC61B06609D8BFFB9E18EBC /* libPods-SampleMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD104D90108C2B6D17EEE66 /* libPods-SampleMobile.a */; };
 		741A756F0DBE4AF9B32A43F6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ADAFFA8420848DC9CA31B24 /* Poppins-Bold.ttf */; };
 		3EBA911DE5F54AA1B7006B9C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB6E33EA288B4050B2C8CA16 /* Poppins-Regular.ttf */; };
 		8D7F8E4E34DB4D709170CD77 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42F33C06C034709B6AFEAA5 /* Poppins-SemiBold.ttf */; };
@@ -47,43 +47,43 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = GUDMobile;
+			remoteInfo = SampleMobile;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "GUDMobile-tvOS";
+			remoteInfo = "SampleMobile-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* GUDMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUDMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* SampleMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* GUDMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUDMobileTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* GUDMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUDMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GUDMobile/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GUDMobile/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GUDMobile/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GUDMobile/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GUDMobile/main.m; sourceTree = "<group>"; };
-		277517E00272586B761F4394 /* Pods-GUDMobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-tvOS.release.xcconfig"; path = "Target Support Files/Pods-GUDMobile-tvOS/Pods-GUDMobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* GUDMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GUDMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* GUDMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GUDMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B8426E3C3CFC668F707E9D1 /* Pods-GUDMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-GUDMobile-tvOSTests/Pods-GUDMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4525DBF238C6266D75A7B2D0 /* libPods-GUDMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GUDMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50FC6E175311D9E485971A79 /* libPods-GUDMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GUDMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD104D90108C2B6D17EEE66 /* libPods-GUDMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GUDMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		65AC7490BAFC13E5ECC7F672 /* Pods-GUDMobile-GUDMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-GUDMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-GUDMobile-GUDMobileTests/Pods-GUDMobile-GUDMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7511653B739BE2749C46F0C4 /* Pods-GUDMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile.release.xcconfig"; path = "Target Support Files/Pods-GUDMobile/Pods-GUDMobile.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GUDMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8D7316443C59E8979594C869 /* Pods-GUDMobile-GUDMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-GUDMobileTests.release.xcconfig"; path = "Target Support Files/Pods-GUDMobile-GUDMobileTests/Pods-GUDMobile-GUDMobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		95872A98F98E151727FAC761 /* Pods-GUDMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile.debug.xcconfig"; path = "Target Support Files/Pods-GUDMobile/Pods-GUDMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		C2428F5A125F7C70A3F30DAE /* Pods-GUDMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-GUDMobile-tvOSTests/Pods-GUDMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DF7476CCF776E92E5C62BAED /* Pods-GUDMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GUDMobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-GUDMobile-tvOS/Pods-GUDMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		EB651D5782C83481028795F6 /* libPods-GUDMobile-GUDMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GUDMobile-GUDMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* SampleMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleMobileTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* SampleMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SampleMobile/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SampleMobile/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SampleMobile/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SampleMobile/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SampleMobile/main.m; sourceTree = "<group>"; };
+		277517E00272586B761F4394 /* Pods-SampleMobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SampleMobile-tvOS/Pods-SampleMobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* SampleMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SampleMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* SampleMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SampleMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8426E3C3CFC668F707E9D1 /* Pods-SampleMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SampleMobile-tvOSTests/Pods-SampleMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		4525DBF238C6266D75A7B2D0 /* libPods-SampleMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FC6E175311D9E485971A79 /* libPods-SampleMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD104D90108C2B6D17EEE66 /* libPods-SampleMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AC7490BAFC13E5ECC7F672 /* Pods-SampleMobile-SampleMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-SampleMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleMobile-SampleMobileTests/Pods-SampleMobile-SampleMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7511653B739BE2749C46F0C4 /* Pods-SampleMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile.release.xcconfig"; path = "Target Support Files/Pods-SampleMobile/Pods-SampleMobile.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SampleMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D7316443C59E8979594C869 /* Pods-SampleMobile-SampleMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-SampleMobileTests.release.xcconfig"; path = "Target Support Files/Pods-SampleMobile-SampleMobileTests/Pods-SampleMobile-SampleMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		95872A98F98E151727FAC761 /* Pods-SampleMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile.debug.xcconfig"; path = "Target Support Files/Pods-SampleMobile/Pods-SampleMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		C2428F5A125F7C70A3F30DAE /* Pods-SampleMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleMobile-tvOSTests/Pods-SampleMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7476CCF776E92E5C62BAED /* Pods-SampleMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleMobile-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SampleMobile-tvOS/Pods-SampleMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EB651D5782C83481028795F6 /* libPods-SampleMobile-SampleMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleMobile-SampleMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		8ADAFFA8420848DC9CA31B24 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9C00395A0E086DC2F7B7BEA /* libPods-GUDMobile-GUDMobileTests.a in Frameworks */,
+				A9C00395A0E086DC2F7B7BEA /* libPods-SampleMobile-SampleMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC61B06609D8BFFB9E18EBC /* libPods-GUDMobile.a in Frameworks */,
+				BCC61B06609D8BFFB9E18EBC /* libPods-SampleMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A37A7CDCE965C259EDEC65A8 /* libPods-GUDMobile-tvOS.a in Frameworks */,
+				A37A7CDCE965C259EDEC65A8 /* libPods-SampleMobile-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,20 +136,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1964CF435458E2826A2468DC /* libPods-GUDMobile-tvOSTests.a in Frameworks */,
+				1964CF435458E2826A2468DC /* libPods-SampleMobile-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* GUDMobileTests */ = {
+		00E356EF1AD99517003FC87E /* SampleMobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* GUDMobileTests.m */,
+				00E356F21AD99517003FC87E /* SampleMobileTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = GUDMobileTests;
+			path = SampleMobileTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -160,7 +160,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* GUDMobile */ = {
+		13B07FAE1A68108700A75B9A /* SampleMobile */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -171,7 +171,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = GUDMobile;
+			name = SampleMobile;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -179,10 +179,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				5BD104D90108C2B6D17EEE66 /* libPods-GUDMobile.a */,
-				EB651D5782C83481028795F6 /* libPods-GUDMobile-GUDMobileTests.a */,
-				50FC6E175311D9E485971A79 /* libPods-GUDMobile-tvOS.a */,
-				4525DBF238C6266D75A7B2D0 /* libPods-GUDMobile-tvOSTests.a */,
+				5BD104D90108C2B6D17EEE66 /* libPods-SampleMobile.a */,
+				EB651D5782C83481028795F6 /* libPods-SampleMobile-SampleMobileTests.a */,
+				50FC6E175311D9E485971A79 /* libPods-SampleMobile-tvOS.a */,
+				4525DBF238C6266D75A7B2D0 /* libPods-SampleMobile-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* GUDMobile */,
+				13B07FAE1A68108700A75B9A /* SampleMobile */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* GUDMobileTests */,
+				00E356EF1AD99517003FC87E /* SampleMobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F7F006BF22D0000F36336F52 /* Pods */,
@@ -213,10 +213,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* GUDMobile.app */,
-				00E356EE1AD99517003FC87E /* GUDMobileTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* GUDMobile-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* GUDMobile-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* SampleMobile.app */,
+				00E356EE1AD99517003FC87E /* SampleMobileTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* SampleMobile-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* SampleMobile-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,14 +224,14 @@
 		F7F006BF22D0000F36336F52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				95872A98F98E151727FAC761 /* Pods-GUDMobile.debug.xcconfig */,
-				7511653B739BE2749C46F0C4 /* Pods-GUDMobile.release.xcconfig */,
-				65AC7490BAFC13E5ECC7F672 /* Pods-GUDMobile-GUDMobileTests.debug.xcconfig */,
-				8D7316443C59E8979594C869 /* Pods-GUDMobile-GUDMobileTests.release.xcconfig */,
-				DF7476CCF776E92E5C62BAED /* Pods-GUDMobile-tvOS.debug.xcconfig */,
-				277517E00272586B761F4394 /* Pods-GUDMobile-tvOS.release.xcconfig */,
-				C2428F5A125F7C70A3F30DAE /* Pods-GUDMobile-tvOSTests.debug.xcconfig */,
-				3B8426E3C3CFC668F707E9D1 /* Pods-GUDMobile-tvOSTests.release.xcconfig */,
+				95872A98F98E151727FAC761 /* Pods-SampleMobile.debug.xcconfig */,
+				7511653B739BE2749C46F0C4 /* Pods-SampleMobile.release.xcconfig */,
+				65AC7490BAFC13E5ECC7F672 /* Pods-SampleMobile-SampleMobileTests.debug.xcconfig */,
+				8D7316443C59E8979594C869 /* Pods-SampleMobile-SampleMobileTests.release.xcconfig */,
+				DF7476CCF776E92E5C62BAED /* Pods-SampleMobile-tvOS.debug.xcconfig */,
+				277517E00272586B761F4394 /* Pods-SampleMobile-tvOS.release.xcconfig */,
+				C2428F5A125F7C70A3F30DAE /* Pods-SampleMobile-tvOSTests.debug.xcconfig */,
+				3B8426E3C3CFC668F707E9D1 /* Pods-SampleMobile-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -267,9 +267,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* GUDMobileTests */ = {
+		00E356ED1AD99517003FC87E /* SampleMobileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GUDMobileTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SampleMobileTests" */;
 			buildPhases = (
 				B866F8781558D42638A037CB /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -282,14 +282,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = GUDMobileTests;
-			productName = GUDMobileTests;
-			productReference = 00E356EE1AD99517003FC87E /* GUDMobileTests.xctest */;
+			name = SampleMobileTests;
+			productName = SampleMobileTests;
+			productReference = 00E356EE1AD99517003FC87E /* SampleMobileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* GUDMobile */ = {
+		13B07F861A680F5B00A75B9A /* SampleMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GUDMobile" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SampleMobile" */;
 			buildPhases = (
 				290B511B2A710754B0CABA3C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -304,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = GUDMobile;
-			productName = GUDMobile;
-			productReference = 13B07F961A680F5B00A75B9A /* GUDMobile.app */;
+			name = SampleMobile;
+			productName = SampleMobile;
+			productReference = 13B07F961A680F5B00A75B9A /* SampleMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* GUDMobile-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* SampleMobile-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GUDMobile-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SampleMobile-tvOS" */;
 			buildPhases = (
 				FF15CC85026E5871A6C79A07 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -324,14 +324,14 @@
 			);
 			dependencies = (
 			);
-			name = "GUDMobile-tvOS";
-			productName = "GUDMobile-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* GUDMobile-tvOS.app */;
+			name = "SampleMobile-tvOS";
+			productName = "SampleMobile-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* SampleMobile-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* GUDMobile-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* SampleMobile-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GUDMobile-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SampleMobile-tvOSTests" */;
 			buildPhases = (
 				CC14E284E085BDAD24A660F7 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -343,9 +343,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "GUDMobile-tvOSTests";
-			productName = "GUDMobile-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* GUDMobile-tvOSTests.xctest */;
+			name = "SampleMobile-tvOSTests";
+			productName = "SampleMobile-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* SampleMobile-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +374,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GUDMobile" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SampleMobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -387,10 +387,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* GUDMobile */,
-				00E356ED1AD99517003FC87E /* GUDMobileTests */,
-				2D02E47A1E0B4A5D006451C7 /* GUDMobile-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* GUDMobile-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* SampleMobile */,
+				00E356ED1AD99517003FC87E /* SampleMobileTests */,
+				2D02E47A1E0B4A5D006451C7 /* SampleMobile-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* SampleMobile-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -469,7 +469,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GUDMobile/Pods-GUDMobile-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SampleMobile/Pods-SampleMobile-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -478,7 +478,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GUDMobile/Pods-GUDMobile-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleMobile/Pods-SampleMobile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		290B511B2A710754B0CABA3C /* [CP] Check Pods Manifest.lock */ = {
@@ -496,7 +496,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GUDMobile-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SampleMobile-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -523,7 +523,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GUDMobile-GUDMobileTests/Pods-GUDMobile-GUDMobileTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SampleMobile-SampleMobileTests/Pods-SampleMobile-SampleMobileTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -532,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GUDMobile-GUDMobileTests/Pods-GUDMobile-GUDMobileTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleMobile-SampleMobileTests/Pods-SampleMobile-SampleMobileTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B866F8781558D42638A037CB /* [CP] Check Pods Manifest.lock */ = {
@@ -550,7 +550,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GUDMobile-GUDMobileTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SampleMobile-SampleMobileTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -572,7 +572,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GUDMobile-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SampleMobile-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -642,7 +642,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GUDMobile-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SampleMobile-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -656,7 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* GUDMobileTests.m in Sources */,
+				00E356F31AD99517003FC87E /* SampleMobileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +682,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* GUDMobileTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* SampleMobileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,12 +691,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* GUDMobile */;
+			target = 13B07F861A680F5B00A75B9A /* SampleMobile */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* GUDMobile-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* SampleMobile-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -704,14 +704,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65AC7490BAFC13E5ECC7F672 /* Pods-GUDMobile-GUDMobileTests.debug.xcconfig */;
+			baseConfigurationReference = 65AC7490BAFC13E5ECC7F672 /* Pods-SampleMobile-SampleMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GUDMobileTests/Info.plist;
+				INFOPLIST_FILE = SampleMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -721,17 +721,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUDMobile.app/GUDMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMobile.app/SampleMobile";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D7316443C59E8979594C869 /* Pods-GUDMobile-GUDMobileTests.release.xcconfig */;
+			baseConfigurationReference = 8D7316443C59E8979594C869 /* Pods-SampleMobile-SampleMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = GUDMobileTests/Info.plist;
+				INFOPLIST_FILE = SampleMobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -741,19 +741,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUDMobile.app/GUDMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMobile.app/SampleMobile";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95872A98F98E151727FAC761 /* Pods-GUDMobile.debug.xcconfig */;
+			baseConfigurationReference = 95872A98F98E151727FAC761 /* Pods-SampleMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = GUDMobile/Info.plist;
+				INFOPLIST_FILE = SampleMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -761,7 +761,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GUDMobile;
+				PRODUCT_NAME = SampleMobile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -770,12 +770,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7511653B739BE2749C46F0C4 /* Pods-GUDMobile.release.xcconfig */;
+			baseConfigurationReference = 7511653B739BE2749C46F0C4 /* Pods-SampleMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = GUDMobile/Info.plist;
+				INFOPLIST_FILE = SampleMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -783,7 +783,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GUDMobile;
+				PRODUCT_NAME = SampleMobile;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -791,7 +791,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF7476CCF776E92E5C62BAED /* Pods-GUDMobile-tvOS.debug.xcconfig */;
+			baseConfigurationReference = DF7476CCF776E92E5C62BAED /* Pods-SampleMobile-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -802,14 +802,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GUDMobile-tvOS/Info.plist";
+				INFOPLIST_FILE = "SampleMobile-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GUDMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.SampleMobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -819,7 +819,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 277517E00272586B761F4394 /* Pods-GUDMobile-tvOS.release.xcconfig */;
+			baseConfigurationReference = 277517E00272586B761F4394 /* Pods-SampleMobile-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -830,14 +830,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GUDMobile-tvOS/Info.plist";
+				INFOPLIST_FILE = "SampleMobile-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GUDMobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.SampleMobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -847,7 +847,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2428F5A125F7C70A3F30DAE /* Pods-GUDMobile-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = C2428F5A125F7C70A3F30DAE /* Pods-SampleMobile-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -857,24 +857,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GUDMobile-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "SampleMobile-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GUDMobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.SampleMobile-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUDMobile-tvOS.app/GUDMobile-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMobile-tvOS.app/SampleMobile-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B8426E3C3CFC668F707E9D1 /* Pods-GUDMobile-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 3B8426E3C3CFC668F707E9D1 /* Pods-SampleMobile-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -884,17 +884,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GUDMobile-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "SampleMobile-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.GUDMobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.SampleMobile-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUDMobile-tvOS.app/GUDMobile-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleMobile-tvOS.app/SampleMobile-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1015,7 +1015,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GUDMobileTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SampleMobileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1024,7 +1024,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GUDMobile" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SampleMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1033,7 +1033,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GUDMobile-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SampleMobile-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1042,7 +1042,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GUDMobile-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SampleMobile-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1051,7 +1051,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GUDMobile" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SampleMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

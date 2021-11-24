@@ -10,27 +10,27 @@ const height = Dimensions.get('window').height;
 EStyleSheet.build({
   // COLORS
   $black: '#000',
-  $gudBlack: '#505050',
-  $gudWhite: '#FFF',
-  $gudGreenLight: '#E0F0F0',
-  $gudGreenMedium: '#C1E3E2',
-  $gudGreenRegular: '#A2D6D6',
-  $gudGreenDark: '#62BDBA',
-  $gudGreenDarkest: '#129089',
-  $gudGray: '#dadada',
-  $gudLightGray: '#f0f0f0',
-  $gudDarkGray: '#b2b2b2',
+  $SampleBlack: '#505050',
+  $SampleWhite: '#FFF',
+  $SampleGreenLight: '#E0F0F0',
+  $SampleGreenMedium: '#C1E3E2',
+  $SampleGreenRegular: '#A2D6D6',
+  $SampleGreenDark: '#62BDBA',
+  $SampleGreenDarkest: '#129089',
+  $SampleGray: '#dadada',
+  $SampleLightGray: '#f0f0f0',
+  $SampleDarkGray: '#b2b2b2',
 
   // PADDINGS & MARGINS
   // Body
-  $gudBodyPaddingH: '5%',
-  $gudBodyPadding: '4%',
-  $gudRadioButtonMarginVertical: height * 0.01,
+  $SampleBodyPaddingH: '5%',
+  $SampleBodyPadding: '4%',
+  $SampleRadioButtonMarginVertical: height * 0.01,
 
   // Titles
-  $gudTitlePaddingTop: '0%',
-  $gudSubTitlePaddingBottom: '3%',
-  $gudSeparatorPaddingBottom: '5%',
+  $SampleTitlePaddingTop: '0%',
+  $SampleSubTitlePaddingBottom: '3%',
+  $SampleSeparatorPaddingBottom: '5%',
 
   // Buttons
   $touchableWidth: width * 0.8,
@@ -43,16 +43,16 @@ EStyleSheet.build({
   $sb: 'Poppins-SemiBold',
   $rg: 'Poppins-Regular',
 
-  $gudXS: height * 0.017,
-  $gudSM: (height * 1.5) / 100,
-  $gudMD: (height * 2) / 100,
-  $gudLG: (height * 2.5) / 100,
+  $SampleXS: height * 0.017,
+  $SampleSM: (height * 1.5) / 100,
+  $SampleMD: (height * 2) / 100,
+  $SampleLG: (height * 2.5) / 100,
 
-  $gudTextPadding: 1,
-  $gudTextMarginTop: 0,
+  $SampleTextPadding: 1,
+  $SampleTextMarginTop: 0,
 
   // General styling
-  $gudBorderRadius: 15,
+  $SampleBorderRadius: 15,
   $menuItemBorderRadius: 10,
 });
 
@@ -66,8 +66,8 @@ export default EStyleSheet.create({
     textAlign: 'center',
     width: width,
     height: height,
-    paddingRight: '$gudBodyPaddingH',
-    paddingLeft: '$gudBodyPaddingH',
+    paddingRight: '$SampleBodyPaddingH',
+    paddingLeft: '$SampleBodyPaddingH',
     padding: '10%',
     alignItems: 'stretch',
     justifyContent: 'space-between',
@@ -76,16 +76,16 @@ export default EStyleSheet.create({
     textAlign: 'center',
     width: width,
     height: height,
-    paddingRight: '$gudBodyPaddingH',
-    paddingLeft: '$gudBodyPaddingH',
-    padding: '$gudBodyPadding',
+    paddingRight: '$SampleBodyPaddingH',
+    paddingLeft: '$SampleBodyPaddingH',
+    padding: '$SampleBodyPadding',
     alignItems: 'stretch',
     justifyContent: 'space-between',
   },
   appbar: {
     borderWidth: 1,
-    borderColor: '$gudGreenLight',
-    backgroundColor: '$gudWhite',
+    borderColor: '$SampleGreenLight',
+    backgroundColor: '$SampleWhite',
     position: 'absolute',
     justifyContent: 'space-between',
     alignItems: 'stretch',
@@ -102,8 +102,8 @@ export default EStyleSheet.create({
   },
   toolbar: {
     borderWidth: 1,
-    borderColor: '$gudGreenLight',
-    backgroundColor: '$gudWhite',
+    borderColor: '$SampleGreenLight',
+    backgroundColor: '$SampleWhite',
     justifyContent: 'space-between',
     alignItems: 'stretch',
     height: height * 0.065,
@@ -117,12 +117,12 @@ export default EStyleSheet.create({
   toolbarIcon: {
     resizeMode: 'contain',
     borderRadius: 20,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
   },
   toolbarProfile: {
     height: width * 0.089,
     borderRadius: 20,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
   },
   // Containers
   cardContainer: {
@@ -132,7 +132,7 @@ export default EStyleSheet.create({
   emergencyCallContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '$gudGreenLight',
+    backgroundColor: '$SampleGreenLight',
     borderRadius: '$cardButtonRadius',
     justifyContent: 'center',
     padding: 20,
@@ -146,8 +146,8 @@ export default EStyleSheet.create({
   profileCardContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '$gudGreenLight',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleGreenLight',
+    borderRadius: '$SampleBorderRadius',
     padding: 10,
   },
   cardContainerLeft: {
@@ -170,7 +170,7 @@ export default EStyleSheet.create({
   carouselContainer: {
     flexDirection: 'column',
     padding: width * 0.03,
-    borderRadius: '$gudBorderRadius',
+    borderRadius: '$SampleBorderRadius',
     shadowColor: 'black',
     shadowOpacity: 0.26,
     shadowOffset: {width: 0, height: 2},
@@ -189,17 +189,17 @@ export default EStyleSheet.create({
   textInputContainer: {
     position: 'relative',
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
-    borderRadius: '$gudBorderRadius',
+    borderColor: '$SampleGreenRegular',
+    borderRadius: '$SampleBorderRadius',
     height: height * 0.15,
     textAlignVertical: 'top',
-    fontSize: '$gudMD',
+    fontSize: '$SampleMD',
     fontFamily: '$rg',
     padding: 15,
   },
   flatCardContainer: {
     padding: 20,
-    borderRadius: '$gudBorderRadius',
+    borderRadius: '$SampleBorderRadius',
     shadowColor: 'black',
     shadowOpacity: 0.26,
     shadowOffset: {width: 0, height: 2},
@@ -256,56 +256,56 @@ export default EStyleSheet.create({
     flexDirection: 'row',
   },
   // Text styles
-  gudText: {
+  SampleText: {
     fontFamily: '$rg',
-    color: '$gudBlack',
-    padding: '$gudTextPadding',
-    marginTop: '$gudTextMarginTop',
+    color: '$SampleBlack',
+    padding: '$SampleTextPadding',
+    marginTop: '$SampleTextMarginTop',
     textAlignVertical: 'top',
   },
   title: {
     fontFamily: '$b',
-    fontSize: '$gudLG',
-    paddingTop: '$gudTitlePaddingTop',
+    fontSize: '$SampleLG',
+    paddingTop: '$SampleTitlePaddingTop',
   },
   userName: {
     fontFamily: '$sb',
-    fontSize: '$gudLG',
+    fontSize: '$SampleLG',
     paddingLeft: width * 0.08,
   },
   userNickname: {
     fontFamily: '$rg',
-    fontSize: '$gudMD',
+    fontSize: '$SampleMD',
     fontStyle: 'italic',
     paddingLeft: width * 0.08,
-    color: '$gudGreenDarkest',
+    color: '$SampleGreenDarkest',
   },
   userDescription: {
     fontFamily: '$rg',
-    fontSize: '$gudMD',
+    fontSize: '$SampleMD',
     fontStyle: 'italic',
     paddingLeft: width * 0.08,
   },
   pressTitle: {
     fontFamily: '$b',
-    fontSize: '$gudLG',
+    fontSize: '$SampleLG',
     paddingLeft: width * 0.08,
   },
   pressDescription: {
     fontFamily: '$rg',
-    fontSize: '$gudXS',
+    fontSize: '$SampleXS',
     paddingLeft: width * 0.08,
   },
-  gudButtonText: {
+  SampleButtonText: {
     fontFamily: '$sb',
-    fontSize: '$gudSM',
-    color: '$gudGreenDark',
+    fontSize: '$SampleSM',
+    color: '$SampleGreenDark',
     textAlign: 'center',
     textAlignVertical: 'top',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  gudInputText: {
+  SampleInputText: {
     fontFamily: '$sb',
     textAlign: 'left',
     paddingLeft: '2.6%',
@@ -313,31 +313,31 @@ export default EStyleSheet.create({
   sectionDescription: {
     fontFamily: '$sb',
     textAlign: 'center',
-    fontSize: '$gudMD',
-    paddingBottom: '$gudSubTitlePaddingBottom',
+    fontSize: '$SampleMD',
+    paddingBottom: '$SampleSubTitlePaddingBottom',
   },
   // For 'back' text in user experience screen
   carouselText: {
     fontFamily: '$sb',
     textAlign: 'center',
-    fontSize: '$gudLG',
+    fontSize: '$SampleLG',
     justifyContent: 'center',
-    paddingBottom: '$gudSubTitlePaddingBottom',
+    paddingBottom: '$SampleSubTitlePaddingBottom',
     textAlignVertical: 'center',
     padding: 20,
-    backgroundColor: '$gudGreenLight',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleGreenLight',
+    borderRadius: '$SampleBorderRadius',
   },
   titleCardText: {
     fontFamily: '$rg',
-    fontSize: '$gudMD',
-    paddingBottom: '$gudSubTitlePaddingBottom',
+    fontSize: '$SampleMD',
+    paddingBottom: '$SampleSubTitlePaddingBottom',
     paddingLeft: width * 0.03,
   },
   titleCardTitle: {
     fontFamily: '$sb',
-    fontSize: '$gudMD',
-    paddingBottom: '$gudSubTitlePaddingBottom',
+    fontSize: '$SampleMD',
+    paddingBottom: '$SampleSubTitlePaddingBottom',
   },
   menuItemBase: {
     flexDirection: 'row',
@@ -383,38 +383,38 @@ export default EStyleSheet.create({
   menuItemText: {
     paddingLeft: width * 0.06,
     fontFamily: '$rg',
-    fontSize: '$gudLG',
+    fontSize: '$SampleLG',
     paddingBottom: height * 0.0015,
   },
   titleCardEditable: {
     fontFamily: '$sb',
-    color: '$gudGreenDark',
+    color: '$SampleGreenDark',
   },
 
   // Text sizes and weight
   textLG: {
-    fontSize: '$gudLG',
+    fontSize: '$SampleLG',
   },
   textMD: {
-    fontSize: '$gudMD',
+    fontSize: '$SampleMD',
   },
   textSM: {
-    fontSize: '$gudSM',
+    fontSize: '$SampleSM',
   },
 
   // Text decorations
   textFocus: {
-    color: '$gudGreenDark',
+    color: '$SampleGreenDark',
   },
 
   // Image styling
-  gudCardImage: {
+  SampleCardImage: {
     resizeMode: 'contain',
     width: (width * 80) / 100,
     height: (height * 30) / 100,
     margin: 10,
   },
-  gudBackgroundImage: {
+  SampleBackgroundImage: {
     width: (width * 70) / 100,
     height: (width * 70) / 100,
     justifyContent: 'center',
@@ -425,25 +425,25 @@ export default EStyleSheet.create({
     height: (width * 10) / 100,
     resizeMode: 'contain',
   },
-  gudImageBackgroundContainer: {
+  SampleImageBackgroundContainer: {
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     marginTop: (height * 29) / 100,
   },
-  gudIcon: {
+  SampleIcon: {
     resizeMode: 'contain',
     width: width * 0.09,
     height: width * 0.09,
   },
-  gudPhoto: {
+  SamplePhoto: {
     resizeMode: 'cover',
     width: width * 0.19,
     height: width * 0.19,
     borderRadius: 50,
   },
-  gudArrowIcon: {
+  SampleArrowIcon: {
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.1,
@@ -473,57 +473,57 @@ export default EStyleSheet.create({
   credentialButton: {
     width: (width * 60) / 100,
     height: (height * 5) / 100,
-    backgroundColor: '$gudWhite',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleWhite',
+    borderRadius: '$SampleBorderRadius',
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
     margin: '2%',
   },
-  gudButton: {
+  SampleButton: {
     width: '$touchableWidth',
     height: (height * 5) / 100,
-    backgroundColor: '$gudWhite',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleWhite',
+    borderRadius: '$SampleBorderRadius',
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
     margin: '2%',
     justifyContent: 'center',
   },
   cardButton: {
     flex: 1,
     height: (height * 5) / 100,
-    backgroundColor: '$gudWhite',
+    backgroundColor: '$SampleWhite',
     borderRadius: '$cardButtonRadius',
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
     marginVertical: '2.5%',
     marginHorizontal: '1%',
     justifyContent: 'space-between',
     alignItems: 'stretch',
   },
   activeBtn: {
-    backgroundColor: '$gudGreenLight',
-    borderColor: '$gudGreenLight',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleGreenLight',
+    borderColor: '$SampleGreenLight',
+    borderRadius: '$SampleBorderRadius',
   },
   inactiveBtn: {
-    backgroundColor: '$gudWhite',
-    borderColor: '$gudGray',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleWhite',
+    borderColor: '$SampleGray',
+    borderRadius: '$SampleBorderRadius',
   },
   inactiveText: {
-    color: '$gudGray',
+    color: '$SampleGray',
   },
   credentialsTouchableActive: {
     height: (height * 5) / 100,
-    borderRadius: '$gudBorderRadius',
+    borderRadius: '$SampleBorderRadius',
     display: 'flex',
     justifyContent: 'center',
   },
   touchableActive: {
     width: '$touchableWidth',
     height: (height * 5) / 100,
-    borderRadius: '$gudBorderRadius',
+    borderRadius: '$SampleBorderRadius',
     display: 'flex',
     justifyContent: 'center',
   },
@@ -535,39 +535,39 @@ export default EStyleSheet.create({
     justifyContent: 'center',
   },
   titleCardEditButton: {
-    backgroundColor: '$gudWhite',
+    backgroundColor: '$SampleWhite',
     margin: '2%',
   },
-  gudMediumButton: {
+  SampleMediumButton: {
     width: width * 0.2,
-    backgroundColor: '$gudWhite',
-    borderRadius: '$gudBorderRadius',
+    backgroundColor: '$SampleWhite',
+    borderRadius: '$SampleBorderRadius',
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
     margin: '2%',
   },
 
   // Input styling
-  gudInput: {
+  SampleInput: {
     width: (width * 80) / 100,
     height: (height * 5) / 100,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
     borderWidth: 1,
-    borderRadius: '$gudBorderRadius',
+    borderRadius: '$SampleBorderRadius',
     paddingLeft: 15,
     margin: '2%',
   },
   valid: {
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
+    borderColor: '$SampleGreenRegular',
   },
   invalid: {
     borderWidth: 1,
     borderColor: 'red',
   },
 
-  // GUD Radio Button
-  gudRadioButtonGroup: {
+  // Sample Radio Button
+  SampleRadioButtonGroup: {
     flexDirection: 'row',
   },
   rbCircle: {
@@ -575,7 +575,7 @@ export default EStyleSheet.create({
     width: 20,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: '$gudGreenDark',
+    borderColor: '$SampleGreenDark',
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: 10,
@@ -584,46 +584,46 @@ export default EStyleSheet.create({
     width: 15,
     height: 15,
     borderRadius: 10,
-    backgroundColor: '$gudGreenMedium',
+    backgroundColor: '$SampleGreenMedium',
   },
 
   // General Styling
-  gudSeparator: {
+  SampleSeparator: {
     position: 'relative',
     width: (width * 8) / 100,
     height: (height * 0.5) / 100,
-    backgroundColor: '$gudGreenDark',
-    borderRadius: '$gudBorderRadius',
-    marginBottom: '$gudSeparatorPaddingBottom',
+    backgroundColor: '$SampleGreenDark',
+    borderRadius: '$SampleBorderRadius',
+    marginBottom: '$SampleSeparatorPaddingBottom',
   },
-  gudItemSeparator: {
+  SampleItemSeparator: {
     position: 'relative',
     width: width * 0.9,
     height: 1,
-    backgroundColor: '$gudGray',
+    backgroundColor: '$SampleGray',
     marginBottom: height * 0.03,
   },
-  gudTitleSeparator: {
+  SampleTitleSeparator: {
     position: 'relative',
     width: width,
     height: 1,
-    backgroundColor: '$gudGray',
+    backgroundColor: '$SampleGray',
     marginBottom: height * 0.03,
   },
-  gudDropDownContainer: {
+  SampleDropDownContainer: {
     width: width * 0.8,
     height: height * 0.05,
   },
-  gudDropDown: {
+  SampleDropDown: {
     borderWidth: 1,
-    borderColor: '$gudGreenRegular',
-    borderRadius: '$gudBorderRadius',
+    borderColor: '$SampleGreenRegular',
+    borderRadius: '$SampleBorderRadius',
   },
   dropDownItem: {
     backgroundColor: '#fff',
   },
 
-  gudDropDownItems: {
+  SampleDropDownItems: {
     backgroundColor: '#fff',
   },
   dropCardContainer: {

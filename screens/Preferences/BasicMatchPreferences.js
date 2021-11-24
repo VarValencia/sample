@@ -56,19 +56,22 @@ class BasicMatchPreferences extends React.Component {
   render() {
     let privacy = (
       <GRadioButtonGroup
-        style={styles.gudRadioButtonGroup}
+        style={styles.SampleRadioButtonGroup}
         options={optMatch}
       />
     );
     let language = (
       <GRadioButtonGroup
-        style={styles.gudRadioButtonGroup}
+        style={styles.SampleRadioButtonGroup}
         options={optLanguage}
       />
     );
     let body = (
       <View style={styles.cardContainerLeft}>
-        <GudText style={[styles.title, {marginTop: '2%'}]} text="Match Básico" />
+        <SampleText
+          style={[styles.title, {marginTop: '2%'}]}
+          text="Match Básico"
+        />
         <TitleCard
           id="Nivel de anonimato"
           title="Nivel de anonimato"
@@ -94,14 +97,17 @@ class BasicMatchPreferences extends React.Component {
               <TouchableHighlight
                 style={[
                   styles.touchableActive,
-                  styles.gudButton,
+                  styles.SampleButton,
                   true ? styles.activeBtn : styles.inactiveBtn,
                 ]}
                 onPress={() => {
                   console.log('you tapped the button Guardar cambios');
                 }}
-                underlayColor={ESS.value('$gudGreenMedium')}>
-                <GudText style={styles.gudButtonText} text="GUARDAR CAMBIOS" />
+                underlayColor={ESS.value('$SampleGreenMedium')}>
+                <SampleText
+                  style={styles.SampleButtonText}
+                  text="GUARDAR CAMBIOS"
+                />
               </TouchableHighlight>
             </View>
           </View>

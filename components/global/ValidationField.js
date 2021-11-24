@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@styles/styles';
-import GudText from './GudText';
+import SampleText from './SampleText';
 import {TextInput, Keyboard} from 'react-native';
 
 class ValidationField extends React.Component {
@@ -42,19 +42,19 @@ class ValidationField extends React.Component {
     }
   }
   render() {
-    var isValid = this.state.isValid
+    var isValid = this.state.isValid;
     return (
       <>
-        <GudText
-          style={[styles.textSM, styles.gudInputText]}
+        <SampleText
+          style={[styles.textSM, styles.SampleInputText]}
           text={this.state.placeholder}
         />
         <TextInput
           ref={this.props.ref}
           style={[
-            this.props.style ? this.props.style : styles.gudInput,
+            this.props.style ? this.props.style : styles.SampleInput,
             isValid ? styles.valid : styles.invalid,
-            this.props.disableAccent ? styles.valid : null
+            this.props.disableAccent ? styles.valid : null,
           ]}
           secureTextEntry={
             this.state.isPassword && this.state.value.length > 0 ? true : false

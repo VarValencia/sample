@@ -3,14 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'GUDMobile' do
+target 'SampleMobile' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'react-native-simple-toast', :path => '../node_modules/react-native-simple-toast'
 
-  target 'GUDMobileTests' do
+  target 'SampleMobileTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,10 +25,10 @@ target 'GUDMobile' do
   end
 end
 
-target 'GUDMobile-tvOS' do
-  # Pods for GUDMobile-tvOS
+target 'SampleMobile-tvOS' do
+  # Pods for SampleMobile-tvOS
 
-  target 'GUDMobile-tvOSTests' do
+  target 'SampleMobile-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

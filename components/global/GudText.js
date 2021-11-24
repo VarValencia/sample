@@ -2,7 +2,7 @@ import React from 'react';
 import {Text} from 'react-native';
 import styles from '@styles/styles';
 
-class GudText extends React.Component {
+class SampleText extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,9 +18,11 @@ class GudText extends React.Component {
 
         return (
           <>
-            <Text style={[styles.gudText, this.props.style]}>
+            <Text style={[styles.SampleText, this.props.style]}>
               {beforeString}
-              <Text style={{color: ESS.value('$gudGreenDark')}}>{accent}</Text>
+              <Text style={{color: ESS.value('$SampleGreenDark')}}>
+                {accent}
+              </Text>
               {afterString}
             </Text>
           </>
@@ -34,14 +36,14 @@ class GudText extends React.Component {
         return (
           <>
             {this.props.accent ? (
-              <Text style={[styles.gudText, this.props.style]}>
+              <Text style={[styles.SampleText, this.props.style]}>
                 {regularText}{' '}
-                <Text style={{color: ESS.value('$gudGreenDark')}}>
+                <Text style={{color: ESS.value('$SampleGreenDark')}}>
                   {accent}
                 </Text>
               </Text>
             ) : (
-              <Text style={[styles.gudText, this.props.style]}>
+              <Text style={[styles.SampleText, this.props.style]}>
                 {originalText}
               </Text>
             )}
@@ -54,4 +56,4 @@ class GudText extends React.Component {
   }
 }
 
-export default GudText;
+export default SampleText;

@@ -20,21 +20,21 @@ class PressCard extends React.Component {
             <TouchableHighlight
               style={[
                 styles.pressCard,
-                {backgroundColor: ESS.value('$gudGreenMedium')},
+                {backgroundColor: ESS.value('$SampleGreenMedium')},
               ]}
               onPress={() => {
                 this.props.onClick() || console.log('sample text');
               }}>
               <View style={styles.pressRight}>
-                <GudText
+                <SampleText
                   style={styles.pressDescription}
                   text={press ? press.category : 'Category'}
                 />
-                <GudText
+                <SampleText
                   style={styles.pressTitle}
                   text={press ? press.title : 'Title'}
                 />
-                <GudText
+                <SampleText
                   style={styles.pressDescription}
                   text={press ? press.description : 'Descripción'}
                 />

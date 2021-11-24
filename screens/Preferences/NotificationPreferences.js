@@ -69,7 +69,7 @@ class NotificationPreferences extends React.Component {
 
     let body = (
       <View style={styles.cardContainerLeft}>
-        <GudText style={styles.title} text="Notificaciones" />
+        <SampleText style={styles.title} text="Notificaciones" />
 
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}

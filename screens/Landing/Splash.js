@@ -20,7 +20,7 @@ const Splash: () => React$Node = () => {
           <View style={styles.cardContainer}>
             <View style={styles.appImageContainer}>
               <Image
-                style={styles.gudCardImage}
+                style={styles.SampleCardImage}
                 source={require('@android/images/LoginScreen.png')}
               />
             </View>

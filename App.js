@@ -28,7 +28,7 @@ import RegisterStepTwo from '@landing/RegisterStepTwo';
 import ConfirmEmail from '@landing/ConfirmEmail';
 
 //MATCH
-import GudAfterMatchScreen from '@match/GudAfterMatchScreen';
+import SampleAfterMatchScreen from '@match/SampleAfterMatchScreen';
 import MatchConfigurationScreen from '@match/MatchConfigurationScreen';
 import LoadingMatch from '@match/LoadingMatch';
 import HelpCenter from '@screens/HelpCenter';
@@ -49,7 +49,7 @@ import EmptyContact from '@screens/EmptyContact';
 import PerfilScreen from '@screens/PerfilScreen';
 import NonFriendProfile from '@screens/NonFriendProfile';
 import Home from '@screens/Home';
-import GudContactScreen from '@screens/GudContactScreen';
+import SampleContactScreen from '@screens/SampleContactScreen';
 import styles from './scss/styles';
 
 const RootStack = createStackNavigator();
@@ -114,8 +114,8 @@ const App: () => React$Node = ({navigator}) => {
             />
             <RootStack.Screen name="LoadingMatch" component={LoadingMatch} />
             <RootStack.Screen
-              name="GudAfterMatchScreen"
-              component={GudAfterMatchScreen}
+              name="SampleAfterMatchScreen"
+              component={SampleAfterMatchScreen}
             />
             <RootStack.Screen name="HelpCenter" component={HelpCenter} />
             <RootStack.Screen name="ConfirmEmail" component={ConfirmEmail} />
@@ -156,8 +156,8 @@ const App: () => React$Node = ({navigator}) => {
             />
             <RootStack.Screen name="Home" component={Home} />
             <RootStack.Screen
-              name="GudContactScreen"
-              component={GudContactScreen}
+              name="SampleContactScreen"
+              component={SampleContactScreen}
             />
           </RootStack.Navigator>
         </NavigationContainer>
@@ -170,13 +170,13 @@ const App: () => React$Node = ({navigator}) => {
       <Appbar style={styles.toolbar}>
         <Appbar.Action
           style={styles.toolbarIcon}
-          color={ESS.value('$gudGreenDarkest')}
+          color={ESS.value('$SampleGreenDarkest')}
           icon={require('@icons/HomeIcon.png')}
           onPress={() => NavigationService.navigateTo('Home')}
         />
         <Appbar.Action
           style={styles.toolbarIcon}
-          color={ESS.value('$gudGreenDarkest')}
+          color={ESS.value('$SampleGreenDarkest')}
           icon={require('@icons/MatchIcon.png')}
           onPress={() =>
             NavigationService.navigateTo('MatchConfigurationScreen')
@@ -185,13 +185,13 @@ const App: () => React$Node = ({navigator}) => {
         <Appbar.Action
           style={styles.toolbarIcon}
           icon={require('@icons/ChatIcon.png')}
-          color={ESS.value('$gudGreenDarkest')}
-          onPress={() => NavigationService.navigateTo('GudContactScreen')}
+          color={ESS.value('$SampleGreenDarkest')}
+          onPress={() => NavigationService.navigateTo('SampleContactScreen')}
         />
         <Appbar.Action
           style={styles.toolbarProfile}
           icon={require('@icons/placeholder.png')}
-          color={ESS.value('$gudGreenDarkest')}
+          color={ESS.value('$SampleGreenDarkest')}
           onPress={() => NavigationService.navigateTo('PerfilScreen')}
         />
       </Appbar>

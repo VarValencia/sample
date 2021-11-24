@@ -20,15 +20,15 @@ import AfterMatchRating from '@components/AfterMatchRating';
 
 const opinion = [
   {
-    name: 'Genial, guardar a este Guder',
+    name: 'Genial, guardar a este Sampleer',
     key: 1,
   },
   {
-    name: 'Bien, pero prefiero probar con otros guders',
+    name: 'Bien, pero prefiero probar con otros Sampleers',
     key: 2,
   },
   {
-    name: 'Mal, problemas con el guder',
+    name: 'Mal, problemas con el Sampleer',
     key: 3,
   },
   {
@@ -36,7 +36,7 @@ const opinion = [
     key: 4,
   },
 ];
-class GudAfterMatchScreen extends React.Component {
+class SampleAfterMatchScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,19 +77,19 @@ class GudAfterMatchScreen extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <ImageBackground
-                source={require('@icons/GudCircles.png')}
-                style={styles.gudBackgroundImage}>
-                <View style={styles.gudImageBackgroundContainer}>
-                  <GudText
+                source={require('@icons/SampleCircles.png')}
+                style={styles.SampleBackgroundImage}>
+                <View style={styles.SampleImageBackgroundContainer}>
+                  <SampleText
                     style={styles.title}
                     accent={true}
                     text="Hey Pablo"
                   />
-                  <View style={styles.gudSeparator} />
-                  <GudText
+                  <View style={styles.SampleSeparator} />
+                  <SampleText
                     style={styles.sectionDescription}
                     accent={true}
-                    text="¿Cómo ha sido la experiencia con este Guder?"
+                    text="¿Cómo ha sido la experiencia con este Sampleer?"
                   />
                 </View>
               </ImageBackground>
@@ -107,16 +107,16 @@ class GudAfterMatchScreen extends React.Component {
                   disabled={!isValid}
                   style={[
                     styles.touchableActive,
-                    styles.gudButton,
+                    styles.SampleButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     this.navigateTo('LoadingMatch');
                   }}>
-                  <GudText
+                  <SampleText
                     style={[
-                      styles.gudButtonText,
+                      styles.SampleButtonText,
                       isValid ? null : styles.inactiveText,
                     ]}
                     text="Aceptar"
@@ -131,4 +131,4 @@ class GudAfterMatchScreen extends React.Component {
   }
 }
 
-export default GudAfterMatchScreen;
+export default SampleAfterMatchScreen;

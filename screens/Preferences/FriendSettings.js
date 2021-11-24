@@ -9,7 +9,7 @@
 import React from 'react';
 import {View, Image, Switch, StatusBar} from 'react-native';
 import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
-import GudText from '@components/global/GudText';
+import SampleText from '@components/global/SampleText';
 import DropDownItem from 'react-native-drop-down-item';
 import styles from '../../scss/styles';
 
@@ -29,7 +29,7 @@ class FriendSettings extends React.Component {
     let notifBody = (
       <View style={styles.dropDownCard}>
         <View style={styles.dropCardContainer}>
-          <GudText
+          <SampleText
             style={styles.textMD}
             text={'Recibe notificaciones cuando el user esté disponible'}
           />
@@ -43,7 +43,7 @@ class FriendSettings extends React.Component {
     let restringeBody = (
       <View style={styles.dropDownCard}>
         <View style={styles.dropCardContainer}>
-          <GudText
+          <SampleText
             style={styles.textMD}
             text={
               'Limita la interacción con este usuario sin necesidad de denunciar o eliminar contacto'
@@ -63,7 +63,7 @@ class FriendSettings extends React.Component {
           {/* <View style={styles.cardContainer}> */}
           <ValidationField
             style={styles.textInputContainer}
-            placeholder={'¿Problemas con el Gudder? Cuéntanos qué ha pasado'}
+            placeholder={'¿Problemas con el Sampleder? Cuéntanos qué ha pasado'}
             maxLength={30}
             minLength={3}
             multiline={true}
@@ -77,28 +77,28 @@ class FriendSettings extends React.Component {
     let deleteBody = (
       <View style={styles.dropDownCard}>
         <View style={styles.dropTextContainer}>
-          <GudText
+          <SampleText
             style={styles.textSM}
             text={'¿Estás seguro de que deseas eliminar este contacto?'}
           />
         </View>
         <View style={styles.containerRow}>
           <TouchableHighlight
-            underlayColor={ESS.value('$gudGreenLight')}
-            style={[styles.gudMediumButton, styles.inactiveBtn]}
+            underlayColor={ESS.value('$SampleGreenLight')}
+            style={[styles.SampleMediumButton, styles.inactiveBtn]}
             onPress={() => {
               console.log('Es eliminado');
             }}>
-            <GudText style={styles.gudButtonText} text={'Si eliminar'} />
+            <SampleText style={styles.SampleButtonText} text={'Si eliminar'} />
           </TouchableHighlight>
 
           <TouchableHighlight
-            underlayColor={ESS.value('$gudGreenLight')}
-            style={[styles.gudMediumButton, styles.activeBtn]}
+            underlayColor={ESS.value('$SampleGreenLight')}
+            style={[styles.SampleMediumButton, styles.activeBtn]}
             onPress={() => {
               console.log('No es eliminado');
             }}>
-            <GudText style={styles.gudButtonText} text={'Mejor no'} />
+            <SampleText style={styles.SampleButtonText} text={'Mejor no'} />
           </TouchableHighlight>
         </View>
       </View>
@@ -113,7 +113,10 @@ class FriendSettings extends React.Component {
           visibleImage={require('@icons/downArrow.png')}
           header={
             <View>
-              <GudText style={styles.titleCardText} text={'Notificaciones'} />
+              <SampleText
+                style={styles.titleCardText}
+                text={'Notificaciones'}
+              />
             </View>
           }>
           {notifBody}
@@ -126,7 +129,7 @@ class FriendSettings extends React.Component {
           visibleImage={require('@icons/downArrow.png')}
           header={
             <View>
-              <GudText style={styles.titleCardText} text={'Restringir'} />
+              <SampleText style={styles.titleCardText} text={'Restringir'} />
             </View>
           }>
           {restringeBody}
@@ -139,7 +142,7 @@ class FriendSettings extends React.Component {
           visibleImage={require('@icons/downArrow.png')}
           header={
             <View>
-              <GudText style={styles.titleCardText} text={'Denunciar'} />
+              <SampleText style={styles.titleCardText} text={'Denunciar'} />
             </View>
           }>
           {reportBody}
@@ -151,7 +154,7 @@ class FriendSettings extends React.Component {
           visibleImage={require('@icons/downArrow.png')}
           header={
             <View>
-              <GudText
+              <SampleText
                 style={styles.titleCardText}
                 text={'Eliminar contacto'}
               />
@@ -161,7 +164,7 @@ class FriendSettings extends React.Component {
         </DropDownItem>
         <View style={styles.appImageContainer}>
           <Image
-            style={styles.gudCardImage}
+            style={styles.SampleCardImage}
             source={require('@icons/ConfigIcon.png')}
           />
         </View>

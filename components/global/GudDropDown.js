@@ -4,7 +4,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 import styles from '../../scss/styles';
 
-class GudDropDown extends React.Component {
+class SampleDropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class GudDropDown extends React.Component {
         value: item.label.toLowerCase(),
         icon: () =>
           item.icon ? (
-            <Image style={styles.gudIcon} source={item.icon} />
+            <Image style={styles.SampleIcon} source={item.icon} />
           ) : null,
         hidden: index == 0 ? true : false,
       };
@@ -38,8 +38,8 @@ class GudDropDown extends React.Component {
       <DropDownPicker
         items={this.selections()}
         defaultValue={this.state.value}
-        containerStyle={styles.gudDropDownContainer}
-        style={[styles.gudDropDown]}
+        containerStyle={styles.SampleDropDownContainer}
+        style={[styles.SampleDropDown]}
         labelStyle={[
           {fontFamily: ESS.value('$rg')},
           this.props.fontFamily,
@@ -49,11 +49,11 @@ class GudDropDown extends React.Component {
         itemStyle={{
           justifyContent: 'flex-start',
         }}
-        dropDownStyle={styles.gudDropDownItems}
+        dropDownStyle={styles.SampleDropDownItems}
         onChangeItem={(item) => this.handleChange(item)}
       />
     );
   }
 }
 
-export default GudDropDown;
+export default SampleDropDown;

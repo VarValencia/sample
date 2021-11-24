@@ -26,18 +26,18 @@ class MatchConfigurator extends React.Component {
       ' eliges para este match:',
     ];
     var processedString = prebuiltString.join('');
-    var accentEnd = processedString.indexOf(prebuiltString[2].substring(0, 5))
+    var accentEnd = processedString.indexOf(prebuiltString[2].substring(0, 5));
 
     return {processedString, accentEnd};
   }
 
-  getAccentEnd(key){
+  getAccentEnd(key) {
     return this.buildString(key).accentEnd;
   }
-  
+
   render() {
     const MENUS = ['privacy', 'language', 'age'];
-    
+
     let privacy = [
       {
         name: 'Chat',
@@ -104,7 +104,7 @@ class MatchConfigurator extends React.Component {
           renderItem={({item}) => {
             return (
               <View style={styles.carouselCard}>
-                <GudText
+                <SampleText
                   style={[{flexShrink: 1, padding: 10}, styles.textMD]}
                   slice={[15, this.getAccentEnd(item.key)]}
                   text={this.buildString(item.key).processedString}

@@ -15,15 +15,15 @@ class UserProfileCard extends React.Component {
           source={this.props.source || require('@icons/placeholder.png')}
         />
         <View style={{flexShrink: 1}}>
-          <GudText
+          <SampleText
             style={styles.userName}
             text={user ? user.name : 'Usuario'}
           />
-          <GudText
+          <SampleText
             style={styles.userNickname}
             text={user ? user.description : 'Descripción'}
           />
-          <GudText
+          <SampleText
             style={styles.userDescription}
             text={user ? user.bio : 'Bio'}
           />

@@ -41,26 +41,29 @@ class NonFriendProfile extends React.Component {
     // Dummy component
     let dummyComp = (
       <>
-        <GudText style={styles.title} text="Perfil" />
-        <View style={styles.gudTitleSeparator} />
+        <SampleText style={styles.title} text="Perfil" />
+        <View style={styles.SampleTitleSeparator} />
         {profileCard}
         <View style={styles.containerRow}>
           <TouchableHighlight
             style={[styles.cardButton, styles.touchableCardActive]}
-            underlayColor={ESS.value('$gudGreenMedium')}
+            underlayColor={ESS.value('$SampleGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Contact');
               this.navigateTo('FriendSettings');
             }}>
-            <GudText style={styles.gudButtonText} text="Contacto GUD" />
+            <SampleText
+              style={styles.SampleButtonText}
+              text="Contacto Sample"
+            />
           </TouchableHighlight>
           <TouchableHighlight
             style={[styles.cardButton, styles.touchableCardActive]}
-            underlayColor={ESS.value('$gudGreenMedium')}
+            underlayColor={ESS.value('$SampleGreenMedium')}
             onPress={() => {
               console.log('you tapped the button Conversar');
             }}>
-            <GudText style={styles.gudButtonText} text="Conversar" />
+            <SampleText style={styles.SampleButtonText} text="Conversar" />
           </TouchableHighlight>
         </View>
         <TitleCard

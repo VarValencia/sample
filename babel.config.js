@@ -16,7 +16,7 @@ module.exports = {
           '@components': './components',
           '@icons': './iconos_app',
           '@scripts': './scripts',
-          '@gud': './components/global',
+          '@Sample': './components/global',
         },
       },
     ],

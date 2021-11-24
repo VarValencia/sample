@@ -38,8 +38,8 @@ class PerfilScreen extends React.Component {
     // Dummy component
     let dummyComp = (
       <>
-        <GudText style={styles.title} text="Perfil" />
-        <View style={styles.gudTitleSeparator} />
+        <SampleText style={styles.title} text="Perfil" />
+        <View style={styles.SampleTitleSeparator} />
         {profileCard}
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
@@ -67,20 +67,15 @@ class PerfilScreen extends React.Component {
           title={'Idioma nativo'}
           text={dummyText}
         />
-        <View
-          style={[
-            styles.emergencyCallContainer
-          ]}>
-          <GudText
-            text={'Mensaje de llamada a la acción'}
-          />
+        <View style={[styles.emergencyCallContainer]}>
+          <SampleText text={'Mensaje de llamada a la acción'} />
           <TouchableHighlight
-            style={[styles.gudButton]}
-            underlayColor={ESS.value('$gudGreenMedium')}
+            style={[styles.SampleButton]}
+            underlayColor={ESS.value('$SampleGreenMedium')}
             onPress={() => {
               console.log('Boton');
             }}>
-            <GudText style={styles.gudButtonText} text="Boton" />
+            <SampleText style={styles.SampleButtonText} text="Boton" />
           </TouchableHighlight>
         </View>
       </>

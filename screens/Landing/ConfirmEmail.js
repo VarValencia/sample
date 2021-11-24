@@ -33,17 +33,17 @@ class ConfirmEmail extends React.Component {
         <SafeAreaView>
           <View style={styles.bodyLogin}>
             <View style={styles.cardContainerLeft}>
-              <GudText
+              <SampleText
                 style={[styles.title, styles.textLG]}
                 text="¡Enhorabuena!"
               />
-              <View style={styles.gudSeparator} />
-              <GudText
+              <View style={styles.SampleSeparator} />
+              <SampleText
                 style={styles.sectionDescription}
                 accent={true}
-                text="Estás a un paso de ser gud"
+                text="Estás a un paso de ser Sample"
               />
-              <GudText
+              <SampleText
                 style={styles.textMD}
                 text="Ya solo te queda validar tu cuenta con el email que te hemos enviado"
               />
@@ -51,7 +51,7 @@ class ConfirmEmail extends React.Component {
             <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
                 <Image
-                  style={styles.gudCardImage}
+                  style={styles.SampleCardImage}
                   source={require('@icons/SignupLogo.png')}
                 />
               </View>
@@ -61,13 +61,16 @@ class ConfirmEmail extends React.Component {
                 <TouchableHighlight
                   style={[
                     styles.touchableActive,
-                    styles.gudButton,
+                    styles.SampleButton,
                     true ? styles.activeBtn : styles.inactiveBtn,
                   ]}
                   onPress={() => {
                     this.onSubmit();
                   }}>
-                  <GudText style={styles.gudButtonText} text="Finalizar" />
+                  <SampleText
+                    style={styles.SampleButtonText}
+                    text="Finalizar"
+                  />
                 </TouchableHighlight>
               </View>
             </View>

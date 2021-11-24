@@ -11,7 +11,7 @@ import {View, StatusBar, TouchableHighlight} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import styles from '../scss/styles';
 
-class GudContactScreen extends React.Component {
+class SampleContactScreen extends React.Component {
   constructor(props) {
     super(props);
 
@@ -50,4 +50,4 @@ class GudContactScreen extends React.Component {
   }
 }
 
-export default GudContactScreen;
+export default SampleContactScreen;

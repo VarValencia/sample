@@ -24,44 +24,44 @@ class HelpCenter extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
-                <Image source={require('@icons/GudMatchLogo.png')} />
+                <Image source={require('@icons/SampleMatchLogo.png')} />
               </View>
-              <GudText
+              <SampleText
                 style={{fontFamily: ESS.value('$sb')}}
-                text="Version 0.00.0.01 de Gud Match."
+                text="Version 0.00.0.01 de Sample Match."
               />
-              <GudText
+              <SampleText
                 style={styles.textSM}
-                text="©2020 Gud Match y Gud Company."
+                text="©2020 Sample Match y Sample Company."
               />
-              <GudText
+              <SampleText
                 style={[styles.textSM, {fontFamily: ESS.value('$sb')}]}
-                text="Esta es la última versión de Gud match"
+                text="Esta es la última versión de Sample match"
               />
               <View style={styles.buttonContainer}>
                 <TouchableHighlight
                   style={[
-                    styles.gudButton,
+                    styles.SampleButton,
                     styles.touchableActive,
                     styles.activeBtn,
                   ]}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     console.log('you tapped the button HelpCenter');
                   }}>
-                  <GudText
-                    style={styles.gudButtonText}
+                  <SampleText
+                    style={styles.SampleButtonText}
                     text="Ir al centro de ayuda"
                   />
                 </TouchableHighlight>
                 <TouchableHighlight
-                  style={[styles.gudButton, styles.touchableActive]}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  style={[styles.SampleButton, styles.touchableActive]}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     console.log('you tapped the button technic support');
                   }}>
-                  <GudText
-                    style={styles.gudButtonText}
+                  <SampleText
+                    style={styles.SampleButtonText}
                     text="Contacta al soporte técnico"
                   />
                 </TouchableHighlight>

@@ -37,9 +37,9 @@ class Home extends React.Component {
     );
 
     let press2 = {
-      title: 'Las lineas rojas de Gud',
+      title: 'Las lineas rojas de Sample',
       description:
-        'Hay unos límites en todas las aplicaciones de Gud que en ningún caso pueden ser traspasados',
+        'Hay unos límites en todas las aplicaciones de Sample que en ningún caso pueden ser traspasados',
     };
     let pressCard2 = (
       <PressCard

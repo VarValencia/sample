@@ -17,14 +17,14 @@ class ContactPhoto extends React.Component {
         {this.props.online ? (
           <View>
             <TouchableHighlight
-              style={[styles.gudPhoto, styles.activeBtn]}
-              underlayColor={ESS.value('$gudGreenMedium')}
+              style={[styles.SamplePhoto, styles.activeBtn]}
+              underlayColor={ESS.value('$SampleGreenMedium')}
               onPress={() => {
                 this.props.onClick()
                   ? this.props.onClick()
                   : console.log('sample text');
               }}>
-              <View style={styles.gudIcon}>
+              <View style={styles.SampleIcon}>
                 <ImageBackground
                   style={styles.profilePicture}
                   source={
@@ -41,12 +41,12 @@ class ContactPhoto extends React.Component {
         ) : (
           <View>
             <TouchableHighlight
-              style={[styles.gudPhoto, styles.activeBtn]}
-              underlayColor={ESS.value('$gudGreenMedium')}
+              style={[styles.SamplePhoto, styles.activeBtn]}
+              underlayColor={ESS.value('$SampleGreenMedium')}
               onPress={() => {
                 this.props.onClick() || console.log('sample text');
               }}>
-              <View style={styles.gudIcon}>
+              <View style={styles.SampleIcon}>
                 <ImageBackground
                   style={[styles.profilePicture, styles.inactiveBtn]}
                   source={

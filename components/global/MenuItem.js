@@ -40,7 +40,7 @@ class MenuItem extends React.Component {
     return (
       <TouchableHighlight
         style={styles.menuItemBase}
-        underlayColor={ESS.value('$gudLightGray')}
+        underlayColor={ESS.value('$SampleLightGray')}
         onPress={() => {
           this.props.expansive
             ? this.toggle()
@@ -49,12 +49,12 @@ class MenuItem extends React.Component {
         <>
           <View style={styles.menuItemContainer}>
             <Image
-              style={styles.gudIcon}
+              style={styles.SampleIcon}
               source={this.props.icon || require('@icons/placeholder.png')}
             />
-            <GudText style={styles.menuItemText} text={this.props.text} />
+            <SampleText style={styles.menuItemText} text={this.props.text} />
           </View>
-          <View style={styles.gudArrowIcon}>
+          <View style={styles.SampleArrowIcon}>
             <Image source={icon} />
           </View>
         </>

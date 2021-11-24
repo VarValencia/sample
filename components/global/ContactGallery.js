@@ -12,7 +12,7 @@ class ContactGallery extends React.Component {
     return (
       <>
         <View style={styles.cardContainer}>
-          <GudText />
+          <SampleText />
           <View style={styles.containerGallery}>
             <ContactPhoto
               onClick={() => {

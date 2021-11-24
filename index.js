@@ -7,19 +7,19 @@ import App from './App';
 import {name as appName} from './app.json';
 
 // Component imports
-import GudText from '@gud/GudText';
-import GRadioButtonGroup from '@gud/GRadioButtonGroup';
-import ValidationField from '@gud/ValidationField';
-import TitleCard from '@gud/TitleCard';
-import GudDropDown from '@gud/GudDropDown';
-import MenuItem from '@gud/MenuItem';
-import UserProfileCard from '@gud/profile_items/UserProfileCard';
+import SampleText from '@Sample/SampleText';
+import GRadioButtonGroup from '@Sample/GRadioButtonGroup';
+import ValidationField from '@Sample/ValidationField';
+import TitleCard from '@Sample/TitleCard';
+import SampleDropDown from '@Sample/SampleDropDown';
+import MenuItem from '@Sample/MenuItem';
+import UserProfileCard from '@Sample/profile_items/UserProfileCard';
 
-import PressCard from '@gud/PressCard';
-import ContactPhoto from '@gud/ContactPhoto';
-import ContactGallery from '@gud/ContactGallery';
-import HomeCard from '@gud/HomeCard';
-import Header from '@gud/Header';
+import PressCard from '@Sample/PressCard';
+import ContactPhoto from '@Sample/ContactPhoto';
+import ContactGallery from '@Sample/ContactGallery';
+import HomeCard from '@Sample/HomeCard';
+import Header from '@Sample/Header';
 // Scripts import
 import AuthenticationService from '@scripts/authentication/AuthenticationService';
 
@@ -32,11 +32,11 @@ global.styles = styles;
 global.ESS = EStyleSheet;
 
 // Global components
-global.GudText = GudText;
+global.SampleText = SampleText;
 global.GRadioButtonGroup = GRadioButtonGroup;
 global.ValidationField = ValidationField;
 global.TitleCard = TitleCard;
-global.GudDropDown = GudDropDown;
+global.SampleDropDown = SampleDropDown;
 global.MenuItem = MenuItem;
 global.UserProfileCard = UserProfileCard;
 global.PressCard = PressCard;

@@ -16,13 +16,13 @@ class TitleCard extends React.Component {
 
   render() {
     let title = (
-      <GudText
+      <SampleText
         style={[styles.titleCardTitle, {flexShrink: 1}]}
         text={this.props.title}
       />
     );
     let text = (
-      <GudText
+      <SampleText
         style={[styles.titleCardText, {flexShrink: 1}]}
         text={this.props.text}
       />
@@ -34,7 +34,7 @@ class TitleCard extends React.Component {
         <View style={[styles.cardContainerLeft]}>
           <View style={{flexDirection: this.props.direction}}>
             <View style={styles.flatCardItem}>
-              <View style={[styles.gudItemSeparator]} />
+              <View style={[styles.SampleItemSeparator]} />
               <View style={styles.titleCardContainer}>
                 {this.props.title ? title : null}
                 {this.props.text ? text : null}
@@ -46,11 +46,11 @@ class TitleCard extends React.Component {
             <View style={styles.containerButtonRight}>
               <TouchableHighlight
                 style={styles.titleCardEditButton}
-                underlayColor={ESS.value('$gudWhite')}
+                underlayColor={ESS.value('$SampleWhite')}
                 onPress={() => {
                   this.handleEdit();
                 }}>
-                <GudText
+                <SampleText
                   style={styles.titleCardEditable}
                   text={this.props.buttonText}
                 />

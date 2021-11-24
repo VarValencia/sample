@@ -25,19 +25,19 @@ class StartConfiguring extends React.Component {
             <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
                 <Image
-                  style={styles.gudCardImage}
+                  style={styles.SampleCardImage}
                   source={require('@icons/firstSettings.png')}
                 />
               </View>
-              <GudText
+              <SampleText
                 style={styles.sectionDescription}
                 text="¡Empieza ahora a configurar tu cuenta! "
               />
-              <GudText
+              <SampleText
                 style={{textAlign: 'center'}}
                 text="Eres lo que muestras"
               />
-              <GudText
+              <SampleText
                 style={{textAlign: 'center'}}
                 text="Edita tu perfil con sentido común, si no sabes como, te ofrecemos diez consejos prácticos de como hacerlo"
               />
@@ -45,26 +45,29 @@ class StartConfiguring extends React.Component {
             <View style={styles.buttonContainer}>
               <TouchableHighlight
                 style={[
-                  styles.gudButton,
+                  styles.SampleButton,
                   styles.touchableActive,
                   styles.activeBtn,
                 ]}
-                underlayColor={ESS.value('$gudGreenMedium')}
+                underlayColor={ESS.value('$SampleGreenMedium')}
                 onPress={() => {
                   console.log('you tapped the button HelpCenter');
                 }}>
-                <GudText
-                  style={styles.gudButtonText}
+                <SampleText
+                  style={styles.SampleButtonText}
                   text="Configurar cuenta"
                 />
               </TouchableHighlight>
               <TouchableHighlight
-                style={[styles.gudButton, styles.touchableActive]}
-                underlayColor={ESS.value('$gudGreenMedium')}
+                style={[styles.SampleButton, styles.touchableActive]}
+                underlayColor={ESS.value('$SampleGreenMedium')}
                 onPress={() => {
                   console.log('you tapped the button technic support');
                 }}>
-                <GudText style={styles.gudButtonText} text="Leer el artículo" />
+                <SampleText
+                  style={styles.SampleButtonText}
+                  text="Leer el artículo"
+                />
               </TouchableHighlight>
             </View>
           </View>

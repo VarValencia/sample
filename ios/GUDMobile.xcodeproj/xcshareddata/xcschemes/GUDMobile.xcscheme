@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "GUDMobile.app"
-               BlueprintName = "GUDMobile"
-               ReferencedContainer = "container:GUDMobile.xcodeproj">
+               BuildableName = "SampleMobile.app"
+               BlueprintName = "SampleMobile"
+               ReferencedContainer = "container:SampleMobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "GUDMobileTests.xctest"
-               BlueprintName = "GUDMobileTests"
-               ReferencedContainer = "container:GUDMobile.xcodeproj">
+               BuildableName = "SampleMobileTests.xctest"
+               BlueprintName = "SampleMobileTests"
+               ReferencedContainer = "container:SampleMobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "GUDMobile.app"
-            BlueprintName = "GUDMobile"
-            ReferencedContainer = "container:GUDMobile.xcodeproj">
+            BuildableName = "SampleMobile.app"
+            BlueprintName = "SampleMobile"
+            ReferencedContainer = "container:SampleMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "GUDMobile.app"
-            BlueprintName = "GUDMobile"
-            ReferencedContainer = "container:GUDMobile.xcodeproj">
+            BuildableName = "SampleMobile.app"
+            BlueprintName = "SampleMobile"
+            ReferencedContainer = "container:SampleMobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -77,12 +77,12 @@ class RegisterStepTwo extends React.Component {
               <View style={styles.appLogoContainer}>
                 <Image
                   style={styles.appLogo}
-                  source={require('@icons/4x/GUDLogo.png')}
+                  source={require('@icons/4x/SampleLogo.png')}
                 />
               </View>
-              <GudText style={styles.title} text="¡BIENVENIDO!" />
-              <View style={styles.gudSeparator} />
-              <GudText
+              <SampleText style={styles.title} text="¡BIENVENIDO!" />
+              <View style={styles.SampleSeparator} />
+              <SampleText
                 style={styles.sectionDescription}
                 accent={true}
                 text="Completa tu cuenta para finalizar con el registro"
@@ -121,19 +121,19 @@ class RegisterStepTwo extends React.Component {
               <View style={styles.buttonContainer}>
                 <View
                   style={[
-                    styles.gudButton,
+                    styles.SampleButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}>
                   <TouchableHighlight
                     disabled={!isValid}
                     style={styles.touchableActive}
-                    underlayColor={ESS.value('$gudGreenMedium')}
+                    underlayColor={ESS.value('$SampleGreenMedium')}
                     onPress={() => {
                       this.onSubmit();
                     }}>
-                    <GudText
+                    <SampleText
                       style={[
-                        styles.gudButtonText,
+                        styles.SampleButtonText,
                         isValid ? null : styles.inactiveText,
                       ]}
                       text="Registrarse"

@@ -60,12 +60,12 @@ class LoginScreen extends React.Component {
               <View style={styles.appLogoContainer}>
                 <Image
                   style={styles.appLogo}
-                  source={require('@icons/4x/GUDLogo.png')}
+                  source={require('@icons/4x/SampleLogo.png')}
                 />
               </View>
-              <GudText style={styles.title} text="¡BIENVENIDO!" />
-              <View style={styles.gudSeparator} />
-              <GudText
+              <SampleText style={styles.title} text="¡BIENVENIDO!" />
+              <View style={styles.SampleSeparator} />
+              <SampleText
                 style={styles.sectionDescription}
                 accent={true}
                 text="Introduce Email y contraseña para acceder a tu cuenta"
@@ -94,10 +94,10 @@ class LoginScreen extends React.Component {
                   disabled={!isValid}
                   style={[
                     styles.touchableActive,
-                    styles.gudButton,
+                    styles.SampleButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     console.log('User', this.state);
                     AuthenticationService.login({
@@ -110,9 +110,9 @@ class LoginScreen extends React.Component {
                     //   Toast.LONG,
                     // );
                   }}>
-                  <GudText
+                  <SampleText
                     style={[
-                      styles.gudButtonText,
+                      styles.SampleButtonText,
                       isValid ? null : styles.inactiveText,
                     ]}
                     text="Acceder"

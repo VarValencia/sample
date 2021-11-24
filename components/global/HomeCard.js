@@ -12,12 +12,12 @@ class HomeCard extends React.Component {
       <>
         <View style={styles.pressCard}>
           <View style={styles.pressLeft}>
-            <GudText
+            <SampleText
               style={styles.pressTitle}
               text={press.title ? press.title : 'título'}
               accent={true}
             />
-            <GudText
+            <SampleText
               style={styles.pressDescription}
               text={press.description ? press.description : 'descripción'}
             />

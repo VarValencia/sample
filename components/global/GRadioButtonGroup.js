@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 
 import styles from '@styles/styles';
-import GudText from './GudText';
+import SampleText from './SampleText';
 
 class GRadioButtonGroup extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class GRadioButtonGroup extends React.Component {
     });
   }
   onPress(key) {
-    this.setState({ selectedKey: key });
+    this.setState({selectedKey: key});
     this.handleRadioButton(key);
   }
   handleRadioButton(key) {
@@ -36,23 +36,28 @@ class GRadioButtonGroup extends React.Component {
       return entry;
     });
     this.props.getKey(key);
-    this.setState({ options: options });
+    this.setState({options: options});
   }
   render() {
-    const { options } = this.state;
+    const {options} = this.state;
     var radioButtons = options.map((option) => {
       return (
-        <View style={[styles.gudRadioButtonGroup, {marginVertical: this.props.spaced}]} key={option.key}>
+        <View
+          style={[
+            styles.SampleRadioButtonGroup,
+            {marginVertical: this.props.spaced},
+          ]}
+          key={option.key}>
           <TouchableOpacity
             style={styles.rbCircle}
             onPress={() => this.onPress(option.key)}>
             {option.checked ? (
               <View style={styles.rbCheckedCircle} />
             ) : (
-                <View />
-              )}
+              <View />
+            )}
           </TouchableOpacity>
-          <GudText style={this.props.style} text={option.name} />
+          <SampleText style={this.props.style} text={option.name} />
         </View>
       );
     });

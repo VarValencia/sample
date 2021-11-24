@@ -53,16 +53,16 @@ class MatchConfigurationScreen extends React.Component {
           <View style={styles.body}>
             <View style={styles.cardContainer}>
               <ImageBackground
-                source={require('@icons/GudCircles.png')}
-                style={styles.gudBackgroundImage}>
-                <View style={styles.gudImageBackgroundContainer}>
-                  <GudText
+                source={require('@icons/SampleCircles.png')}
+                style={styles.SampleBackgroundImage}>
+                <View style={styles.SampleImageBackgroundContainer}>
+                  <SampleText
                     style={styles.title}
                     accent={true}
                     text="Configura tu Match"
                   />
-                  <View style={styles.gudSeparator} />
-                  <GudText
+                  <View style={styles.SampleSeparator} />
+                  <SampleText
                     style={styles.sectionDescription}
                     text="Selecciona los filtros con los que encontrar a una persona para conversar en este mismo momento"
                   />
@@ -80,16 +80,16 @@ class MatchConfigurationScreen extends React.Component {
                   disabled={isValid}
                   style={[
                     styles.touchableActive,
-                    styles.gudButton,
+                    styles.SampleButton,
                     isValid ? styles.activeBtn : styles.inactiveBtn,
                   ]}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     this.navigateTo('LoadingMatch');
                   }}>
-                  <GudText
+                  <SampleText
                     style={[
-                      styles.gudButtonText,
+                      styles.SampleButtonText,
                       isValid ? null : styles.inactiveText,
                     ]}
                     text="Aceptar"

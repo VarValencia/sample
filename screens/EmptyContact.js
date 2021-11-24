@@ -30,15 +30,15 @@ class EmptyContact extends React.Component {
             <View style={styles.cardContainer}>
               <View style={styles.appImageContainer}>
                 <Image
-                  style={styles.gudCardImage}
+                  style={styles.SampleCardImage}
                   source={require('@icons/emptyContacts.png')}
                 />
               </View>
-              <GudText
+              <SampleText
                 style={styles.sectionDescription}
                 text="¡Ups! Parece que todavía no tienes ningún contacto"
               />
-              <GudText
+              <SampleText
                 style={{textAlign: 'center'}}
                 text="Comienza a conocer gente nueva y a agregarlos como amigos para poder consultar el historial de conversaciones aquí"
               />
@@ -47,15 +47,15 @@ class EmptyContact extends React.Component {
                 <TouchableHighlight
                   style={[
                     styles.touchableActive,
-                    styles.gudButton,
+                    styles.SampleButton,
                     true ? styles.activeBtn : styles.inactiveBtn,
                   ]}
                   onPress={() => {
                     console.log('pressed button');
                     this.navigateTo('MatchConfigurationScreen');
                   }}>
-                  <GudText
-                    style={styles.gudButtonText}
+                  <SampleText
+                    style={styles.SampleButtonText}
                     text="¡Vamos a hacer Match!"
                   />
                 </TouchableHighlight>

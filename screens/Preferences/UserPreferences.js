@@ -37,8 +37,8 @@ class UserPreferences extends React.Component {
     // Dummy component
     let dummyComp = (
       <>
-        <GudText style={styles.title} text="Perfil" />
-        <View style={styles.gudTitleSeparator} />
+        <SampleText style={styles.title} text="Perfil" />
+        <View style={styles.SampleTitleSeparator} />
         {profileCard}
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}

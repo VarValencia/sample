@@ -51,7 +51,7 @@ class AccountPreferences extends React.Component {
     // Dummy component
     let dummyComp = (
       <View style={styles.cardContainerLeft}>
-        <GudText style={styles.title} text="Cuenta" />
+        <SampleText style={styles.title} text="Cuenta" />
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="Correo"
@@ -69,12 +69,12 @@ class AccountPreferences extends React.Component {
           buttonText="Cambiar contraseña"
         />
         <View style={styles.cardContainerLeft}>
-          <GudText style={styles.SM} text="Tipo de licencia" />
+          <SampleText style={styles.SM} text="Tipo de licencia" />
         </View>
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="License"
-          title={'Subscripición Gud Match'}
+          title={'Subscripición Sample Match'}
           text={'Finalización del periodo de prueba en:'}
           body={licenseBody}
           editable
@@ -83,7 +83,7 @@ class AccountPreferences extends React.Component {
         <TitleCard
           onEdit={(id) => this.handleEdit(id)}
           id="Delete"
-          title="Eliminar tu cuenta Gud Match"
+          title="Eliminar tu cuenta Sample Match"
           text={'cuenta cuya eliminación solicitas eliminar'}
           body={deleteBody}
           editable

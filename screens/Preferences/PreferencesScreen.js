@@ -34,7 +34,7 @@ class PreferencesScreen extends React.Component {
         <SafeAreaView>
           <View style={styles.body}>
             <View style={styles.cardContainer}>
-              <GudText styles={styles.title} text="Nombre de usuario" />
+              <SampleText styles={styles.title} text="Nombre de usuario" />
               <View style={[styles.buttonContainer]}>
                 <MenuItem
                   id="profile"

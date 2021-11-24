@@ -21,18 +21,18 @@ const LandingPage: () => React$Node = ({navigation}) => {
             <View style={styles.appLogoContainer}>
               <Image
                 style={styles.appLogo}
-                source={require('@icons/4x/GUDLogo.png')}
+                source={require('@icons/4x/SampleLogo.png')}
               />
             </View>
-            <GudText style={styles.title} text="¡BIENVENIDO!" />
-            <View style={styles.gudSeparator} />
+            <SampleText style={styles.title} text="¡BIENVENIDO!" />
+            <View style={styles.SampleSeparator} />
             <View style={styles.appImageContainer}>
               <Image
-                style={styles.gudCardImage}
+                style={styles.SampleCardImage}
                 source={require(`@android/images/LoginScreen.png`)}
               />
             </View>
-            <GudText
+            <SampleText
               style={styles.sectionDescription}
               accent={true}
               text="Entra al espacio donde puedes SER"
@@ -43,21 +43,27 @@ const LandingPage: () => React$Node = ({navigation}) => {
               <View style={[styles.credentialButton, styles.activeBtn]}>
                 <TouchableHighlight
                   style={styles.credentialsTouchableActive}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     navigateTo('LoginScreen');
                   }}>
-                  <GudText style={styles.gudButtonText} text="Iniciar sesión" />
+                  <SampleText
+                    style={styles.SampleButtonText}
+                    text="Iniciar sesión"
+                  />
                 </TouchableHighlight>
               </View>
               <View style={styles.credentialButton}>
                 <TouchableHighlight
                   style={styles.credentialsTouchableActive}
-                  underlayColor={ESS.value('$gudGreenMedium')}
+                  underlayColor={ESS.value('$SampleGreenMedium')}
                   onPress={() => {
                     navigateTo('RegisterScreen');
                   }}>
-                  <GudText style={styles.gudButtonText} text="Regístrate" />
+                  <SampleText
+                    style={styles.SampleButtonText}
+                    text="Regístrate"
+                  />
                 </TouchableHighlight>
               </View>
             </View>
